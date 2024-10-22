@@ -35,8 +35,9 @@
 /docs/Doxyfile
 
 # code::blocks
-tp1.cpb
-tp1.layout
+*.cpb
+*.layout
+*.depend
 
 # temp
 main.cpp
