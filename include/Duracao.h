@@ -1,20 +1,20 @@
 #ifndef DURACAO_H
 #define DURACAO_H
 
-//! Classe duração
-/*! 232002771 - implementação
+//! Classe Duracao
+/*!
+  Classe Duracao, inteiro entre 0 e 360
+  232002771 - implementa&ccedil;&atilde;o
 */
 
-class duracao{
+class Duracao
+{
     private:
         static const int LIMITE = 360;
         int dias;
         bool validar(int);
 
-    protected:
-
     public:
-
         duracao(int);
         bool validacao();
         bool setDias(int);
