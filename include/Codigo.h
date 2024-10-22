@@ -6,7 +6,7 @@
 //! Classe Codigo
 /*!
   Classe Codigo, string de 6 caracteres alfanum&eacute;ricos\n
-  232013031 - implementa&ccdeil;&atilde;o, documenta&ccdeil;&atilde;o
+  232013031 - implementa&ccdeil;&atilde;o
 */
 
 class Codigo
