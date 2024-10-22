@@ -33,3 +33,7 @@
 
 # doxygen
 /docs/Doxyfile
+
+# code::blocks
+tp1.cpb
+tp1.layout
