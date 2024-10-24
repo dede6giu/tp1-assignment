@@ -10,15 +10,19 @@
 class Duracao
 {
     private:
-        static const int LIMITE = 360;
-        int dias;
+        int valor;
         bool validar(int);
 
     public:
-        duracao(int);
-        bool validacao();
-        bool setDias(int);
-        int getDias()const;
+        static const int MAXIMO = 360;
+        static const int MINIMO = 0;
+        bool setValor(int);
+        int getValor() const;
 };
+
+inline int Duracao::getValor() const
+{
+    return valor;
+}
 
 #endif // DURACAO_H

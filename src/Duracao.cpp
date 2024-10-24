@@ -1,11 +1,20 @@
 #include "Duracao.h"
 
-Duracao::Duracao()
+bool Duracao::setValor(int)
 {
-    //ctor
+    if (!Duracao::validar(valor))
+    {
+            return false;
+    }
+    this->valor = valor;
+    return true;
 }
 
-Duracao::~Duracao()
+bool Duracao::validar(int)
 {
-    //dtor
+    if (MINIMO <= valor && valor <= MAXIMO)
+    {
+            return true;
+    }
+    return false;
 }
