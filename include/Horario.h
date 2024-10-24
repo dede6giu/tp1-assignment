@@ -26,17 +26,6 @@ class Horario
         int getValorMinutos() const;
 };
 
-inline std::string Horario::getValor() const
-{
-    std::string resultado = "";
-    if (this->horas < 10) resultado += "0";
-    resultado += std::to_string(this->horas);
-    resultado += ":";
-    if (this->minutos < 10) resultado += "0";
-    resultado += std::to_string(this->minutos);
-    return resultado;
-}
-
 inline int Horario::getValorHoras() const
 {
     return this->horas;

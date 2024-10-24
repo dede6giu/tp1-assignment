@@ -49,13 +49,22 @@ bool Horario::setValor(int horas, int minutos)
         }
         else
         {
-            // levantar um erro
             return false;
         }
     }
     else
     {
-        // levantar um erro
         return false;
     }
+}
+
+std::string Horario::getValor() const
+{
+    std::string resultado = "";
+    if (this->horas < 10) resultado += "0";
+    resultado += std::to_string(this->horas);
+    resultado += ":";
+    if (this->minutos < 10) resultado += "0";
+    resultado += std::to_string(this->minutos);
+    return resultado;
 }
