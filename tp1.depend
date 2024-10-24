@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1729776618 source:/home/gus/Documentos/TP1/tp1-assignment/src/Duracao.cpp
+1729777171 source:/home/gus/Documentos/TP1/tp1-assignment/src/Duracao.cpp
 	"Duracao.h"
 
-1729776720 /home/gus/Documentos/TP1/tp1-assignment/include/Duracao.h
+1729777316 /home/gus/Documentos/TP1/tp1-assignment/include/Duracao.h
 
-1729776835 source:/home/gus/Documentos/TP1/tp1-assignment/main.cpp
+1729777213 source:/home/gus/Documentos/TP1/tp1-assignment/main.cpp
 	<iostream>
 	"Duracao.h"
 

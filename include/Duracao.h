@@ -10,7 +10,7 @@
 class Duracao
 {
     private:
-        int valor;
+        int valor = 0;
         bool validar(int);
 
     public:

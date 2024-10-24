@@ -1,6 +1,6 @@
 #include "Duracao.h"
 
-bool Duracao::setValor(int)
+bool Duracao::setValor(int valor)
 {
     if (!Duracao::validar(valor))
     {
@@ -10,7 +10,7 @@ bool Duracao::setValor(int)
     return true;
 }
 
-bool Duracao::validar(int)
+bool Duracao::validar(int valor)
 {
     if (MINIMO <= valor && valor <= MAXIMO)
     {
