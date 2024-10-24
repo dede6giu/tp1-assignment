@@ -1,12 +1,14 @@
-#ifndef DOMINIOS_HPP_INCLUDED
-#define DOMINIOS_HPP_INCLUDED
+#ifndef AVALIACAO_HPP_INCLUDED
+#define AVALIACAO_HPP_INCLUDED
 
 //! Classe Avaliacao
 /*!
+Classe Avaliacao, inteiro v&aacute;lido entre 0 e 5 inclusivo \n
 232029274 - implementacao
 */
 
-class Avaliacao {
+class Avaliacao
+{
     private:
             int valor;
             bool validar(int);
@@ -15,8 +17,9 @@ class Avaliacao {
             int getValor() const;
 };
 
-inline int Avaliacao::getValor() const{
+inline int Avaliacao::getValor() const
+{
         return valor;
 }
 
-#endif // DOMINIOS_HPP_INCLUDED
+#endif // AVALIACAO_HPP_INCLUDED
