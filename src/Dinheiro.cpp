@@ -1,8 +1,8 @@
-#include "Duracao.h"
+#include "Dinheiro.h"
 
-bool Duracao::setValor(int valor)
+bool Dinheiro::setValor(float valor)
 {
-    if (!Duracao::validar(valor))
+    if (!Dinheiro::validar(valor))
     {
         return false;
     }
@@ -10,7 +10,7 @@ bool Duracao::setValor(int valor)
     return true;
 }
 
-bool Duracao::validar(int valor)
+bool Dinheiro::validar(float valor)
 {
     if (MINIMO <= valor && valor <= MAXIMO)
     {
