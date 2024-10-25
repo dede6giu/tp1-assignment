@@ -41,21 +41,21 @@ bool Horario::setValorMinutos(int valor)
 
 bool Horario::setValor(int horas, int minutos)
 {
-    if (Horario::setValorHoras(horas))
+    if (Horario::validarHoras(horas))
     {
-        if (Horario::setValorMinutos(minutos))
+        if (Horario::validarMinutos(minutos))
         {
+            this->horas = horas;
+            this->minutos = minutos;
             return true;
         }
         else
         {
-            // levantar um erro
             return false;
         }
     }
     else
     {
-        // levantar um erro
         return false;
     }
 }

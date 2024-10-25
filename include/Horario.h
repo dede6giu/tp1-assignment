@@ -12,8 +12,8 @@
 class Horario
 {
     private:
-        int horas = 0;
-        int minutos = 0;
+        int horas;
+        int minutos;
         bool validarHoras(int);
         bool validarMinutos(int);
 
