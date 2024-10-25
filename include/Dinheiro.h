@@ -1,25 +1,29 @@
 #ifndef DINHEIRO_H
 #define DINHEIRO_H
 
+#include <string>
+
 //! Classe Dinheiro
 /*!
-    Classe Dinheiro, float de 0,00 a 200.000,00
-    232013031 - implementa&ccdeil;&atilde;o
+    Classe Dinheiro, int de 0 a 20000000, implementado como centavos\n
+    232002771 - implementa&ccdeil;&atilde;o\n
+    232013031 - altera&ccedil;&otilde;es na implementa&ccdeil;&atilde;o
 */
 class Dinheiro
 {
     private:
-        float valor = 0;
-        bool validar(float);
+        int valor;
+        bool validar(int);
 
     public:
-        float const MINIMO = 0.0;
-        float const MAXIMO = 200000.0;
-        bool setValor(float);
-        float getValor() const;
+        int const MINIMO = 0;
+        int const MAXIMO = 20000000;
+        bool setValor(int);
+        int getValor() const;
+        std::string getValorFormatado() const;
 };
 
-inline float Dinheiro::getValor() const
+inline int Dinheiro::getValor() const
 {
     return valor;
 }
