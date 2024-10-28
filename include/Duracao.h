@@ -3,7 +3,7 @@
 
 //! Classe Duracao
 /*!
-  Classe Duracao, inteiro entre 0 e 360
+  Classe Duracao, inteiro entre 0 e 360 \n
   232002771 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o.
 
 */
@@ -25,7 +25,7 @@ class Duracao
     public:
         //! Um inteiro p&uacute;blico
         /*!
-          Armazena a quantidade m&aacute;xima da dura&ccedil;&atilde;0.
+          Armazena a quantidade m&aacute;xima da dura&ccedil;&atilde;o.
           @sa validar()
         */
         static const int MAXIMO = 360;
