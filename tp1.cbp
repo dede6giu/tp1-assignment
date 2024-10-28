@@ -32,7 +32,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Avaliacao.h" />
+		<Unit filename="include/Codigo.h" />
+		<Unit filename="include/Data.h" />
+		<Unit filename="include/Dinheiro.h" />
+		<Unit filename="include/Duracao.h" />
+		<Unit filename="include/Horario.h" />
+		<Unit filename="include/Nome.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Avaliacao.cpp" />
+		<Unit filename="src/Codigo.cpp" />
+		<Unit filename="src/Data.cpp" />
+		<Unit filename="src/Dinheiro.cpp" />
+		<Unit filename="src/Duracao.cpp" />
+		<Unit filename="src/Horario.cpp" />
+		<Unit filename="src/Nome.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
