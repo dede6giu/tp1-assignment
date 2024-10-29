@@ -12,7 +12,7 @@ bool Duracao::setValor(int valor)
 
 bool Duracao::validar(int valor)
 {
-    if (MINIMO <= valor && valor <= MAXIMO)
+    if (0 <= valor && valor <= MAXIMO)
     {
         return true;
     }
