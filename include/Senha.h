@@ -1,22 +1,25 @@
 #ifndef SENHA_H
 #define SENHA_H
 
+#include <string>
+
 //! Domínio Senha
 /*!
     Domínio Senha \n
-    matricula - implementação
+    23200628 - implementação \n
+    232002771 - implementação por string
 */
 
 class Senha {
     private:
-        int senha;
-        bool validar(Tipo);
+        std::string senha;
+        bool validar(std::string);
     public:
-        bool setValor(int);
-        int getValor() const;
+        bool setValor(std::string);
+        std::string getValor() const;
 };
 
-inline int Senha::getValor() const{
+inline std::string Senha::getValor() const{
     return senha;
 }
 
