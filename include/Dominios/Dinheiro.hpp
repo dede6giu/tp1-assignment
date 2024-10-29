@@ -1,5 +1,5 @@
-#ifndef DINHEIRO_H
-#define DINHEIRO_H
+#ifndef DINHEIRO_HPP_INCLUDED
+#define DINHEIRO_HPP_INCLUDED
 
 #include <string>
 
@@ -28,4 +28,4 @@ inline int Dinheiro::getValor() const
     return valor;
 }
 
-#endif // DINHEIRO_H
+#endif // DINHEIRO_HPP_INCLUDED

@@ -1,5 +1,5 @@
-#ifndef HORARIO_H
-#define HORARIO_H
+#ifndef HORARIO_HPP_INCLUDED
+#define HORARIO_HPP_INCLUDED
 
 #include <string>
 
@@ -36,4 +36,4 @@ inline int Horario::getValorMinutos() const
     return this->minutos;
 }
 
-#endif // HORARIO_H
+#endif // HORARIO_HPP_INCLUDED

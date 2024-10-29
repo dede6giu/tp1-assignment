@@ -1,5 +1,5 @@
-#ifndef AVALIACAO_H
-#define AVALIACAO_H
+#ifndef AVALIACAO_HPP_INCLUDED
+#define AVALIACAO_HPP_INCLUDED
 
 //! Classe Avaliacao
 /*!
@@ -45,4 +45,4 @@ inline int Avaliacao::getValor() const
         return valor;
 }
 
-#endif // AVALIACAO_H
+#endif // AVALIACAO_HPP_INCLUDED

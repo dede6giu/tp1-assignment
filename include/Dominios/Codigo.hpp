@@ -1,5 +1,5 @@
-#ifndef CODIGO_H
-#define CODIGO_H
+#ifndef CODIGO_HPP_INCLUDED
+#define CODIGO_HPP_INCLUDED
 
 #include <string>
 
@@ -26,4 +26,4 @@ inline std::string Codigo::getValor() const
     return valor;
 }
 
-#endif // CODIGO_H
+#endif // CODIGO_HPP_INCLUDED
