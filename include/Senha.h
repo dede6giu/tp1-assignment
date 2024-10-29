@@ -6,7 +6,7 @@
 //! Domínio Senha
 /*!
     Domínio Senha \n
-    23200628 - implementação \n
+    232006028 - implementação \n
     232002771 - implementação por string
 */
 
