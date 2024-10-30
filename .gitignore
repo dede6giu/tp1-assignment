@@ -39,6 +39,9 @@
 *.layout
 *.depend
 
+# vscode
+.vscode
+
 # temp
 main.cpp
 bin/
