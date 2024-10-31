@@ -1,5 +1,5 @@
-#ifndef NOME_H
-#define NOME_H
+#ifndef NOME_HPP_INCLUDED
+#define NOME_HPP_INCLUDED
 
 #include <string>
 
@@ -53,4 +53,4 @@ inline std::string Nome::getValor() const
     return valor;
 }
 
-#endif // NOME_H
+#endif // NOME_HPP_INCLUDED

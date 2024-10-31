@@ -1,4 +1,4 @@
-#include "Horario.h"
+#include "Dominios/Horario.hpp"
 #include <string>
 
 bool Horario::validarHoras(int valor)

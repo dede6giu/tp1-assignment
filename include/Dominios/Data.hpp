@@ -1,5 +1,5 @@
-#ifndef DATA_H
-#define DATA_H
+#ifndef DATA_HPP_INCLUDED
+#define DATA_HPP_INCLUDED
 
 #include <string>
 
@@ -43,4 +43,4 @@ inline int Data::getAno() const
     return this->ano;
 }
 
-#endif // DATA_H
+#endif // DATA_HPP_INCLUDED

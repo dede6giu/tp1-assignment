@@ -1,5 +1,5 @@
-#ifndef SENHA_H
-#define SENHA_H
+#ifndef SENHA_HPP_INCLUDED
+#define SENHA_HPP_INCLUDED
 
 #include <string>
 
@@ -23,4 +23,4 @@ inline std::string Senha::getValor() const{
     return senha;
 }
 
-#endif // SENHA_H
+#endif // SENHA_HPP_INCLUDED

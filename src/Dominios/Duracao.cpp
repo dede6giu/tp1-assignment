@@ -1,4 +1,4 @@
-#include "Duracao.h"
+#include "Dominios/Duracao.hpp"
 
 bool Duracao::setValor(int valor)
 {

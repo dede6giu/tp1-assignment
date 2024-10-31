@@ -1,5 +1,5 @@
-#ifndef DURACAO_H
-#define DURACAO_H
+#ifndef DURACAO_HPP_INCLUDED
+#define DURACAO_HPP_INCLUDED
 
 //! Classe Duracao
 /*!
@@ -52,4 +52,4 @@ inline int Duracao::getValor() const
     return valor;
 }
 
-#endif // DURACAO_H
+#endif // DURACAO_HPP_INCLUDED

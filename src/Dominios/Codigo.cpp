@@ -1,4 +1,4 @@
-#include "Codigo.h"
+#include "Dominios/Codigo.hpp"
 #include <string>
 
 bool Codigo::setValor(std::string valor)
