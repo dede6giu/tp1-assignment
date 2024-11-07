@@ -1,8 +1,11 @@
 #ifndef ATIVIDADE_HPP_INCLUDED
 #define ATIVIDADE_HPP_INCLUDED
 
-//! entidade Atividade
-//! 232029274 - entidade Atividade
+//! Entidade Atividade
+/* 
+    232029274 - implementação entidade Atividade
+*/
+
 using namespace std;
 
 class Atividade {
