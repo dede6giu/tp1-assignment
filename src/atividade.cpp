@@ -1,4 +1,4 @@
-#include "Entidades/Atividade.hpp"
+#include "atividade.hpp"
 //! entidade Atividade
 //! 232029274 - implementacao entidade Atividade
 
