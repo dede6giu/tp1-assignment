@@ -7,7 +7,6 @@
 */
 
 class Atividade {
-
     private:
         Codigo codigo;
         Nome nome;
@@ -18,7 +17,6 @@ class Atividade {
         Avaliacao avaliacao;
     
     public:
-    
         void setCodigo(const Codigo&);
         Codigo getCodigo() const;
     
@@ -41,7 +39,4 @@ class Atividade {
         Avaliacao getAvaliacao() const;
 };
 
-#endif // ATIVIDADE_HPP
-
-
-
+#endif // ATIVIDADE_HPP_INCLUDED
