@@ -1,5 +1,6 @@
-#ifndef CONTA_H
-#define CONTA_H
+#ifndef CONTA_HPP_INCLUDED
+#define CONTA_HPP_INCLUDED
+
 //! Entidade Conta
 /*
     232002771 - implementação da entidade conta
@@ -20,4 +21,4 @@ class Conta
 
 };
 
-#endif // CONTA_H
+#endif // CONTA_HPP_INCLUDED
