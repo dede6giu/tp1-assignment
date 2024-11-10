@@ -1,4 +1,19 @@
 #include "Dominios/Nome.hpp"
+#include <string>
+
+Nome::Nome()
+{
+    nome = "";
+}
+
+Nome::Nome(std::string valor)
+{
+    if (!validar(valor))
+    {
+        return;
+    }
+    this->nome = valor;
+}
 
 bool Nome::setValor(std::string valor)
 {
@@ -6,7 +21,7 @@ bool Nome::setValor(std::string valor)
     {
         return false;
     }
-    this->valor = valor;
+    this->nome = valor;
     return true;
 }
 

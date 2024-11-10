@@ -6,7 +6,7 @@
 //! Classe Nome
 /*!
   Classe Nome, string de m&aacute;ximo 30 caracteres.\n
-  232013031 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o.
+  232013031 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, construtores
 */
 
 class Nome
@@ -14,7 +14,7 @@ class Nome
     private:
         //! Uma string.
         /*! Armazena o valor do nome. */
-        std::string valor = "";
+        std::string nome = "";
 
         //! Nome::validar()
         /*!
@@ -24,12 +24,15 @@ class Nome
         bool validar(std::string);
 
     public:
+        Nome();
+        Nome(std::string);
+
         //! Um inteiro p&uacute;blico
         /*!
           Armazena o tamanho m&aacute;ximo do valor.
           @sa validar()
         */
-        int const MAXLENGTH = 30;
+        static int const MAXLENGTH = 30;
 
         //! Nome::setValor()
         /*!
@@ -50,7 +53,7 @@ class Nome
 
 inline std::string Nome::getValor() const
 {
-    return valor;
+    return nome;
 }
 
 #endif // NOME_HPP_INCLUDED
