@@ -2,13 +2,27 @@
 #include <algorithm>
 #include <string>
 
+Dinheiro::Dinheiro()
+{
+    dinheiro = 0;
+}
+
+Dinheiro::Dinheiro(int valor)
+{
+    if (!Dinheiro::validar(valor))
+    {
+        return;
+    }
+    dinheiro = valor;
+}
+
 bool Dinheiro::setValor(int valor)
 {
     if (!Dinheiro::validar(valor))
     {
         return false;
     }
-    this->valor = valor;
+    this->dinheiro = valor;
     return true;
 }
 
@@ -23,11 +37,11 @@ bool Dinheiro::validar(int valor)
 
 std::string Dinheiro::getValorFormatado() const
 {
-    if (this->valor < 100)
+    if (this->dinheiro < 100)
     {
-        return "0," + std::to_string(this->valor);
+        return "0," + std::to_string(this->dinheiro);
     }
-    std::string numero = std::to_string(this->valor);
+    std::string numero = std::to_string(this->dinheiro);
     int i = numero.length() - 1;
     std::string resultado = "";
     resultado += numero[i]; i--;
