@@ -8,11 +8,11 @@ Nome::Nome()
 
 Nome::Nome(std::string valor)
 {
-    if (!validar(valor))
+    if (!Nome::validar(valor))
     {
         return;
     }
-    this->nome = valor;
+    nome = valor;
 }
 
 bool Nome::setValor(std::string valor)

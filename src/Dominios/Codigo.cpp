@@ -6,7 +6,7 @@ Codigo::Codigo() {
 }
 
 Codigo::Codigo(std::string valor) {
-    if (!validar(valor)) {
+    if (!Codigo::validar(valor)) {
         return;
     }
     codigo = codigo;
