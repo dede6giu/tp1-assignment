@@ -19,15 +19,46 @@ class Destino
         Codigo codigo;
         Nome nome;
         Data inicio;
-        Data Fim;
+        Data fim;
         Avaliacao avaliacao;
-        bool validar();
+        bool validar(); //!< não ainda implementado
 
     public:
-        bool setValor(Codigo);
-        bool setValor(Nome);
-        bool setValor(Avaliacao);
-        bool setValor(Data, bool);
+        Destino();
+
+        void setValor(const Codigo&);
+        inline Codigo getValorCodigo() const;
+
+        void setValor(const Nome&);
+        inline Nome getValorNome() const;
+
+        void setValor(const Avaliacao&);
+        inline Avaliacao getValorAvaliacao() const;
+
+        void setValor(const Data&, bool);
+        inline Data getValorInicio() const;
+        inline Data getValorFim() const;
 };
+
+inline Codigo Destino::getValorCodigo() const {
+    return this->codigo;
+}
+
+inline Nome Destino::getValorNome() const {
+    return this->nome;
+}
+
+inline Avaliacao Destino::getValorAvaliacao() const {
+    return this->avaliacao;
+}
+
+inline Data Destino::getValorInicio() const {
+    return this->inicio;
+}
+
+inline Data Destino::getValorFim() const {
+    return this->fim;
+}
+
 
 #endif // DESTINO_HPP_INCLUDED
