@@ -11,7 +11,7 @@
 
 //! entidade Atividade
 /*!
-    232029274 - entidade Atividade
+    232029274 - implementação
 */
 
 class Atividade {
@@ -25,21 +25,22 @@ private:
     Avaliacao avaliacao;
 
 public:
+    Atividade();
 
-    void setCodigo(const Codigo &novoCodigo);
-    void setNome(const Nome &novoNome);
-    void setData(const Data &novaData);
-    void setHorario(const Horario &novoHorario);
-    void setDuracao(const Duracao &novaDuracao);
-    void setPreco(const Dinheiro &novoPreco);
-    void setAvaliacao(const Avaliacao &novaAvaliacao);
+    void setValor(const Codigo &);
+    void setValor(const Nome &);
+    void setValor(const Data &);
+    void setValor(const Horario &);
+    void setValor(const Duracao &);
+    void setValor(const Dinheiro &);
+    void setValor(const Avaliacao &);
 
-    inline Codigo getCodigo() const { return codigo; }
-    inline Nome getNome() const { return nome; }
-    inline Data getData() const { return data; }
-    inline Horario getHorario() const { return horario; }
-    inline Duracao getDuracao() const { return duracao; }
-    inline Dinheiro getPreco() const { return preco; }
+    inline Codigo       getCodigo() const { return codigo; }
+    inline Nome           getNome() const { return nome; }
+    inline Data           getData() const { return data; }
+    inline Horario     getHorario() const { return horario; }
+    inline Duracao     getDuracao() const { return duracao; }
+    inline Dinheiro      getPreco() const { return preco; }
     inline Avaliacao getAvaliacao() const { return avaliacao; }
 };
 
