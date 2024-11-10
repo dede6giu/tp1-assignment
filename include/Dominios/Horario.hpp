@@ -5,8 +5,8 @@
 
 //! Classe Horario
 /*!
-  Classe Horario, string de 5 caracteres composta por "HH:mm"\n
-  232013031 - implementa&ccdeil;&atilde;o
+  Classe Horario, string de 5 caracteres composta por "HH:mm", impressa em formato de 24h. Internamente salva como dois inteiros, um para horas e outro para minutos.\n
+  232013031 - implementa&ccdeil;&atilde;o, construtores
 */
 
 class Horario
@@ -18,6 +18,9 @@ class Horario
         bool validarMinutos(int);
 
     public:
+        Horario();
+        Horario(int, int);
+
         bool setValor(int, int);
         bool setValorHoras(int);
         bool setValorMinutos(int);
