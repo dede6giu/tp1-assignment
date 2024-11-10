@@ -40,6 +40,8 @@
 		<Unit filename="include/Dominios/Horario.hpp" />
 		<Unit filename="include/Dominios/Nome.hpp" />
 		<Unit filename="include/Dominios/Senha.hpp" />
+		<Unit filename="include/Entidades/Atividade.hpp" />
+		<Unit filename="include/Entidades/Conta.hpp" />
 		<Unit filename="include/Entidades/Destino.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
@@ -50,6 +52,8 @@
 		<Unit filename="src/Dominios/Horario.cpp" />
 		<Unit filename="src/Dominios/Nome.cpp" />
 		<Unit filename="src/Dominios/Senha.cpp" />
+		<Unit filename="src/Entidades/Atividade.cpp" />
+		<Unit filename="src/Entidades/Conta.cpp" />
 		<Unit filename="src/Entidades/Destino.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
