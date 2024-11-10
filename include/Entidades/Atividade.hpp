@@ -2,8 +2,9 @@
 #define ATIVIDADE_HPP_INCLUDED
 
 //! entidade Atividade
-//! 232029274 - entidade Atividade
-using namespace std;
+/*!
+    232029274 - entidade Atividade
+*/
 
 class Atividade {
 private:
