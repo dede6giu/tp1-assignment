@@ -18,9 +18,10 @@ Senha::Senha(std::string valor)
 }
 
 bool Senha::validar(std::string valor){
-    if(valor.size() != 5){
+    if(valor.size() != this->VALIDLEN){
         return false;
     }
+
     for (char c: valor){
         if(!isdigit(c)){
             return false;
