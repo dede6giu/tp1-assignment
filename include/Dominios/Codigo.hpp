@@ -5,7 +5,7 @@
 
 //! Classe Codigo
 /*!
-  Classe Codigo, string de 6 caracteres alfanum&eacute;ricos\n
+  Classe Codigo, string de 6 caracteres alfanum&eacute;ricos sem diacríticos. \n
   232013031 - implementa&ccdeil;&atilde;o, construtores, documentação
 */
 
