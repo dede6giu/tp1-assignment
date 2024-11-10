@@ -18,12 +18,20 @@ class Nome
 
         //! Nome::validar()
         /*!
-          Verifica se o valor do nome est&aacute; dentro do limite de caracteres.
+          Verifica se o valor de uma string est&aacute; dentro do limite MAXLENGTH.
+          @param string a ser verificada.
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
         */
         bool validar(std::string);
 
     public:
+        //! Um inteiro p&uacute;blico estático
+        /*!
+          Armazena o tamanho m&aacute;ximo do valor.
+          @sa validar()
+        */
+        static int const MAXLENGTH = 30;
+
         //! Construtor Vazio
         /*!
             Constrói um objeto Nome com valor vazio.
@@ -35,20 +43,14 @@ class Nome
         /*!
             Recebe um valor string, o verifica e finalmente constrói um objeto
             Nome com o valor inserido.
+            @param string usada para construir o objeto.
             @sa Nome(), Nome::validar()
         */
         Nome(std::string);
 
-        //! Um inteiro p&uacute;blico estático
-        /*!
-          Armazena o tamanho m&aacute;ximo do valor.
-          @sa validar()
-        */
-        static int const MAXLENGTH = 30;
-
         //! Nome::setValor()
         /*!
-          Armazena um novo valor dentro da classe.
+          Armazena um novo valor dentro da classe após sua verificação.
           @param string novo valor.
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
           @sa getValor(), Nome::validar()
@@ -58,7 +60,7 @@ class Nome
         //! Nome::getValor()
         /*!
           Fun&ccedil;&atilde;o para obter o valor da classe Nome.
-          @return O valor do nome
+          @return string parâmetro nome do objeto.
         */
         std::string getValor() const;
 };
