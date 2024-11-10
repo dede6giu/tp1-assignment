@@ -1,8 +1,22 @@
 #include "Dominios/Avaliacao.hpp"
 
+Avaliacao::Avaliacao()
+{
+    avaliacao = 0;
+}
+
+Avaliacao::Avaliacao(int valor)
+{
+    if(!Avaliacao::validar(valor))
+    {
+        return;
+    }
+    this->avaliacao = valor;
+}
+
 bool Avaliacao::validar(int valor)
 {
-    if (valor<0 or valor>5)
+    if (valor < 0 or valor > 5)
     {
         return false;
     }
@@ -15,6 +29,6 @@ bool Avaliacao::setValor(int valor)
     {
         return false;
     }
-    this->valor = valor;
+    this->avaliacao = valor;
     return true;
 }

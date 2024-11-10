@@ -4,8 +4,9 @@
 //! Classe Avaliacao
 /*!
     Classe Avaliacao, inteiro v&aacute;lido entre 0 e 5 inclusivo \n
-    232029274 - implementa&ccedil;&atilde;o \n
-    232002771 - documenta&ccedil;&atilde;o.
+    232029274 - implementa&ccedil;&atilde;o. \n
+    232002771 - documenta&ccedil;&atilde;o. \n
+    232013031 - construtores.
 */
 
 class Avaliacao
@@ -13,7 +14,7 @@ class Avaliacao
     private:
         //! Um int.
         /*! Armazena a o valor da avalia&ccedil;&atilde;o. */
-        int valor;
+        int avaliacao;
 
         //! Avaliacao::validar()
         /*!
@@ -23,6 +24,9 @@ class Avaliacao
         bool validar(int);
 
     public:
+        Avaliacao();
+        Avaliacao(int);
+
         //! Avaliacao::setValor()
         /*!
           Armazena um novo valor dentro da classe.
@@ -42,7 +46,7 @@ class Avaliacao
 
 inline int Avaliacao::getValor() const
 {
-        return valor;
+        return avaliacao;
 }
 
 #endif // AVALIACAO_HPP_INCLUDED

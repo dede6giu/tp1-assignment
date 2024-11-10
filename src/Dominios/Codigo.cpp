@@ -1,13 +1,24 @@
 #include "Dominios/Codigo.hpp"
 #include <string>
 
+Codigo::Codigo() {
+    codigo = "";
+}
+
+Codigo::Codigo(std::string valor) {
+    if (!Codigo::validar(valor)) {
+        return;
+    }
+    codigo = codigo;
+}
+
 bool Codigo::setValor(std::string valor)
 {
     if (!Codigo::validar(valor))
     {
         return false;
     }
-    this->valor = valor;
+    this->codigo = valor;
     return true;
 }
 
