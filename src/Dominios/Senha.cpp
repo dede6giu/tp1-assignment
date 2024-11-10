@@ -18,7 +18,7 @@ Senha::Senha(std::string valor)
 }
 
 bool Senha::validar(std::string valor){
-    if(valor.size() != this->VALIDLEN){
+    if(valor.size() != this->PASSLENGTH){
         return false;
     }
 

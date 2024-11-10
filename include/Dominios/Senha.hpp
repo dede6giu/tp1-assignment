@@ -20,17 +20,17 @@ class Senha
 
         //! Senha::validar()
         /*!
-            Verifica se o tamanho da string fornecida é exatamente igual à VALIDLEN,
+            Verifica se o tamanho da string fornecida é exatamente igual à PASSLENGTH,
             se todos os caracteres são dígitos distintos e se os cinco dígitos não
             estão em ordem (de)cresente.
             @param string à ser analisada.
-            @return bool indicando sucesso da operação
+            @return bool indicando sucesso da operação.
         */
         bool validar(std::string);
     public:
         //! Um inteiro constante estático.
         /*! Armazena o valor do tamanho da senha. */
-        static const int VALIDLEN = 5;
+        static const int PASSLENGTH = 5;
 
         //! Construtor Vazio
         /*!
@@ -50,7 +50,7 @@ class Senha
         //! Senha::setValor(std::string)
         /*!
             Recebe um valor string, o verifica e altera o valor atual do objeto.
-            @param string que alterará o valor da senha atual
+            @param string que alterará o valor senha atual.
             @return booleano indicando o sucesso da operação.
             @sa senha, Senha::validar()
         */
