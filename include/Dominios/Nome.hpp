@@ -14,7 +14,7 @@ class Nome
     private:
         //! Uma string.
         /*! Armazena o valor do nome. */
-        std::string nome = "";
+        std::string nome;
 
         //! Nome::validar()
         /*!
@@ -24,10 +24,22 @@ class Nome
         bool validar(std::string);
 
     public:
+        //! Construtor Vazio
+        /*!
+            Constrói um objeto Nome com valor vazio.
+            @sa Nome(std::string)
+        */
         Nome();
+
+        //! Construtor Paramétrico
+        /*!
+            Recebe um valor string, o verifica e finalmente constrói um objeto
+            Nome com o valor inserido.
+            @sa Nome(), Nome::validar()
+        */
         Nome(std::string);
 
-        //! Um inteiro p&uacute;blico
+        //! Um inteiro p&uacute;blico estático
         /*!
           Armazena o tamanho m&aacute;ximo do valor.
           @sa validar()
