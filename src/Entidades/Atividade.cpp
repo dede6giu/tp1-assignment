@@ -1,7 +1,9 @@
 #include "Entidades/Atividade.hpp"
-//! entidade Atividade
-//! 232029274 - implementacao entidade Atividade
 
+//! entidade Atividade
+/*!
+    232029274 - implementacao entidade Atividade
+*/
 
 void Atividade::setCodigo(const Codigo &novoCodigo) {
     this->codigo = novoCodigo;
