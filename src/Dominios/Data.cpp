@@ -1,6 +1,25 @@
 #include "Dominios/Data.hpp"
 #include <string>
 
+Data::Data()
+{
+    dia = 1;
+    mes = 1;
+    ano = 0;
+}
+
+Data::Data(int dd, int mm, int aa)
+{
+    if (!Data::validar(dd, mm, aa))
+    {
+        return;
+    }
+    dia = dd;
+    mes = mm;
+    ano = aa;
+}
+
+
 bool Data::validar(int dia, int mes, int ano)
 {
     if (ano < 0 or ano > 99)
@@ -17,6 +36,7 @@ bool Data::validar(int dia, int mes, int ano)
     }
     switch (mes)
     {
+        // 31 dias
         case 1:
         case 3:
         case 5:
@@ -24,26 +44,25 @@ bool Data::validar(int dia, int mes, int ano)
         case 8:
         case 10:
         case 12:
-            // 31 dias
             if (dia > 31)
             {
                 return false;
             }
             break;
 
+        // 30 dias
         case 4:
         case 6:
         case 9:
         case 11:
-            // 30 dias
             if (dia > 30)
             {
                 return false;
             }
             break;
 
+        // fevereiro
         case 2:
-            // fevereiro
             ano += 2000;
             if ((ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0) // ano bissexto
             {
