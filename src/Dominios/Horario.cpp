@@ -1,6 +1,26 @@
 #include "Dominios/Horario.hpp"
 #include <string>
 
+Horario::Horario()
+{
+    horas = 0;
+    minutos = 0;
+}
+
+Horario::Horario(int hh, int mm)
+{
+    if (!Horario::validarHoras(hh))
+    {
+        return;
+    }
+    if (!Horario::validarHoras(mm))
+    {
+        return;
+    }
+    horas = hh;
+    minutos = mm;
+}
+
 bool Horario::validarHoras(int valor)
 {
     if (valor < 0 or valor >= 24)

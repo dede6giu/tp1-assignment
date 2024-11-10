@@ -7,14 +7,18 @@
 /*!
     Domínio Senha \n
     232006028 - implementação \n
-    232002771 - implementação por string
+    232002771 - implementação por string \n
+    232013031 - construtores
 */
 
-class Senha {
+class Senha
+{
     private:
         std::string senha;
         bool validar(std::string);
     public:
+        Senha();
+        Senha(std::string);
         bool setValor(std::string);
         std::string getValor() const;
 };
