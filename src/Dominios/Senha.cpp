@@ -3,38 +3,53 @@
 #include <string>
 #include <algorithm>
 
-bool Senha::validar(std::string senha){
-    if(senha.size() != 5){
+Senha::Senha()
+{
+    senha = "";
+}
+
+Senha::Senha(std::string valor)
+{
+    if (!validar(valor))
+    {
+        return;
+    }
+    senha = valor;
+}
+
+bool Senha::validar(std::string valor){
+    if(valor.size() != 5){
         return false;
     }
-    for (char c: senha){
+    for (char c: valor){
         if(!isdigit(c)){
             return false;
         }
     }
 
-    std::set<char> numeros(senha.begin(), senha.end());
+    std::set<char> numeros(valor.begin(), valor.end());
 
-    if(numeros.size() != senha.size()){
+    if(numeros.size() != valor.size()){
         return false;
     }
 
-    if(std::is_sorted(senha.begin(), senha.end())){
+    if(std::is_sorted(valor.begin(), valor.end())){
         return false;
     }
 
-    reverse(senha.begin(), senha.end());
+    reverse(valor.begin(), valor.end());
 
-    if (std::is_sorted(senha.begin(), senha.end())){
+    if (std::is_sorted(valor.begin(), valor.end())){
         return false;
     }
 
     return true;
 }
-bool Senha::setValor(std::string senha) {
-    if(!validar(senha)){
+
+bool Senha::setValor(std::string valor) {
+    if(!validar(valor)){
         return false;
     }
-    this->senha = senha;
+    this->senha = valor;
     return true;
 }
