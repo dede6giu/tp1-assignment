@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Conta.hpp" />
 		<Unit filename="include/Dominios/Avaliacao.hpp" />
 		<Unit filename="include/Dominios/Codigo.hpp" />
 		<Unit filename="include/Dominios/Data.hpp" />
@@ -40,8 +43,9 @@
 		<Unit filename="include/Dominios/Horario.hpp" />
 		<Unit filename="include/Dominios/Nome.hpp" />
 		<Unit filename="include/Dominios/Senha.hpp" />
-		<Unit filename="include/Entidades/Atividade.hpp" />
+		<Unit filename="include/Entidades/Conta.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Conta.cpp" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
 		<Unit filename="src/Dominios/Codigo.cpp" />
 		<Unit filename="src/Dominios/Data.cpp" />
@@ -50,7 +54,7 @@
 		<Unit filename="src/Dominios/Horario.cpp" />
 		<Unit filename="src/Dominios/Nome.cpp" />
 		<Unit filename="src/Dominios/Senha.cpp" />
-		<Unit filename="src/Entidades/Atividade.cpp" />
+		<Unit filename="src/Entidades/Conta.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
