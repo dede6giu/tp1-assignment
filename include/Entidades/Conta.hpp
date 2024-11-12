@@ -12,7 +12,6 @@ class Conta
         Senha senha;
 
     public:
-        Conta(Codigo codigo, Senha senha)
         bool setCodigo(const Codigo&)
         Codigo getCodigo() const;
         bool setSenha(const Senha&);
@@ -20,4 +19,13 @@ class Conta
 
 };
 
+inline int Conta::getValor() const
+{
+    return codigo;
+}
+
+inline int Senha::getValor() const
+{
+    return senha;
+}
 #endif // CONTA_H
