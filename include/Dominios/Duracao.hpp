@@ -3,9 +3,9 @@
 
 //! Classe Duracao
 /*!
-  Classe Duracao, inteiro entre 0 e 360 \n
-  232002771 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o.
-
+    Classe Duracao, inteiro entre 0 e 360 \n
+    232002771 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o. \n
+    232013031 - construtores
 */
 
 class Duracao
@@ -13,7 +13,7 @@ class Duracao
     private:
         //! Um int.
         /*! Armazena a o valor da dura&ccedil;&atilde;o. */
-        int valor = 0;
+        int duracao;
 
         //! Duracao::validar()
         /*!
@@ -23,6 +23,9 @@ class Duracao
         bool validar(int);
 
     public:
+        Duracao();
+        Duracao(int);
+
         //! Um inteiro p&uacute;blico
         /*!
           Armazena a quantidade m&aacute;xima da dura&ccedil;&atilde;o.
@@ -49,7 +52,7 @@ class Duracao
 
 inline int Duracao::getValor() const
 {
-    return valor;
+    return duracao;
 }
 
 #endif // DURACAO_HPP_INCLUDED

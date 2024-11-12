@@ -1,6 +1,7 @@
 #ifndef CONTA_HPP_INCLUDED
 #define CONTA_HPP_INCLUDED
 
+
 #include "./Dominio/Codigo.hpp"
 #include "./Dominio/Senha.hpp"
 
@@ -24,6 +25,7 @@ class Conta
         Senha getSenha() const;
 
 };
+
 
 inline int Conta::getValor() const
 {

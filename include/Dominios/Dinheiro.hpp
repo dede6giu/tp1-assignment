@@ -12,12 +12,16 @@
 class Dinheiro
 {
     private:
-        int valor;
+        int dinheiro;
         bool validar(int);
 
     public:
         int const MINIMO = 0;
         int const MAXIMO = 20000000;
+
+        Dinheiro();
+        Dinheiro(int);
+
         bool setValor(int);
         int getValor() const;
         std::string getValorFormatado() const;
@@ -25,7 +29,7 @@ class Dinheiro
 
 inline int Dinheiro::getValor() const
 {
-    return valor;
+    return dinheiro;
 }
 
 #endif // DINHEIRO_HPP_INCLUDED

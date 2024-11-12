@@ -1,4 +1,4 @@
-#include "Conta.hpp"
+#include "Entidades/Conta.hpp"
 
 Conta::setCodigo(const Codigo &novoCodigo)
 {
