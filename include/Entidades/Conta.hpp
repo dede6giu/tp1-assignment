@@ -1,5 +1,6 @@
-#ifndef CONTA_H
-#define CONTA_H
+#ifndef CONTA_HPP_INCLUDED
+#define CONTA_HPP_INCLUDED
+
 //! Entidade Conta
 /*
     232002771 - implementação da entidade conta
@@ -28,4 +29,5 @@ inline int Senha::getValor() const
 {
     return senha;
 }
-#endif // CONTA_H
+
+#endif // CONTA_HPP_INCLUDED
