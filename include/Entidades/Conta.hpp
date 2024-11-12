@@ -5,7 +5,7 @@
 #include "Dominios/Senha.hpp"
 
 //! Entidade Conta
-/*
+/*!
     232002771 - implementação da entidade conta
 */
 
@@ -21,7 +21,7 @@ class Conta
 
         bool setCodigo(const Codigo&);
         Codigo getCodigo() const;
-        
+
         bool setSenha(const Senha&);
         Senha getSenha() const;
 

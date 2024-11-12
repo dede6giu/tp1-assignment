@@ -1,17 +1,17 @@
 #ifndef ATIVIDADE_HPP_INCLUDED
 #define ATIVIDADE_HPP_INCLUDED
 
-#include "../Dominios/Codigo.hpp"
-#include "../Dominios/Nome.hpp"
-#include "../Dominios/Data.hpp"
-#include "../Dominios/Horario.hpp"
-#include "../Dominios/Duracao.hpp"
-#include "../Dominios/Dinheiro.hpp"
-#include "../Dominios/Avaliacao.hpp"
+#include "Dominios/Codigo.hpp"
+#include "Dominios/Nome.hpp"
+#include "Dominios/Data.hpp"
+#include "Dominios/Horario.hpp"
+#include "Dominios/Duracao.hpp"
+#include "Dominios/Dinheiro.hpp"
+#include "Dominios/Avaliacao.hpp"
 
 //! entidade Atividade
 /*!
-    232029274 - implementação
+    232029274 - implementaÃ§Ã£o
 */
 
 class Atividade {
