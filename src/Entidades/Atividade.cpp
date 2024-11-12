@@ -1,12 +1,12 @@
 #include "Entidades/Atividade.hpp"
 
-#include "./Dominios/Codigo.hpp"
-#include "./Dominios/Nome.hpp"
-#include "./Dominios/Data.hpp"
-#include "./Dominios/Horario.hpp"
-#include "./Dominios/Duracao.hpp"
-#include "./Dominios/Dinheiro.hpp"
-#include "./Dominios/Avaliacao.hpp"
+#include "Dominios/Codigo.hpp"
+#include "Dominios/Nome.hpp"
+#include "Dominios/Data.hpp"
+#include "Dominios/Horario.hpp"
+#include "Dominios/Duracao.hpp"
+#include "Dominios/Dinheiro.hpp"
+#include "Dominios/Avaliacao.hpp"
 
 Atividade::Atividade()
 {
