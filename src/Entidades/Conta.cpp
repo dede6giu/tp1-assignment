@@ -1,13 +1,28 @@
 #include "Entidades/Conta.hpp"
 
-Conta::setCodigo(const Codigo &novoCodigo)
+#include "Dominios/Codigo.hpp"
+#include "Dominios/Senha.hpp"
+
+Conta::Conta()
 {
-    this -> codigo = novoCodigo
-    return true
+    codigo = Codigo();
+    senha = Senha();
 }
 
-Conta::setSenha(const Senha &novaSenha)
+Conta::Conta(const Codigo& cc, const Senha& ss)
 {
-    this -> Senha = novaSenha
-    return true
+    codigo = cc;
+    senha = ss;
+}
+
+bool Conta::setValor(const Codigo &novoCodigo)
+{
+    this -> codigo = novoCodigo;
+    return true;
+}
+
+bool Conta::setValor(const Senha &novaSenha)
+{
+    this -> senha = novaSenha;
+    return true;
 }
