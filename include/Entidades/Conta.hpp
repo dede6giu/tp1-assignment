@@ -17,12 +17,12 @@ class Conta
 
     public:
         Conta();
-        Conta(Codigo&, Senha&);
+        Conta(const Codigo&, const Senha&);
 
-        bool setCodigo(const Codigo&);
+        bool setValor(const Codigo&);
         Codigo getCodigo() const;
 
-        bool setSenha(const Senha&);
+        bool setValor(const Senha&);
         Senha getSenha() const;
 
 };
@@ -30,12 +30,12 @@ class Conta
 
 inline Codigo Conta::getCodigo() const
 {
-    return codigo;
+    return this->codigo;
 }
 
 inline Senha Conta::getSenha() const
 {
-    return senha;
+    return this->senha;
 }
 
 #endif // CONTA_HPP_INCLUDED
