@@ -1,11 +1,9 @@
 #ifndef VIAGEM_HPP_INCLUDED
 #define VIAGEM_HPP_INCLUDED
 
-#include "./Dominios/Avaliacao.hpp"
-#include "./Dominios/Codigo.hpp"
-#include "./Dominios/Nome.hpp"
-
-using namespace std;
+#include "Dominios/Avaliacao.hpp"
+#include "Dominios/Codigo.hpp"
+#include "Dominios/Nome.hpp"
 
 //! Entidade Viagem
 /*!
@@ -17,7 +15,10 @@ class Viagem {
         Avaliacao avaliacao;
         Codigo codigo;
         Nome nome;
+
     public:
+        Viagem();
+
         void setValor(const Avaliacao&);
         Avaliacao getAvaliacao() const;
 
