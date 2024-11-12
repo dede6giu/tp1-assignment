@@ -18,20 +18,22 @@ class Conta
     public:
         Conta();
         Conta(Codigo&, Senha&);
+
         bool setCodigo(const Codigo&);
         Codigo getCodigo() const;
+        
         bool setSenha(const Senha&);
         Senha getSenha() const;
 
 };
 
 
-inline int Conta::getValor() const
+inline Codigo Conta::getCodigo() const
 {
     return codigo;
 }
 
-inline int Senha::getValor() const
+inline Senha Conta::getSenha() const
 {
     return senha;
 }
