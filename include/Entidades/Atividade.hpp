@@ -35,13 +35,13 @@ public:
     void setValor(const Dinheiro &);
     void setValor(const Avaliacao &);
 
-    inline Codigo       getCodigo() const { return codigo; }
-    inline Nome           getNome() const { return nome; }
-    inline Data           getData() const { return data; }
-    inline Horario     getHorario() const { return horario; }
-    inline Duracao     getDuracao() const { return duracao; }
-    inline Dinheiro      getPreco() const { return preco; }
-    inline Avaliacao getAvaliacao() const { return avaliacao; }
+    inline Codigo       getCodigo() const { return this->codigo; }
+    inline Nome           getNome() const { return this->nome; }
+    inline Data           getData() const { return this->data; }
+    inline Horario     getHorario() const { return this->horario; }
+    inline Duracao     getDuracao() const { return this->duracao; }
+    inline Dinheiro      getPreco() const { return this->preco; }
+    inline Avaliacao getAvaliacao() const { return this->avaliacao; }
 };
 
 #endif // ATIVIDADE_HPP
