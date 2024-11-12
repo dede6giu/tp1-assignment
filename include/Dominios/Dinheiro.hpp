@@ -16,8 +16,8 @@ class Dinheiro
         bool validar(int);
 
     public:
-        int const MINIMO = 0;
-        int const MAXIMO = 20000000;
+        static int const MINIMO = 0;
+        static int const MAXIMO = 20000000;
 
         Dinheiro();
         Dinheiro(int);

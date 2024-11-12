@@ -1,12 +1,11 @@
 #ifndef CONTA_HPP_INCLUDED
 #define CONTA_HPP_INCLUDED
 
-
-#include "./Dominio/Codigo.hpp"
-#include "./Dominio/Senha.hpp"
+#include "Dominios/Codigo.hpp"
+#include "Dominios/Senha.hpp"
 
 //! Entidade Conta
-/*
+/*!
     232002771 - implementação da entidade conta
 */
 
@@ -18,23 +17,25 @@ class Conta
 
     public:
         Conta();
-        Conta(Codigo&, Senha&);
-        bool setCodigo(const Codigo&);
+        Conta(const Codigo&, const Senha&);
+
+        bool setValor(const Codigo&);
         Codigo getCodigo() const;
-        bool setSenha(const Senha&);
+
+        bool setValor(const Senha&);
         Senha getSenha() const;
 
 };
 
 
-inline int Conta::getValor() const
+inline Codigo Conta::getCodigo() const
 {
-    return codigo;
+    return this->codigo;
 }
 
-inline int Senha::getValor() const
+inline Senha Conta::getSenha() const
 {
-    return senha;
+    return this->senha;
 }
 
 #endif // CONTA_HPP_INCLUDED
