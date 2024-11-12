@@ -1,7 +1,16 @@
 #ifndef VIAGEM_HPP_INCLUDED
 #define VIAGEM_HPP_INCLUDED
 
+#include "./Dominios/Avaliacao.hpp"
+#include "./Dominios/Codigo.hpp"
+#include "./Dominios/Nome.hpp"
+
 using namespace std;
+
+//! Entidade Viagem
+/*!
+    232006028 - implementação
+*/
 
 class Viagem {
     private:
@@ -9,12 +18,26 @@ class Viagem {
         Codigo codigo;
         Nome nome;
     public:
-        void setAvaliaca(const Avaliacao&);
-        Codigo getAvaliacao() const;
-        void setCodigo(const Codigo&);
+        void setValor(const Avaliacao&);
+        Avaliacao getAvaliacao() const;
+
+        void setValor(const Codigo&);
         Codigo getCodigo() const;
-        void setNome(const Nome&);
-        Codigo getNome() const;
+
+        void setValor(const Nome&);
+        Nome getNome() const;
 };
+
+inline Avaliacao Viagem::getAvaliacao() const {
+    return this->avaliacao;
+}
+
+inline Codigo Viagem::getCodigo() const {
+    return this->codigo;
+}
+
+inline Nome Viagem::getNome() const {
+    return this->nome;
+}
 
 #endif // VIAGEM_HPP_INCLUDED
