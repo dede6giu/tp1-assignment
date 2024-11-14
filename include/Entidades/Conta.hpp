@@ -1,24 +1,73 @@
 #ifndef CONTA_HPP_INCLUDED
 #define CONTA_HPP_INCLUDED
 
+#include "Dominios/Codigo.hpp"
+#include "Dominios/Senha.hpp"
+
 //! Entidade Conta
-/*
+/*!
     232002771 - implementação da entidade conta
 */
 
 class Conta
 {
     private:
+        //! Objeto Codigo
+        /*! Objeto que armazena o codigo da conta. */
         Codigo codigo;
+
+        //! Objeto senha
+        /*! Objeto que armazena a senha da conta. */
         Senha senha;
 
     public:
-        Conta(Codigo codigo, Senha senha)
-        bool setCodigo(const Codigo&)
+        //! Construtor vazio
+        /*! Constrói um objeto Conta vazio. */
+        Conta();
+
+        //! Construtor paramétrico
+        /*!
+            Constrói um objeto Conta e pede 2 parâmetros: Codigo e Conta.
+            @param const Codigo a ser armazenado.
+            @param const Senha a ser armazenado.
+        */
+        Conta(const Codigo&, const Senha&);
+
+
+        //! bool Conta::setValor(const Codigo&)
+        /*!
+            Método que recebe um objeto Codigo e armazena-o como como atributo do objeto.
+            @param const Codigo& a ser armazenado.
+        */
+        bool setValor(const Codigo&);
+
+        //! Codigo Conta::getCodigo()
+        /*! Retorna o atributo Codigo armazenado no objeto. */
         Codigo getCodigo() const;
-        bool setSenha(const Senha&);
+
+
+        //! bool Conta::setValor(const Senha&)
+        /*!
+            Método que recebe um objeto Senha e armazena-o como como atributo do objeto.
+            @param const Senha&
+        */
+        bool setValor(const Senha&);
+
+        //! Senha Conta::getSenha()
+        /*! Retorna o atributo Senha armazenado no objeto. */
         Senha getSenha() const;
 
 };
+
+
+inline Codigo Conta::getCodigo() const
+{
+    return this->codigo;
+}
+
+inline Senha Conta::getSenha() const
+{
+    return this->senha;
+}
 
 #endif // CONTA_HPP_INCLUDED

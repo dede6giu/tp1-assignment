@@ -16,27 +16,85 @@
 class Destino
 {
     private:
+        //! Codigo (atributo)
+        /*! Atributo que armazena o objeto Codigo do Destino.*/
         Codigo codigo;
+
+        //! Nome (atributo)
+        /*! Atributo que armazena o objeto Nome do Destino. */
         Nome nome;
+
+        //! Data (atributo)
+        /*! Atributo que armazena o objeto Data de início do Destino */
         Data inicio;
+
+        //! Data (atributo)
+        /*! Atributo que armazena o objeto Data de fim do Destino. */
         Data fim;
+
+        //! Avaliacao (atributo)
+        /*! Atributo que armazena o objeto Avaliacao do Destino. */
         Avaliacao avaliacao;
+
+        //! bool Destino::validar()
+        /*! */
         bool validar(); //!< não ainda implementado
 
     public:
+        //! Construtor vazio
+        /*! Constrói um objeto Destino vazio. */
         Destino();
 
+
+        //! void Destino::setValor(const Codigo&)
+        /*!
+            Recebe um objeto Codigo e armazena-o como atributo do objeto.
+            @param const Codigo&
+        */
         void setValor(const Codigo&);
+
+        //! inline Codigo Destino::getValorCodigo()
+        /*! Retorna o objeto Codigo armazenado no objeto. */
         inline Codigo getValorCodigo() const;
 
+
+        //! void Destino::setValor(const Nome&)
+        /*!
+            Recebe um objeto Nome e armazena-o como atributo do objeto.
+            @param const Nome& a ser armazenado.
+        */
         void setValor(const Nome&);
+
+        //! inline Nome Destino::getValorNome()
+        /*! Retorna o objeto Nome armazenado no objeto. */
         inline Nome getValorNome() const;
 
+
+        //! void Destino::setValor(const Avaliacao&)
+        /*!
+            Recebe um objeto Avaliacao e armazena-o como atributo do objeto.
+        */
         void setValor(const Avaliacao&);
+
+        //! inline Avaliacao Destino::getValorAvaliacao()
+        /*! Retorna o objeto Avaliacao armazenado no objeto. */
         inline Avaliacao getValorAvaliacao() const;
 
+
+        //! void Destino::setValor(const Data&, bool)
+        /*!
+            Recebe um objeto Data e um bool e armazena-os como atributos do objeto.
+            @param const Data& a ser armazenado.
+            @param bool (se vale 0, é a data de início; se vale 1, é a data de fim).
+        */
         void setValor(const Data&, bool);
+
+        //! inline Data Destino::getValorInicio()
+        /*! Retorna o objeto Data de início armazenado no objeto. */
         inline Data getValorInicio() const;
+
+        //! inline Data Destino::getValorFim()
+        /*! Retorna o objeto Data de fim armazenado no objeto. */
         inline Data getValorFim() const;
 };
 
