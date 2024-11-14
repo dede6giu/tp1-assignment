@@ -9,6 +9,7 @@
     232002771 - implementa&ccdeil;&atilde;o\n
     232013031 - altera&ccedil;&otilde;es na implementa&ccdeil;&atilde;o
 */
+
 class Dinheiro
 {
     private:
