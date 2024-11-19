@@ -8,8 +8,8 @@
 
 /*!
     Entidade de Hospedagem
-    232001667 - All in guys!! Métodos de construtor e set e get de
-    todos os atrbutos além da mesma digníssima hospedagem
+    232001667 - Implementação da entidade Hospedagem
+    E adicao dos devidos atributos e métodos
 */
 class Hospedagem
 {
