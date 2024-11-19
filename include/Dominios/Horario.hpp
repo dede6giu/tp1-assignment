@@ -5,8 +5,9 @@
 
 //! Classe Horario
 /*!
-  Classe Horario, string de 5 caracteres composta por "HH:mm", impressa em formato de 24h. Internamente salva como dois inteiros, um para horas e outro para minutos.\n
-  232013031 - implementa&ccdeil;&atilde;o, construtores
+    Classe Horario, string de 5 caracteres composta por "HH:mm", impressa em formato de 24h. Internamente salva como dois inteiros, um para horas e outro para minutos.\n
+    232013031 - implementa&ccdeil;&atilde;o, construtores \n
+    232002520 - documentação
 */
 
 class Horario

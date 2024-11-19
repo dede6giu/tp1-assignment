@@ -6,7 +6,8 @@
 
 //! Entidade Conta
 /*!
-    232002771 - implementação da entidade conta
+    232002771 - implementação da entidade conta \n
+    232002520 - documentação
 */
 
 class Conta

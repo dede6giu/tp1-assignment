@@ -9,25 +9,68 @@
     tal que 01 <= DD <= 31, 01 <= MM <= 12 e 00 <= AA <= 99, seguindo as
     devidas quantidades de dias no m&ecirc;s.\n
 
-    232013031 - implementa&ccdeil;&atilde;o, construtores
+    232013031 - implementa&ccdeil;&atilde;o, construtores \n
+    232002520 - documentação
 */
 
 class Data
 {
     private:
+        //! Um int
+        /*! Atributo inteiro que armazena o dia. */
         int dia;
+        //! Um int
+        /*! Atributo inteiro que armazena o mês.*/
         int mes;
+        //! Um int
+        /*! Atributo inteiro que armazena o ano.*/
         int ano;
+        //! bool Data::validar(int, int, int)
+        /*!
+            Recebe três valores inteiros, verifica se são valores válidos para
+            dia (>0), mês (> 0 e <= 12) e ano (>=0 e >= 99), respectivamente, e
+            retorna um bool indicando o resultado da operação.
+            @param int dia
+            @param int mes
+            @param int ano
+            @return bool indicando sucesso ou fracasso.
+        */
         bool validar(int, int, int);
 
     public:
+        //! Construtor vazio
+        /*! Cria um objeto Data vazio. */
         Data();
+        //! Construtor paramétrico
+        /*!
+            Constrói um objeto Data que recebe três ints com o dia, mês e ano, respectivamente.
+            @param int dia
+            @param int mes
+            @param int ano
+        */
         Data(int, int, int);
 
+        //! int Data::getDia() const
+        /*! Retorna um int com o valor do dia. */
         int getDia() const;
+        //! int Data::getMes() const
+        /*! Retorna um int com o valor do mês. */
         int getMes() const;
+        //! int Data::getAno() const
+        /*! Retorna um int com o valor do ano.*/
         int getAno() const;
+        //! bool Data::setValor(int, int, int)
+        /*!
+            Recebe três valores inteiros para o dia, o mês e o ano, respectivamente,
+            e guarda esses valores na classe, se a verificação tiver sucesso.
+            @param int dia
+            @param int mes
+            @param int ano
+            @return bool indicando se a operação teve sucesso
+        */
         bool setValor(int, int, int);
+        //! std::string Data::getValor() const
+        /*! Retorna um std::string com a data formatada. */
         std::string getValor() const;
 };
 

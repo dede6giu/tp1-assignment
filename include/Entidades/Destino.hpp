@@ -10,7 +10,8 @@
 //! Entidade Destino
 /*!
     Entidade Destino \n
-    232013031 - implementação
+    232013031 - implementação \n
+    232002520 - documentação
 */
 
 class Destino
