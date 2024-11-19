@@ -9,6 +9,7 @@
     232002771 - implementa&ccdeil;&atilde;o\n
     232013031 - altera&ccedil;&otilde;es na implementa&ccdeil;&atilde;o
 */
+
 class Dinheiro
 {
     private:
@@ -16,8 +17,8 @@ class Dinheiro
         bool validar(int);
 
     public:
-        int const MINIMO = 0;
-        int const MAXIMO = 20000000;
+        static int const MINIMO = 0;
+        static int const MAXIMO = 20000000;
 
         Dinheiro();
         Dinheiro(int);
