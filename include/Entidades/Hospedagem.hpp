@@ -8,8 +8,13 @@
 
 /*!
     Entidade de Hospedagem
+<<<<<<< Updated upstream
     232001667 - Implementação da entidade Hospedagem
     E adicao dos devidos atributos e métodos
+=======
+    232001667 - All in guys!! Métodos de construtor e set e get de
+    todos os atrbutos além da mesma digníssima hospedagem
+>>>>>>> Stashed changes
 */
 class Hospedagem
 {
