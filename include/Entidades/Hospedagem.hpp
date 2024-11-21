@@ -8,9 +8,9 @@
 
 /*!
     Entidade de Hospedagem
-    232001667 - Implementação da entidade Hospedagem
-    E adicao dos devidos atributos e métodos
+    232001667 - implementação
 */
+
 class Hospedagem
 {
 private:
