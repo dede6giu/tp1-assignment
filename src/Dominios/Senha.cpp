@@ -10,7 +10,7 @@ Senha::Senha()
 
 Senha::Senha(std::string valor)
 {
-    Senha::validar(valor)
+    Senha::validar(valor);
     senha = valor;
 }
 
