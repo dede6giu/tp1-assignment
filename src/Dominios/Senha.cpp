@@ -10,46 +10,38 @@ Senha::Senha()
 
 Senha::Senha(std::string valor)
 {
-    if (!Senha::validar(valor))
-    {
-        return;
-    }
+    Senha::validar(valor)
     senha = valor;
 }
 
-bool Senha::validar(std::string valor){
+void Senha::validar(std::string valor){
     if(valor.size() != 5){
-        return false;
+        throw invalid_argument("Argumento invalido.");
     }
     for (char c: valor){
         if(!isdigit(c)){
-            return false;
+            throw invalid_argument("Argumento invalido.");
         }
     }
 
     std::set<char> numeros(valor.begin(), valor.end());
 
     if(numeros.size() != valor.size()){
-        return false;
+        throw invalid_argument("Argumento invalido.");
     }
 
     if(std::is_sorted(valor.begin(), valor.end())){
-        return false;
+        throw invalid_argument("Argumento invalido.");
     }
 
     reverse(valor.begin(), valor.end());
 
     if (std::is_sorted(valor.begin(), valor.end())){
-        return false;
+        throw invalid_argument("Argumento invalido.");
     }
-
-    return true;
 }
 
-bool Senha::setValor(std::string valor) {
-    if(!validar(valor)){
-        return false;
-    }
+void Senha::setValor(std::string valor) {
+    validar(valor)
     this->senha = valor;
-    return true;
 }
