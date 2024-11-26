@@ -43,7 +43,10 @@ class Conta
         bool setValor(const Codigo&);
 
         //! Codigo Conta::getCodigo()
-        /*! Retorna o atributo Codigo armazenado no objeto. */
+        /*!
+            Retorna o atributo Codigo armazenado no objeto.
+            @return objeto Codigo.
+        */
         Codigo getCodigo() const;
 
 
@@ -55,7 +58,10 @@ class Conta
         bool setValor(const Senha&);
 
         //! Senha Conta::getSenha()
-        /*! Retorna o atributo Senha armazenado no objeto. */
+        /*!
+            Retorna o atributo Senha armazenado no objeto.
+            @return objeto Senha.
+        */
         Senha getSenha() const;
 
 };

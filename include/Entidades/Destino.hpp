@@ -10,8 +10,8 @@
 //! Entidade Destino
 /*!
     Entidade Destino \n
-    232013031 - implementação \n
-    232002520 - documentação
+    232013031 - implementaï¿½ï¿½o \n
+    232002520 - documentaï¿½ï¿½o
 */
 
 class Destino
@@ -26,7 +26,7 @@ class Destino
         Nome nome;
 
         //! Data (atributo)
-        /*! Atributo que armazena o objeto Data de início do Destino */
+        /*! Atributo que armazena o objeto Data de inï¿½cio do Destino */
         Data inicio;
 
         //! Data (atributo)
@@ -39,11 +39,11 @@ class Destino
 
         //! bool Destino::validar()
         /*! */
-        bool validar(); //!< não ainda implementado
+        bool validar(); //!< nï¿½o ainda implementado
 
     public:
         //! Construtor vazio
-        /*! Constrói um objeto Destino vazio. */
+        /*! Constrï¿½i um objeto Destino vazio. */
         Destino();
 
 
@@ -55,7 +55,10 @@ class Destino
         void setValor(const Codigo&);
 
         //! inline Codigo Destino::getValorCodigo()
-        /*! Retorna o objeto Codigo armazenado no objeto. */
+        /*!
+            Retorna o objeto Codigo armazenado no objeto.
+            @return objeto Codigo.
+        */
         inline Codigo getValorCodigo() const;
 
 
@@ -67,18 +70,25 @@ class Destino
         void setValor(const Nome&);
 
         //! inline Nome Destino::getValorNome()
-        /*! Retorna o objeto Nome armazenado no objeto. */
+        /*!
+            Retorna o objeto Nome armazenado no objeto.
+            @return objeto Nome.
+        */
         inline Nome getValorNome() const;
 
 
         //! void Destino::setValor(const Avaliacao&)
         /*!
             Recebe um objeto Avaliacao e armazena-o como atributo do objeto.
+            @param const Avaliacao.
         */
         void setValor(const Avaliacao&);
 
         //! inline Avaliacao Destino::getValorAvaliacao()
-        /*! Retorna o objeto Avaliacao armazenado no objeto. */
+        /*!
+            Retorna o objeto Avaliacao armazenado no objeto.
+            @return objeto Avaliacao.
+        */
         inline Avaliacao getValorAvaliacao() const;
 
 
@@ -86,16 +96,22 @@ class Destino
         /*!
             Recebe um objeto Data e um bool e armazena-os como atributos do objeto.
             @param const Data& a ser armazenado.
-            @param bool (se vale 0, é a data de início; se vale 1, é a data de fim).
+            @param bool (se vale 0, ï¿½ a data de inï¿½cio; se vale 1, ï¿½ a data de fim).
         */
         void setValor(const Data&, bool);
 
         //! inline Data Destino::getValorInicio()
-        /*! Retorna o objeto Data de início armazenado no objeto. */
+        /*!
+            Retorna o objeto Data de inï¿½cio armazenado no objeto.
+            @return objeto Data.
+        */
         inline Data getValorInicio() const;
 
         //! inline Data Destino::getValorFim()
-        /*! Retorna o objeto Data de fim armazenado no objeto. */
+        /*!
+            Retorna o objeto Data de fim armazenado no objeto.
+            @return objeto Data.
+        */
         inline Data getValorFim() const;
 };
 

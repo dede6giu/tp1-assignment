@@ -39,7 +39,7 @@ class Dinheiro
         //! Construtor paramétrico
         /*!
             Constrói um objeto Dinheiro e recebe um int com o valor de dinheiro.
-            @param int dinheiro
+            @param int dinheiro.
         */
         Dinheiro(int);
 
@@ -51,10 +51,16 @@ class Dinheiro
         */
         bool setValor(int);
         //! int Dinheiro::getValor(int)
-        /*! Retorna um int com o valor do dinheiro armazenado. */
+        /*!
+            Retorna um int com o valor do dinheiro armazenado.
+            @return dinheiro.
+        */
         int getValor() const;
         //! std::string Dinheiro::getValorFormatado() const
-        /*! Retorna uma string do dinheiro formatado. */
+        /*!
+            Retorna uma string do dinheiro formatado.
+            @return string formatada.
+        */
         std::string getValorFormatado() const;
 };
 
