@@ -15,11 +15,11 @@ class Senha
 {
     private:
         std::string senha;
-        bool validar(std::string);
+        void validar(std::string);
     public:
         Senha();
         Senha(std::string);
-        bool setValor(std::string);
+        void setValor(std::string);
         std::string getValor() const;
 };
 
