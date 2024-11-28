@@ -18,7 +18,7 @@ class Data
         int dia;
         int mes;
         int ano;
-        bool validar(int, int, int);
+        void validar(int, int, int);
 
     public:
         Data();
@@ -27,7 +27,7 @@ class Data
         int getDia() const;
         int getMes() const;
         int getAno() const;
-        bool setValor(int, int, int);
+        void setValor(int, int, int);
         std::string getValor() const;
 };
 

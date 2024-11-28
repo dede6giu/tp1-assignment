@@ -1,5 +1,6 @@
 #include "Dominios/Data.hpp"
 #include <string>
+#include <stdexcept>
 
 Data::Data()
 {
@@ -10,29 +11,23 @@ Data::Data()
 
 Data::Data(int dd, int mm, int aa)
 {
-    if (!Data::validar(dd, mm, aa))
-    {
-        return;
-    }
-    dia = dd;
-    mes = mm;
-    ano = aa;
+    Data::setValor(dd, mm, aa);
 }
 
 
-bool Data::validar(int dia, int mes, int ano)
+void Data::validar(int dia, int mes, int ano)
 {
     if (ano < 0 or ano > 99)
     {
-        return false;
+        throw std::invalid_argument("Ano deve estar entre 00 e 99 inclusivo");
     }
     if (mes <= 0 or mes > 12)
     {
-        return false;
+        throw std::invalid_argument("Mes deve estar entre 01 e 12 inclusivo");
     }
     if (dia <= 0)
     {
-        return false;
+        throw std::invalid_argument("Dia deve ser maior que 0");
     }
     switch (mes)
     {
@@ -46,7 +41,7 @@ bool Data::validar(int dia, int mes, int ano)
         case 12:
             if (dia > 31)
             {
-                return false;
+                throw std::invalid_argument("Dia maior que 31 em mes de 31 dias");
             }
             break;
 
@@ -57,7 +52,7 @@ bool Data::validar(int dia, int mes, int ano)
         case 11:
             if (dia > 30)
             {
-                return false;
+                throw std::invalid_argument("Dia maior que 30 em mes de 30 dias");
             }
             break;
 
@@ -67,33 +62,28 @@ bool Data::validar(int dia, int mes, int ano)
             if ((ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0) // ano bissexto
             {
                 if (dia > 29) {
-                    return false;
+                    throw std::invalid_argument("Dia maior que 29 em fevereiro bissexto");
                 }
             }
             else
             {
                 if (dia > 28) {
-                    return false;
+                    throw std::invalid_argument("Dia maior que 28 em fevereiro nao-bissexto");
                 }
             }
             break;
 
         default:
-            return false;
+            throw std::invalid_argument("Valor do mes incorreto");
     }
-    return true;
 }
 
-bool Data::setValor(int dia, int mes, int ano)
+void Data::setValor(int dia, int mes, int ano)
 {
-    if (!Data::validar(dia, mes, ano))
-    {
-        return false;
-    }
+    Data::validar(dia, mes, ano);
     this->dia = dia;
     this->mes = mes;
     this->ano = ano;
-    return true;
 }
 
 std::string Data::getValor() const
@@ -108,5 +98,4 @@ std::string Data::getValor() const
     if (this->ano < 10) resultado += "0";
     resultado += std::to_string(this->ano);
     return resultado;
-
 }
