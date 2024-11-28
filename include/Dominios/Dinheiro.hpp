@@ -6,7 +6,7 @@
 //! Classe Dinheiro
 /*!
     Classe Dinheiro, int de 0 a 20000000, implementado como centavos\n
-    232002771 - implementa&ccdeil;&atilde;o\n
+    232002771 - implementa&ccdeil;&atilde;o, exceções\n
     232013031 - altera&ccedil;&otilde;es na implementa&ccdeil;&atilde;o
 */
 

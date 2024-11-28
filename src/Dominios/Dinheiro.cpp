@@ -24,7 +24,7 @@ void Dinheiro::validar(int valor)
 {
     if (!(MINIMO <= valor && valor <= MAXIMO))
     {
-        throw std::invalid_argument("O Dinheiro deve ser um real entre 0,00 e 200.000,00");
+        throw std::invalid_argument("O Dinheiro deve ser um inteiro entre 0 e 20000000 inclusivo");
     }
 }
 
