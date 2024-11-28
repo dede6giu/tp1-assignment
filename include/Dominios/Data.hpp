@@ -9,7 +9,7 @@
     tal que 01 <= DD <= 31, 01 <= MM <= 12 e 00 <= AA <= 99, seguindo as
     devidas quantidades de dias no m&ecirc;s.\n
 
-    232013031 - implementa&ccdeil;&atilde;o, construtores
+    232013031 - implementa&ccdeil;&atilde;o, construtores, exceções
 */
 
 class Data
@@ -18,7 +18,7 @@ class Data
         int dia;
         int mes;
         int ano;
-        bool validar(int, int, int);
+        void validar(int, int, int);
 
     public:
         Data();
@@ -27,7 +27,7 @@ class Data
         int getDia() const;
         int getMes() const;
         int getAno() const;
-        bool setValor(int, int, int);
+        void setValor(int, int, int);
         std::string getValor() const;
 };
 

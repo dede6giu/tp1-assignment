@@ -1,4 +1,5 @@
 #include "Dominios/Avaliacao.hpp"
+#include <stdexcept>
 
 Avaliacao::Avaliacao()
 {
@@ -7,28 +8,19 @@ Avaliacao::Avaliacao()
 
 Avaliacao::Avaliacao(int valor)
 {
-    if(!Avaliacao::validar(valor))
-    {
-        return;
-    }
-    this->avaliacao = valor;
+    Avaliacao::setValor(valor);
 }
 
-bool Avaliacao::validar(int valor)
+void Avaliacao::validar(int valor)
 {
     if (valor < 0 or valor > 5)
     {
-        return false;
+        throw std::invalid_argument("Valor deve ser um inteiro entre 0 e 5 inclusivo");
     }
-    return true;
 }
 
-bool Avaliacao::setValor(int valor)
+void Avaliacao::setValor(int valor)
 {
-    if(!Avaliacao::validar(valor))
-    {
-        return false;
-    }
+    Avaliacao::validar(valor);
     this->avaliacao = valor;
-    return true;
 }

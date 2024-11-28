@@ -6,7 +6,8 @@
 //! Classe Nome
 /*!
   Classe Nome, string de m&aacute;ximo 30 caracteres.\n
-  232013031 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, construtores
+  232013031 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, construtores\n
+  232002771 - exceções
 */
 
 class Nome
@@ -21,7 +22,7 @@ class Nome
           Verifica se o valor do nome est&aacute; dentro do limite de caracteres.
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
         */
-        bool validar(std::string);
+        void validar(std::string);
 
     public:
         Nome();
@@ -41,7 +42,7 @@ class Nome
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
           @sa getValor(), Nome::validar()
         */
-        bool setValor(std::string);
+        void setValor(std::string);
 
         //! Nome::getValor()
         /*!

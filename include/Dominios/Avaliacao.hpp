@@ -6,7 +6,7 @@
     Classe Avaliacao, inteiro v&aacute;lido entre 0 e 5 inclusivo \n
     232029274 - implementa&ccedil;&atilde;o. \n
     232002771 - documenta&ccedil;&atilde;o. \n
-    232013031 - construtores.
+    232013031 - construtores, exceões
 */
 
 class Avaliacao
@@ -21,7 +21,7 @@ class Avaliacao
           Verifica se o valor da avalia&ccedil;&atilde;o est&aacute; no intervalo de 0 a 5.
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
         */
-        bool validar(int);
+        void validar(int);
 
     public:
         Avaliacao();
@@ -34,7 +34,7 @@ class Avaliacao
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
           @sa getValor(), Avaliacao::validar()
         */
-        bool setValor(int);
+        void setValor(int);
 
         //! Avalicao::getValor()
         /*!

@@ -6,14 +6,15 @@
 //! Classe Codigo
 /*!
   Classe Codigo, string de 6 caracteres alfanum&eacute;ricos\n
-  232013031 - implementa&ccdeil;&atilde;o, construtores
+  232013031 - implementa&ccdeil;&atilde;o, construtores \n
+  232002771 - exceções
 */
 
 class Codigo
 {
     private:
         std::string codigo = "";
-        bool validar(std::string);
+        void validar(std::string);
 
     public:
         static int const CODELENGTH = 6;
@@ -21,7 +22,7 @@ class Codigo
         Codigo();
         Codigo(std::string);
 
-        bool setValor(std::string);
+        void setValor(std::string);
         std::string getValor() const;
 };
 
