@@ -9,7 +9,7 @@
     tal que 01 <= DD <= 31, 01 <= MM <= 12 e 00 <= AA <= 99, seguindo as
     devidas quantidades de dias no m&ecirc;s.\n
 
-    232013031 - implementa&ccdeil;&atilde;o, construtores
+    232013031 - implementa&ccdeil;&atilde;o, construtores, exceções
 */
 
 class Data

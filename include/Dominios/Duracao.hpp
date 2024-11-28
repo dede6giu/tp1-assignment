@@ -4,7 +4,7 @@
 //! Classe Duracao
 /*!
     Classe Duracao, inteiro entre 0 e 360 \n
-    232002771 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o. \n
+    232002771 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, exceções \n
     232013031 - construtores
 */
 

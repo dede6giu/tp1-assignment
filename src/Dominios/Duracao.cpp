@@ -8,8 +8,7 @@ Duracao::Duracao()
 
 Duracao::Duracao(int valor)
 {
-    validar(valor);
-    duracao = valor;
+    Duracao::setValor(valor);
 }
 
 void Duracao::setValor(int valor)
@@ -22,6 +21,6 @@ void Duracao::validar(int valor)
 {
     if (!(0 <= valor && valor <= MAXIMO))
     {
-        throw std::invalid_argument("A Duracao deve ser um inteiro entre 0 e 360");
+        throw std::invalid_argument("A Duracao deve ser um inteiro entre 0 e 360 inclusivo");
     }
 }
