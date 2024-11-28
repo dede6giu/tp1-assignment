@@ -1,4 +1,5 @@
 #include "Dominios/Duracao.hpp"
+#include <stdexcept>
 
 Duracao::Duracao()
 {
@@ -7,28 +8,20 @@ Duracao::Duracao()
 
 Duracao::Duracao(int valor)
 {
-    if (!Duracao::validar(valor))
-    {
-        return;
-    }
+    validar(valor);
     duracao = valor;
 }
 
-bool Duracao::setValor(int valor)
+void Duracao::setValor(int valor)
 {
-    if (!Duracao::validar(valor))
-    {
-        return false;
-    }
+    validar(valor);
     this->duracao = valor;
-    return true;
 }
 
-bool Duracao::validar(int valor)
+void Duracao::validar(int valor)
 {
-    if (0 <= valor && valor <= MAXIMO)
+    if (!(0 <= valor && valor <= MAXIMO))
     {
-        return true;
+        throw std::invalid_argument("A Duracao deve ser um inteiro entre 0 e 360");
     }
-    return false;
 }

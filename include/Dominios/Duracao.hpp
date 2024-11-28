@@ -20,7 +20,7 @@ class Duracao
           Verifica se o valor da dura&ccedil;&atilde;o est&aacute; no intervalo de 0 a 360.
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
         */
-        bool validar(int);
+        void validar(int);
 
     public:
         Duracao();
@@ -40,7 +40,7 @@ class Duracao
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
           @sa getValor(), Duracao::validar()
         */
-        bool setValor(int);
+        void setValor(int);
 
         //! Duracao::getValor()
         /*!
