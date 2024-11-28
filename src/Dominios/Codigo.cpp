@@ -7,8 +7,7 @@ Codigo::Codigo() {
 }
 
 Codigo::Codigo(std::string valor){
-    validar(valor);
-    this->codigo = valor;
+    setValor(valor);
 }
 
 void Codigo::setValor(std::string valor)
@@ -27,7 +26,7 @@ void Codigo::validar(std::string valor)
     {
         if (!isalnum(valor[i]))
         {
-            throw std::invalid_argument("Codigo deve ser composta apenas por letras e digitos");
+            throw std::invalid_argument("Codigo deve ser composto apenas por letras e digitos");
         }
     }
 }
