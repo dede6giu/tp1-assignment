@@ -21,7 +21,7 @@ class Nome
           Verifica se o valor do nome est&aacute; dentro do limite de caracteres.
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
         */
-        bool validar(std::string);
+        void validar(std::string);
 
     public:
         Nome();
@@ -41,7 +41,7 @@ class Nome
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
           @sa getValor(), Nome::validar()
         */
-        bool setValor(std::string);
+        void setValor(std::string);
 
         //! Nome::getValor()
         /*!

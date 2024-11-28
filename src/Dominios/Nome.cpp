@@ -1,5 +1,6 @@
 #include "Dominios/Nome.hpp"
 #include <string>
+#include <stdexcept>
 
 Nome::Nome()
 {
@@ -8,29 +9,21 @@ Nome::Nome()
 
 Nome::Nome(std::string valor)
 {
-    if (!Nome::validar(valor))
-    {
-        return;
-    }
-    nome = valor;
-}
-
-bool Nome::setValor(std::string valor)
-{
-    if (!Nome::validar(valor))
-    {
-        return false;
-    }
+    validar(valor);
     this->nome = valor;
-    return true;
 }
 
-bool Nome::validar(std::string valor)
+void Nome::setValor(std::string valor)
+{
+    validar(valor);
+    this->nome = valor;
+}
+
+void Nome::validar(std::string valor)
 {
     int len = valor.length();
     if (len > this->MAXLENGTH or len <= 0)
     {
-        return false;
+        throw std::invalid_argument("Tamanho do Nome deve conter no minimo 1 caracter e no maximo 30 caracteres");
     }
-    return true;
 }
