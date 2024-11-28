@@ -9,8 +9,7 @@ Nome::Nome()
 
 Nome::Nome(std::string valor)
 {
-    validar(valor);
-    this->nome = valor;
+    Nome::setValor(valor);
 }
 
 void Nome::setValor(std::string valor)
@@ -24,6 +23,6 @@ void Nome::validar(std::string valor)
     int len = valor.length();
     if (len > this->MAXLENGTH or len <= 0)
     {
-        throw std::invalid_argument("Tamanho do Nome deve conter no minimo 1 caracter e no maximo 30 caracteres");
+        throw std::length_error("Tamanho de Nome deve ser entre 1 a 30 inclusivo");
     }
 }

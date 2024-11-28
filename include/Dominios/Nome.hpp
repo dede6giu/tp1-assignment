@@ -6,7 +6,8 @@
 //! Classe Nome
 /*!
   Classe Nome, string de m&aacute;ximo 30 caracteres.\n
-  232013031 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, construtores
+  232013031 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, construtores\n
+  232002771 - exceções
 */
 
 class Nome
