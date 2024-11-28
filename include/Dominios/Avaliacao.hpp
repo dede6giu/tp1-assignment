@@ -21,7 +21,7 @@ class Avaliacao
           Verifica se o valor da avalia&ccedil;&atilde;o est&aacute; no intervalo de 0 a 5.
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
         */
-        bool validar(int);
+        void validar(int);
 
     public:
         Avaliacao();
@@ -34,7 +34,7 @@ class Avaliacao
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
           @sa getValor(), Avaliacao::validar()
         */
-        bool setValor(int);
+        void setValor(int);
 
         //! Avalicao::getValor()
         /*!
