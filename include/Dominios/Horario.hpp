@@ -14,16 +14,16 @@ class Horario
     private:
         int horas;
         int minutos;
-        bool validarHoras(int);
-        bool validarMinutos(int);
+        void validarHoras(int);
+        void validarMinutos(int);
 
     public:
         Horario();
         Horario(int, int);
 
-        bool setValor(int, int);
-        bool setValorHoras(int);
-        bool setValorMinutos(int);
+        void setValor(int, int);
+        void setValorHoras(int);
+        void setValorMinutos(int);
         std::string getValor() const;
         int getValorHoras() const;
         int getValorMinutos() const;

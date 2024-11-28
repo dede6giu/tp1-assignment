@@ -1,5 +1,6 @@
 #include "Dominios/Horario.hpp"
 #include <string>
+#include <stdexcept>
 
 Horario::Horario()
 {
@@ -9,75 +10,43 @@ Horario::Horario()
 
 Horario::Horario(int hh, int mm)
 {
-    if (!Horario::validarHoras(hh))
-    {
-        return;
-    }
-    if (!Horario::validarHoras(mm))
-    {
-        return;
-    }
-    horas = hh;
-    minutos = mm;
+    Horario::setValor(hh, mm);
 }
 
-bool Horario::validarHoras(int valor)
+void Horario::validarHoras(int valor)
 {
     if (valor < 0 or valor >= 24)
     {
-        return false;
+        throw std::invalid_argument("Horas deve estar entre 00 e 23 inclusivo");
     }
-    return true;
 }
 
-bool Horario::validarMinutos(int valor)
+void Horario::validarMinutos(int valor)
 {
     if (valor < 0 or valor >= 60)
     {
-        return false;
+        throw std::invalid_argument("Minutos deve estar entre 00 e 59 inclusivo");
     }
-    return true;
 }
 
-bool Horario::setValorHoras(int valor)
+void Horario::setValorHoras(int valor)
 {
-    if (!Horario::validarHoras(valor))
-    {
-        return false;
-    }
+    Horario::validarHoras(valor);
     this->horas = valor;
-    return true;
 }
 
-bool Horario::setValorMinutos(int valor)
+void Horario::setValorMinutos(int valor)
 {
-    if (!Horario::validarMinutos(valor))
-    {
-        return false;
-    }
+    Horario::validarMinutos(valor);
     this->minutos = valor;
-    return true;
 }
 
-bool Horario::setValor(int horas, int minutos)
+void Horario::setValor(int horas, int minutos)
 {
-    if (Horario::validarHoras(horas))
-    {
-        if (Horario::validarMinutos(minutos))
-        {
-            this->horas = horas;
-            this->minutos = minutos;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    else
-    {
-        return false;
-    }
+    Horario::validarHoras(horas);
+    Horario::validarMinutos(minutos);
+    this->horas = horas;
+    this->minutos = minutos;
 }
 
 std::string Horario::getValor() const
