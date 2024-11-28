@@ -13,7 +13,7 @@ class Codigo
 {
     private:
         std::string codigo = "";
-        bool validar(std::string);
+        void validar(std::string);
 
     public:
         static int const CODELENGTH = 6;
@@ -21,7 +21,7 @@ class Codigo
         Codigo();
         Codigo(std::string);
 
-        bool setValor(std::string);
+        void setValor(std::string);
         std::string getValor() const;
 };
 
