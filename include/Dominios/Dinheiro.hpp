@@ -14,7 +14,7 @@ class Dinheiro
 {
     private:
         int dinheiro;
-        bool validar(int);
+        void validar(int);
 
     public:
         static int const MINIMO = 0;
@@ -23,7 +23,7 @@ class Dinheiro
         Dinheiro();
         Dinheiro(int);
 
-        bool setValor(int);
+        void setValor(int);
         int getValor() const;
         std::string getValorFormatado() const;
 };
