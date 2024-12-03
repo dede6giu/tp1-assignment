@@ -1,32 +1,34 @@
 #ifndef TUNOME_HPP_INCLUDED
 #define TUNOME_HPP_INCLUDED
 
-//! Teste de unidade Nome
+#include <stdexcept>
+#include <vector>
+#include <string>
+#include "Dominios/Nome.hpp"
+
+//! TUNome
 /*!
-232001667 - implementação de Testes de unidade do domínio Nome
+    232001667 - implementação \n
+    232013031 - implementação
 */
 
-#include <stdexcept>
-#include "Nome.hpp"
-
-using namespace std;
-
 class TUNome {
-private:
-const static string VALOR_VALIDO = "PERSONADISTURBINGTHEPEACE"; // Definição de constante para evitar número mágico.
-const static string VALOR_INVALIDO = "bruhbruhbruhbruhbruhbruhbruhbruh"; // Definição de constante para evitar número mágico.
-Nome *nome; // Referência para unidade em teste.
-int estado; // Estado do teste.
-void setUp(); // Método para criar unidade em teste.
-void tearDown(); // Método para destruir unidade em teste.
-void testarCenarioValorValido(); // Cenário de teste com valor válido.
-void testarCenarioValorInvalido(); // Cenário de teste com valor inválido.
+    private:
+        const std::vector<std::string> VALIDO = {"disturbing the peace", "123456789012345678901234567890", "@r-8&jk ~ a ]"};
+        const std::vector<std::string> INVALIDO = {"", "1234567890123456789012345678901"};
+        Nome *dominio;
+        int estado;
+        void setUp();
+        void tearDown();
+        void testarValido();
+        void testeUniVal(std::string);
+        void testarInvalido();
+        void testeUniInv(std::string);
 
-public:
-const static int SUCESSO = 0; // Definição de constante para reportar resultado.
-const static int FALHA = -1; // Definição de constante para reportar resultado.
-int run(); // Método para executar teste.
+    public:
+        const static int SUCESSO = 0;
+        const static int FALHA = -1;
+        int run();
 };
-
 
 #endif // TUNOME_HPP_INCLUDED

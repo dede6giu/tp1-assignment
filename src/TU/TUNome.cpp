@@ -1,40 +1,62 @@
-#include "TUNome.hpp"
+#include "TU/TUNome.hpp"
 
-void TUNome::setUp(){
-nome = new Nome();
-estado = SUCESSO;
+void TUNome::setUp()
+{
+    dominio = new Nome();
+    estado = SUCESSO;
 }
 
 void TUNome::tearDown(){
-delete nome;
+    delete dominio;
 }
 
-void TUNome::testarCenarioValorValido(){
-try{
-dominio->setValor(VALOR_VALIDO);
-if (dominio->getValor() != VALOR_VALIDO)
-estado = FALHA;
-}
-catch(invalid_argument &excecao){
-estado = FALHA;
-}
+void TUNome::testeUniVal(std::string valor)
+{
+    dominio->setValor(valor);
+    if (dominio->getValor() != valor) estado = FALHA;
 }
 
-void TUNome::testarCenarioValorInvalido(){
-try{
-dominio->setValor(VALOR_INVALIDO);
-estado = FALHA;
-}
-catch(invalid_argument &excecao){
-if (dominio->getValor() == VALOR_INVALIDO)
-estado = FALHA;
-}
+void TUNome::testarValido()
+{
+    try
+    {
+        for (int i = 0; i < VALIDO.size(); i++)
+        {
+            testeUniVal(VALIDO[i]);
+        }
+    }
+    catch(std::length_error &excecao)
+    {
+        estado = FALHA;
+    }
 }
 
-int TUNome::run(){
-setUp();
-testarCenarioValorValido();
-testarCenarioValorInvalido();
-tearDown();
-return estado;
+void TUNome::testeUniInv(std::string valor)
+{
+    try
+    {
+        dominio->setValor(valor);
+        estado = FALHA;
+    }
+    catch(std::length_error &excecao){
+        if (dominio->getValor() == valor)
+        estado = FALHA;
+    }
+}
+
+void TUNome::testarInvalido()
+{
+    for (int i = 0; i < INVALIDO.size(); i++)
+    {
+        testeUniInv(INVALIDO[i]);
+    }
+}
+
+int TUNome::run()
+{
+    setUp();
+    testarValido();
+    testarInvalido();
+    tearDown();
+    return estado;
 }
