@@ -3,30 +3,28 @@
 
 //! Testes de unidade Avaliacao
 /*!
-232001667 - implementação de Testes de unidade do domínio Avaliacao
+    232001667 - implementaÃ§Ã£o
 */
 
 #include <stdexcept>
-#include "Avaliacao.hpp"
+#include "Dominios/Avaliacao.hpp"
 
 using namespace std;
 
 class TUAvaliacao {
-private:
-const static int VALOR_VALIDO = "2"; // Definição de constante para evitar número mágico.
-const static int VALOR_INVALIDO = "-69"; // Definição de constante para evitar número mágico.
-Avaliacao *avaliacao; // Referência para unidade em teste.
-int estado; // Estado do teste.
-void setUp(); // Método para criar unidade em teste.
-void tearDown(); // Método para destruir unidade em teste.
-void testarCenarioValorValido(); // Cenário de teste com valor válido.
-void testarCenarioValorInvalido(); // Cenário de teste com valor inválido.
-
-public:
-const static int SUCESSO = 0; // Definição de constante para reportar resultado.
-const static int FALHA = -1; // Definição de constante para reportar resultado.
-int run(); // Método para executar teste.
+    private:
+        const static int VALOR_VALIDO = "2";
+        const static int VALOR_INVALIDO = "-69";
+        Avaliacao *avaliacao; 
+        int estado; 
+        void setUp(); 
+        void tearDown(); 
+        void testarCenarioValorValido(); 
+        void testarCenarioValorInvalido(); 
+    public:
+        const static int SUCESSO = 0; 
+        const static int FALHA = -1; 
+        int run(); 
 };
-
 
 #endif // TUAVALIACAO_HPP_INCLUDED
