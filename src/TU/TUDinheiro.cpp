@@ -1,40 +1,62 @@
-#include "TUDinheiro.hpp"
+#include "TU/TUDinheiro.hpp"
 
-void TUDinheiro::setUp(){
-dinheiro = new Dinheiro();
-estado = SUCESSO;
+void TUDinheiro::setUp()
+{
+    dominio = new Dinheiro();
+    estado = SUCESSO;
 }
 
 void TUDinheiro::tearDown(){
-delete dinheiro;
+    delete dominio;
 }
 
-void TUDinheiro::testarCenarioValorValido(){
-try{
-dominio->setValor(VALOR_VALIDO);
-if (dominio->getValor() != VALOR_VALIDO)
-estado = FALHA;
-}
-catch(invalid_argument &excecao){
-estado = FALHA;
-}
+void TUDinheiro::testeUniVal(int valor)
+{
+    dominio->setValor(valor);
+    if (dominio->getValor() != valor) estado = FALHA;
 }
 
-void TUDinheiro::testarCenarioValorInvalido(){
-try{
-dominio->setValor(VALOR_INVALIDO);
-estado = FALHA;
-}
-catch(invalid_argument &excecao){
-if (dominio->getValor() == VALOR_INVALIDO)
-estado = FALHA;
-}
+void TUDinheiro::testarValido()
+{
+    try
+    {
+        for (int i = 0; i < VALIDO.size(); i++)
+        {
+            testeUniVal(VALIDO[i]);
+        }
+    }
+    catch(std::invalid_argument &excecao)
+    {
+        estado = FALHA;
+    }
 }
 
-int TUDinheiro::run(){
-setUp();
-testarCenarioValorValido();
-testarCenarioValorInvalido();
-tearDown();
-return estado;
+void TUDinheiro::testeUniInv(int valor)
+{
+    try
+    {
+        dominio->setValor(valor);
+        estado = FALHA;
+    }
+    catch(std::invalid_argument &excecao){
+        if (dominio->getValor() == valor)
+        estado = FALHA;
+    }
+}
+
+void TUDinheiro::testarInvalido()
+{
+    for (int i = 0; i < INVALIDO.size(); i++)
+    {
+        testeUniInv(INVALIDO[i]);
+    }
+}
+
+int TUDinheiro::run()
+{
+    setUp();
+    testarValido();
+    testarInvalido();
+    tearDown();
+    return estado;
 }
