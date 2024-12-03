@@ -45,6 +45,7 @@
 		<Unit filename="include/Entidades/Destino.hpp" />
 		<Unit filename="include/Entidades/Hospedagem.hpp" />
 		<Unit filename="include/Entidades/Viagem.hpp" />
+		<Unit filename="include/TU/TCodigo.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
 		<Unit filename="src/Dominios/Codigo.cpp" />
@@ -59,6 +60,7 @@
 		<Unit filename="src/Entidades/Destino.cpp" />
 		<Unit filename="src/Entidades/Hospedagem.cpp" />
 		<Unit filename="src/Entidades/Viagem.cpp" />
+		<Unit filename="src/TU/TUNome.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
