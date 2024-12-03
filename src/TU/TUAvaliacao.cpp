@@ -1,40 +1,62 @@
-#include "TUAvaliacao.hpp"
+#include "TU/TUAvaliacao.hpp"
 
-void TUAvaliacao::setUp(){
-avaliacao = new Avaliacao();
-estado = SUCESSO;
+void TUAvaliacao::setUp()
+{
+    dominio = new Avaliacao();
+    estado = SUCESSO;
 }
 
 void TUAvaliacao::tearDown(){
-delete avaliacao;
+    delete dominio;
 }
 
-void TUAvaliacao::testarCenarioValorValido(){
-try{
-dominio->setValor(VALOR_VALIDO);
-if (dominio->getValor() != VALOR_VALIDO)
-estado = FALHA;
-}
-catch(invalid_argument &excecao){
-estado = FALHA;
-}
+void TUAvaliacao::testeUniVal(int valor)
+{
+    dominio->setValor(valor);
+    if (dominio->getValor() != valor) estado = FALHA;
 }
 
-void TUAvaliacao::testarCenarioValorInvalido(){
-try{
-dominio->setValor(VALOR_INVALIDO);
-estado = FALHA;
-}
-catch(invalid_argument &excecao){
-if (dominio->getValor() == VALOR_INVALIDO)
-estado = FALHA;
-}
+void TUAvaliacao::testarValido()
+{
+    try
+    {
+        for (int i = 0; i < VALIDO.size(); i++)
+        {
+            testeUniVal(VALIDO[i]);
+        }
+    }
+    catch(std::invalid_argument &excecao)
+    {
+        estado = FALHA;
+    }
 }
 
-int TUAvaliacao::run(){
-setUp();
-testarCenarioValorValido();
-testarCenarioValorInvalido();
-tearDown();
-return estado;
+void TUAvaliacao::testeUniInv(int valor)
+{
+    try
+    {
+        dominio->setValor(valor);
+        estado = FALHA;
+    }
+    catch(std::invalid_argument &excecao){
+        if (dominio->getValor() == valor)
+        estado = FALHA;
+    }
+}
+
+void TUAvaliacao::testarInvalido()
+{
+    for (int i = 0; i < INVALIDO.size(); i++)
+    {
+        testeUniInv(INVALIDO[i]);
+    }
+}
+
+int TUAvaliacao::run()
+{
+    setUp();
+    testarValido();
+    testarInvalido();
+    tearDown();
+    return estado;
 }
