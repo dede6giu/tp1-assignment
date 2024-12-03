@@ -40,7 +40,7 @@ void TUNome::testeUniInv(string valor)
         dominio->setValor(valor);
         estado = FALHA;
     }
-    catch(slength_error &excecao){
+    catch(length_error &excecao){
         if (dominio->getValor() == valor)
         estado = FALHA;
     }

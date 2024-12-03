@@ -1,6 +1,5 @@
 #include "TU/TUCodigo.hpp"
-#include "Dominios/Codigo.hpp"
-#include <stdexcept>
+
 using namespace std;
 
 void TUCodigo::setUp()
@@ -30,6 +29,10 @@ void TUCodigo::testarValido()
 
     }
     catch(invalid_argument &excecao)
+    {
+        estado = FALHA;
+    }
+    catch (length_error &excecao)
     {
         estado = FALHA;
     }

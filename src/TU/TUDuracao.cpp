@@ -1,6 +1,5 @@
 #include "TU/TUDuracao.hpp"
-#include "Dominios/Duracao.hpp"
-#include <stdexcept>
+
 using namespace std;
 
 void TUDuracao::setUp()
@@ -14,7 +13,7 @@ void TUDuracao::tearDown()
     delete dominio;
 }
 
-void TUDuracao::testeUniVal(string teste)
+void TUDuracao::testeUniVal(int teste)
 {
     dominio->setValor(teste);
     if (dominio->getValor() != teste) estado = FALHA;
@@ -35,7 +34,7 @@ void TUDuracao::testarValido()
     }
 }
 
-void TUDuracao::testeUniInv(string teste)
+void TUDuracao::testeUniInv(int teste)
 {
     try
     {

@@ -13,9 +13,9 @@
 class TUDuracao
 {
     private:
-        const std::vector<std::int> VALIDO = {
+        const std::vector<int> VALIDO = {
             0, 360, 123, 294, 300};
-        const std::vector<std::int> INVALIDO = {
+        const std::vector<int> INVALIDO = {
             -1, 361, 1000, -27};
 
         Duracao* dominio;
@@ -23,9 +23,9 @@ class TUDuracao
         void setUp();
         void tearDown();
         void testarValido();
-        void testeUniVal(std::int);
+        void testeUniVal(int);
         void testarInvalido();
-        void testeUniInv(std::int);
+        void testeUniInv(int);
 
     public:
         const static int SUCESSO = 0;
