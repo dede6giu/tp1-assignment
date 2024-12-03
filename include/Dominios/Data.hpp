@@ -19,6 +19,7 @@ class Data
         int mes;
         int ano;
         void validar(int, int, int);
+        void validar(std::string);
 
     public:
         Data();
@@ -28,6 +29,7 @@ class Data
         int getMes() const;
         int getAno() const;
         void setValor(int, int, int);
+        void setValor(std::string);
         std::string getValor() const;
 };
 
