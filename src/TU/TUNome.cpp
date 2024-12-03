@@ -1,5 +1,7 @@
 #include "TU/TUNome.hpp"
 
+using namespace std;
+
 void TUNome::setUp()
 {
     dominio = new Nome();
@@ -10,7 +12,7 @@ void TUNome::tearDown(){
     delete dominio;
 }
 
-void TUNome::testeUniVal(std::string valor)
+void TUNome::testeUniVal(string valor)
 {
     dominio->setValor(valor);
     if (dominio->getValor() != valor) estado = FALHA;
@@ -25,20 +27,20 @@ void TUNome::testarValido()
             testeUniVal(VALIDO[i]);
         }
     }
-    catch(std::length_error &excecao)
+    catch(length_error &excecao)
     {
         estado = FALHA;
     }
 }
 
-void TUNome::testeUniInv(std::string valor)
+void TUNome::testeUniInv(string valor)
 {
     try
     {
         dominio->setValor(valor);
         estado = FALHA;
     }
-    catch(std::length_error &excecao){
+    catch(slength_error &excecao){
         if (dominio->getValor() == valor)
         estado = FALHA;
     }

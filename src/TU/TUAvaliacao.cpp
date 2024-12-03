@@ -1,5 +1,7 @@
 #include "TU/TUAvaliacao.hpp"
 
+using namespace std;
+
 void TUAvaliacao::setUp()
 {
     dominio = new Avaliacao();
@@ -25,7 +27,7 @@ void TUAvaliacao::testarValido()
             testeUniVal(VALIDO[i]);
         }
     }
-    catch(std::invalid_argument &excecao)
+    catch(invalid_argument &excecao)
     {
         estado = FALHA;
     }
@@ -38,7 +40,7 @@ void TUAvaliacao::testeUniInv(int valor)
         dominio->setValor(valor);
         estado = FALHA;
     }
-    catch(std::invalid_argument &excecao){
+    catch(invalid_argument &excecao){
         if (dominio->getValor() == valor)
         estado = FALHA;
     }

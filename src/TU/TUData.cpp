@@ -1,6 +1,6 @@
 #include "TU/TUData.hpp"
 #include "Dominios/Data.hpp"
-#include <stdexcept>
+
 using namespace std;
 
 void TUData::setUp()
