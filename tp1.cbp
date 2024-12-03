@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -45,6 +47,9 @@
 		<Unit filename="include/Entidades/Destino.hpp" />
 		<Unit filename="include/Entidades/Hospedagem.hpp" />
 		<Unit filename="include/Entidades/Viagem.hpp" />
+		<Unit filename="include/TU/TUCodigo.hpp" />
+		<Unit filename="include/TU/TUData.hpp" />
+		<Unit filename="include/TUDuracao.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
 		<Unit filename="src/Dominios/Codigo.cpp" />
@@ -59,6 +64,9 @@
 		<Unit filename="src/Entidades/Destino.cpp" />
 		<Unit filename="src/Entidades/Hospedagem.cpp" />
 		<Unit filename="src/Entidades/Viagem.cpp" />
+		<Unit filename="src/TU/TUCodigo.cpp" />
+		<Unit filename="src/TU/TUData.cpp" />
+		<Unit filename="src/TUDuracao.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
