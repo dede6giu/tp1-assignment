@@ -6,7 +6,7 @@
     Classe Avaliacao, inteiro v&aacute;lido entre 0 e 5 inclusivo \n
     232029274 - implementa&ccedil;&atilde;o. \n
     232002771 - documenta&ccedil;&atilde;o. \n
-    232013031 - construtores, exce�es
+    232013031 - construtores, exceções
 */
 
 class Avaliacao
