@@ -51,10 +51,11 @@ void Horario::setValor(int horas, int minutos)
 
 void Horario::validar(std::string dataStr)
 {
-    if (&dataStr[2] != ":")
-        throw std::invalid_argument("Horario deve ser composto por digitos separados por ':', no formato hh:mm");
+    if (dataStr[2] != ':') {
+        throw std::invalid_argument("As horas e os minutos deve ser separados por ':'");
+    }
 
-    for (int i = 0; i < 6; i++) // essa condição irá cortar tudo o que vier depois do 6 caractere
+    for (int i = 0; i < 5; i++) // essa condição irá cortar tudo o que vier depois do 6 caractere
     {
         if (i == 2) continue;
         if (!isdigit(dataStr[i]))

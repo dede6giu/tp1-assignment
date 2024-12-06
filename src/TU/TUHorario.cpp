@@ -16,7 +16,8 @@ void TUHorario::tearDown()
 void TUHorario::testeUniVal(string teste)
 {
     dominio->setValor(teste);
-    if (dominio->getValor() != teste) estado = FALHA;
+    if (dominio->getValor() != teste)
+        estado = FALHA;
 }
 
 void TUHorario::testarValido()
@@ -28,8 +29,7 @@ void TUHorario::testarValido()
         }
 
     }
-    catch(invalid_argument &excecao)
-    {
+    catch(invalid_argument &excecao) {
         estado = FALHA;
     }
 }
@@ -43,7 +43,8 @@ void TUHorario::testeUniInv(string teste)
     }
     catch (invalid_argument &excecao)
     {
-        if (dominio->getValor() == teste) estado = FALHA;
+        if (dominio->getValor() == teste)
+            estado = FALHA;
     }
 }
 

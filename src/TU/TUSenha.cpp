@@ -13,7 +13,8 @@ void TUSenha::tearDown() {
 
 void TUSenha::testeUniVal(string valor) {
     dominio->setValor(valor);
-    if (dominio->getValor() != valor) estado = FALHA;
+    if (dominio->getValor() != valor)
+        estado = FALHA;
 }
 
 void TUSenha::testarValido() {
@@ -24,8 +25,10 @@ void TUSenha::testarValido() {
             testeUniVal(VALIDO[i]);
         }
     }
-    catch(invalid_argument &excecao)
-    {
+    catch (invalid_argument &excecao) {
+        estado = FALHA;
+    }
+    catch (length_error &excecao) {
         estado = FALHA;
     }
 }
@@ -36,16 +39,19 @@ void TUSenha::testeUniInv(string valor) {
         dominio->setValor(valor);
         estado = FALHA;
     }
-    catch(invalid_argument &excecao){
+    catch (invalid_argument &excecao){
         if (dominio->getValor() == valor)
-        estado = FALHA;
+            estado = FALHA;
+    }
+    catch (length_error &excecao) {
+        if (dominio->getValor() == valor)
+            estado = FALHA;
     }
 }
 
 void TUSenha::testarInvalido()
 {
-    for (int i = 0; i < INVALIDO.size(); i++)
-    {
+    for (int i = 0; i < INVALIDO.size(); i++) {
         testeUniInv(INVALIDO[i]);
     }
 }

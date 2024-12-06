@@ -14,7 +14,7 @@
 class TUHorario {
 private:
     const std::vector<std::string> VALIDO = {
-        "12:00", "23:12", "10:32", "00:02"};
+        "12:00", "23:59", "10:32", "00:02"};
     const std::vector<std::string> INVALIDO = {
         "27:64", "40:00", "10:70", "a3:02", "10.10"};
 
