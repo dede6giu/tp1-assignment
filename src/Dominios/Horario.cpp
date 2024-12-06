@@ -49,6 +49,33 @@ void Horario::setValor(int horas, int minutos)
     this->minutos = minutos;
 }
 
+void Horario::validar(std::string dataStr)
+{
+    if (&dataStr[2] != ":")
+        throw std::invalid_argument("Horario deve ser composto por digitos separados por ':', no formato hh:mm");
+
+    for (int i = 0; i < 6; i++) // essa condição irá cortar tudo o que vier depois do 6 caractere
+    {
+        if (i == 2) continue;
+        if (!isdigit(dataStr[i]))
+        {
+            throw std::invalid_argument("Horario deve ser composto por digitos separados por ':', no formato hh:mm");
+        }
+    }
+}
+
+void Horario::setValor(std::string dataStr)
+{
+    validar(dataStr);
+    int hh, mm;
+    std::string aux = "";
+    aux += dataStr[0]; aux += dataStr[1];
+    hh = stoi(aux); aux = "";
+    aux += dataStr[3]; aux += dataStr[4];
+    mm = stoi(aux); aux = "";
+    Horario::setValor(hh, mm);
+}
+
 std::string Horario::getValor() const
 {
     std::string resultado = "";

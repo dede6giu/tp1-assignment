@@ -51,6 +51,7 @@
 		<Unit filename="include/TU/TUDinheiro.hpp" />
 		<Unit filename="include/TU/TUDuracao.hpp" />
 		<Unit filename="include/TU/TUNome.hpp" />
+		<Unit filename="include/TU/TUSenha.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
 		<Unit filename="src/Dominios/Codigo.cpp" />
@@ -70,7 +71,9 @@
 		<Unit filename="src/TU/TUData.cpp" />
 		<Unit filename="src/TU/TUDinheiro.cpp" />
 		<Unit filename="src/TU/TUDuracao.cpp" />
+		<Unit filename="src/TU/TUHorario.cpp" />
 		<Unit filename="src/TU/TUNome.cpp" />
+		<Unit filename="src/TU/TUSenha.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
