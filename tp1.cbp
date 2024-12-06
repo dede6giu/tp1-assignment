@@ -50,6 +50,7 @@
 		<Unit filename="include/TU/TUData.hpp" />
 		<Unit filename="include/TU/TUDinheiro.hpp" />
 		<Unit filename="include/TU/TUDuracao.hpp" />
+		<Unit filename="include/TU/TUHorario.hpp" />
 		<Unit filename="include/TU/TUNome.hpp" />
 		<Unit filename="include/TU/TUSenha.hpp" />
 		<Unit filename="main.cpp" />
