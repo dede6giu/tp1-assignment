@@ -16,7 +16,7 @@ private:
     const std::vector<std::string> VALIDO = {
         "01852", "26739", "32169"};
     const std::vector<std::string> INVALIDO = {
-        "1432", "a2354", "11523", "12345", "54321"};
+        "1432", "a2354", "11523", "12345", "65432"};
 
     Senha *dominio;
     int estado;
