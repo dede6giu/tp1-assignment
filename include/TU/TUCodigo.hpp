@@ -1,5 +1,5 @@
-#ifndef TUDATA_HPP_INCLUDED
-#define TUDATA_HPP_INCLUDED
+#ifndef TUCODIGO_HPP_INCLUDED
+#define TUCODIGO_HPP_INCLUDED
 
 #include <stdexcept>
 #include <string>
@@ -35,4 +35,4 @@ class TUCodigo
 };
 
 
-#endif // TUDATA_HPP_INCLUDED
+#endif // TUCODIGO_HPP_INCLUDED
