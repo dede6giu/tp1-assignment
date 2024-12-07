@@ -6,7 +6,8 @@
 //! Classe Horario
 /*!
   Classe Horario, string de 5 caracteres composta por "HH:mm", impressa em formato de 24h. Internamente salva como dois inteiros, um para horas e outro para minutos.\n
-  232013031 - implementa&ccdeil;&atilde;o, construtores, exceções
+  232013031 - implementa&ccdeil;&atilde;o, construtores, exceï¿½ï¿½es\n
+  232002520 - implementaÃ§Ã£o
 */
 
 class Horario
@@ -14,6 +15,7 @@ class Horario
     private:
         int horas;
         int minutos;
+        void validar(std::string);
         void validarHoras(int);
         void validarMinutos(int);
 
@@ -22,6 +24,7 @@ class Horario
         Horario(int, int);
 
         void setValor(int, int);
+        void setValor(std::string);
         void setValorHoras(int);
         void setValorMinutos(int);
         std::string getValor() const;

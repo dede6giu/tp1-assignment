@@ -86,6 +86,40 @@ void Data::setValor(int dia, int mes, int ano)
     this->ano = ano;
 }
 
+void Data::validar(std::string dataStr)
+{
+    if (dataStr.size() > 8) {
+        throw std::length_error("Tamanho de Data deve ser exatamente 8");
+    }
+    // dataStr tem que ser do formato DD/MM/AA
+    if (dataStr[2] != '/' || dataStr[5] != '/')
+    {
+        throw std::invalid_argument("Data deve estar no formato DD/MM/AA");
+    }
+    for (int i = 0; i < 8; i++) // essa condição irá cortar tudo o que vier depois do 8 caractere
+    {
+        if (i == 2 || i == 5) continue;
+        if (!isdigit(dataStr[i]))
+        {
+            throw std::invalid_argument("Data deve ser composta por digitos separados por '/'");
+        }
+    }
+}
+
+void Data::setValor(std::string dataStr)
+{
+    validar(dataStr);
+    int dd, mm, aa;
+    std::string aux = "";
+    aux += dataStr[0]; aux += dataStr[1];
+    dd = stoi(aux); aux = "";
+    aux += dataStr[3]; aux += dataStr[4];
+    mm = stoi(aux); aux = "";
+    aux += dataStr[6]; aux += dataStr[7];
+    aa = stoi(aux);
+    Data::setValor(dd, mm, aa);
+}
+
 std::string Data::getValor() const
 {
     std::string resultado = "";
