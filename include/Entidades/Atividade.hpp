@@ -1,6 +1,7 @@
 #ifndef ATIVIDADE_HPP_INCLUDED
 #define ATIVIDADE_HPP_INCLUDED
 
+#include <string>
 #include "Dominios/Codigo.hpp"
 #include "Dominios/Nome.hpp"
 #include "Dominios/Data.hpp"
@@ -11,7 +12,8 @@
 
 //! entidade Atividade
 /*!
-    232029274 - implementação
+    232029274 - implementação \n
+    232002520 - implementação
 */
 
 class Atividade {
@@ -42,6 +44,7 @@ public:
     inline Duracao     getDuracao() const { return this->duracao; }
     inline Dinheiro      getPreco() const { return this->preco; }
     inline Avaliacao getAvaliacao() const { return this->avaliacao; }
+    std::string      getAtividade() const;
 };
 
 #endif // ATIVIDADE_HPP
