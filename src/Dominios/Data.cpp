@@ -88,6 +88,9 @@ void Data::setValor(int dia, int mes, int ano)
 
 void Data::validar(std::string dataStr)
 {
+    if (dataStr.size() > 8) {
+        throw std::length_error("Tamanho de Data deve ser exatamente 8");
+    }
     // dataStr tem que ser do formato DD/MM/AA
     if (dataStr[2] != '/' || dataStr[5] != '/')
     {

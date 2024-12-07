@@ -33,6 +33,10 @@ void TUData::testarValido()
     {
         estado = FALHA;
     }
+    catch(length_error &excessao)
+    {
+        estado = FALHA;
+    }
 }
 
 void TUData::testeUniInv(string teste)
@@ -43,6 +47,10 @@ void TUData::testeUniInv(string teste)
         estado = FALHA;
     }
     catch (invalid_argument &excessao)
+    {
+        if (dominio->getValor() == teste) estado = FALHA;
+    }
+    catch(length_error &excessao)
     {
         if (dominio->getValor() == teste) estado = FALHA;
     }
