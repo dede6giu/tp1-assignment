@@ -2,55 +2,48 @@
 #include <set>
 #include <string>
 #include <algorithm>
+#include <stdexcept>
 
 Senha::Senha()
 {
-    senha = "";
+    senha;
 }
 
 Senha::Senha(std::string valor)
 {
-    if (!Senha::validar(valor))
-    {
-        return;
-    }
+    Senha::validar(valor);
     senha = valor;
 }
 
-bool Senha::validar(std::string valor){
+void Senha::validar(std::string valor){
     if(valor.size() != this->PASSLENGTH){
-        return false;
+        throw std::length_error("Tamanho da Senha deve ser exatamente 5");
     }
 
     for (char c: valor){
         if(!isdigit(c)){
-            return false;
+            throw std::invalid_argument("Senha deve ser composta apenas por digitos");
         }
     }
 
     std::set<char> numeros(valor.begin(), valor.end());
 
     if(numeros.size() != valor.size()){
-        return false;
+        throw std::invalid_argument("Senha nao pode possuir digitos repetidos");
     }
 
     if(std::is_sorted(valor.begin(), valor.end())){
-        return false;
+        throw std::invalid_argument("Senha nao pode ser composta por digitos crescentes");
     }
 
     reverse(valor.begin(), valor.end());
 
     if (std::is_sorted(valor.begin(), valor.end())){
-        return false;
+        throw std::invalid_argument("Senha nao pode ser composta por digitos decrescentes");
     }
-
-    return true;
 }
 
-bool Senha::setValor(std::string valor) {
-    if(!validar(valor)){
-        return false;
-    }
+void Senha::setValor(std::string valor) {
+    validar(valor);
     this->senha = valor;
-    return true;
 }

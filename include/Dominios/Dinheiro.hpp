@@ -6,7 +6,7 @@
 //! Classe Dinheiro
 /*!
     Classe Dinheiro, int de 0 a 20000000, implementado como centavos\n
-    232002771 - implementa&ccdeil;&atilde;o\n
+    232002771 - implementa&ccdeil;&atilde;o, exceções\n
     232013031 - altera&ccedil;&otilde;es na implementa&ccdeil;&atilde;o \n
     232002520 - documentação
 */
@@ -17,13 +17,13 @@ class Dinheiro
         //! int
         /*! Atributo int que armazena o valor de dinheiro. */
         int dinheiro;
+
         //! bool Dinheiro::validar(int)
         /*!
-            Recebe um valor int e verifica se ele é válido (>= Dinheiro::MINIMO e < Dinheiro::MAXIMO).
+            Recebe um valor int e verifica se ele é válido (>= Dinheiro::MINIMO e <= Dinheiro::MAXIMO).
             @param int valor a validar
-            @return resultado da verificação
         */
-        bool validar(int);
+        void validar(int);
 
     public:
         //! static int const
@@ -47,15 +47,16 @@ class Dinheiro
         /*!
             Recebe um int, verifica se é válido e guarda no objeto se a verificação tiver sucesso.
             @param int dinheiro
-            @return bool indicando se a operação teve sucesso.
         */
-        bool setValor(int);
+        void setValor(int);
+
         //! int Dinheiro::getValor(int)
         /*!
             Retorna um int com o valor do dinheiro armazenado.
-            @return dinheiro.
+            @return int dinheiro
         */
         int getValor() const;
+
         //! std::string Dinheiro::getValorFormatado() const
         /*!
             Retorna uma string do dinheiro formatado.

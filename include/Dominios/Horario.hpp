@@ -7,7 +7,8 @@
 /*!
     Classe Horario, string de 5 caracteres composta por "HH:mm", impressa em formato de 24h. Internamente salva como dois inteiros, um para horas e outro para minutos.\n
     232013031 - implementa&ccdeil;&atilde;o, construtores \n
-    232002520 - documentação
+    232002520 - documentação, exce��es\n
+    232002520 - implementação
 */
 
 class Horario
@@ -21,21 +22,21 @@ class Horario
         /*! Armazena o valor dos minutos */
         int minutos;
 
+        void validar(std::string);
+
         //! Horario::validarHoras()
         /*!
             Verifica se o valor de um int está no intervalo 0 e 24 (24 não incluso).
             @param int a ser verificado.
-            @return bool indicando o sucesso da operação.
         */
-        bool validarHoras(int);
+        void validarHoras(int);
 
         //! Horario::validarHoras()
         /*!
             Verifica se o valor de um int está entre 0 e 60 (60 não incluso).
             @param int a ser verificado.
-            @return bool indicando o sucesso da verifica&ccdeil;&atilde;o.
         */
-        bool validarMinutos(int);
+        void validarMinutos(int);
 
     public:
 
@@ -56,6 +57,7 @@ class Horario
         */
         Horario(int, int);
 
+        void setValor(std::string);
 
         //! Horario::setValor()
         /*!
@@ -63,16 +65,15 @@ class Horario
             @param int com o novo valor das horas.
             @param int com o novo valor dos minutos.
         */
-        bool setValor(int, int);
+        void setValor(int, int);
 
         //! Horario::setValorHoras()
         /*!
             Recebe um int, o verifica e salva no atributo horas da classe.
             @param int com o novo valor das horas.
-            @return bool indicando o sucesso da operação.
             @sa Horario::validarHoras().
         */
-        bool setValorHoras(int);
+        void setValorHoras(int);
 
         //! Horario::setValorMinutos()
         /*!
@@ -81,12 +82,12 @@ class Horario
             @return bool indicando o sucesso da operação.
             @sa Horario::validarMinutos().
         */
-        bool setValorMinutos(int);
+        void setValorMinutos(int);
 
         //! Horario::getValor()
         /*!
-            Retorna std::str com o horário, no formato "HH:mm".
-            @return std::str com o horário.
+            Retorna std::string com o horário, no formato "HH:mm".
+            @return std::string com o horário.
         */
         std::string getValor() const;
 

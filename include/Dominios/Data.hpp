@@ -10,7 +10,7 @@
     devidas quantidades de dias no m&ecirc;s.\n
 
     232013031 - implementa&ccdeil;&atilde;o, construtores \n
-    232002520 - documentação
+    232002520 - documentação, exce��es
 */
 
 class Data
@@ -33,14 +33,16 @@ class Data
             @param int dia
             @param int mes
             @param int ano
-            @return bool indicando sucesso ou fracasso.
         */
-        bool validar(int, int, int);
+        void validar(int, int, int);
+
+        void validar(std::string);
 
     public:
         //! Construtor vazio
         /*! Cria um objeto Data vazio. */
         Data();
+
         //! Construtor paramétrico
         /*!
             Constrói um objeto Data que recebe três ints com o dia, mês e ano, respectivamente.
@@ -66,9 +68,11 @@ class Data
             @param int dia
             @param int mes
             @param int ano
-            @return bool indicando se a operação teve sucesso
         */
-        bool setValor(int, int, int);
+        void setValor(int, int, int);
+
+        void setValor(std::string);
+
         //! std::string Data::getValor() const
         /*! Retorna um std::string com a data formatada. */
         std::string getValor() const;

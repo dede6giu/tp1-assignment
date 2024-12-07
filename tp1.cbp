@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Dominios.hpp" />
 		<Unit filename="include/Dominios/Avaliacao.hpp" />
 		<Unit filename="include/Dominios/Codigo.hpp" />
 		<Unit filename="include/Dominios/Data.hpp" />
@@ -40,10 +41,21 @@
 		<Unit filename="include/Dominios/Horario.hpp" />
 		<Unit filename="include/Dominios/Nome.hpp" />
 		<Unit filename="include/Dominios/Senha.hpp" />
+		<Unit filename="include/Entidades.hpp" />
 		<Unit filename="include/Entidades/Atividade.hpp" />
 		<Unit filename="include/Entidades/Conta.hpp" />
 		<Unit filename="include/Entidades/Destino.hpp" />
+		<Unit filename="include/Entidades/Hospedagem.hpp" />
 		<Unit filename="include/Entidades/Viagem.hpp" />
+		<Unit filename="include/TU.hpp" />
+		<Unit filename="include/TU/TUAvaliacao.hpp" />
+		<Unit filename="include/TU/TUCodigo.hpp" />
+		<Unit filename="include/TU/TUData.hpp" />
+		<Unit filename="include/TU/TUDinheiro.hpp" />
+		<Unit filename="include/TU/TUDuracao.hpp" />
+		<Unit filename="include/TU/TUHorario.hpp" />
+		<Unit filename="include/TU/TUNome.hpp" />
+		<Unit filename="include/TU/TUSenha.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
 		<Unit filename="src/Dominios/Codigo.cpp" />
@@ -56,7 +68,16 @@
 		<Unit filename="src/Entidades/Atividade.cpp" />
 		<Unit filename="src/Entidades/Conta.cpp" />
 		<Unit filename="src/Entidades/Destino.cpp" />
+		<Unit filename="src/Entidades/Hospedagem.cpp" />
 		<Unit filename="src/Entidades/Viagem.cpp" />
+		<Unit filename="src/TU/TUAvaliacao.cpp" />
+		<Unit filename="src/TU/TUCodigo.cpp" />
+		<Unit filename="src/TU/TUData.cpp" />
+		<Unit filename="src/TU/TUDinheiro.cpp" />
+		<Unit filename="src/TU/TUDuracao.cpp" />
+		<Unit filename="src/TU/TUHorario.cpp" />
+		<Unit filename="src/TU/TUNome.cpp" />
+		<Unit filename="src/TU/TUSenha.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

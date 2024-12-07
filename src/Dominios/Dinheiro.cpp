@@ -1,38 +1,31 @@
 #include "Dominios/Dinheiro.hpp"
 #include <algorithm>
 #include <string>
+#include <stdexcept>
 
 Dinheiro::Dinheiro()
 {
-    dinheiro = 0;
+    dinheiro;
 }
 
 Dinheiro::Dinheiro(int valor)
 {
-    if (!Dinheiro::validar(valor))
-    {
-        return;
-    }
+    validar(valor);
     dinheiro = valor;
 }
 
-bool Dinheiro::setValor(int valor)
+void Dinheiro::setValor(int valor)
 {
-    if (!Dinheiro::validar(valor))
-    {
-        return false;
-    }
+    validar(valor);
     this->dinheiro = valor;
-    return true;
 }
 
-bool Dinheiro::validar(int valor)
+void Dinheiro::validar(int valor)
 {
-    if (MINIMO <= valor && valor <= MAXIMO)
+    if (!(MINIMO <= valor && valor <= MAXIMO))
     {
-        return true;
+        throw std::invalid_argument("O Dinheiro deve ser um inteiro entre 0 e 20000000 inclusivo");
     }
-    return false;
 }
 
 std::string Dinheiro::getValorFormatado() const

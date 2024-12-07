@@ -1,83 +1,83 @@
 #include "Dominios/Horario.hpp"
 #include <string>
+#include <stdexcept>
 
 Horario::Horario()
 {
-    horas = 0;
-    minutos = 0;
+    horas;
+    minutos;
 }
 
 Horario::Horario(int hh, int mm)
 {
-    if (!Horario::validarHoras(hh))
-    {
-        return;
-    }
-    if (!Horario::validarHoras(mm))
-    {
-        return;
-    }
-    horas = hh;
-    minutos = mm;
+    Horario::setValor(hh, mm);
 }
 
-bool Horario::validarHoras(int valor)
+void Horario::validarHoras(int valor)
 {
     if (valor < 0 or valor >= 24)
     {
-        return false;
+        throw std::invalid_argument("Horas deve estar entre 00 e 23 inclusivo");
     }
-    return true;
 }
 
-bool Horario::validarMinutos(int valor)
+void Horario::validarMinutos(int valor)
 {
     if (valor < 0 or valor >= 60)
     {
-        return false;
+        throw std::invalid_argument("Minutos deve estar entre 00 e 59 inclusivo");
     }
-    return true;
 }
 
-bool Horario::setValorHoras(int valor)
+void Horario::setValorHoras(int valor)
 {
-    if (!Horario::validarHoras(valor))
-    {
-        return false;
-    }
+    Horario::validarHoras(valor);
     this->horas = valor;
-    return true;
 }
 
-bool Horario::setValorMinutos(int valor)
+void Horario::setValorMinutos(int valor)
 {
-    if (!Horario::validarMinutos(valor))
-    {
-        return false;
-    }
+    Horario::validarMinutos(valor);
     this->minutos = valor;
-    return true;
 }
 
-bool Horario::setValor(int horas, int minutos)
+void Horario::setValor(int horas, int minutos)
 {
-    if (Horario::validarHoras(horas))
+    Horario::validarHoras(horas);
+    Horario::validarMinutos(minutos);
+    this->horas = horas;
+    this->minutos = minutos;
+}
+
+void Horario::validar(std::string dataStr)
+{
+    if (dataStr.size() > 5) {
+        throw std::length_error("Tamanho do Horario deve ser exatamente 5");
+    }
+    if (dataStr[2] != ':') {
+        throw std::invalid_argument("As horas e os minutos deve ser separados por ':'");
+    }
+
+    for (int i = 0; i < 5; i++) // essa condição irá cortar tudo o que vier depois do 6 caractere
     {
-        if (Horario::validarMinutos(minutos))
+        if (i == 2) continue;
+        if (!isdigit(dataStr[i]))
         {
-            this->horas = horas;
-            this->minutos = minutos;
-            return true;
-        }
-        else
-        {
-            return false;
+            throw std::invalid_argument("Horario deve ser composto por digitos separados por ':', no formato hh:mm");
         }
     }
-    else
-    {
-        return false;
-    }
+}
+
+void Horario::setValor(std::string dataStr)
+{
+    validar(dataStr);
+    int hh, mm;
+    std::string aux = "";
+    aux += dataStr[0]; aux += dataStr[1];
+    hh = stoi(aux); aux = "";
+    aux += dataStr[3]; aux += dataStr[4];
+    mm = stoi(aux); aux = "";
+    Horario::setValor(hh, mm);
 }
 
 std::string Horario::getValor() const

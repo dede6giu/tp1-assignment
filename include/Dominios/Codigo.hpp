@@ -5,8 +5,9 @@
 
 //! Classe Codigo
 /*!
-  Classe Codigo, string de 6 caracteres alfanum&eacute;ricos sem diacríticos. \n
-  232013031 - implementa&ccdeil;&atilde;o, construtores, documentação
+  Classe Codigo, string de 6 caracteres alfanum&eacute;ricos sem diacrï¿½ticos. \n
+  232013031 - implementa&ccdeil;&atilde;o, construtores, documentaï¿½ï¿½o \n
+  232002771 - exceï¿½ï¿½es
 */
 
 class Codigo
@@ -18,26 +19,25 @@ class Codigo
 
         //! Senha::validar()
         /*!
-            Verifica se o tamanho da string fornecida é exatamente igual à CODELENGTH.
-            Também verifica se todos os caracteres são alfanuméricos sem diacríticos.
-            @param string à ser analisada.
-            @return bool indicando sucesso da operação.
+            Verifica se o tamanho da string fornecida ï¿½ exatamente igual ï¿½ CODELENGTH.
+            Tambï¿½m verifica se todos os caracteres sï¿½o alfanumï¿½ricos sem diacrï¿½ticos.
+            @param string ï¿½ ser analisada.
         */
-        bool validar(std::string);
+        void validar(std::string);
 
     public:
         static int const CODELENGTH = 6;
 
         //! Construtor Vazio
         /*!
-            Constrói um objeto Codigo com valor vazio.
+            Constrï¿½i um objeto Codigo com valor vazio.
             @sa Codigo(std::string)
         */
         Codigo();
 
-        //! Construtor Paramétrico
+        //! Construtor Paramï¿½trico
         /*!
-            Recebe um valor string, o verifica e finalmente constrói um objeto
+            Recebe um valor string, o verifica e finalmente constrï¿½i um objeto
             Codigo com o valor inserido.
             @sa Codigo(), Codigo::validar()
         */
@@ -46,15 +46,14 @@ class Codigo
         //! Codigo::setValor(std::string)
         /*!
             Recebe um valor string, o verifica e altera o valor atual do objeto.
-            @param string que alterará o valor codigo atual.
-            @return booleano indicando o sucesso da operação.
+            @param string que alterarï¿½ o valor codigo atual.
             @sa codigo, Codigo::validar()
         */
-        bool setValor(std::string);
+        void setValor(std::string);
 
         //! Codigo::getValor(std::string)
         /*!
-            Retorna o valor atual do parâmetro codigo.
+            Retorna o valor atual do parï¿½metro codigo.
             @return string codigo do objeto.
             @sa codigo
         */
