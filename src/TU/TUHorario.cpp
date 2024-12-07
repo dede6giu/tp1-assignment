@@ -32,6 +32,9 @@ void TUHorario::testarValido()
     catch(invalid_argument &excecao) {
         estado = FALHA;
     }
+    catch(length_error &excecao) {
+        estado = FALHA;
+    }
 }
 
 void TUHorario::testeUniInv(string teste)
@@ -43,6 +46,10 @@ void TUHorario::testeUniInv(string teste)
     }
     catch (invalid_argument &excecao)
     {
+        if (dominio->getValor() == teste)
+            estado = FALHA;
+    }
+    catch(length_error &excecao) {
         if (dominio->getValor() == teste)
             estado = FALHA;
     }

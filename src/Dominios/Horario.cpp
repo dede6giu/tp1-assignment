@@ -51,6 +51,9 @@ void Horario::setValor(int horas, int minutos)
 
 void Horario::validar(std::string dataStr)
 {
+    if (dataStr.size() > 5) {
+        throw std::length_error("Tamanho do Horario deve ser exatamente 5");
+    }
     if (dataStr[2] != ':') {
         throw std::invalid_argument("As horas e os minutos deve ser separados por ':'");
     }
