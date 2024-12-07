@@ -4,7 +4,7 @@
 
 Nome::Nome()
 {
-    nome = "";
+    nome;
 }
 
 Nome::Nome(std::string valor)

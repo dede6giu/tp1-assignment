@@ -5,7 +5,7 @@
 
 Dinheiro::Dinheiro()
 {
-    dinheiro = 0;
+    dinheiro;
 }
 
 Dinheiro::Dinheiro(int valor)

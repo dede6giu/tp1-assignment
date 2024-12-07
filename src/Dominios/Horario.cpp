@@ -4,8 +4,8 @@
 
 Horario::Horario()
 {
-    horas = 0;
-    minutos = 0;
+    horas;
+    minutos;
 }
 
 Horario::Horario(int hh, int mm)

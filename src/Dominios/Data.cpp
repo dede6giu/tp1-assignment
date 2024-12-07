@@ -2,18 +2,16 @@
 #include <string>
 #include <stdexcept>
 
-Data::Data()
-{
-    dia = 1;
-    mes = 1;
-    ano = 0;
+Data::Data() {
+    dia;
+    mes;
+    ano;
 }
 
 Data::Data(int dd, int mm, int aa)
 {
     Data::setValor(dd, mm, aa);
 }
-
 
 void Data::validar(int dia, int mes, int ano)
 {

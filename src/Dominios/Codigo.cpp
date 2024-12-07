@@ -3,7 +3,7 @@
 #include <stdexcept>
 
 Codigo::Codigo() {
-    codigo = "";
+    codigo;
 }
 
 Codigo::Codigo(std::string valor){
