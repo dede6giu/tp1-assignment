@@ -3,7 +3,7 @@
 
 Duracao::Duracao()
 {
-    duracao = 0;
+    duracao;
 }
 
 Duracao::Duracao(int valor)

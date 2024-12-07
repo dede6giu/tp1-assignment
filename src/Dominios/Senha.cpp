@@ -6,7 +6,7 @@
 
 Senha::Senha()
 {
-    senha = "";
+    senha;
 }
 
 Senha::Senha(std::string valor)

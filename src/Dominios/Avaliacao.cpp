@@ -3,7 +3,7 @@
 
 Avaliacao::Avaliacao()
 {
-    avaliacao = 0;
+    avaliacao;
 }
 
 Avaliacao::Avaliacao(int valor)
