@@ -37,15 +37,12 @@ class Destino
         /*! Atributo que armazena o objeto Avaliacao do Destino. */
         Avaliacao avaliacao;
 
-        //! bool Destino::validar()
-        /*! */
-        bool Destino::validar(); //!< n�o ainda implementado
-
     public:
         //! Construtor vazio
         /*! Constr�i um objeto Destino vazio. */
         Destino();
 
+        Destino(const Codigo&, const Nome&, const Data&, const Data&, const Avaliacao&);
 
         //! void Destino::setValor(const Codigo&)
         /*!
@@ -57,9 +54,9 @@ class Destino
         //! inline Codigo Destino::getValorCodigo()
         /*!
             Retorna o objeto Codigo armazenado no objeto.
-            @return objeto Codigo.
+            @return string valor do Codigo.
         */
-        inline Codigo getValorCodigo() const;
+        inline std::string getValorCodigo() const;
 
 
         //! void Destino::setValor(const Nome&)
@@ -72,9 +69,9 @@ class Destino
         //! inline Nome Destino::getValorNome()
         /*!
             Retorna o objeto Nome armazenado no objeto.
-            @return objeto Nome.
+            @return string valor do Nome.
         */
-        inline Nome getValorNome() const;
+        inline std::string getValorNome() const;
 
 
         //! void Destino::setValor(const Avaliacao&)
@@ -87,9 +84,9 @@ class Destino
         //! inline Avaliacao Destino::getValorAvaliacao()
         /*!
             Retorna o objeto Avaliacao armazenado no objeto.
-            @return objeto Avaliacao.
+            @return int valor do Avaliacao.
         */
-        inline Avaliacao getValorAvaliacao() const;
+        inline int getValorAvaliacao() const;
 
 
         //! void Destino::setValor(const Data&, bool)
@@ -103,36 +100,36 @@ class Destino
         //! inline Data Destino::getValorInicio()
         /*!
             Retorna o objeto Data de in�cio armazenado no objeto.
-            @return objeto Data.
+            @return string valor do parâmetro inicio (Data).
         */
-        inline Data getValorInicio() const;
+        inline std::string getValorInicio() const;
 
         //! inline Data Destino::getValorFim()
         /*!
             Retorna o objeto Data de fim armazenado no objeto.
-            @return objeto Data.
+            @return string valor do parâmetro fim (Data).
         */
-        inline Data getValorFim() const;
+        inline std::string getValorFim() const;
 };
 
-inline Codigo Destino::getValorCodigo() const {
-    return this->codigo;
+inline std::string Destino::getValorCodigo() const {
+    return this->codigo.getValor();
 }
 
-inline Nome Destino::getValorNome() const {
-    return this->nome;
+inline std::string Destino::getValorNome() const {
+    return this->nome.getValor();
 }
 
-inline Avaliacao Destino::getValorAvaliacao() const {
-    return this->avaliacao;
+inline int Destino::getValorAvaliacao() const {
+    return this->avaliacao.getValor();
 }
 
-inline Data Destino::getValorInicio() const {
-    return this->inicio;
+inline std::string Destino::getValorInicio() const {
+    return this->inicio.getValor();
 }
 
-inline Data Destino::getValorFim() const {
-    return this->fim;
+inline std::string Destino::getValorFim() const {
+    return this->fim.getValor();
 }
 
 

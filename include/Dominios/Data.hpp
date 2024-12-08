@@ -19,12 +19,15 @@ class Data
         //! Um int
         /*! Atributo inteiro que armazena o dia. */
         int dia;
+        
         //! Um int
         /*! Atributo inteiro que armazena o mês.*/
         int mes;
+        
         //! Um int
         /*! Atributo inteiro que armazena o ano.*/
         int ano;
+        
         //! bool Data::validar(int, int, int)
         /*!
             Recebe três valores inteiros, verifica se são valores válidos para
@@ -52,15 +55,20 @@ class Data
         */
         Data(int, int, int);
 
+        Data(std::string);
+
         //! int Data::getDia() const
         /*! Retorna um int com o valor do dia. */
         int getDia() const;
+        
         //! int Data::getMes() const
         /*! Retorna um int com o valor do mês. */
         int getMes() const;
+        
         //! int Data::getAno() const
         /*! Retorna um int com o valor do ano.*/
         int getAno() const;
+        
         //! bool Data::setValor(int, int, int)
         /*!
             Recebe três valores inteiros para o dia, o mês e o ano, respectivamente,

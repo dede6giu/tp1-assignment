@@ -14,6 +14,19 @@ Destino::Destino()
     avaliacao = Avaliacao();
 }
 
+Destino::Destino(const Codigo& codigoNovo,
+                 const Nome& nomeNovo,
+                 const Data& inicioNovo,
+                 const Data& fimNovo,
+                 const Avaliacao& avaliacaoNovo)
+{
+    codigo = codigoNovo;
+    nome = nomeNovo;
+    inicio = inicioNovo;
+    fim = fimNovo;
+    avaliacao = avaliacaoNovo;
+}
+
 void Destino::setValor(const Codigo& novoCodigo) {
     this->codigo = novoCodigo;
 }

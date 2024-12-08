@@ -5,27 +5,29 @@
 
 //! Classe Codigo
 /*!
-  Classe Codigo, string de 6 caracteres alfanum&eacute;ricos sem diacr�ticos. \n
-  232013031 - implementa&ccdeil;&atilde;o, construtores, documenta��o \n
-  232002771 - exce��es
+    Classe Codigo, string de 6 caracteres alfanum&eacute;ricos sem diacr�ticos. \n
+    232013031 - implementa&ccdeil;&atilde;o, construtores, documenta��o \n
+    232002771 - exce��es
 */
 
 class Codigo
 {
     private:
+
         //! Uma string.
         /*! Armazena o valor do codigo. */
-        std::string codigo = "";
+        std::string codigo;
 
         //! Senha::validar()
         /*!
             Verifica se o tamanho da string fornecida � exatamente igual � CODELENGTH.
             Tamb�m verifica se todos os caracteres s�o alfanum�ricos sem diacr�ticos.
-            @param string � ser analisada.
+            @param string a ser analisada.
         */
         void validar(std::string);
 
     public:
+
         //! Um inteiro p&uacute;blico
         /*!
           Armazena o valor m&aacute;ximo da valiação.
@@ -68,7 +70,7 @@ class Codigo
 
 inline std::string Codigo::getValor() const
 {
-    return codigo;
+    return this->codigo;
 }
 
 #endif // CODIGO_HPP_INCLUDED

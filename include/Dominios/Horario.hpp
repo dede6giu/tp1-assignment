@@ -60,6 +60,8 @@ class Horario
             @sa Nome(), Horario::validarHoras(), Horario:validarMinutos(), Horario::setValor().
         */
         Horario(int, int);
+        
+        Horario(std::string);
 
         void setValor(std::string);
 

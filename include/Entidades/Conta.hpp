@@ -45,9 +45,9 @@ class Conta
         //! Codigo Conta::getCodigo()
         /*!
             Retorna o atributo Codigo armazenado no objeto.
-            @return objeto Codigo.
+            @return string valor do parâmetro codigo.
         */
-        Codigo getCodigo() const;
+        std::string getValorCodigo() const;
 
 
         //! bool Conta::setValor(const Senha&)
@@ -60,21 +60,20 @@ class Conta
         //! Senha Conta::getSenha()
         /*!
             Retorna o atributo Senha armazenado no objeto.
-            @return objeto Senha.
+            @return string valor do parâmetro senha.
         */
-        Senha getSenha() const;
-
+        std::string getValorSenha() const;
 };
 
 
-inline Codigo Conta::getCodigo() const
+inline std::string Conta::getValorCodigo() const
 {
-    return this->codigo;
+    return this->codigo.getValor();
 }
 
-inline Senha Conta::getSenha() const
+inline std::string Conta::getValorSenha() const
 {
-    return this->senha;
+    return this->senha.getValor();
 }
 
 #endif // CONTA_HPP_INCLUDED

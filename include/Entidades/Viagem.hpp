@@ -4,6 +4,7 @@
 #include "Dominios/Avaliacao.hpp"
 #include "Dominios/Codigo.hpp"
 #include "Dominios/Nome.hpp"
+#include <string>
 
 //! Entidade Viagem
 /*!
@@ -27,6 +28,8 @@ class Viagem {
         //! Construtor vazio
         /*! Constrói um objeto Viagem vazio. */
         Viagem();
+        Viagem(const Avaliacao&, const Codigo&, const Nome&);
+
 
         //! Viagem::setValor(const Avaliaacao&)
         /*!
@@ -37,9 +40,9 @@ class Viagem {
         //! Avaliacao Viagem::getAvaliacao() const
         /*!
             Retorna o objeto Avaliacao armazenado no objeto Viagem.
-            @return objeto Avaliacao.
+            @return int valor do parâmetro avaliacao.
         */
-        Avaliacao getAvaliacao() const;
+        int getValorAvaliacao() const;
 
         //! Viagem::setValor(const Codigo&)
         /*!
@@ -50,9 +53,9 @@ class Viagem {
         //! Codigo Viagem::getCodigo() const
         /*!
             Retorna o objeto Codigo armazenado no objeto Viagem.
-            @return objeto Codigo.
+            @return string valor do parâmetro codigo.
         */
-        Codigo getCodigo() const;
+        std::string getValorCodigo() const;
 
         //! Viagem::setValor(const Nome&)
         /*!
@@ -63,21 +66,21 @@ class Viagem {
         //! Nome Viagem::getNome() const
         /*!
             Retorna o objeto Nome armazenado no objeto Viagem.
-            @return objeto Nome.
+            @return string valor do parâmetro nome.
         */
-        Nome getNome() const;
+        std::string getValorNome() const;
 };
 
-inline Avaliacao Viagem::getAvaliacao() const {
-    return this->avaliacao;
+inline int Viagem::getValorAvaliacao() const {
+    return this->avaliacao.getValor();
 }
 
-inline Codigo Viagem::getCodigo() const {
-    return this->codigo;
+inline std::string Viagem::getValorCodigo() const {
+    return this->codigo.getValor();
 }
 
-inline Nome Viagem::getNome() const {
-    return this->nome;
+inline std::string Viagem::getValorNome() const {
+    return this->nome.getValor();
 }
 
 #endif // VIAGEM_HPP_INCLUDED
