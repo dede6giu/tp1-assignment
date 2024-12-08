@@ -11,7 +11,6 @@ int main()
     string suc = "SUCESSO";
     string fal = "FALHA";
 
-
     cout << "\n" << "===== Dominios =====" << endl;
     {
         TUAvaliacao* holder = new TUAvaliacao();

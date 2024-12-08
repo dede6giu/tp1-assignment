@@ -109,49 +109,49 @@ class Atividade {
             Retorna o objeto Codigo da atividade.
             @return objeto Codigo armazenado no objeto Atividade.
         */
-        inline Codigo Atividade::getCodigo() const { return this->codigo; }
+        inline Codigo getCodigo() const { return this->codigo; }
 
         //! inline Nome Atividade::getNome() const
         /*!
             Retorna o objeto Nome da atividade.
             @return objeto nome armazenado no objeto Atividade.
         */
-        inline Nome Atividade::getNome() const { return this->nome; }
+        inline Nome getNome() const { return this->nome; }
 
         //! inline Data Atividade::getData() const
         /*!
             Retorna o objeto Data da atividade.
             @return objeto Data armazenado no objeto Atividade.
         */
-        inline Data Atividade::getData() const { return this->data; }
+        inline Data getData() const { return this->data; }
 
         //! inline Horario Atividade::getHorario() const
         /*!
             Retorna o objeto Horario da atividade.
             @return objeto Horario armazenado no objeto Atividade.
         */
-        inline Horario Atividade::getHorario() const { return this->horario; }
+        inline Horario getHorario() const { return this->horario; }
 
         //! inline Duracao Atividade::getDuracao() const
         /*!
             Retorna o objeto Duracao da atividade.
             @return objeto Duracao armazenado no objeto Atividade.
         */
-        inline Duracao Atividade::getDuracao() const { return this->duracao; }
+        inline Duracao getDuracao() const { return this->duracao; }
 
         //! inline Dinheiro Atividade::getPreco() const
         /*!
             Retorna o objeto Dinheiro com o preço da atividade.
             @return objeto Dinheiro armazenado no objeto Atividade.
         */
-        inline Dinheiro Atividade::getPreco() const { return this->preco; }
+        inline Dinheiro getPreco() const { return this->preco; }
 
         //! inline Avaliacao Atividade::getAvaliacao() const
         /*!
             Retorna o objeto Avaliacao da atividade.
             @return objeto Avaliacao armazenado no objeto Atividade.
         */
-        inline Avaliacao Atividade::getAvaliacao() const { return this->avaliacao; }
+        inline Avaliacao getAvaliacao() const { return this->avaliacao; }
 
         std::string getAtividade() const;
 };
