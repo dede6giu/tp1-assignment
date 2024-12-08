@@ -209,5 +209,10 @@ int main()
         delete holder;
     }
 
+    do
+    {
+        cout << '\n' << "Aperte 'enter' para encerrar...";
+    } while (getchar() != '\n');
+
     return 0;
 }
