@@ -20,25 +20,25 @@ class Viagem {
         Viagem();
 
         void setValor(const Avaliacao&);
-        Avaliacao getAvaliacao() const;
+        int getValorAvaliacao() const;
 
         void setValor(const Codigo&);
-        Codigo getCodigo() const;
+        std::string getValorCodigo() const;
 
         void setValor(const Nome&);
-        Nome getNome() const;
+        std::string getValorNome() const;
 };
 
-inline Avaliacao Viagem::getAvaliacao() const {
-    return this->avaliacao;
+inline int Viagem::getValorAvaliacao() const {
+    return this->avaliacao.getValor();
 }
 
-inline Codigo Viagem::getCodigo() const {
-    return this->codigo;
+inline std::string Viagem::getValorCodigo() const {
+    return this->codigo.getValor();
 }
 
-inline Nome Viagem::getNome() const {
-    return this->nome;
+inline std::string Viagem::getValorNome() const {
+    return this->nome.getValor();
 }
 
 #endif // VIAGEM_HPP_INCLUDED
