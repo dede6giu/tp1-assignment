@@ -1,12 +1,6 @@
 #include "Entidades/Atividade.hpp"
 
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Nome.hpp"
-#include "Dominios/Data.hpp"
-#include "Dominios/Horario.hpp"
-#include "Dominios/Duracao.hpp"
-#include "Dominios/Dinheiro.hpp"
-#include "Dominios/Avaliacao.hpp"
+#include "Dominios.hpp"
 
 Atividade::Atividade()
 {
@@ -53,4 +47,3 @@ std::string Atividade::getAtividade() const {
         +", "+ std::to_string(this->duracao.getValor()) +", "+ std::to_string(this->preco.getValor()) +", "+ std::to_string(this->avaliacao.getValor());
     return atividade;
 }
-

@@ -10,7 +10,7 @@
 #include "Dominios/Dinheiro.hpp"
 #include "Dominios/Avaliacao.hpp"
 
-//! entidade Atividade
+//! Entidade Atividade
 /*!
     232029274 - implementação \n
     232002520 - implementação

@@ -9,5 +9,6 @@
 #include "TU/TUHorario.hpp"
 #include "TU/TUNome.hpp"
 #include "TU/TUSenha.hpp"
+#include "TU/TUAtividade.hpp"
 
 #endif // TU_HPP_INCLUDED

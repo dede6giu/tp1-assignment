@@ -131,5 +131,20 @@ int main()
         delete holder;
     }
 
+    {
+        TUAtividade* holder = new TUAtividade();
+        cout << "Atividade: ";
+        switch (holder->run())
+        {
+            case holder->SUCESSO:
+                cout << suc << endl;
+                break;
+            case holder->FALHA:
+                cout << fal << endl;
+                break;
+        }
+        delete holder;
+    }
+
     return 0;
 }
