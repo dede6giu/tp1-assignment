@@ -26,6 +26,7 @@ class Atividade {
 
     public:
         Atividade();
+        Atividade(const Codigo&, const Nome&, const Data&,const Horario&, const Duracao&, const Preco&,const Avaliacao&);
 
         void setValor(const Codigo &);
         void setValor(const Nome &);
