@@ -69,7 +69,7 @@ class Dinheiro
         //! std::string Dinheiro::getValorFormatado() const
         /*!
             Retorna uma string do dinheiro no formato "ddd.ddd.ddd,dd" onde "d" é um dígito de 0 a 9 que pode ou não existir.
-            Se o valor do inteiro dinheiro é menor que 100 (centavos), retorna-se "0,dd".
+            Se o valor do inteiro dinheiro é menor que 100 (centavos), retorna-se "0,dd". \n
             Os pontos e a vírgula só são adicionados mediante necessidade.
             @return string formatada.
             @sa getValor()

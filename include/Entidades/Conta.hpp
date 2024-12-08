@@ -6,7 +6,7 @@
 
 //! Entidade Conta
 /*!
-    232002771 - implementação da entidade conta \n
+    232002771 - implementação, documentação \n
     232002520 - documentação
 */
 

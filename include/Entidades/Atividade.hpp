@@ -13,7 +13,9 @@
 //! Entidade Atividade
 /*!
     232029274 - implementação \n
-    232002520 - documentação
+    232002520 - documentação \n
+    232002771 - documentação \n
+    232013031 - documentação
 */
 
 class Atividade {
@@ -50,9 +52,13 @@ class Atividade {
     public:
 
         //! Construtor vazio
-        /*! Constrói um objeto Atividade vazio. */
+        /*! Constrói um objeto Atividade com todos seus parâmetros vazios.
+            @sa Atividade(const Codigo&, const Nome&, const Data&, const Horario&, const Duracao&, const Dinheiro&, const Avaliacao&) */
         Atividade();
 
+        //! Construtor paramétrico
+        /*! Constrói um objeto Atividade, recebendo cada um de seus parâmetros.
+            @sa Atividade() */
         Atividade(const Codigo&, const Nome&, const Data&, const Horario&, const Duracao&, const Dinheiro&, const Avaliacao&);
 
         //! Atividade::setValor(const Codigo&)
@@ -104,56 +110,54 @@ class Atividade {
         */
         void setValor(const Avaliacao &);
 
-        //! inline Codigo Atividade::getCodigo() const
+        //! inline std::string Atividade::getValorCodigo() const
         /*!
             Retorna o objeto Codigo da atividade.
             @return objeto Codigo armazenado no objeto Atividade.
         */
-        inline Codigo getCodigo() const { return this->codigo; }
+        inline std::string getValorCodigo() const { return this->codigo.getValor(); }
 
-        //! inline Nome Atividade::getNome() const
+        //! inline std::string Atividade::getValorNome() const
         /*!
             Retorna o objeto Nome da atividade.
-            @return objeto nome armazenado no objeto Atividade.
+            @return objeto Nome armazenado no objeto Atividade.
         */
-        inline Nome getNome() const { return this->nome; }
+        inline std::string getValorNome() const { return this->nome.getValor(); }
 
-        //! inline Data Atividade::getData() const
+        //! inline std::string Atividade::getValorData() const
         /*!
             Retorna o objeto Data da atividade.
             @return objeto Data armazenado no objeto Atividade.
         */
-        inline Data getData() const { return this->data; }
+        inline std::string getValorData() const { return this->data.getValor(); }
 
-        //! inline Horario Atividade::getHorario() const
+        //! inline std::string Atividade::getValorHorario() const
         /*!
             Retorna o objeto Horario da atividade.
             @return objeto Horario armazenado no objeto Atividade.
         */
-        inline Horario getHorario() const { return this->horario; }
+        inline std::string getValorHorario() const { return this->horario.getValor(); }
 
-        //! inline Duracao Atividade::getDuracao() const
+        //! inline int Atividade::getValorDuracao() const
         /*!
             Retorna o objeto Duracao da atividade.
             @return objeto Duracao armazenado no objeto Atividade.
         */
-        inline Duracao getDuracao() const { return this->duracao; }
+        inline int getValorDuracao() const { return this->duracao.getValor(); }
 
-        //! inline Dinheiro Atividade::getPreco() const
+        //! inline int Atividade::getValorPreco() const
         /*!
             Retorna o objeto Dinheiro com o preço da atividade.
             @return objeto Dinheiro armazenado no objeto Atividade.
         */
-        inline Dinheiro getPreco() const { return this->preco; }
+        inline int getValorPreco() const { return this->preco.getValor(); }
 
-        //! inline Avaliacao Atividade::getAvaliacao() const
+        //! inline int getValorAvaliacao() const
         /*!
             Retorna o objeto Avaliacao da atividade.
             @return objeto Avaliacao armazenado no objeto Atividade.
         */
-        inline Avaliacao getAvaliacao() const { return this->avaliacao; }
-
-        std::string getAtividade() const;
+        inline int getValorAvaliacao() const { return this->avaliacao.getValor(); }
 };
 
 #endif // ATIVIDADE_HPP

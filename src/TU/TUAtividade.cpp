@@ -17,37 +17,37 @@ void TUAtividade::testarCenario()
     Codigo codigo;
     codigo.setValor(VALIDO_CODIGO);
     entidade->setValor(codigo);
-    if (entidade->getCodigo().getValor() != VALIDO_CODIGO) estado = FALHA;
+    if (entidade->getValorCodigo() != VALIDO_CODIGO) estado = FALHA;
 
     Nome nome;
     nome.setValor(VALIDO_NOME);
     entidade->setValor(nome);
-    if (entidade->getNome().getValor() != VALIDO_NOME) estado = FALHA;
+    if (entidade->getValorNome() != VALIDO_NOME) estado = FALHA;
 
     Data data;
     data.setValor(VALIDO_DATA);
     entidade->setValor(data);
-    if (entidade->getData().getValor() != VALIDO_DATA) estado = FALHA;
+    if (entidade->getValorData() != VALIDO_DATA) estado = FALHA;
 
     Horario horario;
     horario.setValor(VALIDO_HORARIO);
     entidade->setValor(horario);
-    if (entidade->getHorario().getValor() != VALIDO_HORARIO) estado = FALHA;
+    if (entidade->getValorHorario() != VALIDO_HORARIO) estado = FALHA;
 
     Duracao duracao;
     duracao.setValor(VALIDO_DURACAO);
     entidade->setValor(duracao);
-    if (entidade->getDuracao().getValor() != VALIDO_DURACAO) estado = FALHA;
+    if (entidade->getValorDuracao() != VALIDO_DURACAO) estado = FALHA;
 
     Dinheiro preco;
     preco.setValor(VALIDO_PRECO);
     entidade->setValor(preco);
-    if (entidade->getPreco().getValor() != VALIDO_PRECO) estado = FALHA;
+    if (entidade->getValorPreco() != VALIDO_PRECO) estado = FALHA;
 
     Avaliacao avaliacao;
     avaliacao.setValor(VALIDO_AVALIACAO);
     entidade->setValor(avaliacao);
-    if (entidade->getAvaliacao().getValor() != VALIDO_AVALIACAO) estado = FALHA;
+    if (entidade->getValorAvaliacao() != VALIDO_AVALIACAO) estado = FALHA;
 }
 
 int TUAtividade::run()
