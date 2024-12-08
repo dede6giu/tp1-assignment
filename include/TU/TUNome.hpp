@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include <vector>
 #include <string>
-#include "Dominios/Nome.hpp"
+#include "../../include/Dominios/Nome.hpp"
 
 //! TUNome
 /*!

@@ -3,7 +3,7 @@
 
 #include <stdexcept>
 #include <vector>
-#include "Dominios/Dinheiro.hpp"
+#include "../../include/Dominios/Dinheiro.hpp"
 
 //! TUDinheiro
 /*!

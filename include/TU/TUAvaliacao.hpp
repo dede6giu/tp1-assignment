@@ -2,7 +2,7 @@
 #define TUAVALIACAO_HPP_INCLUDED
 
 #include <stdexcept>
-#include "Dominios/Avaliacao.hpp"
+#include "../../include/Dominios/Avaliacao.hpp"
 #include <vector>
 
 //! TUAvaliacao

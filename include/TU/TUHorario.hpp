@@ -9,7 +9,7 @@
 #include <stdexcept>
 #include <vector>
 #include <string>
-#include "Dominios/Horario.hpp"
+#include "../../include/Dominios/Horario.hpp"
 
 class TUHorario {
 private:

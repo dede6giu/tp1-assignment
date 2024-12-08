@@ -3,7 +3,7 @@
 
 #include <vector>
 //#include
-#include "Entidades/Atividade.hpp"
+#include "../../include/Entidades/Atividade.hpp"
 
 class TUAtividade {
 private:

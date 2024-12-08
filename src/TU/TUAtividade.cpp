@@ -1,5 +1,5 @@
 #include <stdexcept>
-#include "TU/TUAtividade.hpp"
+#include "../../include/TU/TUAtividade.hpp"
 
 using namespace std;
 

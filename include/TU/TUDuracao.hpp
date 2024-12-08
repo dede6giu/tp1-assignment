@@ -3,7 +3,7 @@
 
 #include <stdexcept>
 #include <vector>
-#include "Dominios/Duracao.hpp"
+#include "../../include/Dominios/Duracao.hpp"
 
 //! TUDuracao
 /*!

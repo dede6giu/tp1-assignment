@@ -1,4 +1,4 @@
-#include "Dominios/Senha.hpp"
+#include "../../include/Dominios/Senha.hpp"
 #include <set>
 #include <string>
 #include <algorithm>

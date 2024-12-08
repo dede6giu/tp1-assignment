@@ -3,7 +3,7 @@
 
 #include <stdexcept>
 #include <vector>
-#include "Entidades/Destino.hpp"
+#include "../../include/Entidades/Destino.hpp"
 
 class TUDestino
 {

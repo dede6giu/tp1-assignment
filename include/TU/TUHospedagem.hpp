@@ -3,7 +3,7 @@
 
 #include <stdexcept>
 #include <vector>
-#include "Entidades/Hospedagem.hpp"
+#include "../../include/Entidades/Hospedagem.hpp"
 
 class TUHospedagem
 {

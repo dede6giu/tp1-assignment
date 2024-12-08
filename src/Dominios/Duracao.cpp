@@ -1,4 +1,4 @@
-#include "Dominios/Duracao.hpp"
+#include "../../include/Dominios/Duracao.hpp"
 #include <stdexcept>
 
 Duracao::Duracao()

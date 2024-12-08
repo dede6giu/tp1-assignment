@@ -2,7 +2,7 @@
 #define TUVIAGEM_HPP_INCLUDED
 
 #include <stdexcept>
-#include "Entidades/Viagem.hpp"
+#include "../../include/Entidades/Viagem.hpp"
 
 class TUViagem
 {

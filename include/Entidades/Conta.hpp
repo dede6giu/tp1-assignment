@@ -1,8 +1,8 @@
 #ifndef CONTA_HPP_INCLUDED
 #define CONTA_HPP_INCLUDED
 
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Senha.hpp"
+#include "../../include/Dominios/Codigo.hpp"
+#include "../../include/Dominios/Senha.hpp"
 
 //! Entidade Conta
 /*!
@@ -13,7 +13,7 @@
 class Conta
 {
     private:
-        //! Codigo (atributo) 
+        //! Codigo (atributo)
         /*! Atributo que armazena o codigo da conta. */
         Codigo codigo;
 

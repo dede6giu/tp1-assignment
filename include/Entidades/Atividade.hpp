@@ -2,13 +2,13 @@
 #define ATIVIDADE_HPP_INCLUDED
 
 #include <string>
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Nome.hpp"
-#include "Dominios/Data.hpp"
-#include "Dominios/Horario.hpp"
-#include "Dominios/Duracao.hpp"
-#include "Dominios/Dinheiro.hpp"
-#include "Dominios/Avaliacao.hpp"
+#include "../../include/Dominios/Codigo.hpp"
+#include "../../include/Dominios/Nome.hpp"
+#include "../../include/Dominios/Data.hpp"
+#include "../../include/Dominios/Horario.hpp"
+#include "../../include/Dominios/Duracao.hpp"
+#include "../../include/Dominios/Dinheiro.hpp"
+#include "../../include/Dominios/Avaliacao.hpp"
 
 //! Entidade Atividade
 /*!
@@ -18,7 +18,7 @@
 
 class Atividade {
     private:
-    
+
         //! Codigo (atributo)
         /*! Atributo da classe Codigo. */
         Codigo codigo;
@@ -48,7 +48,7 @@ class Atividade {
         Avaliacao avaliacao;
 
     public:
-    
+
         //! Construtor vazio
         /*! Constrói um objeto Atividade vazio. */
         Atividade();

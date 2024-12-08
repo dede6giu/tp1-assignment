@@ -1,12 +1,12 @@
 #ifndef HOSPEDAGEM_HPP_INCLUDED
 #define HOSPEDAGEM_HPP_INCLUDED
 
-#include "Dominios/Avaliacao.hpp"
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Dinheiro.hpp"
-#include "Dominios/Nome.hpp"
+#include "../../include/Dominios/Avaliacao.hpp"
+#include "../../include/Dominios/Codigo.hpp"
+#include "../../include/Dominios/Dinheiro.hpp"
+#include "../../include/Dominios/Nome.hpp"
 
-//! Entidade Hospedagem 
+//! Entidade Hospedagem
 /*!
     232001667 - implementação \n
     232002520 - documentação
@@ -15,29 +15,29 @@
 class Hospedagem
 {
     private:
-    
-        //! Codigo (atributo) 
+
+        //! Codigo (atributo)
         /*! Atributo da classe Codigo. */
         Codigo codigo;
-        
-        //! Nome (atributo) 
+
+        //! Nome (atributo)
         /*! Atributo da classe Nome. */
         Nome nome;
-        
-        //! Avaliacao (atributo) 
+
+        //! Avaliacao (atributo)
         /*! Atributo da classe Avaliacao. */
         Avaliacao avaliacao;
-        
-        //! Dinheiro (atributo) 
+
+        //! Dinheiro (atributo)
         /*! Atributo da classe Dinheiro que representa a diária do estabelecimento. */
         Dinheiro diaria;
-        
+
     public:
-    
+
         //! Construtor vazio
         /*! Constrói um objeto Hospedagem vazio. */
         Hospedagem();
-        
+
         Hospedagem(const Codigo&, const Nome&, const Avaliacao&, const Dinheiro&);
 
         //! Hospedagem::setValor(const Codigo&)
@@ -46,7 +46,7 @@ class Hospedagem
             @param const Codigo.
         */
         void setValor(const Codigo&);
-        
+
         //! Codigo Hospedagem::getCodigo() const
         /*!
             Retorna o objeto Codigo armazenado no objeto Hospedagem.
@@ -60,7 +60,7 @@ class Hospedagem
             @param const Nome.
         */
         void setValor(const Nome&);
-        
+
         //! Nome Hospedagem::getNome() const
         /*!
             Retorna o objeto Nome armazenado no objeto Hospedagem.
@@ -74,7 +74,7 @@ class Hospedagem
             @param const Avaliacao.
         */
         void setValor(const Avaliacao&);
-        
+
         //! Avaliacao Hospedagem::getAvaliacao() const
         /*!
             Retorna o objeto Codigo armazenado no objeto Hospedagem.
@@ -88,7 +88,7 @@ class Hospedagem
             @param const Dinheiro.
         */
         void setValor(const Dinheiro&);
-        
+
         //! Dinheiro Hospedagem::getDiaria() const
         /*!
             Retorna o objeto Dinheiro (diária) da Hospedagem.

@@ -1,4 +1,4 @@
-#include "Dominios/Codigo.hpp"
+#include "../../include/Dominios/Codigo.hpp"
 #include <string>
 #include <stdexcept>
 

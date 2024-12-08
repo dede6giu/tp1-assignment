@@ -1,6 +1,6 @@
-#include "Entidades/Atividade.hpp"
+#include "../../include/Entidades/Atividade.hpp"
 
-#include "Dominios.hpp"
+#include "../../include/Dominios.hpp"
 
 Atividade::Atividade()
 {

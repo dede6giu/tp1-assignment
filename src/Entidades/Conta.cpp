@@ -1,7 +1,7 @@
-#include "Entidades/Conta.hpp"
+#include "../../include/Entidades/Conta.hpp"
 
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Senha.hpp"
+#include "../../include/Dominios/Codigo.hpp"
+#include "../../include/Dominios/Senha.hpp"
 
 Conta::Conta()
 {

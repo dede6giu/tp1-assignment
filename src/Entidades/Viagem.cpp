@@ -1,4 +1,4 @@
-#include "Entidades/Viagem.hpp"
+#include "../../include/Entidades/Viagem.hpp"
 
 Viagem::Viagem()
 {

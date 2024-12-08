@@ -1,9 +1,9 @@
-#include "Entidades/Hospedagem.hpp"
+#include "../../include/Entidades/Hospedagem.hpp"
 
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Nome.hpp"
-#include "Dominios/Dinheiro.hpp"
-#include "Dominios/Avaliacao.hpp"
+#include "../../include/Dominios/Codigo.hpp"
+#include "../../include/Dominios/Nome.hpp"
+#include "../../include/Dominios/Dinheiro.hpp"
+#include "../../include/Dominios/Avaliacao.hpp"
 
 Hospedagem::Hospedagem()
 {

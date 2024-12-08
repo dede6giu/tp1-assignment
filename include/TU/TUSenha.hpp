@@ -9,7 +9,7 @@
 #include <stdexcept>
 #include <vector>
 #include <string>
-#include "Dominios/Senha.hpp"
+#include "../../include/Dominios/Senha.hpp"
 
 class TUSenha {
 private:

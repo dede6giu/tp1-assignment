@@ -1,4 +1,4 @@
-#include "Dominios/Avaliacao.hpp"
+#include "../../include/Dominios/Avaliacao.hpp"
 #include <stdexcept>
 
 Avaliacao::Avaliacao()

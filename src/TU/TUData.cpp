@@ -1,5 +1,5 @@
-#include "TU/TUData.hpp"
-#include "Dominios/Data.hpp"
+#include "../../include/TU/TUData.hpp"
+#include "../../include/Dominios/Data.hpp"
 
 using namespace std;
 

@@ -1,9 +1,9 @@
 #ifndef VIAGEM_HPP_INCLUDED
 #define VIAGEM_HPP_INCLUDED
 
-#include "Dominios/Avaliacao.hpp"
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Nome.hpp"
+#include "../../include/Dominios/Avaliacao.hpp"
+#include "../../include/Dominios/Codigo.hpp"
+#include "../../include/Dominios/Nome.hpp"
 #include <string>
 
 //! Entidade Viagem

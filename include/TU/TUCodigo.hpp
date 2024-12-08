@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
-#include "Dominios/Codigo.hpp"
+#include "../../include/Dominios/Codigo.hpp"
 
 //! TUCodigo
 /*!
