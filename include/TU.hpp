@@ -12,5 +12,6 @@
 
 #include "TU/TUDestino.hpp"
 #include "TU/TUHospedagem.hpp"
+#include "TU/TUViagem.hpp"
 
 #endif // TU_HPP_INCLUDED

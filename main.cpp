@@ -150,10 +150,24 @@ int main()
         delete holder;
     }
 
-
     {
         TUHospedagem* holder = new TUHospedagem();
         cout << "Hospedagem: ";
+        switch (holder->run())
+        {
+            case holder->SUCESSO:
+                cout << suc << endl;
+                break;
+            case holder->FALHA:
+                cout << fal << endl;
+                break;
+        }
+        delete holder;
+    }
+
+    {
+        TUViagem* holder = new TUViagem();
+        cout << "Viagem    : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
