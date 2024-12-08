@@ -41,12 +41,12 @@ class Conta
         Conta(const Codigo&, const Senha&);
 
 
-        //! bool Conta::setValor(const Codigo&)
+        //! Conta::setValor(const Codigo&)
         /*!
             Método que recebe um objeto Codigo e armazena-o como atributo do objeto.
             @param Codigo a ser armazenado.
         */
-        bool setValor(const Codigo&);
+        void setValor(const Codigo&);
 
         //! Codigo Conta::getCodigo()
         /*!
@@ -55,13 +55,12 @@ class Conta
         */
         std::string getValorCodigo() const;
 
-
-        //! bool Conta::setValor(const Senha&)
+        //! Conta::setValor(const Senha&)
         /*!
             Método que recebe um objeto Senha e armazena-o como atributo do objeto.
             @param Senha a ser armazenado.
         */
-        bool setValor(const Senha&);
+        void setValor(const Senha&);
 
         //! Senha Conta::getSenha()
         /*!
@@ -70,7 +69,6 @@ class Conta
         */
         std::string getValorSenha() const;
 };
-
 
 inline std::string Conta::getValorCodigo() const
 {

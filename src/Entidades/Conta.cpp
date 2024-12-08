@@ -16,14 +16,12 @@ Conta::Conta(const Codigo& cc,
     senha = ss;
 }
 
-bool Conta::setValor(const Codigo &novoCodigo)
+void Conta::setValor(const Codigo &novoCodigo)
 {
     this -> codigo = novoCodigo;
-    return true;
 }
 
-bool Conta::setValor(const Senha &novaSenha)
+void Conta::setValor(const Senha &novaSenha)
 {
     this -> senha = novaSenha;
-    return true;
 }
