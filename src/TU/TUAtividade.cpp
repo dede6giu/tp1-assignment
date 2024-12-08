@@ -1,7 +1,6 @@
 #include <stdexcept>
 #include "TU/TUAtividade.hpp"
 
-#include <iostream>
 using namespace std;
 
 void TUAtividade::setUp()

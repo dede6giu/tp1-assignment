@@ -136,6 +136,21 @@ int main()
     cout << "\n" << "===== Entidades =====" << endl;
 
     {
+        TUAtividade* holder = new TUAtividade();
+        cout << "Atividade : ";
+        switch (holder->run())
+        {
+            case holder->SUCESSO:
+                cout << suc << endl;
+                break;
+            case holder->FALHA:
+                cout << fal << endl;
+                break;
+        }
+        delete holder;
+    }
+
+    {
         TUConta* holder = new TUConta();
         cout << "Conta     : ";
         switch (holder->run())
@@ -183,21 +198,6 @@ int main()
     {
         TUViagem* holder = new TUViagem();
         cout << "Viagem    : ";
-        switch (holder->run())
-        {
-            case holder->SUCESSO:
-                cout << suc << endl;
-                break;
-            case holder->FALHA:
-                cout << fal << endl;
-                break;
-        }
-        delete holder;
-    }
-
-    {
-        TUAtividade* holder = new TUAtividade();
-        cout << "Atividade: ";
         switch (holder->run())
         {
             case holder->SUCESSO:
