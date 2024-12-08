@@ -19,14 +19,13 @@ class Conta
         Conta();
         Conta(const Codigo&, const Senha&);
 
-        bool setValor(const Codigo&);
+        void setValor(const Codigo&);
         std::string getValorCodigo() const;
 
-        bool setValor(const Senha&);
+        void setValor(const Senha&);
         std::string getValorSenha() const;
 
 };
-
 
 inline std::string Conta::getValorCodigo() const
 {
