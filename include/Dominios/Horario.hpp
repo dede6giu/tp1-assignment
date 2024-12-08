@@ -7,7 +7,9 @@
 /*!
     Classe Horario, string de 5 caracteres composta por "HH:mm", impressa em formato de 24h. Internamente salva como dois inteiros, um para horas e outro para minutos.\n
     232013031 - implementa&ccdeil;&atilde;o, construtores \n
-    232002520 - documentação, exce��es, implementação
+    232002520 - documentação, exceções, implementação \n
+    232002771 - documentação \n
+    232006028 - documentação
 */
 
 class Horario
@@ -24,7 +26,7 @@ class Horario
         //! bool Horario::validar(std::string)
         /*!
             Recebe uma string e verifica se ela é válida (tamanho exatamente igual 5 e se o terceiro caractere é ":").
-            @param string � ser analisada.
+            @param string é ser analisada.
         */
         void validar(std::string);
 
@@ -57,10 +59,10 @@ class Horario
             salva os valores dentro do objeto.
             @param int com as horas.
             @param int com os minutos.
-            @sa Nome(), Horario::validarHoras(), Horario:validarMinutos(), Horario::setValor().
+            @sa Nome(), Horario::setValor().
         */
         Horario(int, int);
-        
+
         Horario(std::string);
 
         void setValor(std::string);
@@ -77,7 +79,6 @@ class Horario
         /*!
             Recebe um int, o verifica e salva no atributo horas da classe.
             @param int com o novo valor das horas.
-            @sa Horario::validarHoras().
         */
         void setValorHoras(int);
 
@@ -85,8 +86,6 @@ class Horario
         /*!
             Recebe um int, o verifica e salva no atributo minutos da classe.
             @param int com o novo valor dos minutos.
-            @return bool indicando o sucesso da operação.
-            @sa Horario::validarMinutos().
         */
         void setValorMinutos(int);
 

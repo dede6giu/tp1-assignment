@@ -6,8 +6,8 @@
 //! Classe Senha
 /*!
     Classe Senha, sequência válida de 5 dígitos sem repetição, não crescente nem decrescente.
-    232006028 - implementação, exceções. \n
-    232002771 - implementação por string. \n
+    232006028 - implementação, exceções, documentação. \n
+    232002771 - implementação por string,documentação. \n
     232013031 - construtores, documentação.
 */
 
@@ -43,7 +43,7 @@ class Senha
         /*!
             Recebe um valor string, o verifica e finalmente constrói um objeto
             Senha com o valor inserido.
-            @sa Senha(), Senha::validar()
+            @sa Senha()
         */
         Senha(std::string);
 
@@ -51,7 +51,7 @@ class Senha
         /*!
             Recebe um valor string, o verifica e altera o valor atual do objeto.
             @param string que alterará o valor senha atual.
-            @sa senha, Senha::validar()
+            @sa senha
         */
         void setValor(std::string);
 
