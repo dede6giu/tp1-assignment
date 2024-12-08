@@ -42,8 +42,7 @@ void Atividade::setValor(const Avaliacao &novaAvaliacao) {
 }
 
 std::string Atividade::getAtividade() const {
-    std::string atividade = "";
-    atividade += this->codigo.getValor() +", "+ this->nome.getValor() +", "+ this->data.getValor() +", "+ this->horario.getValor()
-        +", "+ std::to_string(this->duracao.getValor()) +", "+ std::to_string(this->preco.getValor()) +", "+ std::to_string(this->avaliacao.getValor());
-    return atividade;
+    return codigo.getValor() + ", " + nome.getValor() + ", " + data.getValor() + ", " +
+           horario.getValor() + ", " + std::to_string(duracao.getValor()) + ", " +
+           std::to_string(preco.getValor()) + ", " + std::to_string(avaliacao.getValor());
 }

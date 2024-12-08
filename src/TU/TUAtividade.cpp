@@ -17,16 +17,25 @@ void TUAtividade::tearDown()
 
 void TUAtividade::testeUniVal(vector<string> teste)
 {
-    dominio->getCodigo().setValor(teste[0]);            // Codigo
-    dominio->getNome().setValor(teste[1]);              // Nome
-    dominio->getData().setValor(teste[2]);              // Data
-    dominio->getHorario().setValor(teste[3]);           // Horario
-    dominio->getDuracao().setValor(stoi(teste[4]));     // Duracao
-    dominio->getPreco().setValor(stoi(teste[5]));       // Dinheiro
-    dominio->getAvaliacao().setValor(stoi(teste[6]));   // Avaliacao
+    Codigo codigo = Codigo(teste[0]);
+    Nome nome = Nome(teste[1]);
+    Data data = Data(); data.setValor(teste[2]);
+    Horario horario = Horario(); horario.setValor(teste[3]);
+    Duracao duracao = Duracao(stoi(teste[4]));
+    Dinheiro preco = Dinheiro(stoi(teste[5]));
+    Avaliacao avaliacao = Avaliacao(stoi(teste[6]));
 
-    if (dominio->getAtividade() != teste[7])
+    dominio->setValor(codigo);      // Codigo
+    dominio->setValor(nome);        // Nome
+    dominio->setValor(data);        // Data
+    dominio->setValor(horario);     // Horario
+    dominio->setValor(duracao);     // Duracao
+    dominio->setValor(preco);       // Dinheiro
+    dominio->setValor(avaliacao);   // Avaliacao
+
+    if (dominio->getAtividade() != teste[7]) {
         estado = FALHA;
+    }
 }
 
 void TUAtividade::testarValido()
@@ -50,13 +59,21 @@ void TUAtividade::testeUniInv(vector<string> teste)
 {
     try
     {
-        dominio->getCodigo().setValor(teste[0]);            // Codigo
-        dominio->getNome().setValor(teste[1]);              // Nome
-        dominio->getData().setValor(teste[2]);              // Data
-        dominio->getHorario().setValor(teste[3]);           // Horario
-        dominio->getDuracao().setValor(stoi(teste[4]));     // Duracao
-        dominio->getPreco().setValor(stoi(teste[5]));       // Dinheiro
-        dominio->getAvaliacao().setValor(stoi(teste[6]));   // Avaliacao
+        Codigo codigo = Codigo(teste[0]);
+        Nome nome = Nome(teste[1]);
+        Data data = Data(); data.setValor(teste[2]);
+        Horario horario = Horario(); horario.setValor(teste[3]);
+        Duracao duracao = Duracao(stoi(teste[4]));
+        Dinheiro preco = Dinheiro(stoi(teste[5]));
+        Avaliacao avaliacao = Avaliacao(stoi(teste[6]));
+
+        dominio->setValor(codigo);      // Codigo
+        dominio->setValor(nome);        // Nome
+        dominio->setValor(data);        // Data
+        dominio->setValor(horario);     // Horario
+        dominio->setValor(duracao);     // Duracao
+        dominio->setValor(preco);       // Dinheiro
+        dominio->setValor(avaliacao);   // Avaliacao
 
         estado = FALHA;
     }
