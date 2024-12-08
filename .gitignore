@@ -31,9 +31,6 @@
 *.out
 *.app
 
-# doxygen
-/docs/Doxyfile
-
 # code::blocks
 *.cpb
 *.layout
@@ -43,7 +40,4 @@
 .vscode
 
 # temp
-main.cpp
-bin/
-obj/
 .vscode/
