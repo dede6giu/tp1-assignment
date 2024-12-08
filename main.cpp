@@ -136,6 +136,21 @@ int main()
     cout << "\n" << "===== Entidades =====" << endl;
 
     {
+        TUConta* holder = new TUConta();
+        cout << "Conta     : ";
+        switch (holder->run())
+        {
+            case holder->SUCESSO:
+                cout << suc << endl;
+                break;
+            case holder->FALHA:
+                cout << fal << endl;
+                break;
+        }
+        delete holder;
+    }
+
+    {
         TUDestino* holder = new TUDestino();
         cout << "Destino   : ";
         switch (holder->run())
