@@ -1,6 +1,7 @@
 #ifndef ATIVIDADE_HPP_INCLUDED
 #define ATIVIDADE_HPP_INCLUDED
 
+#include <string>
 #include "Dominios/Codigo.hpp"
 #include "Dominios/Nome.hpp"
 #include "Dominios/Data.hpp"
@@ -9,9 +10,10 @@
 #include "Dominios/Dinheiro.hpp"
 #include "Dominios/Avaliacao.hpp"
 
-//! entidade Atividade
+//! Entidade Atividade
 /*!
-    232029274 - implementação
+    232029274 - implementação \n
+    232002520 - implementação
 */
 
 class Atividade {
@@ -28,21 +30,23 @@ class Atividade {
         Atividade();
         Atividade(const Codigo&, const Nome&, const Data&, const Horario&, const Duracao&, const Dinheiro&, const Avaliacao&);
 
-        void setValor(const Codigo &);
-        void setValor(const Nome &);
-        void setValor(const Data &);
-        void setValor(const Horario &);
-        void setValor(const Duracao &);
-        void setValor(const Dinheiro &);
-        void setValor(const Avaliacao &);
+        void setValor(const Codigo &codigo);
+        void setValor(const Nome &nome);
+        void setValor(const Data &data);
+        void setValor(const Horario &horario);
+        void setValor(const Duracao &duracao);
+        void setValor(const Dinheiro &preco);
+        void setValor(const Avaliacao &avaliacao);
 
-        inline Codigo       getCodigo() const { return this->codigo; }
-        inline Nome           getNome() const { return this->nome; }
-        inline Data           getData() const { return this->data; }
-        inline Horario     getHorario() const { return this->horario; }
-        inline Duracao     getDuracao() const { return this->duracao; }
-        inline Dinheiro      getPreco() const { return this->preco; }
-        inline Avaliacao getAvaliacao() const { return this->avaliacao; }
+        inline Codigo       getCodigo()     const { return this->codigo; }
+        inline Nome         getNome()       const { return this->nome; }
+        inline Data         getData()       const { return this->data; }
+        inline Horario      getHorario()    const { return this->horario; }
+        inline Duracao      getDuracao()    const { return this->duracao; }
+        inline Dinheiro     getPreco()      const { return this->preco; }
+        inline Avaliacao    getAvaliacao()  const { return this->avaliacao; }
+
+        std::string getAtividade() const;
 };
 
 #endif // ATIVIDADE_HPP_INCLUDED

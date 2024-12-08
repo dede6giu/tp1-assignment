@@ -28,7 +28,7 @@ class Codigo
 
 inline std::string Codigo::getValor() const
 {
-    return codigo;
+    return this->codigo;
 }
 
 #endif // CODIGO_HPP_INCLUDED

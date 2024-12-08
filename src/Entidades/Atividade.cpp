@@ -1,12 +1,6 @@
 #include "Entidades/Atividade.hpp"
 
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Nome.hpp"
-#include "Dominios/Data.hpp"
-#include "Dominios/Horario.hpp"
-#include "Dominios/Duracao.hpp"
-#include "Dominios/Dinheiro.hpp"
-#include "Dominios/Avaliacao.hpp"
+#include "Dominios.hpp"
 
 Atividade::Atividade()
 {
@@ -64,3 +58,8 @@ void Atividade::setValor(const Avaliacao &novaAvaliacao) {
     this->avaliacao = novaAvaliacao;
 }
 
+std::string Atividade::getAtividade() const {
+    return codigo.getValor() + ", " + nome.getValor() + ", " + data.getValor() + ", " +
+           horario.getValor() + ", " + std::to_string(duracao.getValor()) + ", " +
+           std::to_string(preco.getValor()) + ", " + std::to_string(avaliacao.getValor());
+}

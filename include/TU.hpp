@@ -10,6 +10,7 @@
 #include "TU/TUNome.hpp"
 #include "TU/TUSenha.hpp"
 
+#include "TU/TUAtividade.hpp"
 #include "TU/TUConta.hpp"
 #include "TU/TUDestino.hpp"
 #include "TU/TUHospedagem.hpp"
