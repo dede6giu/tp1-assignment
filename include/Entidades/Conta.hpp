@@ -20,22 +20,22 @@ class Conta
         Conta(const Codigo&, const Senha&);
 
         bool setValor(const Codigo&);
-        Codigo getCodigo() const;
+        std::string getValorCodigo() const;
 
         bool setValor(const Senha&);
-        Senha getSenha() const;
+        std::string getValorSenha() const;
 
 };
 
 
-inline Codigo Conta::getCodigo() const
+inline std::string Conta::getValorCodigo() const
 {
-    return this->codigo;
+    return this->codigo.getValor();
 }
 
-inline Senha Conta::getSenha() const
+inline std::string Conta::getValorSenha() const
 {
-    return this->senha;
+    return this->senha.getValor();
 }
 
 #endif // CONTA_HPP_INCLUDED

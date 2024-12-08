@@ -11,5 +11,6 @@
 #include "TU/TUSenha.hpp"
 
 #include "TU/TUDestino.hpp"
+#include "TU/TUConta.hpp"
 
 #endif // TU_HPP_INCLUDED
