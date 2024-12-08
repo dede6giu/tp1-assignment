@@ -9,7 +9,8 @@ Conta::Conta()
     senha = Senha();
 }
 
-Conta::Conta(const Codigo& cc, const Senha& ss)
+Conta::Conta(const Codigo& cc,
+             const Senha& ss)
 {
     codigo = cc;
     senha = ss;

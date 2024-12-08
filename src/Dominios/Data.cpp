@@ -1,11 +1,15 @@
 #include "Dominios/Data.hpp"
-#include <string>
 #include <stdexcept>
 
 Data::Data() {
     dia;
     mes;
     ano;
+}
+
+Data::Data(std::string dataStr)
+{
+    Data::setValor(dataStr);
 }
 
 Data::Data(int dd, int mm, int aa)

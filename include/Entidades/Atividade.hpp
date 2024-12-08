@@ -17,36 +17,36 @@
 */
 
 class Atividade {
-private:
-    Codigo codigo;
-    Nome nome;
-    Data data;
-    Horario horario;
-    Duracao duracao;
-    Dinheiro preco;
-    Avaliacao avaliacao;
+    private:
+        Codigo codigo;
+        Nome nome;
+        Data data;
+        Horario horario;
+        Duracao duracao;
+        Dinheiro preco;
+        Avaliacao avaliacao;
 
-public:
-    Atividade();
+    public:
+        Atividade();
+        Atividade(const Codigo&, const Nome&, const Data&, const Horario&, const Duracao&, const Dinheiro&, const Avaliacao&);
 
-    void setValor(const Codigo &codigo);
-    void setValor(const Nome &nome);
-    void setValor(const Data &data);
-    void setValor(const Horario &horario);
-    void setValor(const Duracao &duracao);
-    void setValor(const Dinheiro &preco);
-    void setValor(const Avaliacao &avaliacao);
+        void setValor(const Codigo &codigo);
+        void setValor(const Nome &nome);
+        void setValor(const Data &data);
+        void setValor(const Horario &horario);
+        void setValor(const Duracao &duracao);
+        void setValor(const Dinheiro &preco);
+        void setValor(const Avaliacao &avaliacao);
 
-    inline Codigo       getCodigo()     const { return this->codigo; }
-    inline Nome         getNome()       const { return this->nome; }
-    inline Data         getData()       const { return this->data; }
-    inline Horario      getHorario()    const { return this->horario; }
-    inline Duracao      getDuracao()    const { return this->duracao; }
-    inline Dinheiro     getPreco()      const { return this->preco; }
-    inline Avaliacao    getAvaliacao()  const { return this->avaliacao; }
+        inline Codigo       getCodigo()     const { return this->codigo; }
+        inline Nome         getNome()       const { return this->nome; }
+        inline Data         getData()       const { return this->data; }
+        inline Horario      getHorario()    const { return this->horario; }
+        inline Duracao      getDuracao()    const { return this->duracao; }
+        inline Dinheiro     getPreco()      const { return this->preco; }
+        inline Avaliacao    getAvaliacao()  const { return this->avaliacao; }
 
-    std::string getAtividade() const;
+        std::string getAtividade() const;
 };
-#endif // ATIVIDADE_HPP
 
-
+#endif // ATIVIDADE_HPP_INCLUDED

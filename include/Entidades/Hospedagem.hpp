@@ -1,10 +1,10 @@
 #ifndef HOSPEDAGEM_HPP_INCLUDED
-#define HOSPEDAGEM__HPP_INCLUDED
+#define HOSPEDAGEM_HPP_INCLUDED
 
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Nome.hpp"
 #include "Dominios/Avaliacao.hpp"
+#include "Dominios/Codigo.hpp"
 #include "Dominios/Dinheiro.hpp"
+#include "Dominios/Nome.hpp"
 
 /*!
     Entidade de Hospedagem
@@ -13,25 +13,28 @@
 
 class Hospedagem
 {
-private:
-    Codigo codigo;
-    Nome nome;
-    Avaliacao avaliacao;
-    Dinheiro diaria;
-public:
-    Hospedagem();
+    private:
+        Codigo codigo;
+        Nome nome;
+        Avaliacao avaliacao;
+        Dinheiro diaria;
 
-    void setValor(const Codigo&);
-    inline Codigo getCodigo() const {return this->codigo;}
+    public:
+        Hospedagem();
+        Hospedagem(const Codigo&, const Nome&, const Avaliacao&, const Dinheiro&);
 
-    void setValor(const Nome&);
-    inline Nome getNome() const {return this->nome;}
 
-    void setValor(const Avaliacao&);
-    inline Avaliacao getAvaliacao() const {return this->avaliacao;}
+        void setValor(const Codigo&);
+        inline std::string getValorCodigo() const {return this->codigo.getValor();}
 
-    void setValor(const Dinheiro&);
-    inline Dinheiro getDiaria() const {return this->diaria;}
+        void setValor(const Nome&);
+        inline std::string getValorNome() const {return this->nome.getValor();}
+
+        void setValor(const Avaliacao&);
+        inline int getValorAvaliacao() const {return this->avaliacao.getValor();}
+
+        void setValor(const Dinheiro&);
+        inline int getValorDiaria() const {return this->diaria.getValor();}
 };
 
-#endif // HOSPEDAGEM_HPP
+#endif // HOSPEDAGEM_HPP_INCLUDED

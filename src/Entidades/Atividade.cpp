@@ -13,6 +13,23 @@ Atividade::Atividade()
     avaliacao = Avaliacao();
 }
 
+Atividade::Atividade(const Codigo& codigoNovo,
+                     const Nome& nomeNovo,
+                     const Data& dataNovo,
+                     const Horario& horarioNovo,
+                     const Duracao& duracaoNovo,
+                     const Dinheiro& precoNovo,
+                     const Avaliacao& avaliacaoNovo)
+{
+    codigo = codigoNovo;
+    nome = nomeNovo;
+    data = dataNovo;
+    horario = horarioNovo;
+    duracao = duracaoNovo;
+    preco = precoNovo;
+    avaliacao = avaliacaoNovo;
+}
+
 void Atividade::setValor(const Codigo &novoCodigo) {
     this->codigo = novoCodigo;
 }

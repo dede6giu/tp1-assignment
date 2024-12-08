@@ -5,29 +5,42 @@
 #include "Dominios/Dinheiro.hpp"
 #include "Dominios/Avaliacao.hpp"
 
-Hospedagem::Hospedagem(){
-    codigo=Codigo();
-    nome=Nome();
-    diaria=Dinheiro();
-    avaliacao=Avaliacao();
+Hospedagem::Hospedagem()
+{
+    codigo = Codigo();
+    nome = Nome();
+    diaria = Dinheiro();
+    avaliacao = Avaliacao();
 }
 
-inline void Hospedagem::setValor(const Codigo& codigo)
+Hospedagem::Hospedagem(const Codigo& codigoNovo,
+                       const Nome& nomeNovo,
+                       const Avaliacao& avaliacaoNovo,
+                       const Dinheiro& dinheiroNovo)
 {
-    this->codigo=codigo;
+    codigo = codigoNovo;
+    nome = nomeNovo;
+    avaliacao = avaliacaoNovo;
+    diaria = dinheiroNovo;
 }
 
-inline void Hospedagem::setValor(const Nome& nome)
+
+void Hospedagem::setValor(const Codigo& codigo)
 {
-    this->nome=nome;
+    this->codigo = codigo;
 }
 
-inline void Hospedagem::setValor(const Avaliacao& avaliacao)
+void Hospedagem::setValor(const Nome& nome)
 {
-    this->avaliacao=avaliacao;
+    this->nome = nome;
 }
 
-inline void Hospedagem::setValor(const Dinheiro& diaria)
+void Hospedagem::setValor(const Avaliacao& avaliacao)
 {
-    this->diaria=diaria;
+    this->avaliacao = avaliacao;
+}
+
+void Hospedagem::setValor(const Dinheiro& diaria)
+{
+    this->diaria = diaria;
 }
