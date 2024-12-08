@@ -1,43 +1,127 @@
 #ifndef DESTINO_HPP_INCLUDED
 #define DESTINO_HPP_INCLUDED
 
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Nome.hpp"
-#include "Dominios/Data.hpp"
-#include "Dominios/Avaliacao.hpp"
+#include "../../include/Dominios/Codigo.hpp"
+#include "../../include/Dominios/Nome.hpp"
+#include "../../include/Dominios/Data.hpp"
+#include "../../include/Dominios/Avaliacao.hpp"
 
 
 //! Entidade Destino
 /*!
     Entidade Destino \n
-    232013031 - implementação
+    232013031 - implementação \n
+    232002520 - documentação \n
+    232002771 - documentação
 */
 
 class Destino
 {
     private:
+        //! Codigo (atributo)
+        /*! Atributo que armazena o objeto Codigo do Destino.*/
         Codigo codigo;
+
+        //! Nome (atributo)
+        /*! Atributo que armazena o objeto Nome do Destino. */
         Nome nome;
+
+        //! Data (atributo)
+        /*! Atributo que armazena o objeto Data de início do Destino */
         Data inicio;
+
+        //! Data (atributo)
+        /*! Atributo que armazena o objeto Data de fim do Destino. */
         Data fim;
+
+        //! Avaliacao (atributo)
+        /*! Atributo que armazena o objeto Avaliacao do Destino. */
         Avaliacao avaliacao;
-        bool validar(); //!< não ainda implementado
 
     public:
+        //! Construtor vazio
+        /*! Constrói um objeto Destino vazio.
+            @sa Destino(const Codigo&, const Nome&, const Data&, const Data&, const Avaliacao&)
+        */
         Destino();
+
+        //! Construtor paramétrico
+        /*!
+            Constrói um objeto Destino e pede como parâmetros: um Codigo, um Nome, uma Data de início, uma Data de fim e uma Avaliacao.
+            @param const Codigo a ser armazenado.
+            @param const Nome a ser armazenado.
+            @param const Data de inicio a ser armazenada.
+            @param const Data de fim a ser armazenada.
+            @param const Avaliacao a ser armazenado.
+            @sa Destino()
+        */
         Destino(const Codigo&, const Nome&, const Data&, const Data&, const Avaliacao&);
 
+        //! void Destino::setValor(const Codigo&)
+        /*!
+            Recebe um objeto Codigo e armazena-o como atributo do objeto.
+            @param const Codigo&
+        */
         void setValor(const Codigo&);
+
+        //! inline Codigo Destino::getValorCodigo()
+        /*!
+            Retorna o objeto Codigo armazenado no objeto.
+            @return string valor do Codigo.
+        */
         inline std::string getValorCodigo() const;
 
+
+        //! void Destino::setValor(const Nome&)
+        /*!
+            Recebe um objeto Nome e armazena-o como atributo do objeto.
+            @param const Nome& a ser armazenado.
+        */
         void setValor(const Nome&);
+
+        //! inline Nome Destino::getValorNome()
+        /*!
+            Retorna o objeto Nome armazenado no objeto.
+            @return string valor do Nome.
+        */
         inline std::string getValorNome() const;
 
+
+        //! void Destino::setValor(const Avaliacao&)
+        /*!
+            Recebe um objeto Avaliacao e armazena-o como atributo do objeto.
+            @param const Avaliacao.
+        */
         void setValor(const Avaliacao&);
+
+        //! inline Avaliacao Destino::getValorAvaliacao()
+        /*!
+            Retorna o objeto Avaliacao armazenado no objeto.
+            @return int valor do Avaliacao.
+        */
         inline int getValorAvaliacao() const;
 
+
+        //! void Destino::setValor(const Data&, bool)
+        /*!
+            Recebe um objeto Data e um bool e armazena-os como atributos do objeto.
+            @param const Data& a ser armazenado.
+            @param bool (se vale 0, é a data de início; se vale 1, é a data de fim).
+        */
         void setValor(const Data&, bool);
+
+        //! inline Data Destino::getValorInicio()
+        /*!
+            Retorna o objeto Data de início armazenado no objeto.
+            @return string valor do parâmetro início (Data).
+        */
         inline std::string getValorInicio() const;
+
+        //! inline Data Destino::getValorFim()
+        /*!
+            Retorna o objeto Data de fim armazenado no objeto.
+            @return string valor do parâmetro fim (Data).
+        */
         inline std::string getValorFim() const;
 };
 

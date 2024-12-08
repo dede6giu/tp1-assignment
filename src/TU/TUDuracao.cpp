@@ -1,4 +1,4 @@
-#include "TU/TUDuracao.hpp"
+#include "../../include/TU/TUDuracao.hpp"
 
 using namespace std;
 

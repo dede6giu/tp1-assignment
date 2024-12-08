@@ -3,13 +3,14 @@
 
 #include <stdexcept>
 #include <vector>
-#include "Dominios/Dinheiro.hpp"
+#include "../../include/Dominios/Dinheiro.hpp"
 
-//! TUDinheiro
+//! Testes de Unidade do Dominio Dinheiro
 /*!
-    232001667 - implementação \n
-    232013031 - implementação
+    232013031 - implementaÃ§Ã£o. \n
+    232001667 - implementaÃ§Ã£o.
 */
+
 
 class TUDinheiro {
     private:

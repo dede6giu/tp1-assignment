@@ -2,13 +2,13 @@
 #define TUAVALIACAO_HPP_INCLUDED
 
 #include <stdexcept>
-#include "Dominios/Avaliacao.hpp"
+#include "../../include/Dominios/Avaliacao.hpp"
 #include <vector>
 
-//! TUAvaliacao
+//! Testes de Unidade do Dominio Avaliacao
 /*!
-    232001667 - implementação \n
-    232013031 - implementação
+    232013031 - implementação. \n
+    232001667 - implementação.
 */
 
 class TUAvaliacao {

@@ -1,0 +1,19 @@
+/*! \mainpage Projeto de TP1
+
+\section intro_sec Introdução
+
+Essa é a documentação do projeto de TP1. A documentação é do formato
+pública, ou seja, não possui registro dos atributos e métodos privados
+das classes, nem dos comentários adicionais nas implementações. \n
+Contudo, parte do código está documentado com essas informações, se
+vier ao caso, um pode verificar a fonte para obter mais informações.
+
+\section credit_sec Créditos
+
+232001667 - Davi Sousa da Vinha \n
+232002520 - Giovanni Daldegan \n
+232002771 - Gustavo Henrique Gomes Barbosa \n
+232013031 - José Antônio Alcântara da Silva de Andrade \n
+202029274 - Márcio Vieira dos Santos \n
+202006028 - Pedro Freitas França \n
+*/

@@ -64,6 +64,7 @@
 		<Unit filename="include/TU/TUSenha.hpp" />
 		<Unit filename="include/TU/TUViagem.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="mainpage.dox" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
 		<Unit filename="src/Dominios/Codigo.cpp" />
 		<Unit filename="src/Dominios/Data.cpp" />

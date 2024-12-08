@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "TU.hpp"
+#include "../../include/TU.hpp"
 
 using namespace std;
 
@@ -10,7 +10,6 @@ int main()
 
     string suc = "SUCESSO";
     string fal = "FALHA";
-
 
     cout << "\n" << "===== Dominios =====" << endl;
     {

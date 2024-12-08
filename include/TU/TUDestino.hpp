@@ -3,7 +3,12 @@
 
 #include <stdexcept>
 #include <vector>
-#include "Entidades/Destino.hpp"
+#include "../../include/Entidades/Destino.hpp"
+
+//! Testes de Unidade da Entidade Destino
+/*!
+    232013031 - implementação.
+*/
 
 class TUDestino
 {

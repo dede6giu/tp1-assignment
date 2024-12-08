@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TP1 Trabalho: Código-Fonte de src/Dominios/Horario.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_horario_8cpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Horario.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_horario_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_horario_8hpp.html">../../include/Dominios/Horario.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_horario.html#a46801f79049e424c1a520838c33397b2">    4</a></span><a class="code hl_function" href="class_horario.html#a46801f79049e424c1a520838c33397b2">Horario::Horario</a>()</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    horas;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    minutos;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
+</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_horario.html#aa3afbffb68590e6b12e65fd3ee9153de">   10</a></span><a class="code hl_function" href="class_horario.html#a46801f79049e424c1a520838c33397b2">Horario::Horario</a>(std::string horas)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_function" href="class_horario.html#a809c5ab48c98c708b114fcad235cdf55">Horario::setValor</a>(horas);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_horario.html#aa1461e3f39f75bc2e745591cb0072fa4">   15</a></span><a class="code hl_function" href="class_horario.html#a46801f79049e424c1a520838c33397b2">Horario::Horario</a>(<span class="keywordtype">int</span> hh, <span class="keywordtype">int</span> mm)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="class_horario.html#a809c5ab48c98c708b114fcad235cdf55">Horario::setValor</a>(hh, mm);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> Horario::validarHoras(<span class="keywordtype">int</span> valor)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (valor &lt; 0 or valor &gt;= 24)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Horas deve estar entre 00 e 23 inclusivo&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> Horario::validarMinutos(<span class="keywordtype">int</span> valor)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">if</span> (valor &lt; 0 or valor &gt;= 60)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Minutos deve estar entre 00 e 59 inclusivo&quot;</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_horario.html#acd700499237b175a98a14debec14a68a">   36</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_horario.html#acd700499237b175a98a14debec14a68a">Horario::setValorHoras</a>(<span class="keywordtype">int</span> valor)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    Horario::validarHoras(valor);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    this-&gt;horas = valor;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_horario.html#ab998bea3d117b6cccf61b670227776dc">   42</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_horario.html#ab998bea3d117b6cccf61b670227776dc">Horario::setValorMinutos</a>(<span class="keywordtype">int</span> valor)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    Horario::validarMinutos(valor);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    this-&gt;minutos = valor;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_horario.html#af661e9819bf7b3d14f6da449b97347b5">   48</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_horario.html#a809c5ab48c98c708b114fcad235cdf55">Horario::setValor</a>(<span class="keywordtype">int</span> horas, <span class="keywordtype">int</span> minutos)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    Horario::validarHoras(horas);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    Horario::validarMinutos(minutos);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    this-&gt;horas = horas;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    this-&gt;minutos = minutos;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> Horario::validar(std::string dataStr)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> (dataStr.size() &gt; 5) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">throw</span> std::length_error(<span class="stringliteral">&quot;Tamanho do Horario deve ser exatamente 5&quot;</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">if</span> (dataStr[2] != <span class="charliteral">&#39;:&#39;</span>) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;As horas e os minutos deve ser separados por &#39;:&#39;&quot;</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++) <span class="comment">// essa condição irá cortar tudo o que vier depois do 6 caractere</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (i == 2) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (!isdigit(dataStr[i]))</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Horario deve ser composto por digitos separados por &#39;:&#39;, no formato hh:mm&quot;</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_horario.html#a809c5ab48c98c708b114fcad235cdf55">   75</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_horario.html#a809c5ab48c98c708b114fcad235cdf55">Horario::setValor</a>(std::string dataStr)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    validar(dataStr);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">int</span> hh, mm;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    std::string aux = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    aux += dataStr[0]; aux += dataStr[1];</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    hh = stoi(aux); aux = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    aux += dataStr[3]; aux += dataStr[4];</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    mm = stoi(aux); aux = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_function" href="class_horario.html#a809c5ab48c98c708b114fcad235cdf55">Horario::setValor</a>(hh, mm);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_horario.html#ada6ee24f26c4240986ca78e8ea93ebb6">   87</a></span>std::string <a class="code hl_function" href="class_horario.html#ada6ee24f26c4240986ca78e8ea93ebb6">Horario::getValor</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    std::string resultado = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> (this-&gt;horas &lt; 10) resultado += <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    resultado += std::to_string(this-&gt;horas);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    resultado += <span class="stringliteral">&quot;:&quot;</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (this-&gt;minutos &lt; 10) resultado += <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    resultado += std::to_string(this-&gt;minutos);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> resultado;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+</div>
+<div class="ttc" id="a_horario_8hpp_html"><div class="ttname"><a href="_horario_8hpp.html">Horario.hpp</a></div></div>
+<div class="ttc" id="aclass_horario_html_a46801f79049e424c1a520838c33397b2"><div class="ttname"><a href="class_horario.html#a46801f79049e424c1a520838c33397b2">Horario::Horario</a></div><div class="ttdeci">Horario()</div><div class="ttdoc">Construtor vazio.</div><div class="ttdef"><b>Definição</b> <a href="#l00004">Horario.cpp:4</a></div></div>
+<div class="ttc" id="aclass_horario_html_a809c5ab48c98c708b114fcad235cdf55"><div class="ttname"><a href="class_horario.html#a809c5ab48c98c708b114fcad235cdf55">Horario::setValor</a></div><div class="ttdeci">void setValor(std::string)</div><div class="ttdef"><b>Definição</b> <a href="#l00075">Horario.cpp:75</a></div></div>
+<div class="ttc" id="aclass_horario_html_ab998bea3d117b6cccf61b670227776dc"><div class="ttname"><a href="class_horario.html#ab998bea3d117b6cccf61b670227776dc">Horario::setValorMinutos</a></div><div class="ttdeci">void setValorMinutos(int)</div><div class="ttdoc">Horario::setValorMinutos()</div><div class="ttdef"><b>Definição</b> <a href="#l00042">Horario.cpp:42</a></div></div>
+<div class="ttc" id="aclass_horario_html_acd700499237b175a98a14debec14a68a"><div class="ttname"><a href="class_horario.html#acd700499237b175a98a14debec14a68a">Horario::setValorHoras</a></div><div class="ttdeci">void setValorHoras(int)</div><div class="ttdoc">Horario::setValorHoras()</div><div class="ttdef"><b>Definição</b> <a href="#l00036">Horario.cpp:36</a></div></div>
+<div class="ttc" id="aclass_horario_html_ada6ee24f26c4240986ca78e8ea93ebb6"><div class="ttname"><a href="class_horario.html#ada6ee24f26c4240986ca78e8ea93ebb6">Horario::getValor</a></div><div class="ttdeci">std::string getValor() const</div><div class="ttdoc">Horario::getValor()</div><div class="ttdef"><b>Definição</b> <a href="#l00087">Horario.cpp:87</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_321314543c8556a054a2d1d464bdd8b9.html">Dominios</a></li><li class="navelem"><a class="el" href="_horario_8cpp.html">Horario.cpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

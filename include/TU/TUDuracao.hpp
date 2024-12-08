@@ -3,9 +3,9 @@
 
 #include <stdexcept>
 #include <vector>
-#include "Dominios/Duracao.hpp"
+#include "../../include/Dominios/Duracao.hpp"
 
-//! TUDuracao
+//! Testes de Unidade do Dominio Duracao
 /*!
     232002771 - implementação
 */

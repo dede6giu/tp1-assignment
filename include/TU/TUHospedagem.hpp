@@ -3,7 +3,12 @@
 
 #include <stdexcept>
 #include <vector>
-#include "Entidades/Hospedagem.hpp"
+#include "../../include/Entidades/Hospedagem.hpp"
+
+//! Testes de Unidade da Entidade Hospedagem
+/*!
+    232013031 - implementação
+*/
 
 class TUHospedagem
 {

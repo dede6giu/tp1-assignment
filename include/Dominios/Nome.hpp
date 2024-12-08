@@ -3,51 +3,66 @@
 
 #include <string>
 
-//! Classe Nome
+//! Dominio Nome
 /*!
-  Classe Nome, string de m&aacute;ximo 30 caracteres.\n
-  232013031 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, construtores\n
-  232002771 - exce��es
+    Dominio Nome, string de no máximo 30 caracteres.\n
+    232013031 - implementação, documentação, construtores\n
+    232002771 - exceções, documentação \n
+    232006028 - documentação
 */
 
 class Nome
 {
     private:
+
         //! Uma string.
         /*! Armazena o valor do nome. */
-        std::string nome = "";
+        std::string nome;
 
         //! Nome::validar()
         /*!
-          Verifica se o valor do nome est&aacute; dentro do limite de caracteres.
-          @return bool indicando sucesso da opera&ccedil;&atilde;o.
+          Verifica se o valor de uma string está dentro do limite MAXLENGTH.
+          @param string a ser verificada.
         */
         void validar(std::string);
 
     public:
-        Nome();
-        Nome(std::string);
 
-        //! Um inteiro p&uacute;blico
+        //! Um inteiro público estático
         /*!
-          Armazena o tamanho m&aacute;ximo do valor.
-          @sa validar()
+          Armazena o tamanho máximo do valor.
         */
         static int const MAXLENGTH = 30;
 
+        //! Construtor Vazio
+        /*!
+            Constrói um objeto Nome com valor vazio.
+            @sa Nome(std::string)
+        */
+        Nome();
+
+        //! Construtor Paramétrico
+        /*!
+            Recebe um valor string, o verifica e finalmente constrói um objeto
+            Nome com o valor inserido.
+            @param string usada para construir o objeto.
+            @sa Nome()
+        */
+        Nome(std::string);
+
         //! Nome::setValor()
         /*!
-          Armazena um novo valor dentro da classe.
+          Armazena um novo valor dentro da classe após sua verificação.
           @param string novo valor.
-          @return bool indicando sucesso da opera&ccedil;&atilde;o.
-          @sa getValor(), Nome::validar()
+          @return bool indicando sucesso da operação.
+          @sa getValor()
         */
         void setValor(std::string);
 
         //! Nome::getValor()
         /*!
-          Fun&ccedil;&atilde;o para obter o valor da classe Nome.
-          @return O valor do nome
+          Função para obter o valor da classe Nome.
+          @return string parâmetro nome do objeto.
         */
         std::string getValor() const;
 };

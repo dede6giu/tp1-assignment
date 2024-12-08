@@ -1,51 +1,57 @@
 #ifndef DURACAO_HPP_INCLUDED
 #define DURACAO_HPP_INCLUDED
 
-//! Classe Duracao
+//! Dominio Duracao
 /*!
-    Classe Duracao, inteiro entre 0 e 360 \n
-    232002771 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, exce��es \n
-    232013031 - construtores
+    Dominio Duracao, inteiro entre 0 e 360 \n
+    232002771 - implementação, documentação, exceções \n
+    232013031 - construtores \n
+    232006028 - documentação
 */
 
 class Duracao
 {
     private:
         //! Um int.
-        /*! Armazena a o valor da dura&ccedil;&atilde;o. */
+        /*! Armazena o valor da duração. */
         int duracao;
 
         //! Duracao::validar()
         /*!
-          Verifica se o valor da dura&ccedil;&atilde;o est&aacute; no intervalo de 0 a 360.
-          @return bool indicando sucesso da opera&ccedil;&atilde;o.
+          Verifica se o valor da duração está no intervalo de 0 a 360.
         */
         void validar(int);
 
     public:
+        //! Construtor vazio
+        /*! Constrói um objeto Duracao vazio. */
         Duracao();
+
+        //! Construtor paramétrico
+        /*!
+            Constrói um objeto Duracao e recebe um int com o valor de duracao.
+            @param int duracao.
+        */
         Duracao(int);
 
-        //! Um inteiro p&uacute;blico
+        //! Um inteiro público
         /*!
-          Armazena a quantidade m&aacute;xima da dura&ccedil;&atilde;o.
-          @sa validar()
+          Armazena a quantidade máxima da duração.
+          @param int valor a validar
         */
         static const int MAXIMO = 360;
 
         //! Duracao::setValor()
         /*!
-          Armazena um novo valor dentro da classe.
-          @param int novo valor.
-          @return bool indicando sucesso da opera&ccedil;&atilde;o.
-          @sa getValor(), Duracao::validar()
+            Recebe um int, verifica se é válido e guarda no objeto se a verificação tiver sucesso.
+            @param int duracao
         */
         void setValor(int);
 
         //! Duracao::getValor()
         /*!
-          Fun&ccedil;&atilde;o para obter o valor da classe Duracao.
-          @return O valor da dura&ccedil;&atilde;o.
+            Retorna um int com o valor da duracao armazenada.
+            @return int duracao
         */
         int getValor() const;
 };

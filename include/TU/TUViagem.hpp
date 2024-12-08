@@ -2,7 +2,12 @@
 #define TUVIAGEM_HPP_INCLUDED
 
 #include <stdexcept>
-#include "Entidades/Viagem.hpp"
+#include "../../include/Entidades/Viagem.hpp"
+
+//! Testes de Unidade da Entidade Viagem
+/*!
+    232013031 - implementação
+*/
 
 class TUViagem
 {

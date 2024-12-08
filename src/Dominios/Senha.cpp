@@ -1,4 +1,4 @@
-#include "Dominios/Senha.hpp"
+#include "../../include/Dominios/Senha.hpp"
 #include <set>
 #include <string>
 #include <algorithm>
@@ -16,9 +16,10 @@ Senha::Senha(std::string valor)
 }
 
 void Senha::validar(std::string valor){
-    if(valor.size() != 5){
+    if(valor.size() != this->PASSLENGTH){
         throw std::length_error("Tamanho da Senha deve ser exatamente 5");
     }
+
     for (char c: valor){
         if(!isdigit(c)){
             throw std::invalid_argument("Senha deve ser composta apenas por digitos");

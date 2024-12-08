@@ -1,9 +1,9 @@
-#include "Entidades/Destino.hpp"
+#include "../../include/Entidades/Destino.hpp"
 
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Nome.hpp"
-#include "Dominios/Data.hpp"
-#include "Dominios/Avaliacao.hpp"
+#include "../../include/Dominios/Codigo.hpp"
+#include "../../include/Dominios/Nome.hpp"
+#include "../../include/Dominios/Data.hpp"
+#include "../../include/Dominios/Avaliacao.hpp"
 
 Destino::Destino()
 {

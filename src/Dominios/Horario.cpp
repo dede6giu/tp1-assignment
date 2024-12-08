@@ -1,4 +1,4 @@
-#include "Dominios/Horario.hpp"
+#include "../../include/Dominios/Horario.hpp"
 #include <stdexcept>
 
 Horario::Horario()

@@ -4,11 +4,11 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
-#include "Dominios/Codigo.hpp"
+#include "../../include/Dominios/Codigo.hpp"
 
-//! TUCodigo
+//! Testes de Unidade do Dominio Codigo
 /*!
-    232002771 - implementação
+    232002771 - implementação.
 */
 
 class TUCodigo
