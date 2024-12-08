@@ -15,7 +15,7 @@ int main()
     cout << "\n" << "===== Dominios =====" << endl;
     {
         TUAvaliacao* holder = new TUAvaliacao();
-        cout << "Avaliacao: ";
+        cout << "Avaliacao : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
@@ -30,7 +30,7 @@ int main()
 
     {
         TUCodigo* holder = new TUCodigo();
-        cout << "Codigo   : ";
+        cout << "Codigo    : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
@@ -45,7 +45,7 @@ int main()
 
     {
         TUData* holder = new TUData();
-        cout << "Data     : ";
+        cout << "Data      : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
@@ -60,7 +60,7 @@ int main()
 
     {
         TUDinheiro* holder = new TUDinheiro();
-        cout << "Dinheiro : ";
+        cout << "Dinheiro  : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
@@ -75,7 +75,7 @@ int main()
 
     {
         TUDuracao* holder = new TUDuracao();
-        cout << "Duracao  : ";
+        cout << "Duracao   : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
@@ -90,7 +90,7 @@ int main()
 
     {
         TUHorario* holder = new TUHorario();
-        cout << "Horario  : ";
+        cout << "Horario   : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
@@ -105,7 +105,7 @@ int main()
 
     {
         TUNome* holder = new TUNome();
-        cout << "Nome     : ";
+        cout << "Nome      : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
@@ -120,7 +120,7 @@ int main()
 
     {
         TUSenha* holder = new TUSenha();
-        cout << "Senha    : ";
+        cout << "Senha     : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
@@ -137,7 +137,37 @@ int main()
 
     {
         TUDestino* holder = new TUDestino();
-        cout << "Destino  : ";
+        cout << "Destino   : ";
+        switch (holder->run())
+        {
+            case holder->SUCESSO:
+                cout << suc << endl;
+                break;
+            case holder->FALHA:
+                cout << fal << endl;
+                break;
+        }
+        delete holder;
+    }
+
+    {
+        TUHospedagem* holder = new TUHospedagem();
+        cout << "Hospedagem: ";
+        switch (holder->run())
+        {
+            case holder->SUCESSO:
+                cout << suc << endl;
+                break;
+            case holder->FALHA:
+                cout << fal << endl;
+                break;
+        }
+        delete holder;
+    }
+
+    {
+        TUViagem* holder = new TUViagem();
+        cout << "Viagem    : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
