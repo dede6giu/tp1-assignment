@@ -52,6 +52,7 @@
 		<Unit filename="include/TU.hpp" />
 		<Unit filename="include/TU/TUAvaliacao.hpp" />
 		<Unit filename="include/TU/TUCodigo.hpp" />
+		<Unit filename="include/TU/TUConta.hpp" />
 		<Unit filename="include/TU/TUData.hpp" />
 		<Unit filename="include/TU/TUDestino.hpp" />
 		<Unit filename="include/TU/TUDinheiro.hpp" />
@@ -60,6 +61,7 @@
 		<Unit filename="include/TU/TUHospedagem.hpp" />
 		<Unit filename="include/TU/TUNome.hpp" />
 		<Unit filename="include/TU/TUSenha.hpp" />
+		<Unit filename="include/TU/TUViagem.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
 		<Unit filename="src/Dominios/Codigo.cpp" />
@@ -76,6 +78,7 @@
 		<Unit filename="src/Entidades/Viagem.cpp" />
 		<Unit filename="src/TU/TUAvaliacao.cpp" />
 		<Unit filename="src/TU/TUCodigo.cpp" />
+		<Unit filename="src/TU/TUConta.cpp" />
 		<Unit filename="src/TU/TUData.cpp" />
 		<Unit filename="src/TU/TUDestino.cpp" />
 		<Unit filename="src/TU/TUDinheiro.cpp" />
@@ -84,6 +87,7 @@
 		<Unit filename="src/TU/TUHospedagem.cpp" />
 		<Unit filename="src/TU/TUNome.cpp" />
 		<Unit filename="src/TU/TUSenha.cpp" />
+		<Unit filename="src/TU/TUViagem.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
