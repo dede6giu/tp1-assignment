@@ -9,7 +9,8 @@
 //! Entidade Viagem
 /*!
     232006028 - implementação \n
-    232002520 - documentação
+    232002520 - documentação \n
+    232002771 - documentação
 */
 
 class Viagem {
@@ -26,8 +27,19 @@ class Viagem {
 
     public:
         //! Construtor vazio
-        /*! Constrói um objeto Viagem vazio. */
+        /*! Constrói um objeto Viagem vazio.
+            @sa Viagem(const Avaliacao&, const Codigo&, const Nome&)
+         */
         Viagem();
+
+        //! Construtor paramétrico
+        /*!
+            Constrói um objeto Viagem e pede como parâmetros: uma Avaliacao, um Codigo e um Nome.
+            @param const Avaliacao a ser armazenado.
+            @param const Codigo a ser armazenado.
+            @param const Nome a ser armazenado.
+            @sa Viagem()
+        */
         Viagem(const Avaliacao&, const Codigo&, const Nome&);
 
 
@@ -37,6 +49,7 @@ class Viagem {
             @param const Avaliacao.
         */
         void setValor(const Avaliacao&);
+
         //! Avaliacao Viagem::getAvaliacao() const
         /*!
             Retorna o objeto Avaliacao armazenado no objeto Viagem.
@@ -50,6 +63,7 @@ class Viagem {
             @param const Codigo.
         */
         void setValor(const Codigo&);
+
         //! Codigo Viagem::getCodigo() const
         /*!
             Retorna o objeto Codigo armazenado no objeto Viagem.

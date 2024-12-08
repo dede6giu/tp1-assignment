@@ -10,8 +10,9 @@
 //! Entidade Destino
 /*!
     Entidade Destino \n
-    232013031 - implementa��o \n
-    232002520 - documenta��o
+    232013031 - implementação \n
+    232002520 - documentação \n
+    232002771 - documentação
 */
 
 class Destino
@@ -26,7 +27,7 @@ class Destino
         Nome nome;
 
         //! Data (atributo)
-        /*! Atributo que armazena o objeto Data de in�cio do Destino */
+        /*! Atributo que armazena o objeto Data de início do Destino */
         Data inicio;
 
         //! Data (atributo)
@@ -39,9 +40,21 @@ class Destino
 
     public:
         //! Construtor vazio
-        /*! Constr�i um objeto Destino vazio. */
+        /*! Constrói um objeto Destino vazio.
+            @sa Destino(const Codigo&, const Nome&, const Data&, const Data&, const Avaliacao&)
+        */
         Destino();
 
+        //! Construtor paramétrico
+        /*!
+            Constrói um objeto Destino e pede como parâmetros: um Codigo, um Nome, uma Data de início, uma Data de fim e uma Avaliacao.
+            @param const Codigo a ser armazenado.
+            @param const Nome a ser armazenado.
+            @param const Data de inicio a ser armazenada.
+            @param const Data de fim a ser armazenada.
+            @param const Avaliacao a ser armazenado.
+            @sa Destino()
+        */
         Destino(const Codigo&, const Nome&, const Data&, const Data&, const Avaliacao&);
 
         //! void Destino::setValor(const Codigo&)
@@ -93,14 +106,14 @@ class Destino
         /*!
             Recebe um objeto Data e um bool e armazena-os como atributos do objeto.
             @param const Data& a ser armazenado.
-            @param bool (se vale 0, � a data de in�cio; se vale 1, � a data de fim).
+            @param bool (se vale 0, é a data de início; se vale 1, é a data de fim).
         */
         void setValor(const Data&, bool);
 
         //! inline Data Destino::getValorInicio()
         /*!
-            Retorna o objeto Data de in�cio armazenado no objeto.
-            @return string valor do parâmetro inicio (Data).
+            Retorna o objeto Data de início armazenado no objeto.
+            @return string valor do parâmetro início (Data).
         */
         inline std::string getValorInicio() const;
 
