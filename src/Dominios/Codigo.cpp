@@ -20,7 +20,7 @@ void Codigo::validar(std::string valor)
 {
     if (valor.length() != this->CODELENGTH)
     {
-        throw std::length_error("Tamanho do Codigo deve ser exatamente 6");;
+        throw std::length_error("Tamanho do Codigo deve ser exatamente 6");
     }
     for (int i = 0; i < this->CODELENGTH; i++)
     {

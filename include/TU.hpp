@@ -10,4 +10,6 @@
 #include "TU/TUNome.hpp"
 #include "TU/TUSenha.hpp"
 
+#include "TU/TUDestino.hpp"
+
 #endif // TU_HPP_INCLUDED

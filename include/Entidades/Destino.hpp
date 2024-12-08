@@ -27,37 +27,37 @@ class Destino
         Destino();
 
         void setValor(const Codigo&);
-        inline Codigo getValorCodigo() const;
+        inline std::string getValorCodigo() const;
 
         void setValor(const Nome&);
-        inline Nome getValorNome() const;
+        inline std::string getValorNome() const;
 
         void setValor(const Avaliacao&);
-        inline Avaliacao getValorAvaliacao() const;
+        inline int getValorAvaliacao() const;
 
         void setValor(const Data&, bool);
-        inline Data getValorInicio() const;
-        inline Data getValorFim() const;
+        inline std::string getValorInicio() const;
+        inline std::string getValorFim() const;
 };
 
-inline Codigo Destino::getValorCodigo() const {
-    return this->codigo;
+inline std::string Destino::getValorCodigo() const {
+    return this->codigo.getValor();
 }
 
-inline Nome Destino::getValorNome() const {
-    return this->nome;
+inline std::string Destino::getValorNome() const {
+    return this->nome.getValor();
 }
 
-inline Avaliacao Destino::getValorAvaliacao() const {
-    return this->avaliacao;
+inline int Destino::getValorAvaliacao() const {
+    return this->avaliacao.getValor();
 }
 
-inline Data Destino::getValorInicio() const {
-    return this->inicio;
+inline std::string Destino::getValorInicio() const {
+    return this->inicio.getValor();
 }
 
-inline Data Destino::getValorFim() const {
-    return this->fim;
+inline std::string Destino::getValorFim() const {
+    return this->fim.getValor();
 }
 
 

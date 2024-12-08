@@ -11,6 +11,8 @@ int main()
     string suc = "SUCESSO";
     string fal = "FALHA";
 
+
+    cout << "\n" << "===== Dominios =====" << endl;
     {
         TUAvaliacao* holder = new TUAvaliacao();
         cout << "Avaliacao: ";
@@ -119,6 +121,23 @@ int main()
     {
         TUSenha* holder = new TUSenha();
         cout << "Senha    : ";
+        switch (holder->run())
+        {
+            case holder->SUCESSO:
+                cout << suc << endl;
+                break;
+            case holder->FALHA:
+                cout << fal << endl;
+                break;
+        }
+        delete holder;
+    }
+
+    cout << "\n" << "===== Entidades =====" << endl;
+
+    {
+        TUDestino* holder = new TUDestino();
+        cout << "Destino  : ";
         switch (holder->run())
         {
             case holder->SUCESSO:
