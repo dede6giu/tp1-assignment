@@ -3,9 +3,9 @@
 
 //! Dominio Avaliacao
 /*!
-    Dominio Avaliacao, inteiro v&aacute;lido entre 0 e 5 inclusivo. \n
-    232029274 - implementa&ccedil;&atilde;o. \n
-    232002771 - documenta&ccedil;&atilde;o. \n
+    Dominio Avaliacao, inteiro válido entre 0 e 5 inclusivo. \n
+    232029274 - implementação. \n
+    232002771 - documentação. \n
     232013031 - construtores, exceções, documentação.
 */
 
@@ -14,12 +14,12 @@ class Avaliacao
     private:
 
         //! Um int.
-        /*! Armazena o valor da avalia&ccedil;&atilde;o. */
+        /*! Armazena o valor da avaliação. */
         int avaliacao;
 
         //! Avaliacao::validar()
         /*!
-          Verifica se o valor da avalia&ccedil;&atilde;o est&aacute; no intervalo de 0 a 5.
+          Verifica se o valor da avaliação está no intervalo de 0 a 5.
           @param int valor a validar
         */
         void validar(int);
@@ -49,8 +49,8 @@ class Avaliacao
 
         //! Avalicao::getValor()
         /*!
-          Fun&ccedil;&atilde;o para obter o valor da classe Avaliacao.
-          @return int o valor da avalia&ccedil;&atilde;o.
+          Função para obter o valor da classe Avaliacao.
+          @return int o valor da avaliacao.
         */
         int getValor() const;
 };

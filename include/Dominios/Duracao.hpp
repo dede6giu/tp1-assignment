@@ -4,7 +4,7 @@
 //! Classe Duracao
 /*!
     Classe Duracao, inteiro entre 0 e 360 \n
-    232002771 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, exce��es \n
+    232002771 - implementação, documentação, exce��es \n
     232013031 - construtores \n
     232006028 - documentação
 */
@@ -13,12 +13,12 @@ class Duracao
 {
     private:
         //! Um int.
-        /*! Armazena o valor da dura&ccedil;&atilde;o. */
+        /*! Armazena o valor da duração. */
         int duracao;
 
         //! Duracao::validar()
         /*!
-          Verifica se o valor da dura&ccedil;&atilde;o est&aacute; no intervalo de 0 a 360.
+          Verifica se o valor da duração está no intervalo de 0 a 360.
         */
         void validar(int);
 
@@ -34,9 +34,9 @@ class Duracao
         */
         Duracao(int);
 
-        //! Um inteiro p&uacute;blico
+        //! Um inteiro público
         /*!
-          Armazena a quantidade m&aacute;xima da dura&ccedil;&atilde;o.
+          Armazena a quantidade máxima da duração.
           @param int valor a validar
         */
         static const int MAXIMO = 360;

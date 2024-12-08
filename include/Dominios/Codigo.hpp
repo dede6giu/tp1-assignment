@@ -6,7 +6,7 @@
 //! Dominio Codigo
 /*!
     Dominio Codigo, string de 6 caracteres alfanum&eacute;ricos maiúsculos ou minúsculos sem diacríticos. \n
-    232013031 - implementa&ccdeil;&atilde;o, construtores, documentação. \n
+    232013031 - implementação, construtores, documentação. \n
     232002771 - exceções, documentação.
 */
 
@@ -29,9 +29,9 @@ class Codigo
 
     public:
 
-        //! Um inteiro p&uacute;blico
+        //! Um inteiro público
         /*!
-          Armazena o valor m&aacute;ximo da valiação.
+          Armazena o valor máximo da valiação.
         */
         static int const CODELENGTH = 6;
 

@@ -6,8 +6,8 @@
 //! Classe Dinheiro
 /*!
     Classe Dinheiro, int de 0 a 20000000 inclusivo, implementado como centavos. \n
-    232002771 - implementa&ccdeil;&atilde;o, exceções, documentação. \n
-    232013031 - implementa&ccdeil;&atilde;o, documentação. \n
+    232002771 - implementação, exceções, documentação. \n
+    232013031 - implementação, documentação. \n
     232002520 - documentação
 */
 

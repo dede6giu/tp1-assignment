@@ -5,8 +5,8 @@
 
 //! Classe Nome
 /*!
-  Classe Nome, string de no m&aacute;ximo 30 caracteres.\n
-  232013031 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, construtores\n
+  Classe Nome, string de no máximo 30 caracteres.\n
+  232013031 - implementação, documentação, construtores\n
   232002771 - exceções, documentação \n
   232006028 - documentação
 */
@@ -20,15 +20,15 @@ class Nome
 
         //! Nome::validar()
         /*!
-          Verifica se o valor de uma string est&aacute; dentro do limite MAXLENGTH.
+          Verifica se o valor de uma string está dentro do limite MAXLENGTH.
           @param string a ser verificada.
         */
         void validar(std::string);
 
     public:
-        //! Um inteiro p&uacute;blico est�tico
+        //! Um inteiro público est�tico
         /*!
-          Armazena o tamanho m&aacute;ximo do valor.
+          Armazena o tamanho máximo do valor.
         */
         static int const MAXLENGTH = 30;
 
@@ -52,14 +52,14 @@ class Nome
         /*!
           Armazena um novo valor dentro da classe após sua verificação.
           @param string novo valor.
-          @return bool indicando sucesso da opera&ccedil;&atilde;o.
+          @return bool indicando sucesso da operação.
           @sa getValor()
         */
         void setValor(std::string);
 
         //! Nome::getValor()
         /*!
-          Fun&ccedil;&atilde;o para obter o valor da classe Nome.
+          Função para obter o valor da classe Nome.
           @return string parâmetro nome do objeto.
         */
         std::string getValor() const;

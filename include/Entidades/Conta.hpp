@@ -6,13 +6,15 @@
 
 //! Entidade Conta
 /*!
-    232002771 - implementação, documentação \n
-    232002520 - documentação
+    232002771 - implementação, documentação. \n
+    232002520 - documentação. \n
+    232013031 - documentação.
 */
 
 class Conta
 {
     private:
+
         //! Codigo (atributo)
         /*! Atributo que armazena o codigo da conta. */
         Codigo codigo;
@@ -22,15 +24,19 @@ class Conta
         Senha senha;
 
     public:
-        //! Construtor vazio
-        /*! Constrói um objeto Conta vazio. */
+
+        //! Construtor vazio.
+        /*! Constrói um objeto Conta vazio.
+            @sa Conta(const Codigo&, const Senha&)
+        */
         Conta();
 
-        //! Construtor paramétrico
+        //! Construtor paramétrico.
         /*!
-            Constrói um objeto Conta e pede 2 parâmetros: Codigo e Conta.
+            Constrói um objeto Conta e pede 2 parâmetros: um Codigo e uma Conta.
             @param const Codigo a ser armazenado.
             @param const Senha a ser armazenado.
+            @sa Conta()
         */
         Conta(const Codigo&, const Senha&);
 
@@ -38,7 +44,7 @@ class Conta
         //! bool Conta::setValor(const Codigo&)
         /*!
             Método que recebe um objeto Codigo e armazena-o como atributo do objeto.
-            @param const Codigo& a ser armazenado.
+            @param Codigo a ser armazenado.
         */
         bool setValor(const Codigo&);
 
@@ -53,7 +59,7 @@ class Conta
         //! bool Conta::setValor(const Senha&)
         /*!
             Método que recebe um objeto Senha e armazena-o como atributo do objeto.
-            @param const Senha&
+            @param Senha a ser armazenado.
         */
         bool setValor(const Senha&);
 

@@ -5,11 +5,11 @@
 
 //! Classe Data
 /*!
-    Classe Data, formato "DD/MM/AA", salvo como tr&ecirc;s inteiros,
+    Classe Data, formato "DD/MM/AA", salvo como três inteiros,
     tal que 01 <= DD <= 31, 01 <= MM <= 12 e 00 <= AA <= 99, seguindo as
-    devidas quantidades de dias no m&ecirc;s.\n
+    devidas quantidades de dias no mês.\n
 
-    232013031 - implementa&ccdeil;&atilde;o, construtores, documentação. \n
+    232013031 - implementação, construtores, documentação. \n
     232002520 - documentação, exceções. \n
     232002771 - documentação.
 */
@@ -44,7 +44,7 @@ class Data
         //! Data::validar(int, int, int)
         /*!
             Recebe um valor string e verifica se tal é um formato válido de data. \n
-            Note que <b>não</b> verifica se o valor na data é válido.
+            Note que <u>não</u> verifica se o valor na data é válido.
             @param string data formatada no formato "DD/MM/AA"
             @sa validar(int, int, int)
         */
