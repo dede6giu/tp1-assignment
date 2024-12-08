@@ -23,6 +23,7 @@ class Data
 
     public:
         Data();
+        Data(std::string);
         Data(int, int, int);
 
         int getDia() const;

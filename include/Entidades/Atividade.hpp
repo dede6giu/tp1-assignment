@@ -26,7 +26,7 @@ class Atividade {
 
     public:
         Atividade();
-        Atividade(const Codigo&, const Nome&, const Data&, const Horario&, const Duracao&, const Preco&, const Avaliacao&);
+        Atividade(const Codigo&, const Nome&, const Data&, const Horario&, const Duracao&, const Dinheiro&, const Avaliacao&);
 
         void setValor(const Codigo &);
         void setValor(const Nome &);
@@ -45,6 +45,4 @@ class Atividade {
         inline Avaliacao getAvaliacao() const { return this->avaliacao; }
 };
 
-#endif // ATIVIDADE_HPP
-
-
+#endif // ATIVIDADE_HPP_INCLUDED

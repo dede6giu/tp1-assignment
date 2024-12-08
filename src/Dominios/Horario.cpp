@@ -1,11 +1,15 @@
 #include "Dominios/Horario.hpp"
-#include <string>
 #include <stdexcept>
 
 Horario::Horario()
 {
     horas;
     minutos;
+}
+
+Horario::Horario(std::string horas)
+{
+    Horario::setValor(horas);
 }
 
 Horario::Horario(int hh, int mm)

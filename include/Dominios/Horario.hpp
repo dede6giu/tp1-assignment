@@ -21,6 +21,7 @@ class Horario
 
     public:
         Horario();
+        Horario(std::string);
         Horario(int, int);
 
         void setValor(int, int);

@@ -25,7 +25,7 @@ class Destino
 
     public:
         Destino();
-        Destino(const Codigo&, const Nome&, const Data&, const Avaliacao&);
+        Destino(const Codigo&, const Nome&, const Data&, const Data&, const Avaliacao&);
 
         void setValor(const Codigo&);
         inline std::string getValorCodigo() const;
