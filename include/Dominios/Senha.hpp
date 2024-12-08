@@ -3,9 +3,9 @@
 
 #include <string>
 
-//! Classe Senha
+//! Dominio Senha
 /*!
-    Classe Senha, sequência válida de 5 dígitos sem repetição, não crescente nem decrescente.
+    Dominio Senha, sequência válida de 5 dígitos sem repetição, não crescente nem decrescente.
     232006028 - implementação, exceções, documentação. \n
     232002771 - implementação por string,documentação. \n
     232013031 - construtores, documentação.

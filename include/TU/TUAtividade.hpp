@@ -2,8 +2,14 @@
 #define TUATIVIDADE_HPP_INCLUDED
 
 #include <vector>
-//#include
 #include "../../include/Entidades/Atividade.hpp"
+
+//! Testes de Unidade da Entidade Atividade
+/*!
+    232029274 - implementação. \n
+    232002520 - implementação.
+*/
+
 class TUAtividade
 {
     private:

@@ -5,7 +5,7 @@
 #include <vector>
 #include "../../include/Dominios/Duracao.hpp"
 
-//! TUDuracao
+//! Testes de Unidade do Dominio Duracao
 /*!
     232002771 - implementação
 */

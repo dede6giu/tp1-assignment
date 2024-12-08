@@ -4,6 +4,11 @@
 #include <stdexcept>
 #include "../../include/Entidades/Viagem.hpp"
 
+//! Testes de Unidade da Entidade Viagem
+/*!
+    232013031 - implementação
+*/
+
 class TUViagem
 {
     private:

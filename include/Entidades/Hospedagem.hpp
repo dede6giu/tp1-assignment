@@ -8,8 +8,10 @@
 
 //! Entidade Hospedagem
 /*!
-    232001667 - implementação \n
-    232002520 - documentação
+    232001667 - implementação. \n
+    232002520 - documentação. \n
+    232002771 - documentação. \n
+    232013031 - documentação.
 */
 
 class Hospedagem
@@ -35,9 +37,18 @@ class Hospedagem
     public:
 
         //! Construtor vazio
-        /*! Constrói um objeto Hospedagem vazio. */
+        /*! Constrói um objeto Hospedagem vazio.
+            @sa Hospedagem(const Codigo&, const Nome&, const Avaliacao&, const Dinheiro&)
+        */
         Hospedagem();
 
+        //! Construtor paramétrico.
+        /*!
+            Constrói um objeto Hospedagem e pede 2 parâmetros: um Codigo, um Nome, uma Avaliacao e um Dinheiro diária.
+            @param const Codigo a ser armazenado.
+            @param const Senha a ser armazenado.
+            @sa Hospedagem()
+        */
         Hospedagem(const Codigo&, const Nome&, const Avaliacao&, const Dinheiro&);
 
         //! Hospedagem::setValor(const Codigo&)
@@ -47,10 +58,10 @@ class Hospedagem
         */
         void setValor(const Codigo&);
 
-        //! Codigo Hospedagem::getCodigo() const
+        //! std::string Hospedagem::getCodigo() const
         /*!
             Retorna o objeto Codigo armazenado no objeto Hospedagem.
-            @return objeto Codigo.
+            @return string valor do objeto Codigo.
         */
         inline std::string getValorCodigo() const {return this->codigo.getValor();}
 
@@ -61,10 +72,10 @@ class Hospedagem
         */
         void setValor(const Nome&);
 
-        //! Nome Hospedagem::getNome() const
+        //! std::string Hospedagem::getNome() const
         /*!
             Retorna o objeto Nome armazenado no objeto Hospedagem.
-            @return objeto Nome.
+            @return string valor do objeto Nome.
         */
         inline std::string getValorNome() const {return this->nome.getValor();}
 
@@ -75,10 +86,10 @@ class Hospedagem
         */
         void setValor(const Avaliacao&);
 
-        //! Avaliacao Hospedagem::getAvaliacao() const
+        //! int Hospedagem::getAvaliacao() const
         /*!
-            Retorna o objeto Codigo armazenado no objeto Hospedagem.
-            @return objeto Avalliacao.
+            Retorna o objeto Avaliacao armazenado no objeto Hospedagem.
+            @return int valor do objeto Avaliacao.
         */
         inline int getValorAvaliacao() const {return this->avaliacao.getValor();}
 
@@ -89,10 +100,10 @@ class Hospedagem
         */
         void setValor(const Dinheiro&);
 
-        //! Dinheiro Hospedagem::getDiaria() const
+        //! int Hospedagem::getDiaria() const
         /*!
             Retorna o objeto Dinheiro (diária) da Hospedagem.
-            @return objeto Dinheiro.
+            @return int valor do objeto Dinheiro.
         */
         inline int getValorDiaria() const {return this->diaria.getValor();}
 };

@@ -3,17 +3,18 @@
 
 #include <string>
 
-//! Classe Nome
+//! Dominio Nome
 /*!
-  Classe Nome, string de no máximo 30 caracteres.\n
-  232013031 - implementação, documentação, construtores\n
-  232002771 - exceções, documentação \n
-  232006028 - documentação
+    Dominio Nome, string de no máximo 30 caracteres.\n
+    232013031 - implementação, documentação, construtores\n
+    232002771 - exceções, documentação \n
+    232006028 - documentação
 */
 
 class Nome
 {
     private:
+
         //! Uma string.
         /*! Armazena o valor do nome. */
         std::string nome;
@@ -26,7 +27,8 @@ class Nome
         void validar(std::string);
 
     public:
-        //! Um inteiro público est�tico
+
+        //! Um inteiro público estático
         /*!
           Armazena o tamanho máximo do valor.
         */

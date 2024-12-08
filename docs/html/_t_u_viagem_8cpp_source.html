@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TP1 Trabalho: Código-Fonte de src/TU/TUViagem.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_t_u_viagem_8cpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TUViagem.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_u_viagem_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_t_u_viagem_8hpp.html">TUViagem.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keywordtype">void</span> TUViagem::setUp()</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    entidade = <span class="keyword">new</span> <a class="code hl_class" href="class_viagem.html">Viagem</a>();</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    estado = <a class="code hl_variable" href="class_t_u_viagem.html#a3809ca3010c4af0308b32011c7a3aefd">SUCESSO</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>}</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span> TUViagem::tearDown()</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">delete</span> entidade;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> TUViagem::testarCenario()</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_codigo.html">Codigo</a> codigo;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    codigo.<a class="code hl_function" href="class_codigo.html#a145979bfee1eccff764966ee6b0dc7e6">setValor</a>(VALIDO_CODIGO);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    entidade-&gt;<a class="code hl_function" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">setValor</a>(codigo);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">if</span> (entidade-&gt;<a class="code hl_function" href="class_viagem.html#a8555fc621c38fbad9ab71becb0fa8610">getValorCodigo</a>() != VALIDO_CODIGO) estado = <a class="code hl_variable" href="class_t_u_viagem.html#a7ed6d70d59cd761a930bef1651bf7c2e">FALHA</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    nome.<a class="code hl_function" href="class_nome.html#a3fa35d065611a83a5aebda0c642b2f19">setValor</a>(VALIDO_NOME);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    entidade-&gt;<a class="code hl_function" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">setValor</a>(nome);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (entidade-&gt;<a class="code hl_function" href="class_viagem.html#a2126e6474e133c08aa58b7a922fac81d">getValorNome</a>() != VALIDO_NOME) estado = <a class="code hl_variable" href="class_t_u_viagem.html#a7ed6d70d59cd761a930bef1651bf7c2e">FALHA</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> avaliacao;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    avaliacao.<a class="code hl_function" href="class_avaliacao.html#a3f2776f1f13da9557727eedfb9d82c9a">setValor</a>(VALIDO_AVALIACAO);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    entidade-&gt;<a class="code hl_function" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">setValor</a>(avaliacao);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">if</span> (entidade-&gt;<a class="code hl_function" href="class_viagem.html#a9597a110f2077609e92ffe6c20b751c4">getValorAvaliacao</a>() != VALIDO_AVALIACAO) estado = <a class="code hl_variable" href="class_t_u_viagem.html#a7ed6d70d59cd761a930bef1651bf7c2e">FALHA</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_t_u_viagem.html#aff5ad610253c0c70bb7230e25924a4ff">   32</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_viagem.html#aff5ad610253c0c70bb7230e25924a4ff">TUViagem::run</a>()</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    setUp();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    testarCenario();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    tearDown();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">return</span> estado;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+</div>
+<div class="ttc" id="a_t_u_viagem_8hpp_html"><div class="ttname"><a href="_t_u_viagem_8hpp.html">TUViagem.hpp</a></div></div>
+<div class="ttc" id="aclass_avaliacao_html"><div class="ttname"><a href="class_avaliacao.html">Avaliacao</a></div><div class="ttdoc">Dominio Avaliacao.</div><div class="ttdef"><b>Definição</b> <a href="_avaliacao_8hpp_source.html#l00012">Avaliacao.hpp:13</a></div></div>
+<div class="ttc" id="aclass_avaliacao_html_a3f2776f1f13da9557727eedfb9d82c9a"><div class="ttname"><a href="class_avaliacao.html#a3f2776f1f13da9557727eedfb9d82c9a">Avaliacao::setValor</a></div><div class="ttdeci">void setValor(int)</div><div class="ttdoc">Avaliacao::setValor()</div><div class="ttdef"><b>Definição</b> <a href="_avaliacao_8cpp_source.html#l00022">Avaliacao.cpp:22</a></div></div>
+<div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Dominio Codigo.</div><div class="ttdef"><b>Definição</b> <a href="_codigo_8hpp_source.html#l00013">Codigo.hpp:14</a></div></div>
+<div class="ttc" id="aclass_codigo_html_a145979bfee1eccff764966ee6b0dc7e6"><div class="ttname"><a href="class_codigo.html#a145979bfee1eccff764966ee6b0dc7e6">Codigo::setValor</a></div><div class="ttdeci">void setValor(std::string)</div><div class="ttdoc">Codigo::setValor(std::string)</div><div class="ttdef"><b>Definição</b> <a href="_codigo_8cpp_source.html#l00015">Codigo.cpp:15</a></div></div>
+<div class="ttc" id="aclass_nome_html"><div class="ttname"><a href="class_nome.html">Nome</a></div><div class="ttdoc">Dominio Nome.</div><div class="ttdef"><b>Definição</b> <a href="_nome_8hpp_source.html#l00014">Nome.hpp:15</a></div></div>
+<div class="ttc" id="aclass_nome_html_a3fa35d065611a83a5aebda0c642b2f19"><div class="ttname"><a href="class_nome.html#a3fa35d065611a83a5aebda0c642b2f19">Nome::setValor</a></div><div class="ttdeci">void setValor(std::string)</div><div class="ttdoc">Nome::setValor()</div><div class="ttdef"><b>Definição</b> <a href="_nome_8cpp_source.html#l00015">Nome.cpp:15</a></div></div>
+<div class="ttc" id="aclass_t_u_viagem_html_a3809ca3010c4af0308b32011c7a3aefd"><div class="ttname"><a href="class_t_u_viagem.html#a3809ca3010c4af0308b32011c7a3aefd">TUViagem::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdef"><b>Definição</b> <a href="_t_u_viagem_8hpp_source.html#l00026">TUViagem.hpp:26</a></div></div>
+<div class="ttc" id="aclass_t_u_viagem_html_a7ed6d70d59cd761a930bef1651bf7c2e"><div class="ttname"><a href="class_t_u_viagem.html#a7ed6d70d59cd761a930bef1651bf7c2e">TUViagem::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdef"><b>Definição</b> <a href="_t_u_viagem_8hpp_source.html#l00027">TUViagem.hpp:27</a></div></div>
+<div class="ttc" id="aclass_t_u_viagem_html_aff5ad610253c0c70bb7230e25924a4ff"><div class="ttname"><a href="class_t_u_viagem.html#aff5ad610253c0c70bb7230e25924a4ff">TUViagem::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definição</b> <a href="#l00032">TUViagem.cpp:32</a></div></div>
+<div class="ttc" id="aclass_viagem_html"><div class="ttname"><a href="class_viagem.html">Viagem</a></div><div class="ttdoc">Entidade Viagem.</div><div class="ttdef"><b>Definição</b> <a href="_viagem_8hpp_source.html#l00016">Viagem.hpp:16</a></div></div>
+<div class="ttc" id="aclass_viagem_html_a2126e6474e133c08aa58b7a922fac81d"><div class="ttname"><a href="class_viagem.html#a2126e6474e133c08aa58b7a922fac81d">Viagem::getValorNome</a></div><div class="ttdeci">std::string getValorNome() const</div><div class="ttdoc">Nome Viagem::getNome() const.</div><div class="ttdef"><b>Definição</b> <a href="_viagem_8hpp_source.html#l00096">Viagem.hpp:96</a></div></div>
+<div class="ttc" id="aclass_viagem_html_a8555fc621c38fbad9ab71becb0fa8610"><div class="ttname"><a href="class_viagem.html#a8555fc621c38fbad9ab71becb0fa8610">Viagem::getValorCodigo</a></div><div class="ttdeci">std::string getValorCodigo() const</div><div class="ttdoc">Codigo Viagem::getCodigo() const.</div><div class="ttdef"><b>Definição</b> <a href="_viagem_8hpp_source.html#l00092">Viagem.hpp:92</a></div></div>
+<div class="ttc" id="aclass_viagem_html_a9597a110f2077609e92ffe6c20b751c4"><div class="ttname"><a href="class_viagem.html#a9597a110f2077609e92ffe6c20b751c4">Viagem::getValorAvaliacao</a></div><div class="ttdeci">int getValorAvaliacao() const</div><div class="ttdoc">Avaliacao Viagem::getAvaliacao() const.</div><div class="ttdef"><b>Definição</b> <a href="_viagem_8hpp_source.html#l00088">Viagem.hpp:88</a></div></div>
+<div class="ttc" id="aclass_viagem_html_af25cc4e7977ddf3a569107f4f12a03f0"><div class="ttname"><a href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">Viagem::setValor</a></div><div class="ttdeci">void setValor(const Avaliacao &amp;)</div><div class="ttdoc">Viagem::setValor(const Avaliaacao&amp;)</div><div class="ttdef"><b>Definição</b> <a href="_viagem_8cpp_source.html#l00029">Viagem.cpp:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c845f34f9edb5a8cc8f1ae3c15cb2a8b.html">TU</a></li><li class="navelem"><a class="el" href="_t_u_viagem_8cpp.html">TUViagem.cpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

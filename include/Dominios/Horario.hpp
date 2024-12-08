@@ -3,9 +3,9 @@
 
 #include <string>
 
-//! Classe Horario
+//! Dominio Horario
 /*!
-    Classe Horario, string de 5 caracteres composta por "HH:mm", impressa em formato de 24h. Internamente salva como dois inteiros, um para horas e outro para minutos.\n
+    Dominio Horario, string de 5 caracteres composta por "HH:mm", impressa em formato de 24h. Internamente salva como dois inteiros, um para horas e outro para minutos.\n
     232013031 - implementação, construtores \n
     232002520 - documentação, exceções, implementação \n
     232002771 - documentação \n

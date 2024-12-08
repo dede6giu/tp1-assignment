@@ -3,9 +3,9 @@
 
 #include <string>
 
-//! Classe Dinheiro
+//! Dominio Dinheiro
 /*!
-    Classe Dinheiro, int de 0 a 20000000 inclusivo, implementado como centavos. \n
+    Dominio Dinheiro, int de 0 a 20000000 inclusivo, implementado como centavos. \n
     232002771 - implementação, exceções, documentação. \n
     232013031 - implementação, documentação. \n
     232002520 - documentação

@@ -6,10 +6,10 @@
 #include <string>
 #include "../../include/Dominios/Nome.hpp"
 
-//! TUNome
+//! Testes de Unidade do Dominio Nome
 /*!
-    232001667 - implementação \n
-    232013031 - implementação
+    232001667 - implementaÃ§Ã£o. \n
+    232013031 - implementaÃ§Ã£o.
 */
 
 class TUNome {

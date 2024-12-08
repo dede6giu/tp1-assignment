@@ -33,7 +33,7 @@ class Conta
 
         //! Construtor paramétrico.
         /*!
-            Constrói um objeto Conta e pede 2 parâmetros: um Codigo e uma Conta.
+            Constrói um objeto Conta e pede 2 parâmetros: um Codigo e uma Senha.
             @param const Codigo a ser armazenado.
             @param const Senha a ser armazenado.
             @sa Conta()

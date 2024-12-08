@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TP1 Trabalho: Código-Fonte de include/Entidades/Atividade.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_atividade_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Atividade.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_atividade_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ATIVIDADE_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ATIVIDADE_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_codigo_8hpp.html">../../include/Dominios/Codigo.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_nome_8hpp.html">../../include/Dominios/Nome.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_data_8hpp.html">../../include/Dominios/Data.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_horario_8hpp.html">../../include/Dominios/Horario.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_duracao_8hpp.html">../../include/Dominios/Duracao.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_dinheiro_8hpp.html">../../include/Dominios/Dinheiro.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_avaliacao_8hpp.html">../../include/Dominios/Avaliacao.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_atividade.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="class_atividade.html">Atividade</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> codigo;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_class" href="class_data.html">Data</a> data;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_class" href="class_horario.html">Horario</a> horario;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_class" href="class_duracao.html">Duracao</a> duracao;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> preco;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> avaliacao;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_function" href="class_atividade.html#afa32195ee25ca6fb8e7045600bf90821">Atividade</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_function" href="class_atividade.html#afa32195ee25ca6fb8e7045600bf90821">Atividade</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_horario.html">Horario</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_duracao.html">Duracao</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp;);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a5355118d8661ccd3e2018c3e160889f7">setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a> &amp;);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a5355118d8661ccd3e2018c3e160889f7">setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a> &amp;);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a5355118d8661ccd3e2018c3e160889f7">setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a> &amp;);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a5355118d8661ccd3e2018c3e160889f7">setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_horario.html">Horario</a> &amp;);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a5355118d8661ccd3e2018c3e160889f7">setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_duracao.html">Duracao</a> &amp;);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a5355118d8661ccd3e2018c3e160889f7">setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> &amp;);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a5355118d8661ccd3e2018c3e160889f7">setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> &amp;);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_atividade.html#a20e794b9df21936e177480ba8c5b0bde">  118</a></span>        <span class="keyword">inline</span> std::string <a class="code hl_function" href="class_atividade.html#a20e794b9df21936e177480ba8c5b0bde">getValorCodigo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;codigo.<a class="code hl_function" href="class_codigo.html#a42f4ee541458441b438bb4b0c9cc3921">getValor</a>(); }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_atividade.html#afa5defa779824a48d3844f1a7adda50c">  125</a></span>        <span class="keyword">inline</span> std::string <a class="code hl_function" href="class_atividade.html#afa5defa779824a48d3844f1a7adda50c">getValorNome</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;nome.<a class="code hl_function" href="class_nome.html#ae6eddd41a782357f0466a1c400156925">getValor</a>(); }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_atividade.html#aa0892ca07d704698610f051aeb5bfe24">  132</a></span>        <span class="keyword">inline</span> std::string <a class="code hl_function" href="class_atividade.html#aa0892ca07d704698610f051aeb5bfe24">getValorData</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;data.<a class="code hl_function" href="class_data.html#aecd8f0d04b834d1448d1d005f9b748b8">getValor</a>(); }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_atividade.html#af477e9d5a4d68adedae33a7e700a64ce">  139</a></span>        <span class="keyword">inline</span> std::string <a class="code hl_function" href="class_atividade.html#af477e9d5a4d68adedae33a7e700a64ce">getValorHorario</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;horario.<a class="code hl_function" href="class_horario.html#ada6ee24f26c4240986ca78e8ea93ebb6">getValor</a>(); }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="class_atividade.html#a8228f439086d3bf9e95ed4e45dc32a4e">  146</a></span>        <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_atividade.html#a8228f439086d3bf9e95ed4e45dc32a4e">getValorDuracao</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;duracao.<a class="code hl_function" href="class_duracao.html#a5fd6f8ad02e0daa5b40341a27919c565">getValor</a>(); }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="class_atividade.html#a553d549239b4e59e041ab7266eb49c48">  153</a></span>        <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_atividade.html#a553d549239b4e59e041ab7266eb49c48">getValorPreco</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;preco.<a class="code hl_function" href="class_dinheiro.html#a7641159efc88fae43eab104702f06edc">getValor</a>(); }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="class_atividade.html#a3927bbbed236fc6cc0620377ed1076af">  160</a></span>        <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_atividade.html#a3927bbbed236fc6cc0620377ed1076af">getValorAvaliacao</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;avaliacao.<a class="code hl_function" href="class_avaliacao.html#a31e7d5be1f978469887751abbdd13a65">getValor</a>(); }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>};</div>
+</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#endif </span><span class="comment">// ATIVIDADE_HPP</span></div>
+<div class="ttc" id="a_avaliacao_8hpp_html"><div class="ttname"><a href="_avaliacao_8hpp.html">Avaliacao.hpp</a></div></div>
+<div class="ttc" id="a_codigo_8hpp_html"><div class="ttname"><a href="_codigo_8hpp.html">Codigo.hpp</a></div></div>
+<div class="ttc" id="a_data_8hpp_html"><div class="ttname"><a href="_data_8hpp.html">Data.hpp</a></div></div>
+<div class="ttc" id="a_dinheiro_8hpp_html"><div class="ttname"><a href="_dinheiro_8hpp.html">Dinheiro.hpp</a></div></div>
+<div class="ttc" id="a_duracao_8hpp_html"><div class="ttname"><a href="_duracao_8hpp.html">Duracao.hpp</a></div></div>
+<div class="ttc" id="a_horario_8hpp_html"><div class="ttname"><a href="_horario_8hpp.html">Horario.hpp</a></div></div>
+<div class="ttc" id="a_nome_8hpp_html"><div class="ttname"><a href="_nome_8hpp.html">Nome.hpp</a></div></div>
+<div class="ttc" id="aclass_atividade_html"><div class="ttname"><a href="class_atividade.html">Atividade</a></div><div class="ttdoc">Entidade Atividade.</div><div class="ttdef"><b>Definição</b> <a href="#l00021">Atividade.hpp:21</a></div></div>
+<div class="ttc" id="aclass_atividade_html_a20e794b9df21936e177480ba8c5b0bde"><div class="ttname"><a href="class_atividade.html#a20e794b9df21936e177480ba8c5b0bde">Atividade::getValorCodigo</a></div><div class="ttdeci">std::string getValorCodigo() const</div><div class="ttdoc">inline std::string Atividade::getValorCodigo() const</div><div class="ttdef"><b>Definição</b> <a href="#l00118">Atividade.hpp:118</a></div></div>
+<div class="ttc" id="aclass_atividade_html_a3927bbbed236fc6cc0620377ed1076af"><div class="ttname"><a href="class_atividade.html#a3927bbbed236fc6cc0620377ed1076af">Atividade::getValorAvaliacao</a></div><div class="ttdeci">int getValorAvaliacao() const</div><div class="ttdoc">inline int getValorAvaliacao() const</div><div class="ttdef"><b>Definição</b> <a href="#l00160">Atividade.hpp:160</a></div></div>
+<div class="ttc" id="aclass_atividade_html_a5355118d8661ccd3e2018c3e160889f7"><div class="ttname"><a href="class_atividade.html#a5355118d8661ccd3e2018c3e160889f7">Atividade::setValor</a></div><div class="ttdeci">void setValor(const Codigo &amp;)</div><div class="ttdoc">Atividade::setValor(const Codigo&amp;)</div><div class="ttdef"><b>Definição</b> <a href="_atividade_8cpp_source.html#l00033">Atividade.cpp:33</a></div></div>
+<div class="ttc" id="aclass_atividade_html_a553d549239b4e59e041ab7266eb49c48"><div class="ttname"><a href="class_atividade.html#a553d549239b4e59e041ab7266eb49c48">Atividade::getValorPreco</a></div><div class="ttdeci">int getValorPreco() const</div><div class="ttdoc">inline int Atividade::getValorPreco() const</div><div class="ttdef"><b>Definição</b> <a href="#l00153">Atividade.hpp:153</a></div></div>
+<div class="ttc" id="aclass_atividade_html_a8228f439086d3bf9e95ed4e45dc32a4e"><div class="ttname"><a href="class_atividade.html#a8228f439086d3bf9e95ed4e45dc32a4e">Atividade::getValorDuracao</a></div><div class="ttdeci">int getValorDuracao() const</div><div class="ttdoc">inline int Atividade::getValorDuracao() const</div><div class="ttdef"><b>Definição</b> <a href="#l00146">Atividade.hpp:146</a></div></div>
+<div class="ttc" id="aclass_atividade_html_aa0892ca07d704698610f051aeb5bfe24"><div class="ttname"><a href="class_atividade.html#aa0892ca07d704698610f051aeb5bfe24">Atividade::getValorData</a></div><div class="ttdeci">std::string getValorData() const</div><div class="ttdoc">inline std::string Atividade::getValorData() const</div><div class="ttdef"><b>Definição</b> <a href="#l00132">Atividade.hpp:132</a></div></div>
+<div class="ttc" id="aclass_atividade_html_af477e9d5a4d68adedae33a7e700a64ce"><div class="ttname"><a href="class_atividade.html#af477e9d5a4d68adedae33a7e700a64ce">Atividade::getValorHorario</a></div><div class="ttdeci">std::string getValorHorario() const</div><div class="ttdoc">inline std::string Atividade::getValorHorario() const</div><div class="ttdef"><b>Definição</b> <a href="#l00139">Atividade.hpp:139</a></div></div>
+<div class="ttc" id="aclass_atividade_html_afa32195ee25ca6fb8e7045600bf90821"><div class="ttname"><a href="class_atividade.html#afa32195ee25ca6fb8e7045600bf90821">Atividade::Atividade</a></div><div class="ttdeci">Atividade()</div><div class="ttdoc">Construtor vazio.</div><div class="ttdef"><b>Definição</b> <a href="_atividade_8cpp_source.html#l00005">Atividade.cpp:5</a></div></div>
+<div class="ttc" id="aclass_atividade_html_afa5defa779824a48d3844f1a7adda50c"><div class="ttname"><a href="class_atividade.html#afa5defa779824a48d3844f1a7adda50c">Atividade::getValorNome</a></div><div class="ttdeci">std::string getValorNome() const</div><div class="ttdoc">inline std::string Atividade::getValorNome() const</div><div class="ttdef"><b>Definição</b> <a href="#l00125">Atividade.hpp:125</a></div></div>
+<div class="ttc" id="aclass_avaliacao_html"><div class="ttname"><a href="class_avaliacao.html">Avaliacao</a></div><div class="ttdoc">Dominio Avaliacao.</div><div class="ttdef"><b>Definição</b> <a href="_avaliacao_8hpp_source.html#l00012">Avaliacao.hpp:13</a></div></div>
+<div class="ttc" id="aclass_avaliacao_html_a31e7d5be1f978469887751abbdd13a65"><div class="ttname"><a href="class_avaliacao.html#a31e7d5be1f978469887751abbdd13a65">Avaliacao::getValor</a></div><div class="ttdeci">int getValor() const</div><div class="ttdoc">Avalicao::getValor()</div><div class="ttdef"><b>Definição</b> <a href="_avaliacao_8hpp_source.html#l00058">Avaliacao.hpp:58</a></div></div>
+<div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Dominio Codigo.</div><div class="ttdef"><b>Definição</b> <a href="_codigo_8hpp_source.html#l00013">Codigo.hpp:14</a></div></div>
+<div class="ttc" id="aclass_codigo_html_a42f4ee541458441b438bb4b0c9cc3921"><div class="ttname"><a href="class_codigo.html#a42f4ee541458441b438bb4b0c9cc3921">Codigo::getValor</a></div><div class="ttdeci">std::string getValor() const</div><div class="ttdoc">Codigo::getValor(std::string)</div><div class="ttdef"><b>Definição</b> <a href="_codigo_8hpp_source.html#l00070">Codigo.hpp:70</a></div></div>
+<div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdoc">Dominio Data.</div><div class="ttdef"><b>Definição</b> <a href="_data_8hpp_source.html#l00017">Data.hpp:18</a></div></div>
+<div class="ttc" id="aclass_data_html_aecd8f0d04b834d1448d1d005f9b748b8"><div class="ttname"><a href="class_data.html#aecd8f0d04b834d1448d1d005f9b748b8">Data::getValor</a></div><div class="ttdeci">std::string getValor() const</div><div class="ttdoc">std::string Data::getValor() const</div><div class="ttdef"><b>Definição</b> <a href="_data_8cpp_source.html#l00125">Data.cpp:125</a></div></div>
+<div class="ttc" id="aclass_dinheiro_html"><div class="ttname"><a href="class_dinheiro.html">Dinheiro</a></div><div class="ttdoc">Dominio Dinheiro.</div><div class="ttdef"><b>Definição</b> <a href="_dinheiro_8hpp_source.html#l00014">Dinheiro.hpp:15</a></div></div>
+<div class="ttc" id="aclass_dinheiro_html_a7641159efc88fae43eab104702f06edc"><div class="ttname"><a href="class_dinheiro.html#a7641159efc88fae43eab104702f06edc">Dinheiro::getValor</a></div><div class="ttdeci">int getValor() const</div><div class="ttdoc">int Dinheiro::getValor(int) const</div><div class="ttdef"><b>Definição</b> <a href="_dinheiro_8hpp_source.html#l00080">Dinheiro.hpp:80</a></div></div>
+<div class="ttc" id="aclass_duracao_html"><div class="ttname"><a href="class_duracao.html">Duracao</a></div><div class="ttdoc">Dominio Duracao.</div><div class="ttdef"><b>Definição</b> <a href="_duracao_8hpp_source.html#l00012">Duracao.hpp:13</a></div></div>
+<div class="ttc" id="aclass_duracao_html_a5fd6f8ad02e0daa5b40341a27919c565"><div class="ttname"><a href="class_duracao.html#a5fd6f8ad02e0daa5b40341a27919c565">Duracao::getValor</a></div><div class="ttdeci">int getValor() const</div><div class="ttdoc">Duracao::getValor()</div><div class="ttdef"><b>Definição</b> <a href="_duracao_8hpp_source.html#l00059">Duracao.hpp:59</a></div></div>
+<div class="ttc" id="aclass_horario_html"><div class="ttname"><a href="class_horario.html">Horario</a></div><div class="ttdoc">Dominio Horario.</div><div class="ttdef"><b>Definição</b> <a href="_horario_8hpp_source.html#l00015">Horario.hpp:16</a></div></div>
+<div class="ttc" id="aclass_horario_html_ada6ee24f26c4240986ca78e8ea93ebb6"><div class="ttname"><a href="class_horario.html#ada6ee24f26c4240986ca78e8ea93ebb6">Horario::getValor</a></div><div class="ttdeci">std::string getValor() const</div><div class="ttdoc">Horario::getValor()</div><div class="ttdef"><b>Definição</b> <a href="_horario_8cpp_source.html#l00087">Horario.cpp:87</a></div></div>
+<div class="ttc" id="aclass_nome_html"><div class="ttname"><a href="class_nome.html">Nome</a></div><div class="ttdoc">Dominio Nome.</div><div class="ttdef"><b>Definição</b> <a href="_nome_8hpp_source.html#l00014">Nome.hpp:15</a></div></div>
+<div class="ttc" id="aclass_nome_html_ae6eddd41a782357f0466a1c400156925"><div class="ttname"><a href="class_nome.html#ae6eddd41a782357f0466a1c400156925">Nome::getValor</a></div><div class="ttdeci">std::string getValor() const</div><div class="ttdoc">Nome::getValor()</div><div class="ttdef"><b>Definição</b> <a href="_nome_8hpp_source.html#l00070">Nome.hpp:70</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ce5f4a480043d107452a96d2c52b2a64.html">Entidades</a></li><li class="navelem"><a class="el" href="_atividade_8hpp.html">Atividade.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

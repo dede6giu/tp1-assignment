@@ -3,9 +3,9 @@
 
 #include <string>
 
-//! Classe Data
+//! Dominio Data
 /*!
-    Classe Data, formato "DD/MM/AA", salvo como três inteiros,
+    Dominio Data, formato "DD/MM/AA", salvo como três inteiros,
     tal que 01 <= DD <= 31, 01 <= MM <= 12 e 00 <= AA <= 99, seguindo as
     devidas quantidades de dias no mês.\n
 

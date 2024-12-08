@@ -1,10 +1,10 @@
 #ifndef DURACAO_HPP_INCLUDED
 #define DURACAO_HPP_INCLUDED
 
-//! Classe Duracao
+//! Dominio Duracao
 /*!
-    Classe Duracao, inteiro entre 0 e 360 \n
-    232002771 - implementação, documentação, exce��es \n
+    Dominio Duracao, inteiro entre 0 e 360 \n
+    232002771 - implementação, documentação, exceções \n
     232013031 - construtores \n
     232006028 - documentação
 */

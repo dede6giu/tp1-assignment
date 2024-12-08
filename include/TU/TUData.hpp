@@ -6,10 +6,11 @@
 #include <vector>
 #include "../../include/Dominios/Data.hpp"
 
-//! TUData
+//! Testes de Unidade do Dominio Data
 /*!
-    232013031 - implementação
+    232013031 - implementaÃ§Ã£o.
 */
+
 
 class TUData
 {

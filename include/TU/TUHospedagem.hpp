@@ -5,6 +5,11 @@
 #include <vector>
 #include "../../include/Entidades/Hospedagem.hpp"
 
+//! Testes de Unidade da Entidade Hospedagem
+/*!
+    232013031 - implementação
+*/
+
 class TUHospedagem
 {
     private:
