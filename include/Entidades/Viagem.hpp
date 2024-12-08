@@ -4,6 +4,7 @@
 #include "Dominios/Avaliacao.hpp"
 #include "Dominios/Codigo.hpp"
 #include "Dominios/Nome.hpp"
+#include <string>
 
 //! Entidade Viagem
 /*!
@@ -18,6 +19,8 @@ class Viagem {
 
     public:
         Viagem();
+        Viagem(const Avaliacao&, const Codigo&, const Nome&);
+
 
         void setValor(const Avaliacao&);
         int getValorAvaliacao() const;

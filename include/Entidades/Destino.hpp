@@ -10,7 +10,7 @@
 //! Entidade Destino
 /*!
     Entidade Destino \n
-    232013031 - implementação
+    232013031 - implementaÃ§Ã£o
 */
 
 class Destino
@@ -21,10 +21,11 @@ class Destino
         Data inicio;
         Data fim;
         Avaliacao avaliacao;
-        bool validar(); //!< não ainda implementado
+        bool validar(); //!< nÃ£o ainda implementado
 
     public:
         Destino();
+        Destino(const Codigo&, const Nome&, const Data&, const Data&, const Avaliacao&);
 
         void setValor(const Codigo&);
         inline std::string getValorCodigo() const;

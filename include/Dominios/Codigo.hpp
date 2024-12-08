@@ -13,7 +13,7 @@
 class Codigo
 {
     private:
-        std::string codigo = "";
+        std::string codigo;
         void validar(std::string);
 
     public:

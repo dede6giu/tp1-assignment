@@ -1,22 +1,32 @@
 #include "Entidades/Viagem.hpp"
 
-#include "Dominios/Avaliacao.hpp"
-#include "Dominios/Codigo.hpp"
-#include "Dominios/Nome.hpp"
-
-Viagem::Viagem() {
+Viagem::Viagem()
+{
     avaliacao = Avaliacao();
     codigo = Codigo();
     nome = Nome();
 }
 
-void Viagem::setValor(const Codigo &novoCodigo) {
+Viagem::Viagem(const Avaliacao& avaliacaoNovo,
+               const Codigo& codigoNovo,
+               const Nome& nomeNovo)
+{
+    avaliacao = avaliacaoNovo;
+    codigo = codigoNovo;
+    nome = nomeNovo;
+}
+
+void Viagem::setValor(const Codigo &novoCodigo)
+{
     this->codigo = novoCodigo;
 }
 
-void Viagem::setValor(const Nome &novoNome) {
+void Viagem::setValor(const Nome &novoNome)
+{
     this->nome = novoNome;
 }
-void Viagem::setValor(const Avaliacao &novaAvaliacao) {
+
+void Viagem::setValor(const Avaliacao &novaAvaliacao)
+{
     this->avaliacao = novaAvaliacao;
 }

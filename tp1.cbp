@@ -52,6 +52,7 @@
 		<Unit filename="include/TU.hpp" />
 		<Unit filename="include/TU/TUAvaliacao.hpp" />
 		<Unit filename="include/TU/TUCodigo.hpp" />
+		<Unit filename="include/TU/TUConta.hpp" />
 		<Unit filename="include/TU/TUData.hpp" />
 		<Unit filename="include/TU/TUDestino.hpp" />
 		<Unit filename="include/TU/TUDinheiro.hpp" />
@@ -77,6 +78,7 @@
 		<Unit filename="src/Entidades/Viagem.cpp" />
 		<Unit filename="src/TU/TUAvaliacao.cpp" />
 		<Unit filename="src/TU/TUCodigo.cpp" />
+		<Unit filename="src/TU/TUConta.cpp" />
 		<Unit filename="src/TU/TUData.cpp" />
 		<Unit filename="src/TU/TUDestino.cpp" />
 		<Unit filename="src/TU/TUDinheiro.cpp" />

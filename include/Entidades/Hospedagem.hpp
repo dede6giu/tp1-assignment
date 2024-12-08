@@ -21,6 +21,8 @@ class Hospedagem
 
     public:
         Hospedagem();
+        Hospedagem(const Codigo&, const Nome&, const Avaliacao&, const Dinheiro&);
+
 
         void setValor(const Codigo&);
         inline std::string getValorCodigo() const {return this->codigo.getValor();}

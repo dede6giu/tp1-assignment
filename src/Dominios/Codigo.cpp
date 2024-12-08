@@ -2,11 +2,13 @@
 #include <string>
 #include <stdexcept>
 
-Codigo::Codigo() {
+Codigo::Codigo()
+{
     codigo;
 }
 
-Codigo::Codigo(std::string valor){
+Codigo::Codigo(std::string valor)
+{
     setValor(valor);
 }
 
