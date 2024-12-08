@@ -4,7 +4,7 @@
 //! Classe Duracao
 /*!
     Classe Duracao, inteiro entre 0 e 360 \n
-    232002771 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, exce��es \n
+    232002771 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, exce��es \n
     232013031 - construtores
 */
 
@@ -12,7 +12,7 @@ class Duracao
 {
     private:
         //! Um int.
-        /*! Armazena a o valor da dura&ccedil;&atilde;o. */
+        /*! Armazena o valor da dura&ccedil;&atilde;o. */
         int duracao;
 
         //! Duracao::validar()
@@ -23,29 +23,36 @@ class Duracao
         void validar(int);
 
     public:
+        //! Construtor vazio
+        /*! Constrói um objeto Duracao vazio. */
         Duracao();
+
+        //! Construtor paramétrico
+        /*!
+            Constrói um objeto Duracao e recebe um int com o valor de duracao.
+            @param int duracao.
+        */
         Duracao(int);
 
         //! Um inteiro p&uacute;blico
         /*!
           Armazena a quantidade m&aacute;xima da dura&ccedil;&atilde;o.
+          @param int valor a validar
           @sa validar()
         */
         static const int MAXIMO = 360;
-
+        
         //! Duracao::setValor()
         /*!
-          Armazena um novo valor dentro da classe.
-          @param int novo valor.
-          @return bool indicando sucesso da opera&ccedil;&atilde;o.
-          @sa getValor(), Duracao::validar()
+            Recebe um int, verifica se é válido e guarda no objeto se a verificação tiver sucesso.
+            @param int duracao
         */
         void setValor(int);
 
         //! Duracao::getValor()
         /*!
-          Fun&ccedil;&atilde;o para obter o valor da classe Duracao.
-          @return O valor da dura&ccedil;&atilde;o.
+            Retorna um int com o valor da duracao armazenada.
+            @return int duracao
         */
         int getValor() const;
 };

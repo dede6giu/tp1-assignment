@@ -13,13 +13,13 @@
 
 class Viagem {
     private:
-        //! Objeto Avaliacao
+        //! Avaliacao (atributo)
         /*! Atributo de classe Avaliacao. */
         Avaliacao avaliacao;
-        //! Objeto Codigo
+        //! Codigo (atributo)
         /*! Atributo de classe Codigo. */
         Codigo codigo;
-        //! Objeto Nome
+        //! Nome (atributo)
         /*! Atributo de classe Nome. */
         Nome nome;
 

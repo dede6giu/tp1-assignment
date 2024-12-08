@@ -39,7 +39,7 @@ class Destino
 
         //! bool Destino::validar()
         /*! */
-        bool validar(); //!< n�o ainda implementado
+        bool Destino::validar(); //!< n�o ainda implementado
 
     public:
         //! Construtor vazio

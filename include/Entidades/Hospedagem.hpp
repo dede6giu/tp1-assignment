@@ -6,8 +6,8 @@
 #include "Dominios/Avaliacao.hpp"
 #include "Dominios/Dinheiro.hpp"
 
+//! Entidade Hospedagem 
 /*!
-    Entidade de Hospedagem \n
     232001667 - implementação \n
     232002520 - documentação
 */
@@ -15,17 +15,17 @@
 class Hospedagem
 {
 private:
-    //! Objeto Codigo
-    /*! Atributo de classe Codigo. */
+    //! Codigo (atributo) 
+    /*! Atributo da classe Codigo. */
     Codigo codigo;
-    //! Objeto Nome
-    /*! Atributo de classe Nome. */
+    //! Nome (atributo) 
+    /*! Atributo da classe Nome. */
     Nome nome;
-    //! Objeto Avaliacao
-    /*! Atributo de classe Avaliacao. */
+    //! Avaliacao (atributo) 
+    /*! Atributo da classe Avaliacao. */
     Avaliacao avaliacao;
-    //! Objeto Dinheiro
-    /*! Atributo de classe Dinheiro que representa a diária do estabelecimento. */
+    //! Dinheiro (atributo) 
+    /*! Atributo da classe Dinheiro que representa a diária do estabelecimento. */
     Dinheiro diaria;
 public:
     //! Construtor vazio
@@ -84,5 +84,4 @@ public:
     */
     inline Dinheiro getDiaria() const {return this->diaria;}
 };
-
 #endif // HOSPEDAGEM_HPP

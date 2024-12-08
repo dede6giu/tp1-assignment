@@ -7,8 +7,7 @@
 /*!
     Classe Horario, string de 5 caracteres composta por "HH:mm", impressa em formato de 24h. Internamente salva como dois inteiros, um para horas e outro para minutos.\n
     232013031 - implementa&ccdeil;&atilde;o, construtores \n
-    232002520 - documentação, exce��es\n
-    232002520 - implementação
+    232002520 - documentação, exce��es, implementação
 */
 
 class Horario
@@ -22,6 +21,11 @@ class Horario
         /*! Armazena o valor dos minutos */
         int minutos;
 
+        //! bool Horario::validar(std::string)
+        /*!
+            Recebe uma string e verifica se ela é válida (tamanho exatamente igual 5 e se o terceiro caractere é ":").
+            @param string � ser analisada.
+        */
         void validar(std::string);
 
         //! Horario::validarHoras()

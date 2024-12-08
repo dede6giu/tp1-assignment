@@ -13,12 +13,12 @@
 class Conta
 {
     private:
-        //! Objeto Codigo
-        /*! Objeto que armazena o codigo da conta. */
+        //! Codigo (atributo) 
+        /*! Atributo que armazena o codigo da conta. */
         Codigo codigo;
 
-        //! Objeto senha
-        /*! Objeto que armazena a senha da conta. */
+        //! Senha (atributo)
+        /*! Atributo que armazena a senha da conta. */
         Senha senha;
 
     public:
@@ -37,7 +37,7 @@ class Conta
 
         //! bool Conta::setValor(const Codigo&)
         /*!
-            Método que recebe um objeto Codigo e armazena-o como como atributo do objeto.
+            Método que recebe um objeto Codigo e armazena-o como atributo do objeto.
             @param const Codigo& a ser armazenado.
         */
         bool setValor(const Codigo&);
@@ -52,7 +52,7 @@ class Conta
 
         //! bool Conta::setValor(const Senha&)
         /*!
-            Método que recebe um objeto Senha e armazena-o como como atributo do objeto.
+            Método que recebe um objeto Senha e armazena-o como atributo do objeto.
             @param const Senha&
         */
         bool setValor(const Senha&);
@@ -78,3 +78,5 @@ inline Senha Conta::getSenha() const
 }
 
 #endif // CONTA_HPP_INCLUDED
+
+

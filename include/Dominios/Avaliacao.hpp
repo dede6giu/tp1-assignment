@@ -19,12 +19,23 @@ class Avaliacao
         //! Avaliacao::validar()
         /*!
           Verifica se o valor da avalia&ccedil;&atilde;o est&aacute; no intervalo de 0 a 5.
+          @param int valor a validar
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
         */
         void validar(int);
 
     public:
+        //! Construtor Vazio
+        /*!
+            Constr�i um objeto Avaliacao com valor vazio.
+            @sa Avaliacao(std::string)
+        */
         Avaliacao();
+        //! Construtor paramétrico
+        /*!
+            Constrói um objeto Avaliacao e recebe um int com o valor de avaliacao.
+            @param int avaliacao.
+        */
         Avaliacao(int);
 
         //! Avaliacao::setValor()

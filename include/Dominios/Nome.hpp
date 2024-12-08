@@ -5,9 +5,9 @@
 
 //! Classe Nome
 /*!
-  Classe Nome, string de m&aacute;ximo 30 caracteres.\n
+  Classe Nome, string de no m&aacute;ximo 30 caracteres.\n
   232013031 - implementa&ccedil;&atilde;o, documenta&ccedil;&atilde;o, construtores\n
-  232002771 - exceções
+  232002771 - exceï¿½ï¿½es
 */
 
 class Nome
@@ -26,7 +26,7 @@ class Nome
         void validar(std::string);
 
     public:
-        //! Um inteiro p&uacute;blico estático
+        //! Um inteiro p&uacute;blico estï¿½tico
         /*!
           Armazena o tamanho m&aacute;ximo do valor.
           @sa validar()
@@ -35,14 +35,14 @@ class Nome
 
         //! Construtor Vazio
         /*!
-            Constrói um objeto Nome com valor vazio.
+            Constrï¿½i um objeto Nome com valor vazio.
             @sa Nome(std::string)
         */
         Nome();
 
-        //! Construtor Paramétrico
+        //! Construtor Paramï¿½trico
         /*!
-            Recebe um valor string, o verifica e finalmente constrói um objeto
+            Recebe um valor string, o verifica e finalmente constrï¿½i um objeto
             Nome com o valor inserido.
             @param string usada para construir o objeto.
             @sa Nome(), Nome::validar()
@@ -51,7 +51,7 @@ class Nome
 
         //! Nome::setValor()
         /*!
-          Armazena um novo valor dentro da classe após sua verificação.
+          Armazena um novo valor dentro da classe apï¿½s sua verificaï¿½ï¿½o.
           @param string novo valor.
           @return bool indicando sucesso da opera&ccedil;&atilde;o.
           @sa getValor(), Nome::validar()
@@ -61,7 +61,7 @@ class Nome
         //! Nome::getValor()
         /*!
           Fun&ccedil;&atilde;o para obter o valor da classe Nome.
-          @return string parâmetro nome do objeto.
+          @return string parï¿½metro nome do objeto.
         */
         std::string getValor() const;
 };

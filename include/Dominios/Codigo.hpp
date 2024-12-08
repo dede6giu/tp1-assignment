@@ -26,6 +26,12 @@ class Codigo
         void validar(std::string);
 
     public:
+        //! Um inteiro p&uacute;blico
+        /*!
+          Armazena o valor m&aacute;ximo da valiação.
+          @param int valor a validar
+          @sa validar()
+        */
         static int const CODELENGTH = 6;
 
         //! Construtor Vazio
