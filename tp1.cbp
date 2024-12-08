@@ -60,6 +60,7 @@
 		<Unit filename="include/TU/TUHospedagem.hpp" />
 		<Unit filename="include/TU/TUNome.hpp" />
 		<Unit filename="include/TU/TUSenha.hpp" />
+		<Unit filename="include/TU/TUViagem.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
 		<Unit filename="src/Dominios/Codigo.cpp" />
@@ -84,6 +85,7 @@
 		<Unit filename="src/TU/TUHospedagem.cpp" />
 		<Unit filename="src/TU/TUNome.cpp" />
 		<Unit filename="src/TU/TUSenha.cpp" />
+		<Unit filename="src/TU/TUViagem.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
