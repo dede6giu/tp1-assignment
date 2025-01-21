@@ -14,14 +14,13 @@ class IFAutenticacao
 
         //! Autentica o usuário
         /*!
-            O método recebe do usuário um código e uma senha.
+            O método recebe do usuário um código e uma senha, ou seja, uma Conta.
             Ele checa se a senha é a associada ao código fornecido e, se sim, retorna true.
             Se o código não existe, ou a senha está incorreta, retorna false.
-            @param código da conta
-            @param senha da conta
+            @param ponteiro para a Conta fornecida
             @return sucesso da operação
         */
-        virtual bool autenticar(Codigo, Senha) = 0;
+        virtual bool autenticar(Conta*) = 0;
 };
 
 
