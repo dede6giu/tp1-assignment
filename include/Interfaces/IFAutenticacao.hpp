@@ -1,6 +1,8 @@
 #ifndef IFAUTENTICACAO_HPP_INCLUDED
 #define IFAUTENTICACAO_HPP_INCLUDED
 
+#include "../Entidades/Conta.hpp"
+
 //! Interface Front Autenticação
 /*!
     232013031 - Implementação \n
@@ -22,6 +24,8 @@ class IFAutenticacao
             @return Sucesso da operação.
         */
         virtual bool autenticar(Conta*) = 0;
+
+        virtual ~IFAutenticacao(){};
 };
 
 #endif // IFAUTENTICACAO_HPP_INCLUDED

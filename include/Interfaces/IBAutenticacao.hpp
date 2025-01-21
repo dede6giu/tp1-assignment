@@ -1,6 +1,8 @@
 #ifndef IBAUTENTICACAO_HPP_INCLUDED
 #define IBAUTENTICACAO_HPP_INCLUDED
 
+#include "../Entidades/Conta.hpp"
+
 //! Interface Back Autenticação
 /*!
     232013031 - Implementação \n
@@ -23,6 +25,8 @@ class IBAutenticacao
             @return Sucesso da operação.
         */
         virtual bool autenticar(Conta) = 0;
+
+        virtual ~IBAutenticacao(){};
 };
 
 #endif // IBAUTENTICACAO_HPP_INCLUDED
