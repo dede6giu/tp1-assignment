@@ -12,8 +12,8 @@ int main()
 {
     cout << "Hello World" << endl;
 
-    CIFAutenticacao* cntrIFAutenticacao = new CIFAutenticacao();
-    SBAutenticacao* stubBAutenticacao = new SBAutenticacao();
+    IFAutenticacao* cntrIFAutenticacao = new CIFAutenticacao();
+    IBAutenticacao* stubBAutenticacao = new SBAutenticacao();
 
     cntrIFAutenticacao->setCntrIBAutenticacao(stubBAutenticacao);
 

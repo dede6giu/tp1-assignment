@@ -2,6 +2,7 @@
 #define IFAUTENTICACAO_HPP_INCLUDED
 
 #include "../Entidades/Conta.hpp"
+#include "IBAutenticacao.hpp"
 
 //! Interface Front Autenticação
 /*!
@@ -25,6 +26,15 @@ class IFAutenticacao
         */
         virtual bool autenticar(Conta*) = 0;
 
+        //! Dependência da IBA
+        /*!
+            Estabelece uma referência para a IBAutenticacao como uma variável, permitindo
+            acesso ao banco de dados pelos métodos da IFAutenticacao.
+            @param Referência à IBAutenticacao a ser salva.
+        */
+        virtual void setCntrIBAutenticacao(IBAutenticacao*) = 0;
+
+        //! Destrutor Virtual
         virtual ~IFAutenticacao(){};
 };
 
