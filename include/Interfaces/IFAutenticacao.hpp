@@ -14,14 +14,14 @@ class IFAutenticacao
 
         //! Autentica o usuário
         /*!
-            O método recebe do usuário um código e uma senha, ou seja, uma Conta.
-            Ele checa se a senha é a associada ao código fornecido e, se sim, retorna true.
-            Se o código não existe, ou a senha está incorreta, retorna false.
-            @param ponteiro para a Conta fornecida
-            @return sucesso da operação
+            Indica o início do processamento de autenticação. Ou seja, dentro da função,
+            receberá um Código e uma Senha, verifica se estão corretamente formatados, e
+            então envia essas informações para autenticação no banco de dados.
+            @param Recebe um ponteiro nulo que receberá a Conta caso seja
+            autenticada. Senão, continua nulo.
+            @return Sucesso da operação.
         */
         virtual bool autenticar(Conta*) = 0;
 };
-
 
 #endif // IFAUTENTICACAO_HPP_INCLUDED
