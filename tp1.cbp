@@ -34,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Controladores/CIFAutenticacao.hpp" />
 		<Unit filename="include/Dominios.hpp" />
 		<Unit filename="include/Dominios/Avaliacao.hpp" />
 		<Unit filename="include/Dominios/Codigo.hpp" />
@@ -49,6 +50,9 @@
 		<Unit filename="include/Entidades/Destino.hpp" />
 		<Unit filename="include/Entidades/Hospedagem.hpp" />
 		<Unit filename="include/Entidades/Viagem.hpp" />
+		<Unit filename="include/Interfaces/IBAutenticacao.hpp" />
+		<Unit filename="include/Interfaces/IFAutenticacao.hpp" />
+		<Unit filename="include/Stubs/SBAutenticacao.hpp" />
 		<Unit filename="include/TU.hpp" />
 		<Unit filename="include/TU/TUAtividade.hpp" />
 		<Unit filename="include/TU/TUAvaliacao.hpp" />
@@ -65,6 +69,7 @@
 		<Unit filename="include/TU/TUViagem.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mainpage.dox" />
+		<Unit filename="src/Controladores/CIFAutenticacao.cpp" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
 		<Unit filename="src/Dominios/Codigo.cpp" />
 		<Unit filename="src/Dominios/Data.cpp" />
@@ -78,6 +83,7 @@
 		<Unit filename="src/Entidades/Destino.cpp" />
 		<Unit filename="src/Entidades/Hospedagem.cpp" />
 		<Unit filename="src/Entidades/Viagem.cpp" />
+		<Unit filename="src/Stubs/SBAutenticacao.cpp" />
 		<Unit filename="src/TU/TUAtividade.cpp" />
 		<Unit filename="src/TU/TUAvaliacao.cpp" />
 		<Unit filename="src/TU/TUCodigo.cpp" />
