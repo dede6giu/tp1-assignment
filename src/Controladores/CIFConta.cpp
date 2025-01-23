@@ -1,13 +1,13 @@
-#include "../../include/Controladores/CIFAutenticacao.hpp"
-#include "../../include/Dominios/Codigo.hpp"
-#include "../../include/Dominios/Senha.hpp"
+#include "../../include/Controladores/CIFConta.hpp"
+#include "../Entidades/Conta.hpp"
+#include "../Dominios/Senha.hpp"
+#include "../Dominios/Codigo.hpp"
 #include <string>
-#include <exception>
 #include <iostream>
 
 using namespace std;
 
-bool CIFAutenticacao::autenticar(Conta* contaAutenticada)
+bool CIFConta::criar()
 {
     Codigo codigo;
     Senha senha;
@@ -15,7 +15,7 @@ bool CIFAutenticacao::autenticar(Conta* contaAutenticada)
 
     while (true)
     {
-        cout << endl << "Autenticacao do usuario" << endl << endl;
+        cout << endl << "Criacao de conta" << endl << endl;
         try
         {
             cout << "Forneca o codigo: ";
@@ -40,16 +40,9 @@ bool CIFAutenticacao::autenticar(Conta* contaAutenticada)
     contaRecebida.setValor(codigo);
     contaRecebida.setValor(senha);
 
-    bool resultado = cntrIBAutenticacao->autenticar(contaRecebida);
+    bool resultado = cntrIBConta->criar(contaRecebida);
 
     if (resultado)
-    {
-        contaAutenticada->setValor(codigo);
-        contaAutenticada->setValor(senha);
         return true;
-    }
-    else
-    {
-        return false;
-    }
+    return false;
 }
