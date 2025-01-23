@@ -1,10 +1,9 @@
 #include <iostream>
 #include <string>
 #include <exception>
-#include "include/Interfaces/IFAutenticacao.hpp"
-#include "include/Interfaces/IBAutenticacao.hpp"
-#include "include/Controladores/CIFAutenticacao.hpp"
-#include "include/Stubs/SBAutenticacao.hpp"
+#include "include/Controladores.hpp"
+#include "include/Stubs.hpp"
+#include "include/Interfaces.hpp"
 
 using namespace std;
 
@@ -12,13 +11,12 @@ int main()
 {
     cout << "Hello World" << endl;
 
-    IFAutenticacao* cntrIFAutenticacao = new CIFAutenticacao();
-    IBAutenticacao* stubBAutenticacao = new SBAutenticacao();
+    IFConta* cntrIFConta = new CIFConta();
+    IBConta* stubBConta = new SBConta();
 
-    cntrIFAutenticacao->setCntrIBAutenticacao(stubBAutenticacao);
+    cntrIFConta->setCntrIBConta(stubBConta);
 
     bool resultado = false;
-    Conta contaAutenticada;
 
     while (true)
     {
@@ -26,7 +24,7 @@ int main()
 
         try
         {
-            resultado = cntrIFAutenticacao->autenticar(&contaAutenticada);
+            resultado = cntrIFConta->criar();
         }
         catch (const runtime_error &exc)
         {
@@ -37,18 +35,17 @@ int main()
         if (resultado)
         {
             cout << endl << "Sucesso." << endl;
-            cout << "Codigo = " << contaAutenticada.getValorCodigo() << endl;
             break;
         }
         else
         {
-            cout << "Falha de autenticacao" << endl;
+            cout << "Falha na criacao" << endl;
             break;
         }
     }
 
-    delete cntrIFAutenticacao;
-    delete stubBAutenticacao;
+    delete cntrIFConta;
+    delete stubBConta;
 
     return 0;
 }
