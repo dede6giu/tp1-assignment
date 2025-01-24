@@ -3,8 +3,10 @@
 
 #include "Interfaces/IBAutenticacao.hpp"
 #include "Interfaces/IBConta.hpp"
+#include "Interfaces/IBViagem.hpp"
 
 #include "Interfaces/IFAutenticacao.hpp"
 #include "Interfaces/IFConta.hpp"
+#include "Interfaces/IBViagem.hpp"
 
 #endif // INTERFACES_HPP_INCLUDED

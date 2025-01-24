@@ -2,6 +2,7 @@
 #include "../../include/Dominios/Avaliacao.hpp"
 #include "../../include/Dominios/Codigo.hpp"
 #include "../../include/Dominios/Nome.hpp"
+#include <iostream>
 
 using namespace std;
 
@@ -22,7 +23,7 @@ bool CIFViagem::criar() {
             cin >> aux1;
             avaliacao.setValor(aux1);
             cout << "Forneça o nome: ";
-            cint >> aux0;
+            cin >> aux0;
             nome.setValor(aux0);
             break;
         }

@@ -12,8 +12,8 @@ class CIFViagem : public IFViagem {
     public:
 
         bool criar();
-        inline void setCntrIBConta(IBConta* novo) {
-            this->cntrIBConta = novo;
+        inline void setCntrIBViagem(IBViagem* novo) {
+            this->cntrIBViagem = novo;
         }
 };
 

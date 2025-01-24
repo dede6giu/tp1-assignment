@@ -1,6 +1,8 @@
 #ifndef IFVIAGEM_HPP_INCLUDED
 #define IFVIAGEM_HPP_INCLUDED
 
+#include "IBViagem.hpp"
+
 //! Interface Front Viagem
 /*!
     232002520 - implementação \n
@@ -13,7 +15,7 @@ class IFViagem {
 
         virtual bool criar() = 0;
         virtual void setCntrIBViagem(IBViagem*) = 0;
-        virtual ~IFViagem();
+        virtual ~IFViagem(){};
 };
 
 #endif // IFVIAGEM_HPP_INCLUDED

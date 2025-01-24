@@ -1,6 +1,10 @@
 #ifndef IBVIAGEM_HPP_INCLUDED
 #define IBVIAGEM_HPP_INCLUDED
 
+#include "../Entidades/Viagem.hpp"
+#include "../Dominios/Avaliacao.hpp"
+#include "../Dominios/Nome.hpp"
+
 //! Interface Back Viagem
 /*!
     232002520 - implementação \n

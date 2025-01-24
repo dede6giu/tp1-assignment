@@ -7,7 +7,7 @@
 class SBViagem : public IBViagem {
     private:
 
-        const static std::string TRIGGER_FALHA_AVALIACAO;
+        const static int TRIGGER_FALHA_AVALIACAO;
         const static std::string TRIGGER_FALHA_CODIGO;
         const static std::string TRIGGER_FALHA_NOME;
 
