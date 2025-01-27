@@ -1,6 +1,9 @@
 #ifndef IFATIVIDADE_HPP_INCLUDED
 #define IFATIVIDADE_HPP_INCLUDED
 
+#include "IBAtividade.hpp"
+#include "Entidades/Conta.hpp"
+
 //! Interface Front Atividade
 /*!
     232013031 - implementação \n
@@ -10,7 +13,6 @@
     criação, exclusão, leitura e atualização de Atividade da Conta
     atualmente autenticada.
 */
-
 
 class IFAtividade
 {
