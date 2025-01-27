@@ -46,3 +46,8 @@ bool CIFConta::criar()
         return true;
     return false;
 }
+
+void CIFConta::run(Conta* contaAutenticada)
+{
+
+}

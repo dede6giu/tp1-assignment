@@ -16,6 +16,7 @@
 					<Add directory="include/TU" />
 					<Add directory="include/Controladores" />
 					<Add directory="include/Stubs" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -28,6 +29,7 @@
 					<Add directory="include/TU" />
 					<Add directory="include/Controladores" />
 					<Add directory="include/Stubs" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -61,8 +63,10 @@
 		<Unit filename="include/Interfaces/IBAutenticacao.hpp" />
 		<Unit filename="include/Interfaces/IBConta.hpp" />
 		<Unit filename="include/Interfaces/IBViagem.hpp" />
+		<Unit filename="include/Interfaces/IFAtividade.hpp" />
 		<Unit filename="include/Interfaces/IFAutenticacao.hpp" />
 		<Unit filename="include/Interfaces/IFConta.hpp" />
+		<Unit filename="include/Interfaces/IFDados.hpp" />
 		<Unit filename="include/Interfaces/IFViagem.hpp" />
 		<Unit filename="include/Stubs.hpp" />
 		<Unit filename="include/Stubs/SBAutenticacao.hpp" />

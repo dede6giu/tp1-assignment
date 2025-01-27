@@ -4,12 +4,16 @@
 #include "../Entidades/Viagem.hpp"
 #include "../Dominios/Avaliacao.hpp"
 #include "../Dominios/Nome.hpp"
+#include <vector>
 
 //! Interface Back Viagem
 /*!
     232002520 - implementação \n
+    232013031 - documentação \n
 
-    A IBViagem é responsável pela comunicação entre o usuário e o banco de dados quanto ao controle das Viagens. Ela permite criar, excluir, ler e atualizar Viagem.
+    A IBViagem é responsável pela comunicação entre o usuário e o
+    banco de dados quanto ao controle das Viagens. Ela permite criar,
+    excluir, ler e atualizar Viagem.
 */
 
 class IBViagem {

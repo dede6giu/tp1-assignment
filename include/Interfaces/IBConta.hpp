@@ -9,9 +9,8 @@
 /*!
     232013031 - Implementação \n
 
-    A IBC é responsável pela comunicação do usuário com
-    o banco de dados. Ela permite criar, verificar a
-    existência,
+    A IBConta é responsável pela comunicação do usuário com
+    o banco de dados. Ela permite criar, verificar a existência,
 */
 
 class IBConta
