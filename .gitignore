@@ -38,6 +38,7 @@
 
 # vscode
 .vscode
-
-# temp
 .vscode/
+
+# exceptions
+!libSQL.a
