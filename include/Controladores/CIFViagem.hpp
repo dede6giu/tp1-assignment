@@ -11,10 +11,12 @@ class CIFViagem : public IFViagem {
 
     public:
 
-        bool criar();
-        inline void setCntrIBViagem(IBViagem* novo) {
-            this->cntrIBViagem = novo;
-        }
+        void run(Conta*);
+        void setCntrIBViagem(IBViagem*);
 };
+
+inline void CIFViagem::setCntrIBViagem(IBViagem* novo) {
+    this->cntrIBViagem = novo;
+}
 
 #endif // CIFVIAGEM_HPP_INCLUDED

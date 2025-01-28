@@ -6,7 +6,7 @@
 
 using namespace std;
 
-bool CIFViagem::criar() {
+void CIFViagem::run(Conta* contaAutenticada) {
     Codigo codigo;
     Avaliacao avaliacao;
     Nome nome;
@@ -42,7 +42,5 @@ bool CIFViagem::criar() {
 
     bool resultado = cntrIBViagem->criar(viagemRecebida);
 
-    if (resultado)
-        return true;
-    return false;
+    return;
 }
