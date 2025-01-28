@@ -1,55 +1,52 @@
-#ifndef IFAUTENTICACAO_HPP_INCLUDED
-#define IFAUTENTICACAO_HPP_INCLUDED
+#include "Viagem.hpp"
 
-#include <string>
-#include <iostream>
-#include "../Entidades/Conta.hpp"
-#include "IAutenticacao.hpp"
-
-// Classe concreta que implementa a interface IAutenticacao
-class Autenticacao : public IAutenticacao {
-private:
-    IAutenticacao* referenciaIAutenticacao;
-
-public:
-
-    bool autenticar(Conta* conta) override {
-        if (conta == nullptr) {
-            std::cerr << "Conta inválida.\n";
-            return false;
-        }
-
-        std::string codigo = conta->getCodigo();
-        std::string senha = conta->getSenha();
-
-        if (codigo.empty() || senha.empty()) {
-            std::cerr << "Código ou senha estão vazios.\n";
-            return false;
-        }
-
-        // Simulacao de validacao no "banco de dados"
-        if (codigo == "1234" && senha == "senhaSegura") {
-            std::cout << "Usuário autenticado com sucesso.\n";
-            return true;
-        } else {
-            std::cerr << "Falha na autenticação. Código ou senha incorretos.\n";
-            return false;
-        }
+void Viagem::run(Conta* conta) {
+    if (conta == nullptr) {
+        std::cerr << "Conta inválida. Não é possível realizar operações de Viagem.\n";
+        return;
     }
 
-    void setCntrIAutenticacao(IAutenticacao* referencia) override {
-        if (referencia == nullptr) {
-            std::cerr << "Referência de IAutenticacao inválida.\n";
-            return;
-        }
-        referenciaIAutenticacao = referencia;
-        std::cout << "Referência de IAutenticacao configurada com sucesso.\n";
+    int escolha;
+    std::cout << "Escolha uma operação para realizar:\n";
+    std::cout << "1 - Criar Viagem\n";
+    std::cout << "2 - Excluir Viagem\n";
+    std::cout << "3 - Atualizar Viagem\n";
+    std::cout << "4 - Consultar Viagem\n";
+    std::cin >> escolha;
+
+    switch (escolha) {
+        case 1:
+            std::cout << "Criando Viagem...\n";
+            referenciaIFViagem->criarViagem(conta);
+            break;
+        case 2:
+            std::cout << "Excluindo Viagem...\n";
+            referenciaIFViagem->excluirViagem(conta);
+            break;
+        case 3:
+            std::cout << "Atualizando Viagem...\n";
+            referenciaIFViagem->atualizarViagem(conta);
+            break;
+        case 4:
+            std::cout << "Consultando Viagem...\n";
+            referenciaIFViagem->consultarViagem(conta);
+            break;
+        default:
+            std::cerr << "Opção inválida.\n";
+            break;
+    }
+}
+
+void Viagem::setCntrIBViagem(IBViagem* referencia) {
+    if (referencia == nullptr) {
+        std::cerr << "Referência de IBViagem inválida.\n";
+        return;
     }
 
-    ~Autenticacao() override {
-        std::cout << "Destrutor de Autenticacao chamado.\n";
-    }
-};
+    referenciaIFViagem = referencia;
+    std::cout << "Referência de IBViagem configurada com sucesso.\n";
+}
 
-#endif // IFAUTENTICACAO_HPP_INCLUDED
-
+Viagem::~Viagem() {
+    std::cout << "Destrutor de Viagem chamado.\n";
+}
