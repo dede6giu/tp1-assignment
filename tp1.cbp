@@ -13,15 +13,12 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include/TU" />
-					<Add directory="include/Controladores" />
-					<Add directory="include/Stubs" />
 					<Add directory="include" />
-					<Add directory="sql" />
+					<Add directory="libraries/sql" />
 				</Compiler>
 				<Linker>
-					<Add library="sql/libSQL.a" />
-					<Add directory="sql" />
+					<Add library="libraries/sql/libSQL.a" />
+					<Add directory="libraries/sql" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -44,7 +41,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="libraries/sql" />
+			<Add directory="libraries/boost" />
 		</Compiler>
+		<Linker>
+			<Add library="libraries/sql/libSQL.a" />
+			<Add directory="libraries/sql" />
+			<Add directory="libraries/boost" />
+		</Linker>
 		<Unit filename="include/Controladores.hpp" />
 		<Unit filename="include/Controladores/CIFAutenticacao.hpp" />
 		<Unit filename="include/Controladores/CIFConta.hpp" />
