@@ -57,3 +57,8 @@ void Atividade::setValor(const Dinheiro &novoPreco) {
 void Atividade::setValor(const Avaliacao &novaAvaliacao) {
     this->avaliacao = novaAvaliacao;
 }
+
+void Atividade::setTag(Codigo novoID)
+{
+    this->tag = novoID;
+}
