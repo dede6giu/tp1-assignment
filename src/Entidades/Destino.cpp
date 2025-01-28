@@ -46,3 +46,8 @@ void Destino::setValor(const Data& novoData, bool inifim) {
         this->inicio = novoData;
     }
 }
+
+void Destino::setTag(Codigo novoID)
+{
+    this->tag = novoID;
+}

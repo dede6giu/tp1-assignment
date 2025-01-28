@@ -30,3 +30,8 @@ void Viagem::setValor(const Avaliacao &novaAvaliacao)
 {
     this->avaliacao = novaAvaliacao;
 }
+
+void Viagem::setTag(Codigo novoID)
+{
+    this->tag = novoID;
+}

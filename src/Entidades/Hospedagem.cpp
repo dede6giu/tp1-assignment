@@ -24,7 +24,6 @@ Hospedagem::Hospedagem(const Codigo& codigoNovo,
     diaria = dinheiroNovo;
 }
 
-
 void Hospedagem::setValor(const Codigo& codigo)
 {
     this->codigo = codigo;
@@ -43,4 +42,9 @@ void Hospedagem::setValor(const Avaliacao& avaliacao)
 void Hospedagem::setValor(const Dinheiro& diaria)
 {
     this->diaria = diaria;
+}
+
+void Hospedagem::setTag(Codigo novoID)
+{
+    this->tag = novoID;
 }

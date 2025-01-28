@@ -4,6 +4,7 @@
 #include "../../include/Dominios/Avaliacao.hpp"
 #include "../../include/Dominios/Codigo.hpp"
 #include "../../include/Dominios/Nome.hpp"
+
 #include <string>
 
 //! Entidade Viagem
@@ -15,6 +16,9 @@
 
 class Viagem {
     private:
+
+        Codigo tag;
+
         //! Avaliacao (atributo)
         /*! Atributo de classe Avaliacao. */
         Avaliacao avaliacao;
@@ -83,6 +87,10 @@ class Viagem {
             @return string valor do parâmetro nome.
         */
         std::string getValorNome() const;
+
+        inline Codigo getTag() const { return this->tag; }
+
+        void setTag(Codigo);
 };
 
 inline int Viagem::getValorAvaliacao() const {
