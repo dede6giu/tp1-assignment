@@ -4,6 +4,7 @@
 #include "include/Controladores.hpp"
 #include "include/Stubs.hpp"
 #include "include/Interfaces.hpp"
+#include "include/Modulos/MBConta.hpp"
 
 using namespace std;
 
@@ -12,9 +13,9 @@ int main()
     cout << "Hello World" << endl;
 
     IFConta* cntrIFConta = new CIFConta();
-    IBConta* stubBConta = new SBConta();
+    IBConta* mdlConta = new MBConta();
 
-    cntrIFConta->setCntrIBConta(stubBConta);
+    cntrIFConta->setCntrIBConta(mdlConta);
 
     bool resultado = false;
 
@@ -28,7 +29,7 @@ int main()
         }
         catch (const runtime_error &exc)
         {
-            cout << "Erro de sistema" << endl;
+            cout << &exc << endl;
             break;
         }
 
@@ -39,13 +40,13 @@ int main()
         }
         else
         {
-            cout << "Falha na criacao" << endl;
+            cout << "Falha na criacao." << endl;
             break;
         }
     }
 
     delete cntrIFConta;
-    delete stubBConta;
+    delete mdlConta;
 
     return 0;
 }
