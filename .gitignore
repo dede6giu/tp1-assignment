@@ -42,3 +42,4 @@
 
 # exceptions
 !libSQL.a
+src/Modulos/MFAutenticacao.c
