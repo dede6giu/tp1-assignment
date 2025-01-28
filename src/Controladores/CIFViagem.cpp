@@ -1,7 +1,4 @@
 #include "../../include/Controladores/CIFViagem.hpp"
-#include "../../include/Dominios/Avaliacao.hpp"
-#include "../../include/Dominios/Codigo.hpp"
-#include "../../include/Dominios/Nome.hpp"
 #include <iostream>
 
 using namespace std;

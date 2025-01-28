@@ -1,8 +1,4 @@
 #include "../../include/Controladores/CIFAutenticacao.hpp"
-#include "../../include/Dominios/Codigo.hpp"
-#include "../../include/Dominios/Senha.hpp"
-#include <string>
-#include <exception>
 #include <iostream>
 
 using namespace std;

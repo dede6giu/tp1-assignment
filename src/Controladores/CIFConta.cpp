@@ -1,8 +1,4 @@
 #include "../../include/Controladores/CIFConta.hpp"
-#include "../Entidades/Conta.hpp"
-#include "../Dominios/Senha.hpp"
-#include "../Dominios/Codigo.hpp"
-#include <string>
 #include <iostream>
 
 using namespace std;
