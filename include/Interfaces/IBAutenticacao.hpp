@@ -5,9 +5,9 @@
 
 //! Interface Back Autenticação
 /*!
-    232013031 - Implementação \n
+    232013031 - implementação \n
 
-    A IBA é responsável pela autenticação do usuário no sistema do software.
+    A IBAutenticacao é responsável pela autenticação do usuário no sistema do software.
     Ela se comunica com o banco de dados para checar se a Conta fornecida existe.
 */
 
@@ -26,6 +26,7 @@ class IBAutenticacao
         */
         virtual bool autenticar(Conta) = 0;
 
+        //! Destrutor Virtual
         virtual ~IBAutenticacao(){};
 };
 

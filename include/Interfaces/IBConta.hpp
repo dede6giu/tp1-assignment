@@ -2,16 +2,14 @@
 #define IBCONTA_HPP_INCLUDED
 
 #include "../Entidades/Conta.hpp"
-#include "../Dominios/Senha.hpp"
-#include "../Dominios/Codigo.hpp"
 
 //! Interface Back Conta
 /*!
-    232013031 - Implementação \n
+    232013031 - Implementação e Documentação \n
 
-    A IBC é responsável pela comunicação do usuário com
-    o banco de dados. Ela permite criar, verificar a
-    existência,
+    A IBConta é responsável pela comunicação do usuário com
+    o banco de dados. Ela permite criar, excluir, verificar a
+    existência e atualizar uma Conta
 */
 
 class IBConta

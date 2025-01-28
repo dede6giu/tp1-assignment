@@ -16,7 +16,13 @@
 					<Add directory="include/TU" />
 					<Add directory="include/Controladores" />
 					<Add directory="include/Stubs" />
+					<Add directory="include" />
+					<Add directory="sql" />
 				</Compiler>
+				<Linker>
+					<Add library="sql/libSQL.a" />
+					<Add directory="sql" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/tp1-assignment" prefix_auto="1" extension_auto="1" />
@@ -28,6 +34,7 @@
 					<Add directory="include/TU" />
 					<Add directory="include/Controladores" />
 					<Add directory="include/Stubs" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -41,6 +48,7 @@
 		<Unit filename="include/Controladores.hpp" />
 		<Unit filename="include/Controladores/CIFAutenticacao.hpp" />
 		<Unit filename="include/Controladores/CIFConta.hpp" />
+		<Unit filename="include/Controladores/CIFViagem.hpp" />
 		<Unit filename="include/Dominios.hpp" />
 		<Unit filename="include/Dominios/Avaliacao.hpp" />
 		<Unit filename="include/Dominios/Codigo.hpp" />
@@ -57,13 +65,23 @@
 		<Unit filename="include/Entidades/Hospedagem.hpp" />
 		<Unit filename="include/Entidades/Viagem.hpp" />
 		<Unit filename="include/Interfaces.hpp" />
+		<Unit filename="include/Interfaces/IBAtividade.hpp" />
 		<Unit filename="include/Interfaces/IBAutenticacao.hpp" />
 		<Unit filename="include/Interfaces/IBConta.hpp" />
+		<Unit filename="include/Interfaces/IBDestino.hpp" />
+		<Unit filename="include/Interfaces/IBHospedagem.hpp" />
+		<Unit filename="include/Interfaces/IBViagem.hpp" />
+		<Unit filename="include/Interfaces/IFAtividade.hpp" />
 		<Unit filename="include/Interfaces/IFAutenticacao.hpp" />
 		<Unit filename="include/Interfaces/IFConta.hpp" />
+		<Unit filename="include/Interfaces/IFDados.hpp" />
+		<Unit filename="include/Interfaces/IFDestino.hpp" />
+		<Unit filename="include/Interfaces/IFHospedagem.hpp" />
+		<Unit filename="include/Interfaces/IFViagem.hpp" />
 		<Unit filename="include/Stubs.hpp" />
 		<Unit filename="include/Stubs/SBAutenticacao.hpp" />
 		<Unit filename="include/Stubs/SBConta.hpp" />
+		<Unit filename="include/Stubs/SBViagem.hpp" />
 		<Unit filename="include/TU.hpp" />
 		<Unit filename="include/TU/TUAtividade.hpp" />
 		<Unit filename="include/TU/TUAvaliacao.hpp" />
@@ -82,6 +100,7 @@
 		<Unit filename="mainpage.dox" />
 		<Unit filename="src/Controladores/CIFAutenticacao.cpp" />
 		<Unit filename="src/Controladores/CIFConta.cpp" />
+		<Unit filename="src/Controladores/CIFViagem.cpp" />
 		<Unit filename="src/Dominios/Avaliacao.cpp" />
 		<Unit filename="src/Dominios/Codigo.cpp" />
 		<Unit filename="src/Dominios/Data.cpp" />
@@ -97,6 +116,7 @@
 		<Unit filename="src/Entidades/Viagem.cpp" />
 		<Unit filename="src/Stubs/SBAutenticacao.cpp" />
 		<Unit filename="src/Stubs/SBConta.cpp" />
+		<Unit filename="src/Stubs/SBViagem.cpp" />
 		<Unit filename="src/TU/TUAtividade.cpp" />
 		<Unit filename="src/TU/TUAvaliacao.cpp" />
 		<Unit filename="src/TU/TUCodigo.cpp" />

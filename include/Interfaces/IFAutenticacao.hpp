@@ -8,7 +8,7 @@
 /*!
     232013031 - Implementação \n
 
-    A IFA é responsável pela autenticação do usuário no sistema do software.
+    A IFAutenticacao é responsável pela autenticação do usuário no sistema do software.
 */
 
 class IFAutenticacao
@@ -24,9 +24,9 @@ class IFAutenticacao
             autenticada. Senão, continua nulo.
             @return Sucesso da operação.
         */
-        virtual bool autenticar(Conta*) = 0;
+        virtual bool run(Conta*) = 0;
 
-        //! Dependência da IBA
+        //! Dependência da IBAutenticacao
         /*!
             Estabelece uma referência para a IBAutenticacao como uma variável, permitindo
             acesso ao banco de dados pelos métodos da IFAutenticacao.
