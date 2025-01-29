@@ -1,6 +1,7 @@
 #ifndef IBAUTENTICACAO_HPP_INCLUDED
 #define IBAUTENTICACAO_HPP_INCLUDED
 
+#include "../Interfaces/IBConta.hpp"
 #include "../Entidades/Conta.hpp"
 
 //! Interface Back Autenticação
@@ -25,6 +26,14 @@ class IBAutenticacao
             @return Sucesso da operação.
         */
         virtual bool autenticar(Conta) = 0;
+
+        //! Dependência da IBConta
+        /*!
+            Estabelece uma referência para a IBConta como uma variável, permitindo
+            acesso ao banco de dados pelos métodos da IBConta.
+            @param Referência à IBConta a ser salva.
+        */
+        virtual void setCntrIBConta(IBConta*) = 0;
 
         //! Destrutor Virtual
         virtual ~IBAutenticacao(){};
