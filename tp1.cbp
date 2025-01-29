@@ -42,12 +42,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 			<Add directory="libraries/sql" />
-			<Add directory="libraries/boost" />
+			<Add directory="libraries/pdcurses" />
 		</Compiler>
 		<Linker>
 			<Add library="libraries/sql/libSQL.a" />
+			<Add library="libraries/pdcurses/wincon/pdcurses.a" />
 			<Add directory="libraries/sql" />
-			<Add directory="libraries/boost" />
+			<Add directory="libraries/pdcurses" />
 		</Linker>
 		<Unit filename="include/Controladores.hpp" />
 		<Unit filename="include/Controladores/CIFAutenticacao.hpp" />
