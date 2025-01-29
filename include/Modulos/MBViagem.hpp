@@ -28,7 +28,7 @@ class MBViagem : public IBViagem
         void setCntrIBDestino(IBDestino*);
 };
 
-void MBViagem::setCntrIBDestino(IBDestino* novo)
+inline void MBViagem::setCntrIBDestino(IBDestino* novo)
 {
     this->cntrIBDestino = novo;
 }
