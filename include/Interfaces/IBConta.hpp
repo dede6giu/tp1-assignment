@@ -30,14 +30,12 @@ class IBConta
 
         //! Exclui uma Conta
         /*!
-            Recebe uma Conta em formato de Codigo e Senha, e realiza
-            uma confirmação de decisão antes da exclusão da Conta. Se a
-            Conta existe, e a Senha está correta, ocorre a exclusão.
+            Recebe um Codigo. Se a Conta do Codigo existe, ocorre a exclusão.
             Senão, a operação falha.
-            @param Conta a ser excluída.
+            @param Codigo da Conta a ser excluída.
             @return Sucesso da operação.
         */
-        virtual bool excluir(Conta) = 0;
+        virtual bool excluir(Codigo) = 0;
 
         //! Lê uma Conta
         /*!
