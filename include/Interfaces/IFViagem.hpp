@@ -36,7 +36,7 @@ class IFViagem {
             Se escolher retornar uma tela, a função retorna void.
             @param Conta atualmente autenticada.
         */
-        virtual void run(Conta*) = 0;
+        virtual void run(Conta) = 0;
 
         //! Dependência da IBViagem
         /*!

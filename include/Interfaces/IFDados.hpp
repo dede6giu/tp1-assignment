@@ -25,10 +25,12 @@ class IFDados
         /*!
             Inicia a IFDados. O usuário deve possuir a opção de visualizar
             seu perfil ou acessar as Viagens registradas em sua Conta. Também
-            oferece a opção de desautenticar a Conta (retorna a função).
+            oferece a opção de desautenticar a Conta (retornar void). \n
+            Se, durante a execução do perfil, o retorno for verdadeiro, deve-se
+            imediatamente desautenticar a Conta (retornar void).
             @param Conta atualmente autenticada.
         */
-        virtual void run(Conta*) = 0;
+        virtual void run(Conta) = 0;
 
         //! Dependência da IFConta
         /*!

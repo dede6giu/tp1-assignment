@@ -29,7 +29,8 @@ class IFConta
         //! Visualiza um Perfil
         /*!
             Inicia a tela que permite o usuário, já autenticado, a alterar
-            sua Senha, ver seu Código atual e excluir sua Conta. \n
+            sua Senha, ver seu Código atual e excluir sua Conta, como também sair
+            de seu perfil (retornar uma tela, não desconectar da Conta) \n
             Não é necessário realizar nenhuma operação para ver o Código atual.
             Ele é visível como título do painel. \n
             Ao requisitar a mudança de Senha, o usuário deve fornecer a Senha atual.
@@ -38,10 +39,12 @@ class IFConta
             Ao requisitar a exclusão da Conta, o usuário deve fornecer a Senha atual.
             O sistema checa se a Senha fornecida é a mesma da Conta atualmente
             autenticada, depois requisita uma confirmação antes de enviar as
-            informações de exclusão para o backend.
+            informações de exclusão para o backend. Retorna true. \n
+            Se o usuário requisitar sair do perfil, retorna false.
             @param Conta atualmente autenticada.
+            @return Bool o usuário deletou a Conta.
         */
-        virtual void run(Conta*) = 0;
+        virtual bool run(Conta*) = 0;
 
         //! Dependência da IBConta
         /*!
