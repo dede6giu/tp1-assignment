@@ -1,35 +1,31 @@
-#include "MFConta.hpp"
+#include "../../include/Modulos/MFConta.hpp"
 #include <iostream>
 
-MIFConta ::criar() override{
-        if (!ibConta) {
-            std::cerr << "Erro: IBConta não foi configurada.\n";
-            return false;
+using namespace std;
+
+MIFConta ::criar(){
+    while (true){
+        cout << "Iniciando o processo de criação de conta...\n";
+        string nome, senha;
+        cout << "Digite o nome da conta: ";
+        cin >> nome;
+        cout << "Digite a senha: ";
+        cin >> senha;
+        Conta conta(nome, senha);
+        if (cntrIBConta->criar(conta)){
+            cout<<"Sua conta foi criada com sucesso"<<endl;
+            cout<<"Tente novamente"<<endl;
+            break
         }
-
-        std::cout << "Iniciando o processo de criação de conta...\n";
-
-        std::string nome, senha;
-        std::cout << "Digite o nome da conta: ";
-        std::cin >> nome;
-        std::cout << "Digite a senha: ";
-        std::cin >> senha;
-
-        if (ibConta->adicionarConta(nome, senha)) {
-            std::cout << "Conta criada com sucesso!\n";
-            return true;
-        } else {
-            std::cerr << "Erro ao criar a conta.\n";
-            return false;
+        else{
+            cout<<"Houve um problema na criacao da conta"<<endl;
         }
+}
     }
-MIFConta::setCntrIBConta(IBConta* ibContaRef) override{
-        ibConta = ibContaRef;
-        std::cout << "Referência ao IBConta configurada com sucesso.\n";
-    }
+MIFConta::setCntrIBConta(IBConta* cntrIBConta){
+    this->cntrIBConta = cntrIBConta;
+}
 
-
-MIFConta :: ~MIFConta() override {
-        std::cout << "Destrutor de IFContaImpl chamado.\n";
-    }
+MIFConta :: ~MIFConta() {
+}
 

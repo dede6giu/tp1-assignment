@@ -1,12 +1,13 @@
 #ifndef MFCONTA_HPP_INCLUDED
 #define MFCONTA_HPP_INCLUDED
 #include "IFConta.hpp"
+#include "IBConta.hpp"
 #include "../Entidade/Conta.hpp"
-#include <iostream>
 
 class MIFConta : public IFConta {
 private:
-    IBConta* ibConta; // Referência para a interface de banco de dados
+
+    IBConta* cntrIBConta;
 
 public:
     //Construtora
