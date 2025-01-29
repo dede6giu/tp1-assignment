@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add directory="include" />
 					<Add directory="libraries/sql" />
+					<Add directory="include/Modulos" />
 				</Compiler>
 				<Linker>
 					<Add library="libraries/sql/libSQL.a" />
@@ -32,6 +33,7 @@
 					<Add directory="include/Controladores" />
 					<Add directory="include/Stubs" />
 					<Add directory="include" />
+					<Add directory="include/Modulos" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -87,6 +89,7 @@
 		<Unit filename="include/Modulos/MBConta.hpp" />
 		<Unit filename="include/Modulos/MBViagem.hpp" />
 		<Unit filename="include/Modulos/MFAtividade.hpp" />
+		<Unit filename="include/Modulos/MFAutenticacao.h" />
 		<Unit filename="include/Modulos/MFConta.hpp" />
 		<Unit filename="include/Modulos/MFDados.hpp" />
 		<Unit filename="include/Modulos/MFDestino.hpp" />
@@ -139,6 +142,7 @@
 		<Unit filename="src/Modulos/MBConta.cpp" />
 		<Unit filename="src/Modulos/MBViagem.cpp" />
 		<Unit filename="src/Modulos/MFAtividade.cpp" />
+		<Unit filename="src/Modulos/MFAutenticacao.cpp" />
 		<Unit filename="src/Modulos/MFConta.cpp" />
 		<Unit filename="src/Modulos/MFDados.cpp" />
 		<Unit filename="src/Modulos/MFDestino.cpp" />
