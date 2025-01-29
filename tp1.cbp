@@ -89,7 +89,7 @@
 		<Unit filename="include/Modulos/MBConta.hpp" />
 		<Unit filename="include/Modulos/MBViagem.hpp" />
 		<Unit filename="include/Modulos/MFAtividade.hpp" />
-		<Unit filename="include/Modulos/MFAutenticacao.h" />
+		<Unit filename="include/Modulos/MFAutenticacao.hpp" />
 		<Unit filename="include/Modulos/MFConta.hpp" />
 		<Unit filename="include/Modulos/MFDados.hpp" />
 		<Unit filename="include/Modulos/MFDestino.hpp" />

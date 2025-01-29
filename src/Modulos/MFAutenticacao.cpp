@@ -4,8 +4,6 @@
 
 using namespace std;
 
-// system"cls";
-
 MFAutenticacao::run(Conta* contaAutenticar){
     system("cls");
     string codigo, senha;
