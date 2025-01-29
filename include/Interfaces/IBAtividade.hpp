@@ -35,14 +35,36 @@ class IBAtividade
         */
         virtual bool excluir(Atividade) = 0;
 
-        //! Lê uma Atividade
+        //! Exclui uma Tabela
         /*!
-            Recebe um Codigo e busca suas Atividade no banco de dados.
-            @param Codigo chave.
-            @return Retorna um vetor de Atividade com todas as Atividade cadastradas
-            com o Codigo informado.
+            Recebe um Codigo e exclui a tabela associada ao Codigo. Método só deve
+            ser usado durante a exclusão de Conta.
+            @param Codigo da Conta excluída.
+            @return Sucesso da operação.
         */
-        virtual std::vector<Atividade> ler(Codigo) = 0;
+        virtual bool excluir(Codigo) = 0;
+
+        //! Exclui Atividades
+        /*!
+            Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Exclui
+            da Conta associada todas as Atividade que possuem o Destino como pai. Método
+            só deve ser acionado durante a exclusão de Destino.
+            @param Codigo da Conta.
+            @param Codigo do Destino excluído.
+            @return Sucesso da operação.
+        */
+        virtual bool excluir(Codigo, Codigo) = 0;
+
+        //! Lê todos Atividade
+        /*!
+            Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Busca
+            da Conta associada por todos Atividade que possuem o Destino como pai.
+            @param Codigo da Conta.
+            @param Codigo do Destino.
+            @return Retorna um vetor de Atividade com todos os Atividade cadastrados
+            com os Codigo informados.
+        */
+        virtual std::vector<Atividade> ler(Codigo, Codigo) = 0;
 
         //! Atualiza o Nome de uma Atividade
         /*!
