@@ -35,7 +35,7 @@ class IFConta
         /*!
             Estabelece uma referência para a IBConta como uma variável, permitindo
             acesso ao banco de dados pelos métodos da IFConta.
-            @param Referência à IBAutenticacao a ser salva.
+            @param Referência à IBConta a ser salva.
         */
         virtual void setCntrIBConta(IBConta*) = 0;
 

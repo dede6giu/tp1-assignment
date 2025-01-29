@@ -9,6 +9,8 @@ class MBConta : public IBConta
     private:
         sqlite3* banco;
 
+        IBViagem* cntrIBViagem;
+
     public:
         MBConta();
         ~MBConta();
@@ -17,6 +19,12 @@ class MBConta : public IBConta
         bool excluir(Conta);
         bool ler(Codigo);
         bool atualizar(Conta, Senha);
+        void setCntrIBViagem(IBViagem*);
 };
+
+inline void MBConta::setCntrIBViagem(IBViagem* novo)
+{
+    this->cntrIBViagem = novo;
+}
 
 #endif // MBCONTA_HPP_INCLUDED

@@ -10,7 +10,7 @@ MBConta::MBConta()
 
     if (rc != SQLITE_OK)
     {
-        throw runtime_error(sqlite3_errmsg(banco));
+        throw runtime_error("Falha na abertura do banco de dados. O diretorio 'data/' existe?");
     }
 
     string comando = "CREATE TABLE IF NOT EXISTS Contas (Codigo, Senha);";
@@ -19,7 +19,7 @@ MBConta::MBConta()
 
     if (rc != SQLITE_OK)
     {
-        throw runtime_error(sqlite3_errmsg(banco));
+        throw runtime_error(errmsg);
     }
 
     delete errmsg;
@@ -42,59 +42,36 @@ bool MBConta::criar(Conta novaConta)
     comando += novaConta.getValorSenha();
     comando += "');";
 
-    sqlite3_stmt *stmt;
-    int rc = sqlite3_prepare_v2(banco, comando.c_str(), -1, &stmt, nullptr);
+    char* errmsg;
+    int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
     if (rc != SQLITE_OK)
     {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
+        throw runtime_error(errmsg);
     }
-    rc = sqlite3_step(stmt);
-    if (rc != SQLITE_DONE)
-    {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
-    }
-    rc = sqlite3_finalize(stmt);
-    if (rc != SQLITE_OK)
-    {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
-    }
+    delete errmsg;
 
     return true;
 }
 
 bool MBConta::excluir(Conta contaExcluir)
 {
-    throw exception("Falta implementacao de delecao completa da conta");
-
     Codigo codigo(contaExcluir.getValorCodigo());
-    if (MBConta::ler(codigo)) return false;
+    if (!MBConta::ler(codigo)) return false;
+
+    // exclui viagens da conta
+    cntrIBViagem->excluir(codigo);
 
     string comando = "DELETE FROM Contas WHERE Codigo='";
     comando += contaExcluir.getValorCodigo();
     comando += "';";
 
-    sqlite3_stmt *stmt;
-    int rc = sqlite3_prepare_v2(banco, comando.c_str(), -1, &stmt, nullptr);
+    char* errmsg;
+    int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
     if (rc != SQLITE_OK)
     {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
+        throw runtime_error(errmsg);
     }
-    rc = sqlite3_step(stmt);
-    if (rc != SQLITE_DONE)
-    {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
-    }
-    rc = sqlite3_finalize(stmt);
-    if (rc != SQLITE_OK)
-    {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
-    }
+    delete errmsg;
 
     return true;
 }
@@ -135,35 +112,23 @@ bool MBConta::ler(Codigo contaCheque)
 
 bool MBConta::atualizar(Conta contaAtualizar, Senha novaSenha)
 {
-    Codigo codigo(novaConta.getValorCodigo());
-    if (MBConta::ler(codigo)) return false;
+    Codigo codigo(contaAtualizar.getValorCodigo());
+    if (!MBConta::ler(codigo)) return false;
 
-    string senha = novaConta.getValorSenha();
+    string senha = contaAtualizar.getValorSenha();
     string comando = "UPDATE Contas SET Senha='";
     comando += novaSenha.getValor();
-    comando += "', WHERE Codigo='";
+    comando += "' WHERE Codigo='";
     comando += contaAtualizar.getValorCodigo();
     comando += "';";
 
-    sqlite3_stmt *stmt;
-    int rc = sqlite3_prepare_v2(banco, comando.c_str(), -1, &stmt, nullptr);
+    char* errmsg;
+    int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
     if (rc != SQLITE_OK)
     {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
+        throw runtime_error(errmsg);
     }
-    rc = sqlite3_step(stmt);
-    if (rc != SQLITE_DONE)
-    {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
-    }
-    rc = sqlite3_finalize(stmt);
-    if (rc != SQLITE_OK)
-    {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
-    }
+    delete errmsg;
 
     return true;
 }

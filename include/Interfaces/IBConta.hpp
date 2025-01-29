@@ -2,6 +2,10 @@
 #define IBCONTA_HPP_INCLUDED
 
 #include "../Entidades/Conta.hpp"
+#include "../Interfaces/IBAtividade.hpp"
+#include "../Interfaces/IBDestino.hpp"
+#include "../Interfaces/IBHospedagem.hpp"
+#include "../Interfaces/IBViagem.hpp"
 
 //! Interface Back Conta
 /*!
@@ -59,6 +63,14 @@ class IBConta
             @return Sucesso da operação.
         */
         virtual bool atualizar(Conta, Senha) = 0;
+
+        //! Dependência da IBViagem
+        /*!
+            Estabelece uma referência para a IBViagem como uma variável, permitindo
+            acesso ao banco de dados pelos métodos da IBViagem.
+            @param Referência à IBViagem a ser salva.
+        */
+        virtual void setCntrIBViagem(IBViagem*) = 0;
 
         //! Destrutor Virtual
         virtual ~IBConta(){};
