@@ -23,6 +23,7 @@ class Atividade {
     private:
 
         Codigo tag;
+        Codigo tagDestino;
 
         //! Codigo (atributo)
         /*! Atributo da classe Codigo. */
@@ -60,9 +61,19 @@ class Atividade {
         Atividade();
 
         //! Construtor paramétrico
-        /*! Constrói um objeto Atividade, recebendo cada um de seus parâmetros.
-            @sa Atividade() */
-        Atividade(const Codigo&, const Nome&, const Data&, const Horario&, const Duracao&, const Dinheiro&, const Avaliacao&);
+        /*! Constrói um objeto Atividade, recebendo cada um de seus parâmetros, além de uma tag própria e a tag do objeto Destino associado.
+            @param const Codigo&.
+            @param const Nome&.
+            @param const Data&.
+            @param const Horario&.
+            @param const Duracao&.
+            @param const Dinheiro&.
+            @param const Avaliacao&.
+            @param const Codigo& a ser armazenado como tag.
+            @param const Codigo& a ser armazenado como tag do objeto Destino associado.
+            @sa Atividade()
+        */
+        Atividade(const Codigo&, const Nome&, const Data&, const Horario&, const Duracao&, const Dinheiro&, const Avaliacao&, const Codigo&, const Codigo&);
 
         //! Atividade::setValor(const Codigo&)
         /*!
@@ -162,9 +173,11 @@ class Atividade {
         */
         inline int getValorAvaliacao() const { return this->avaliacao.getValor(); }
 
-        inline Codigo getTag() const { return this->tag; }
+        inline Codigo getTag()        const { return this->tag; }
+        inline Codigo getTagDestino() const { return this->tagDestino; }
 
-        void setTag(Codigo);
+        void setTag(Codigo&);
+        void setTagDestino(Codigo&);
 };
 
 #endif // ATIVIDADE_HPP_INCLUDED

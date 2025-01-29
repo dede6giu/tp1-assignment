@@ -20,6 +20,7 @@ class Hospedagem
     private:
 
         Codigo tag;
+        Codigo tagDestino;
 
         //! Codigo (atributo)
         /*! Atributo da classe Codigo. */
@@ -47,12 +48,14 @@ class Hospedagem
 
         //! Construtor paramétrico.
         /*!
-            Constrói um objeto Hospedagem e pede 2 parâmetros: um Codigo, um Nome, uma Avaliacao e um Dinheiro diária.
+            Constrói um objeto Hospedagem e pede 2 parâmetros: um Codigo, um Nome, uma Avaliacao e um Dinheiro diária, além de uma tag própria e a tag do objeto Destino associado.
             @param const Codigo a ser armazenado.
             @param const Senha a ser armazenado.
+            @param const Codigo a ser armazenado como tag.
+            @param const Codigo a ser armazenado como tag do objeto Destino associado.
             @sa Hospedagem()
         */
-        Hospedagem(const Codigo&, const Nome&, const Avaliacao&, const Dinheiro&);
+        Hospedagem(const Codigo&, const Nome&, const Avaliacao&, const Dinheiro&, const Codigo&, const Codigo&);
 
         //! Hospedagem::setValor(const Codigo&)
         /*!
@@ -110,9 +113,11 @@ class Hospedagem
         */
         inline int getValorDiaria() const {return this->diaria.getValor();}
 
-        inline Codigo getTag() const { return this->tag; }
+        inline Codigo getTag()        const { return this->tag; }
+        inline Codigo getTagDestino() const { return this->tagDestino; }
 
-        void setTag(Codigo);
+        void setTag(Codigo&);
+        void setTagDestino(Codigo&);
 };
 
 #endif // HOSPEDAGEM_HPP_INCLUDED

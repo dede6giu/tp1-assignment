@@ -11,6 +11,8 @@ Atividade::Atividade()
     duracao = Duracao();
     preco = Dinheiro();
     avaliacao = Avaliacao();
+    tag = Codigo();
+    tagDestino = Codigo();
 }
 
 Atividade::Atividade(const Codigo& codigoNovo,
@@ -19,7 +21,9 @@ Atividade::Atividade(const Codigo& codigoNovo,
                      const Horario& horarioNovo,
                      const Duracao& duracaoNovo,
                      const Dinheiro& precoNovo,
-                     const Avaliacao& avaliacaoNovo)
+                     const Avaliacao& avaliacaoNovo,
+                     const Codigo& tagNova,
+                     const Codigo& tagDestinoNova);
 {
     codigo = codigoNovo;
     nome = nomeNovo;
@@ -28,6 +32,8 @@ Atividade::Atividade(const Codigo& codigoNovo,
     duracao = duracaoNovo;
     preco = precoNovo;
     avaliacao = avaliacaoNovo;
+    tag = tagNova;
+    tagDestino = tagDestinoNova;
 }
 
 void Atividade::setValor(const Codigo &novoCodigo) {
@@ -58,7 +64,11 @@ void Atividade::setValor(const Avaliacao &novaAvaliacao) {
     this->avaliacao = novaAvaliacao;
 }
 
-void Atividade::setTag(Codigo novoID)
+void Atividade::setTag(Codigo& novoID)
 {
     this->tag = novoID;
+}
+void Atividade::setTagDestino(Codigo& novoIDDestino)
+{
+    this->tagDestino = novoIDDestino;
 }
