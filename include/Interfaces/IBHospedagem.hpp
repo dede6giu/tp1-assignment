@@ -35,14 +35,36 @@ class IBHospedagem
         */
         virtual bool excluir(Hospedagem) = 0;
 
-        //! Lê uma Hospedagem
+        //! Exclui uma Tabela
         /*!
-            Recebe um Codigo e busca suas Hospedagem no banco de dados.
-            @param Codigo chave.
-            @return Retorna um vetor de Hospedagem com todas as Hospedagem cadastradas
-            com o Codigo informado.
+            Recebe um Codigo e exclui a tabela associada ao Codigo. Método só deve
+            ser usado durante a exclusão de Conta.
+            @param Codigo da Conta excluída.
+            @return Sucesso da operação.
         */
-        virtual std::vector<Hospedagem> ler(Codigo) = 0;
+        virtual bool excluir(Codigo) = 0;
+
+        //! Exclui Hospedagens
+        /*!
+            Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Exclui
+            da Conta associada todos os Hospedagem que possuem o Destino como pai. Método
+            só deve ser acionado durante a exclusão de Destino.
+            @param Codigo da Conta.
+            @param Codigo do Destino excluído.
+            @return Sucesso da operação.
+        */
+        virtual bool excluir(Codigo, Codigo) = 0;
+
+        //! Lê todos Hospedagem
+        /*!
+            Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Busca
+            da Conta associada por todos Hospedagem que possuem o Destino como pai.
+            @param Codigo da Conta.
+            @param Codigo do Destino.
+            @return Retorna um vetor de Hospedagem com todos os Hospedagem cadastrados
+            com os Codigo informados.
+        */
+        virtual std::vector<Hospedagem> ler(Codigo, Codigo) = 0;
 
         //! Atualiza o Nome de uma Hospedagem
         /*!

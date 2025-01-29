@@ -35,14 +35,36 @@ class IBDestino
         */
         virtual bool excluir(Destino) = 0;
 
-        //! Lê um Destino
+        //! Exclui uma Tabela
         /*!
-            Recebe um Codigo e busca seus Destino no banco de dados.
-            @param Codigo chave.
-            @return Retorna um vetor de Destino com todos os Destino cadastrados
-            com o Codigo informado.
+            Recebe um Codigo e exclui a tabela associada ao Codigo. Método só deve
+            ser usado durante a exclusão de Conta.
+            @param Codigo da Conta excluída.
+            @return Sucesso da operação.
         */
-        virtual std::vector<Destino> ler(Codigo) = 0;
+        virtual bool excluir(Codigo) = 0;
+
+        //! Exclui Destinos
+        /*!
+            Recebe dois Codigo. O primeiro é uma Conta, o segundo uma Viagem. Exclui
+            da Conta associada todos os Destino que possuem a Viagem como pai. Método
+            só deve ser acionado durante a exclusão de Viagem.
+            @param Codigo da Conta.
+            @param Codigo da Viagem excluída.
+            @return Sucesso da operação.
+        */
+        virtual bool excluir(Codigo, Codigo) = 0;
+
+        //! Lê todos Destino
+        /*!
+            Recebe dois Codigo. O primeiro é uma Conta, o segundo uma Viagem. Busca
+            da Conta associada por todos Destino que possuem a Viagem como pai.
+            @param Codigo da Conta.
+            @param Codigo da Viagem.
+            @return Retorna um vetor de Destino com todos os Destino cadastrados
+            com os Codigo informados.
+        */
+        virtual std::vector<Destino> ler(Codigo, Codigo) = 0;
 
         //! Atualiza o Nome de um Destino
         /*!
