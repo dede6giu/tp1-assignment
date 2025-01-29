@@ -173,9 +173,11 @@ class Atividade {
         */
         inline int getValorAvaliacao() const { return this->avaliacao.getValor(); }
 
-        inline Codigo getTag() const { return this->tag; }
+        inline Codigo getTag()        const { return this->tag; }
+        inline Codigo getTagDestino() const { return this->tagDestino; }
 
-        void setTag(Codigo);
+        void setTag(Codigo&);
+        void setTagDestino(Codigo&);
 };
 
 #endif // ATIVIDADE_HPP_INCLUDED

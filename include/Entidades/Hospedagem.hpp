@@ -113,9 +113,11 @@ class Hospedagem
         */
         inline int getValorDiaria() const {return this->diaria.getValor();}
 
-        inline Codigo getTag() const { return this->tag; }
+        inline Codigo getTag()        const { return this->tag; }
+        inline Codigo getTagDestino() const { return this->tagDestino; }
 
-        void setTag(Codigo);
+        void setTag(Codigo&);
+        void setTagDestino(Codigo&);
 };
 
 #endif // HOSPEDAGEM_HPP_INCLUDED

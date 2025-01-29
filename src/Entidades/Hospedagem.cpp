@@ -50,12 +50,12 @@ void Hospedagem::setValor(const Dinheiro& diaria)
     this->diaria = diaria;
 }
 
-void Hospedagem::setTag(Codigo novoID)
+void Hospedagem::setTag(Codigo& novoID)
 {
     this->tag = novoID;
 }
 
-void Hospedagem::setTagDestino(Codigo novoIDDestino)
+void Hospedagem::setTagDestino(Codigo& novoIDDestino)
 {
     this->tagDestino = novoIDDestino;
 }

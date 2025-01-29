@@ -64,11 +64,11 @@ void Atividade::setValor(const Avaliacao &novaAvaliacao) {
     this->avaliacao = novaAvaliacao;
 }
 
-void Atividade::setTag(Codigo novoID)
+void Atividade::setTag(Codigo& novoID)
 {
     this->tag = novoID;
 }
-void Atividade::setTagDestino(Codigo novoIDDestino)
+void Atividade::setTagDestino(Codigo& novoIDDestino)
 {
     this->tagDestino = novoIDDestino;
 }

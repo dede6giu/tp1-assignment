@@ -131,9 +131,11 @@ class Destino
         */
         inline std::string getValorFim() const;
 
-        inline Codigo getTag() const { return this->tag; }
+        inline Codigo getTag()       const { return this->tag; }
+        inline COdigo getTagViagem() const { return this->tagViagem; }
 
-        void setTag(Codigo);
+        void setTag(Codigo&);
+        void setTagViagem(Codigo&);
 };
 
 inline std::string Destino::getValorCodigo() const {

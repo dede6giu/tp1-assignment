@@ -53,12 +53,12 @@ void Destino::setValor(const Data& novoData, bool inifim) {
     }
 }
 
-void Destino::setTag(Codigo novoID)
+void Destino::setTag(Codigo& novoID)
 {
     this->tag = novoID;
 }
 
-void Destino::setTagViagem(Codigo novoIDViagem)
+void Destino::setTagViagem(Codigo& novoIDViagem)
 {
     this->tagViagem = novoIDViagem;
 }
