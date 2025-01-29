@@ -23,10 +23,9 @@ class IBConta
         //! Cria uma Conta
         /*!
             Processa as informações recebidas e verifica se é possível
-            criar uma nova Conta.
-            Se as informações foram incorretamente formatadas, ou o
-            código fornecido já existe, a operação falha. Senão, ocorre
-            sucesso e uma Conta é criada.
+            criar uma nova Conta. Os dados são enviados ao backend, e
+            tal retorna se a operação teve sucesso ou não. O resultado
+            deve ser transmitido.
             @param Conta a ser criada.
             @return Sucesso da operação.
         */
@@ -34,8 +33,8 @@ class IBConta
 
         //! Exclui uma Conta
         /*!
-            Recebe um Codigo. Se a Conta do Codigo existe, ocorre a exclusão.
-            Senão, a operação falha.
+            Recebe um Codigo. Se a Conta do Codigo fornecido existe,
+            ocorre a exclusão. Senão, a operação falha.
             @param Codigo da Conta a ser excluída.
             @return Sucesso da operação.
         */

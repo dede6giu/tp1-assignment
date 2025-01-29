@@ -16,7 +16,7 @@ class MBConta : public IBConta
         ~MBConta();
 
         bool criar(Conta);
-        bool excluir(Conta);
+        bool excluir(Codigo);
         bool ler(Codigo);
         bool atualizar(Conta, Senha);
         void setCntrIBViagem(IBViagem*);

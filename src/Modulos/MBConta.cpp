@@ -53,16 +53,15 @@ bool MBConta::criar(Conta novaConta)
     return true;
 }
 
-bool MBConta::excluir(Conta contaExcluir)
+bool MBConta::excluir(Codigo contaExcluir)
 {
-    Codigo codigo(contaExcluir.getValorCodigo());
-    if (!MBConta::ler(codigo)) return false;
+    if (!MBConta::ler(contaExcluir)) return false;
 
     // exclui viagens da conta
-    cntrIBViagem->excluir(codigo);
+    cntrIBViagem->excluir(contaExcluir);
 
     string comando = "DELETE FROM Contas WHERE Codigo='";
-    comando += contaExcluir.getValorCodigo();
+    comando += contaExcluir.getValor();
     comando += "';";
 
     char* errmsg;
