@@ -21,6 +21,7 @@ class Destino
     private:
 
         Codigo tag;
+        Codigo tagViagem;
 
         //! Codigo (atributo)
         /*! Atributo que armazena o objeto Codigo do Destino.*/
@@ -51,15 +52,17 @@ class Destino
 
         //! Construtor paramétrico
         /*!
-            Constrói um objeto Destino e pede como parâmetros: um Codigo, um Nome, uma Data de início, uma Data de fim e uma Avaliacao.
+            Constrói um objeto Destino e pede como parâmetros: um Codigo, um Nome, uma Data de início, uma Data de fim e uma Avaliacao, além de uma tag própria e a tag do objeto Viagem associado.
             @param const Codigo a ser armazenado.
             @param const Nome a ser armazenado.
             @param const Data de inicio a ser armazenada.
             @param const Data de fim a ser armazenada.
             @param const Avaliacao a ser armazenado.
+            @param const Codigo a ser armazenado como tag.
+            @param const Codigo a ser armazenado como tag do objeto Viagem associado.
             @sa Destino()
         */
-        Destino(const Codigo&, const Nome&, const Data&, const Data&, const Avaliacao&);
+        Destino(const Codigo&, const Nome&, const Data&, const Data&, const Avaliacao&, const Codigo&, const Codigo&);
 
         //! void Destino::setValor(const Codigo&)
         /*!
