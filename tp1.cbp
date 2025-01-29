@@ -61,6 +61,7 @@
 		<Unit filename="include/Interfaces/IBConta.hpp" />
 		<Unit filename="include/Interfaces/IFAutenticacao.hpp" />
 		<Unit filename="include/Interfaces/IFConta.hpp" />
+		<Unit filename="include/Modulo/MFDados.hpp" />
 		<Unit filename="include/Stubs.hpp" />
 		<Unit filename="include/Stubs/SBAutenticacao.hpp" />
 		<Unit filename="include/Stubs/SBConta.hpp" />
@@ -95,7 +96,6 @@
 		<Unit filename="src/Entidades/Destino.cpp" />
 		<Unit filename="src/Entidades/Hospedagem.cpp" />
 		<Unit filename="src/Entidades/Viagem.cpp" />
-		<Unit filename="src/ModuleIfConta.cpp" />
 		<Unit filename="src/Stubs/SBAutenticacao.cpp" />
 		<Unit filename="src/Stubs/SBConta.cpp" />
 		<Unit filename="src/TU/TUAtividade.cpp" />
