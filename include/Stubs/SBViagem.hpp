@@ -15,7 +15,7 @@ class SBViagem : public IBViagem {
 
         bool criar(Viagem);
         bool excluir(Viagem);
-        bool ler(Codigo);
+        std::vector<Viagem> ler(Codigo);
         bool atualizar(Viagem, Avaliacao);
         bool atualizar(Viagem, Codigo);
         bool atualizar(Viagem, Nome);

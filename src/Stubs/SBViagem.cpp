@@ -35,15 +35,15 @@ bool SBViagem::excluir(Viagem viagemRecebida) {
     return true;
 }
 
-bool SBViagem::ler(Codigo codigoRecebido) {
+std::vector<Viagem> SBViagem::ler(Codigo codigoRecebido) {
 
     cout << endl            << "SBViagem::ler"           << endl;
     cout << "Codigo     = " << codigoRecebido.getValor() << endl;
 
     if (codigoRecebido.getValor() == TRIGGER_FALHA_CODIGO) {
-        return false;
+        return {};
     }
-    return true;
+    return {};
 }
 
 bool SBViagem::atualizar(Viagem viagemRecebida, Avaliacao avaliacaoRecebida) {
