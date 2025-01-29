@@ -23,21 +23,11 @@ class IFDados
 
         //! Inicia a IFDados
         /*!
-            Inicia a Interface Front Dados, requisitando do usuário qual
-            tipo de informação deseja trabalhar com. As opções são: Atividade,
-            Conta, Destino, Hospedagem, Viagem. \n
-            @param Ponteiro da Conta atualmente autenticada.
+            Inicia a IFDados. O usuário deve possuir a opção de visualizar
+            seu perfil ou acessar as Viagens registradas em sua Conta.
+            @param Conta atualmente autenticada.
         */
         virtual void run(Conta*) = 0;
-
-        //! Dependência da IFAtividade
-        /*!
-            Estabelece uma referência para a IFAtividade como uma variável,
-            permitindo uma conexão com os métodos relacionados ao manejamento
-            de Atividade associadas à conta.
-            @param Referência à IFAtividade a ser salva.
-        */
-        virtual void setCntrIFAtividade(IFAtividade*) = 0;
 
         //! Dependência da IFConta
         /*!
@@ -47,24 +37,6 @@ class IFDados
             @param Referência à IFConta a ser salva.
         */
         virtual void setCntrIFConta(IFConta*) = 0;
-
-        //! Dependência da IFDestino
-        /*!
-            Estabelece uma referência para a IFDestino como uma variável,
-            permitindo uma conexão com os métodos relacionados ao manejamento
-            de Destino associadas à conta.
-            @param Referência à IFDestino a ser salva.
-        */
-        virtual void setCntrIFDestino(IFDestino*) = 0;
-
-        //! Dependência da IFHospedagem
-        /*!
-            Estabelece uma referência para a IFHospedagem como uma variável,
-            permitindo uma conexão com os métodos relacionados ao manejamento
-            de Hospedagem associadas à conta.
-            @param Referência à IFHospedagem a ser salva.
-        */
-        virtual void setCntrIFHospedagem(IFHospedagem*) = 0;
 
         //! Dependência da IFViagem
         /*!
