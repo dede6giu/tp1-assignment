@@ -7,6 +7,7 @@
 #include "../../include/Dominios/Avaliacao.hpp"
 
 
+
 //! Entidade Destino
 /*!
     Entidade Destino \n
@@ -18,6 +19,9 @@
 class Destino
 {
     private:
+
+        Codigo tag;
+
         //! Codigo (atributo)
         /*! Atributo que armazena o objeto Codigo do Destino.*/
         Codigo codigo;
@@ -123,6 +127,10 @@ class Destino
             @return string valor do parâmetro fim (Data).
         */
         inline std::string getValorFim() const;
+
+        inline Codigo getTag() const { return this->tag; }
+
+        void setTag(Codigo);
 };
 
 inline std::string Destino::getValorCodigo() const {

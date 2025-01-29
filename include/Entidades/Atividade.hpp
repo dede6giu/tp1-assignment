@@ -10,6 +10,7 @@
 #include "../../include/Dominios/Dinheiro.hpp"
 #include "../../include/Dominios/Avaliacao.hpp"
 
+
 //! Entidade Atividade
 /*!
     232029274 - implementação \n
@@ -20,6 +21,8 @@
 
 class Atividade {
     private:
+
+        Codigo tag;
 
         //! Codigo (atributo)
         /*! Atributo da classe Codigo. */
@@ -158,6 +161,10 @@ class Atividade {
             @return objeto Avaliacao armazenado no objeto Atividade.
         */
         inline int getValorAvaliacao() const { return this->avaliacao.getValor(); }
+
+        inline Codigo getTag() const { return this->tag; }
+
+        void setTag(Codigo);
 };
 
-#endif // ATIVIDADE_HPP
+#endif // ATIVIDADE_HPP_INCLUDED

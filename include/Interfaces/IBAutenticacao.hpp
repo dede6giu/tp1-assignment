@@ -1,13 +1,14 @@
 #ifndef IBAUTENTICACAO_HPP_INCLUDED
 #define IBAUTENTICACAO_HPP_INCLUDED
 
+#include "../Interfaces/IBConta.hpp"
 #include "../Entidades/Conta.hpp"
 
 //! Interface Back Autenticação
 /*!
-    232013031 - Implementação \n
+    232013031 - implementação \n
 
-    A IBA é responsável pela autenticação do usuário no sistema do software.
+    A IBAutenticacao é responsável pela autenticação do usuário no sistema do software.
     Ela se comunica com o banco de dados para checar se a Conta fornecida existe.
 */
 
@@ -26,6 +27,15 @@ class IBAutenticacao
         */
         virtual bool autenticar(Conta) = 0;
 
+        //! Dependência da IBConta
+        /*!
+            Estabelece uma referência para a IBConta como uma variável, permitindo
+            acesso ao banco de dados pelos métodos da IBConta.
+            @param Referência à IBConta a ser salva.
+        */
+        virtual void setCntrIBConta(IBConta*) = 0;
+
+        //! Destrutor Virtual
         virtual ~IBAutenticacao(){};
 };
 

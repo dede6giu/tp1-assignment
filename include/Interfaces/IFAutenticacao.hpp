@@ -8,7 +8,7 @@
 /*!
     232013031 - Implementação \n
 
-    A IFA é responsável pela autenticação do usuário no sistema do software.
+    A IFAutenticacao é responsável pela autenticação do usuário no sistema do software.
 */
 
 class IFAutenticacao
@@ -17,16 +17,17 @@ class IFAutenticacao
 
         //! Autentica o usuário
         /*!
-            Indica o início do processamento de autenticação. Ou seja, dentro da função,
-            receberá um Código e uma Senha, verifica se estão corretamente formatados, e
-            então envia essas informações para autenticação no banco de dados.
-            @param Recebe um ponteiro nulo que receberá a Conta caso seja
-            autenticada. Senão, continua nulo.
+            Inicia a autenticação. Dentro da função, requisita ao usuário um Codigo
+            e uma Senha, verifica se estão corretamente formatados, e, então, envia
+            essas informações para autenticação no banco de dados. Retorna true se
+            a autenticação foi bem sucedida, e o parâmetro possuirá as informações
+            da Conta autenticada. Senão, retorna false, e o parâmetro deve ser nulo.
+            @param (OUT) Conta autenticada. Deve entrar como um objeto Conta.
             @return Sucesso da operação.
         */
-        virtual bool autenticar(Conta*) = 0;
+        virtual bool run(Conta*) = 0;
 
-        //! Dependência da IBA
+        //! Dependência da IBAutenticacao
         /*!
             Estabelece uma referência para a IBAutenticacao como uma variável, permitindo
             acesso ao banco de dados pelos métodos da IFAutenticacao.

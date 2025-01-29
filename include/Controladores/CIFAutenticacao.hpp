@@ -13,7 +13,7 @@ class CIFAutenticacao : public IFAutenticacao
 
     public:
 
-        bool autenticar(Conta*);
+        bool run(Conta*);
         void setCntrIBAutenticacao(IBAutenticacao*);
 };
 

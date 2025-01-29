@@ -6,6 +6,7 @@
 #include "../../include/Dominios/Dinheiro.hpp"
 #include "../../include/Dominios/Nome.hpp"
 
+
 //! Entidade Hospedagem
 /*!
     232001667 - implementação. \n
@@ -17,6 +18,8 @@
 class Hospedagem
 {
     private:
+
+        Codigo tag;
 
         //! Codigo (atributo)
         /*! Atributo da classe Codigo. */
@@ -106,6 +109,10 @@ class Hospedagem
             @return int valor do objeto Dinheiro.
         */
         inline int getValorDiaria() const {return this->diaria.getValor();}
+
+        inline Codigo getTag() const { return this->tag; }
+
+        void setTag(Codigo);
 };
 
 #endif // HOSPEDAGEM_HPP_INCLUDED

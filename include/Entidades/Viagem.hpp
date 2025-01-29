@@ -4,6 +4,7 @@
 #include "../../include/Dominios/Avaliacao.hpp"
 #include "../../include/Dominios/Codigo.hpp"
 #include "../../include/Dominios/Nome.hpp"
+
 #include <string>
 
 //! Entidade Viagem
@@ -15,17 +16,23 @@
 
 class Viagem {
     private:
+
+        Codigo tag;
+
         //! Avaliacao (atributo)
         /*! Atributo de classe Avaliacao. */
         Avaliacao avaliacao;
+
         //! Codigo (atributo)
         /*! Atributo de classe Codigo. */
         Codigo codigo;
+
         //! Nome (atributo)
         /*! Atributo de classe Nome. */
         Nome nome;
 
     public:
+
         //! Construtor vazio
         /*! Constrói um objeto Viagem vazio.
             @sa Viagem(const Avaliacao&, const Codigo&, const Nome&)
@@ -40,7 +47,7 @@ class Viagem {
             @param const Nome a ser armazenado.
             @sa Viagem()
         */
-        Viagem(const Avaliacao&, const Codigo&, const Nome&);
+        Viagem(const Avaliacao&, const Codigo&, const Nome&, const Codigo&);
 
 
         //! Viagem::setValor(const Avaliaacao&)
@@ -83,6 +90,10 @@ class Viagem {
             @return string valor do parâmetro nome.
         */
         std::string getValorNome() const;
+
+        inline Codigo getTag() const { return this->tag; }
+
+        void setTag(Codigo);
 };
 
 inline int Viagem::getValorAvaliacao() const {
