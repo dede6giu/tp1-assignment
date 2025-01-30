@@ -2,6 +2,10 @@
 #define IBCONTA_HPP_INCLUDED
 
 #include "../Entidades/Conta.hpp"
+#include "../Interfaces/IBAtividade.hpp"
+#include "../Interfaces/IBDestino.hpp"
+#include "../Interfaces/IBHospedagem.hpp"
+#include "../Interfaces/IBViagem.hpp"
 
 //! Interface Back Conta
 /*!
@@ -19,10 +23,9 @@ class IBConta
         //! Cria uma Conta
         /*!
             Processa as informações recebidas e verifica se é possível
-            criar uma nova Conta.
-            Se as informações foram incorretamente formatadas, ou o
-            código fornecido já existe, a operação falha. Senão, ocorre
-            sucesso e uma Conta é criada.
+            criar uma nova Conta. Os dados são enviados ao backend, e
+            tal retorna se a operação teve sucesso ou não. O resultado
+            deve ser transmitido.
             @param Conta a ser criada.
             @return Sucesso da operação.
         */
@@ -30,14 +33,12 @@ class IBConta
 
         //! Exclui uma Conta
         /*!
-            Recebe uma Conta em formato de Codigo e Senha, e realiza
-            uma confirmação de decisão antes da exclusão da Conta. Se a
-            Conta existe, e a Senha está correta, ocorre a exclusão.
-            Senão, a operação falha.
-            @param Conta a ser excluída.
+            Recebe um Codigo. Se a Conta do Codigo fornecido existe,
+            ocorre a exclusão. Senão, a operação falha.
+            @param Codigo da Conta a ser excluída.
             @return Sucesso da operação.
         */
-        virtual bool excluir(Conta) = 0;
+        virtual bool excluir(Codigo) = 0;
 
         //! Lê uma Conta
         /*!
@@ -59,6 +60,14 @@ class IBConta
             @return Sucesso da operação.
         */
         virtual bool atualizar(Conta, Senha) = 0;
+
+        //! Dependência da IBViagem
+        /*!
+            Estabelece uma referência para a IBViagem como uma variável, permitindo
+            acesso ao banco de dados pelos métodos da IBViagem.
+            @param Referência à IBViagem a ser salva.
+        */
+        virtual void setCntrIBViagem(IBViagem*) = 0;
 
         //! Destrutor Virtual
         virtual ~IBConta(){};

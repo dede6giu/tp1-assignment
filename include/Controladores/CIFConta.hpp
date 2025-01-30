@@ -13,7 +13,7 @@ class CIFConta : public IFConta
     public:
 
         bool criar();
-        void run(Conta*);
+        void run(Conta);
         void setCntrIBConta(IBConta*);
 };
 

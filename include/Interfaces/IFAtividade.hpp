@@ -20,12 +20,23 @@ class IFAtividade
 
         //! Inicia IFAtividade
         /*!
-            Método que inicia a IFAtividade. Ele pergunta ao usuário qual
-            operação deseja realizar entre criar, excluir, ler e atualizar,
-            e chama o método apropriado da IBAtividade.
+            Método que inicia a IFAtividade. O método, por padrão, pergunta
+            ao usuário se deseja manejar as Atividade já registrados no
+            Destino recebido ou se deseja criar uma nova, ou retornar uma tela. \n
+            Se desejar criar uma nova, o sistema requisita todas as informações
+            necessárias para a criação de um objeto Atividade (com excessão do
+            Codigo da Conta) e então envia o objeto para o backend. Deve
+            esclarecer ao usuário se a operação falhou ou não. \n
+            Se desejar visualizar as Atividade, o sistema deve chamar a leitura
+            do backend e apresentar uma Atividade por vez. O usuário então deve
+            escolher entre mostrar a próxima (se possível), a anterior (se
+            possível), pesquisar uma Atividade pela tag, editar a atual ou
+            excluir a atual. \n
+            Se escolher retornar uma tela, a função retorna void.
             @param Conta atualmente autenticada.
+            @param Codigo Tag do Destino associado.
         */
-        virtual void run(Conta*) = 0;
+        virtual void run(Conta, Codigo) = 0;
 
         //! Dependência da IBAtividade
         /*!

@@ -18,7 +18,10 @@ class IFConta
         //! Cria uma conta
         /*!
             Move um usuário não-autenticado para a tela de criação de Conta.
-            Após o término do processo, retorna o usuário à tela principal.
+            Deve-se requisitar do usuário um Codigo e uma Senha (válidos).
+            Com esses valores cria-se uma Conta e envia-se as informações para
+            o backend. Se a conta for criada com sucesso, a função deve retornar
+            true, senão, false.
             @return Sucesso da operação.
         */
         virtual bool criar() = 0;
@@ -26,16 +29,28 @@ class IFConta
         //! Visualiza um Perfil
         /*!
             Inicia a tela que permite o usuário, já autenticado, a alterar
-            sua Senha, ver seu Código e Senha atuais e excluir sua Conta.
+            sua Senha, ver seu Código atual e excluir sua Conta, como também sair
+            de seu perfil (retornar uma tela, não desconectar da Conta) \n
+            Não é necessário realizar nenhuma operação para ver o Código atual.
+            Ele é visível como título do painel. \n
+            Ao requisitar a mudança de Senha, o usuário deve fornecer a Senha atual.
+            O sistema checa se a Senha fornecida é a mesma da Conta atualmente
+            autenticada, e então transmite as informações de mudança ao backend. \n
+            Ao requisitar a exclusão da Conta, o usuário deve fornecer a Senha atual.
+            O sistema checa se a Senha fornecida é a mesma da Conta atualmente
+            autenticada, depois requisita uma confirmação antes de enviar as
+            informações de exclusão para o backend. Retorna true. \n
+            Se o usuário requisitar sair do perfil, retorna false.
             @param Conta atualmente autenticada.
+            @return Bool o usuário deletou a Conta.
         */
-        virtual void run(Conta*) = 0;
+        virtual bool run(Conta*) = 0;
 
         //! Dependência da IBConta
         /*!
             Estabelece uma referência para a IBConta como uma variável, permitindo
             acesso ao banco de dados pelos métodos da IFConta.
-            @param Referência à IBAutenticacao a ser salva.
+            @param Referência à IBConta a ser salva.
         */
         virtual void setCntrIBConta(IBConta*) = 0;
 

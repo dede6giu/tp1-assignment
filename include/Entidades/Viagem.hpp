@@ -22,14 +22,17 @@ class Viagem {
         //! Avaliacao (atributo)
         /*! Atributo de classe Avaliacao. */
         Avaliacao avaliacao;
+
         //! Codigo (atributo)
         /*! Atributo de classe Codigo. */
         Codigo codigo;
+
         //! Nome (atributo)
         /*! Atributo de classe Nome. */
         Nome nome;
 
     public:
+
         //! Construtor vazio
         /*! Constrói um objeto Viagem vazio.
             @sa Viagem(const Avaliacao&, const Codigo&, const Nome&)
@@ -44,7 +47,7 @@ class Viagem {
             @param const Nome a ser armazenado.
             @sa Viagem()
         */
-        Viagem(const Avaliacao&, const Codigo&, const Nome&);
+        Viagem(const Avaliacao&, const Codigo&, const Nome&, const Codigo&);
 
 
         //! Viagem::setValor(const Avaliaacao&)
