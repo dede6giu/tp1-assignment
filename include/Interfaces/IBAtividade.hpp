@@ -25,6 +25,14 @@ class IBAtividade
         */
         virtual bool criar(Atividade) = 0;
 
+        //! Cria uma Tabela
+        /*!
+            Recebe um Codigo e adiciona uma nova tabela com tal Codigo ao banco
+            de dados, se não já existir a tabela.
+            @param Codigo da Conta.
+        */
+        virtual void criar(Codigo) = 0;
+
         //! Exclui uma Atividade
         /*!
             Recebe uma Atividade e realiza uma confirmação antes da exclusão. Se a
@@ -40,9 +48,8 @@ class IBAtividade
             Recebe um Codigo e exclui a tabela associada ao Codigo. Método só deve
             ser usado durante a exclusão de Conta.
             @param Codigo da Conta excluída.
-            @return Sucesso da operação.
         */
-        virtual bool excluir(Codigo) = 0;
+        virtual void excluir(Codigo) = 0;
 
         //! Exclui Atividades
         /*!
@@ -51,9 +58,16 @@ class IBAtividade
             só deve ser acionado durante a exclusão de Destino.
             @param Codigo da Conta.
             @param Codigo do Destino excluído.
-            @return Sucesso da operação.
         */
-        virtual bool excluir(Codigo, Codigo) = 0;
+        virtual void excluir(Codigo, Codigo) = 0;
+
+        //! Lê uma Atividade
+        /*!
+            Verifica a existência de uma Atividade no banco de dados.
+            @param Atividade a verificar.
+            @return Existência da Atividade.
+        */
+        virtual bool ler(Atividade) = 0;
 
         //! Lê todos Atividade
         /*!
@@ -93,7 +107,6 @@ class IBAtividade
         */
         virtual bool atualizar(Atividade, Horario) = 0;
 
-
         //! Atualiza a Duracao de uma Atividade
         /*!
             Atualiza a duração de uma Atividade.
@@ -103,7 +116,6 @@ class IBAtividade
         */
         virtual bool atualizar(Atividade, Duracao) = 0;
 
-
         //! Atualiza o Dinheiro de uma Atividade
         /*!
             Atualiza o Dinheiro associado a uma Atividade.
@@ -112,7 +124,6 @@ class IBAtividade
             @return Sucesso da operação.
         */
         virtual bool atualizar(Atividade, Dinheiro) = 0;
-
 
         //! Atualiza a Avaliacao de uma Atividade
         /*!

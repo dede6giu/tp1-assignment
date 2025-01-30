@@ -25,6 +25,14 @@ class IBHospedagem
         */
         virtual bool criar(Hospedagem) = 0;
 
+        //! Cria uma Tabela
+        /*!
+            Recebe um Codigo e adiciona uma nova tabela com tal Codigo ao banco
+            de dados, se não já existir a tabela.
+            @param Codigo da Conta.
+        */
+        virtual void criar(Codigo) = 0;
+
         //! Exclui uma Hospedagem
         /*!
             Recebe uma Hospedagem e realiza uma confirmação antes da exclusão. Se a
@@ -40,9 +48,8 @@ class IBHospedagem
             Recebe um Codigo e exclui a tabela associada ao Codigo. Método só deve
             ser usado durante a exclusão de Conta.
             @param Codigo da Conta excluída.
-            @return Sucesso da operação.
         */
-        virtual bool excluir(Codigo) = 0;
+        virtual void excluir(Codigo) = 0;
 
         //! Exclui Hospedagens
         /*!
@@ -51,9 +58,16 @@ class IBHospedagem
             só deve ser acionado durante a exclusão de Destino.
             @param Codigo da Conta.
             @param Codigo do Destino excluído.
-            @return Sucesso da operação.
         */
-        virtual bool excluir(Codigo, Codigo) = 0;
+        virtual void excluir(Codigo, Codigo) = 0;
+
+        //! Lê uma Hospedagem
+        /*!
+            Verifica a existência de uma Hospedagem no banco de dados.
+            @param Hospedagem a verificar.
+            @return Existência da Hospedagem.
+        */
+        virtual bool ler(Hospedagem) = 0;
 
         //! Lê todos Hospedagem
         /*!
