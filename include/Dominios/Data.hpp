@@ -11,7 +11,7 @@
 
     232013031 - implementação, construtores, documentação. \n
     232002520 - documentação, exceções. \n
-    232002771 - documentação.
+    232002771 - documentação, sobrecarga de operadores.
 */
 
 class Data
@@ -107,6 +107,10 @@ class Data
         //! std::string Data::getValor() const
         /*! Retorna um string com a data no formato "DD/MM/AA". */
         std::string getValor() const;
+
+        friend bool operator>(const Data&, const Data&);
+        friend bool operator==(const Data&, const Data&);
+        friend bool operator<(const Data&, const Data&);
 };
 
 inline int Data::getDia() const

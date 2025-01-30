@@ -135,3 +135,27 @@ std::string Data::getValor() const
     resultado += std::to_string(this->ano);
     return resultado;
 }
+
+
+bool operator==(const Data& data1, const Data& data2){
+    return data1.getAno() == data2.getAno()
+    && data1.getMes() == data2.getMes()
+    && data1.getDia() == data2.getDia();
+};
+
+bool operator<(const Data& data1, const Data& data2){
+    if(data1.getAno() < data2.getAno()){
+        return true;
+    }
+    if(data1.getAno() == data2.getAno() && data1.getMes() < data2.getMes()){
+        return true;
+    }
+    if(data1.getAno() == data2.getAno() && data1.getMes() == data2.getMes() && data1.getDia() < data2.getDia()){
+        return true;
+    }
+    return false;
+};
+
+bool operator>(const Data& data1, const Data& data2){
+    return data2 < data1;
+};

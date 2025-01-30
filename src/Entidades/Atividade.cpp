@@ -23,7 +23,7 @@ Atividade::Atividade(const Codigo& codigoNovo,
                      const Dinheiro& precoNovo,
                      const Avaliacao& avaliacaoNovo,
                      const Codigo& tagNova,
-                     const Codigo& tagDestinoNova);
+                     const Codigo& tagDestinoNova)
 {
     codigo = codigoNovo;
     nome = nomeNovo;
