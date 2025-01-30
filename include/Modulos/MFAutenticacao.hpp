@@ -1,8 +1,6 @@
 #ifndef MFAUTENTICACAO_HPP_INCLUDEDE
 #define MFAUTENTICACAO_HPP_INCLUDEDE
 
-
-
 /*!
     232002771 - implementação. \n
 */

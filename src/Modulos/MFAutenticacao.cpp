@@ -8,8 +8,8 @@ MFAutenticacao::run(Conta* contaAutenticar){
     system("cls");
     string codigo, senha;
     cout << "Digite seu código: ";
-    cin >> codigo
-    cout << endl << "Digite sua senha: "
+    cin >> codigo;
+    cout << endl << "Digite sua senha: ";
     cin >> senha;
     Conta contaFornecida(codigo, senha);
     if (cntrIBConta->criar(contaFornecida)){
@@ -20,6 +20,6 @@ MFAutenticacao::run(Conta* contaAutenticar){
     else
         return 0;
 
-MFAutenticacao::setCntrIBAutenticacao(IBAutenticacao* ibAutenticacao) {
+MFAutenticacao::setCntrIBAutenticacao(IBAutenticacao* cntrIBAutenticacao) {
     this->cntrIBAutenticacao = cntrIBAutenticacao;
 }
