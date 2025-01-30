@@ -4,6 +4,8 @@
 #include <vector>
 #include "../Entidades/Conta.hpp"
 #include "../Entidades/Destino.hpp"
+#include "../Interfaces/IBAtividade.hpp"
+#include "../Interfaces/IBHospedagem.hpp"
 
 //! Interface Back Destino
 /*!
@@ -16,14 +18,22 @@ class IBDestino
 {
     public:
 
-        //! Cria uma Destino
+        //! Cria um Destino
         /*!
-            Recebe os detalhes de umo novo Destino e adiciona ao banco de dados.
+            Recebe os detalhes de um novo Destino e adiciona ao banco de dados.
             Verifica se o Destino é único antes de realizar a operação.
             @param Destino a ser criado.
             @return Sucesso da operação.
         */
         virtual bool criar(Destino) = 0;
+
+        //! Cria uma Tabela
+        /*!
+            Recebe um Codigo e adiciona uma nova tabela com tal Codigo ao banco
+            de dados, se não já existir a tabela.
+            @param Codigo da Conta.
+        */
+        virtual void criar(Codigo) = 0;
 
         //! Exclui um Destino
         /*!
@@ -40,9 +50,8 @@ class IBDestino
             Recebe um Codigo e exclui a tabela associada ao Codigo. Método só deve
             ser usado durante a exclusão de Conta.
             @param Codigo da Conta excluída.
-            @return Sucesso da operação.
         */
-        virtual bool excluir(Codigo) = 0;
+        virtual void excluir(Codigo) = 0;
 
         //! Exclui Destinos
         /*!
@@ -51,9 +60,16 @@ class IBDestino
             só deve ser acionado durante a exclusão de Viagem.
             @param Codigo da Conta.
             @param Codigo da Viagem excluída.
-            @return Sucesso da operação.
         */
-        virtual bool excluir(Codigo, Codigo) = 0;
+        virtual void excluir(Codigo, Codigo) = 0;
+
+        //! Lê um Destino
+        /*!
+            Verifica a existência de um Destino no banco de dados.
+            @param Destino a verificar.
+            @return Existência do Destino.
+        */
+        virtual bool ler(Destino) = 0;
 
         //! Lê todos Destino
         /*!
@@ -80,9 +96,10 @@ class IBDestino
             Atualiza a Data de início ou fim de um Destino.
             @param Destino a ser atualizado.
             @param Nova Data a ser atribuída ao Destino.
+            @param Bool false se for para atualizar início, true para fim.
             @return Sucesso da operação.
         */
-        virtual bool atualizar(Destino, Data) = 0;
+        virtual bool atualizar(Destino, Data, bool) = 0;
 
         //! Atualiza a Avaliacao de um Destino
         /*!
@@ -92,6 +109,22 @@ class IBDestino
             @return Sucesso da operação.
         */
         virtual bool atualizar(Destino, Avaliacao) = 0;
+
+        //! Dependência da IBAtividade
+        /*!
+            Estabelece uma referência para a IBAtividade como uma variável, permitindo
+            acesso ao banco de dados pelos métodos da IBAtividade.
+            @param Referência à IBAtividade a ser salva.
+        */
+        virtual void setCntrIBAtividade(IBAtividade*) = 0;
+
+        //! Dependência da IBHospedagem
+        /*!
+            Estabelece uma referência para a IBHospedagem como uma variável, permitindo
+            acesso ao banco de dados pelos métodos da IBHospedagem.
+            @param Referência à IBHospedagem a ser salva.
+        */
+        virtual void setCntrIBHospedagem(IBHospedagem*) = 0;
 
         //! Destrutor Virtual
         virtual ~IBDestino() {}

@@ -86,7 +86,7 @@ void MBViagem::excluir(Codigo tabelaExcluir)
 
     string comando = "DROP TABLE IF EXISTS ";
     comando += tabelaExcluir.getValor();
-    comando += " ;";
+    comando += ";";
     char* errmsg;
     int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
     if (rc != SQLITE_OK)
@@ -141,11 +141,12 @@ bool MBViagem::ler(Viagem viagemCheque)
 std::vector<Viagem> MBViagem::ler(Codigo contaCheque)
 {
     vector<Viagem> resultado;
+    // garante que a conta tem uma tabela
     MBViagem::criar(contaCheque);
 
     string comando = "SELECT Tag, Nome, Avaliacao FROM ";
     comando += contaCheque.getValor();
-    comando += "';";
+    comando += ";";
     sqlite3_stmt *stmt;
     int rc = sqlite3_prepare_v2(banco, comando.c_str(), -1, &stmt, NULL);
     if (rc != SQLITE_OK)
@@ -212,9 +213,9 @@ bool MBViagem::atualizar(Viagem viagemAtual, Nome novoNome)
 
     string comando = "UPDATE ";
     comando += viagemAtual.getValorCodigo();
-    comando += " SET Nome=";
+    comando += " SET Nome='";
     comando += novoNome.getValor();
-    comando += " WHERE Tag='";
+    comando += "' WHERE Tag='";
     comando += viagemAtual.getTag().getValor();
     comando += "';";
 
