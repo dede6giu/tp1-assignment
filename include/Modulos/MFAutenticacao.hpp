@@ -1,10 +1,11 @@
 #ifndef MFAUTENTICACAO_HPP_INCLUDEDE
 #define MFAUTENTICACAO_HPP_INCLUDEDE
 
+#include "../Interfaces/IFAutenticacao.hpp"
+
 /*!
     232002771 - implementação. \n
 */
-
 class MFAutenticacao : public IFAutenticacao
 {
     private:

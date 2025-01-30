@@ -3,7 +3,7 @@
 
 using namespace std;
 
-MIFConta ::criar(){
+MFConta ::criar(){
     while (true){
         cout << "Iniciando o processo de criação de conta...\n";
         string nome, senha;
@@ -22,10 +22,6 @@ MIFConta ::criar(){
         }
 }
     }
-MIFConta::setCntrIBConta(IBConta* cntrIBConta){
+MFConta::setCntrIBConta(IBConta* cntrIBConta){
     this->cntrIBConta = cntrIBConta;
 }
-
-MIFConta :: ~MIFConta() {
-}
-

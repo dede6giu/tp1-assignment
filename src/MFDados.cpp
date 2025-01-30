@@ -27,12 +27,11 @@ bool MFDados::run(Conta* contaAutenticar){
             }
         }
     }
-}
 
-void MFDados::setCntrIFConta(IFConta* cntrIFConta) {
+MFDados::setCntrIFConta(IFConta* cntrIFConta) {
     this->cntrIFConta = cntrIFConta;
 }
 
-void MFDados::setCntrIFViagem(IFViagem* cntrIFViagem) {
+MFDados::setCntrIFViagem(IFViagem* cntrIFViagem) {
     this->cntrIFViagem = cntrIFViagem;
 }

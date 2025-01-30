@@ -1,8 +1,8 @@
 #ifndef MFCONTA_HPP_INCLUDED
 #define MFCONTA_HPP_INCLUDED
-#include "IFConta.hpp"
-#include "IBConta.hpp"
-#include "../Entidade/Conta.hpp"
+
+#include "../Interfaces/IFConta.hpp"
+#include "../InterfacesIBConta.hpp"
 
 class MIFConta : public IFConta {
 private:
