@@ -18,6 +18,9 @@ class MFAtividade : public IFAtividade
 
     public:
 
+        MFAtividade();
+        ~MFAtividade();
+
         int lerInt(std::string);
         void esperarInput();
         void printAtividade(Atividade);

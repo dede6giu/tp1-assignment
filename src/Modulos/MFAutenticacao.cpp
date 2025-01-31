@@ -1,10 +1,20 @@
 #include "../../include/Modulos/MFAutenticacao.hpp"
-#include "../../include/Modulos/MBConta.hpp"
+#include "../../include/Modulos/MBAutenticacao.hpp"
 #include <stdlib.h>
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+MFAutenticacao::MFAutenticacao()
+{
+    cntrIBAutenticacao = new MBAutenticacao();
+}
+
+MFAutenticacao::~MFAutenticacao()
+{
+    delete cntrIBAutenticacao;
+}
 
 void MFAutenticacao::esperarInput()
 {
@@ -16,10 +26,6 @@ void MFAutenticacao::esperarInput()
 
 bool MFAutenticacao::run(Conta* contaAutenticar)
 {
-    IBConta* dep1 = new MBConta();
-
-    cntrIBAutenticacao->setCntrIBConta(dep1);
-
     bool retorno = false;
     while(true)
     {
@@ -95,6 +101,5 @@ bool MFAutenticacao::run(Conta* contaAutenticar)
         }
     }
 
-    delete dep1;
     return retorno;
 }

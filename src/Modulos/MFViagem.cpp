@@ -1,12 +1,23 @@
 #include "../../include/Modulos/MFViagem.hpp"
-#include "../../include/Modulos/MBDestino.hpp"
-#include "../../include/Modulos/MFAtividade.hpp"
-#include "../../include/Modulos/MFHospedagem.hpp"
+#include "../../include/Modulos/MBViagem.hpp"
+#include "../../include/Modulos/MFDestino.hpp"
 #include <stdlib.h>
 #include <stdexcept>
 #include <iostream>
 
 using namespace std;
+
+MFViagem::MFViagem()
+{
+    cntrIBViagem = new MBViagem();
+    cntrIFDestino = new MFDestino();
+}
+
+MFViagem::~MFViagem()
+{
+    delete cntrIBViagem;
+    delete cntrIFDestino;
+}
 
 int MFViagem::lerInt(std::string entrada)
 {
@@ -84,8 +95,8 @@ bool MFViagem::editarViagem(Viagem viagemAtual)
             getline(cin, comando);
             try
             {
-                resultado = stoi(comando);
-                Avaliacao nomeAvaliacao(resultado);
+                int aux = stoi(comando);
+                Avaliacao nomeAvaliacao(aux);
                 if (cntrIBViagem->atualizar(viagemAtual, nomeAvaliacao))
                 {
                     return true;
@@ -190,7 +201,6 @@ bool MFViagem::processViagem()
                 break;
             case 4:
                 atualizarViagem = true;
-                try
                 {
                     bool sucesso = editarViagem(viagemRegistradas[posicaoAtual]);
                     if (sucesso)
@@ -203,10 +213,6 @@ bool MFViagem::processViagem()
                         esperarInput();
                         break;
                     }
-                }
-                catch (const runtime_error &exp)
-                {
-                    cout << endl << "Falha desconhecida durante a operacao. Tente novamente.";
                 }
                 esperarInput();
                 return atualizarViagem;
@@ -326,15 +332,6 @@ bool MFViagem::criarViagem(Codigo contaAutenticada)
 
 void MFViagem::run(Codigo contaAutenticada)
 {
-    IBDestino* dep1 = new MBDestino();
-    IFAtividade* dep2 = new MFAtividade();
-    IFHospedagem* dep3 = new MFHospedagem();
-
-    cntrIFDestino->setCntrIBDestino(dep1);
-    cntrIFDestino->setCntrIFAtividade(dep2);
-    cntrIFDestino->setCntrIFHospedagem(dep3);
-    cntrIBViagem->setCntrIBDestino(dep1);
-
     bool atualizarViagem = true;
     bool operando = true;
     while (operando)
@@ -365,6 +362,7 @@ void MFViagem::run(Codigo contaAutenticada)
                     if (sucesso)
                     {
                         cout << endl << "Viagem criada com sucesso.";
+                        atualizarViagem = true;
                     }
                     else
                     {
@@ -397,9 +395,5 @@ void MFViagem::run(Codigo contaAutenticada)
                 break;
         }
     }
-
-    delete dep1;
-    delete dep2;
-    delete dep3;
     return;
 }

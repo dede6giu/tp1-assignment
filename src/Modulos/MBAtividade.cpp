@@ -25,14 +25,14 @@ bool MBAtividade::criar(Atividade novoAtividade)
     string comando = "INSERT INTO ";
     comando += novoAtividade.getValorCodigo();
     comando += " (Tag, TagDestino, Nome, Data, Horario, Duracao, Preco, Avaliacao) VALUES ('";
-    comando += novoAtividade.getTag().getValor();        comando += "', '";
-    comando += novoAtividade.getTagDestino().getValor(); comando += "', '";
-    comando += novoAtividade.getValorNome();             comando += "', '";
-    comando += novoAtividade.getValorData();             comando += "', '";
-    comando += novoAtividade.getValorHorario();          comando += "', ";
-    comando += novoAtividade.getValorDuracao();          comando += ", ";
-    comando += novoAtividade.getValorPreco();            comando += ", ";
-    comando += novoAtividade.getValorAvaliacao();        comando += ");";
+    comando += novoAtividade.getTag().getValor();            comando += "', '";
+    comando += novoAtividade.getTagDestino().getValor();     comando += "', '";
+    comando += novoAtividade.getValorNome();                 comando += "', '";
+    comando += novoAtividade.getValorData();                 comando += "', '";
+    comando += novoAtividade.getValorHorario();              comando += "', '";
+    comando += to_string(novoAtividade.getValorDuracao());   comando += "', '";
+    comando += to_string(novoAtividade.getValorPreco());     comando += "', '";
+    comando += to_string(novoAtividade.getValorAvaliacao()); comando += "');";
 
     char* errmsg;
     int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
@@ -288,9 +288,9 @@ bool MBAtividade::atualizar(Atividade atividadeAtual, Duracao novoDuracao)
 
     string comando = "UPDATE ";
     comando += atividadeAtual.getValorCodigo();
-    comando += " SET Duracao=";
-    comando += novoDuracao.getValor();
-    comando += " WHERE Tag='";
+    comando += " SET Duracao='";
+    comando += to_string(novoDuracao.getValor());
+    comando += "' WHERE Tag='";
     comando += atividadeAtual.getTag().getValor();
     comando += "';";
 
@@ -312,9 +312,9 @@ bool MBAtividade::atualizar(Atividade atividadeAtual, Dinheiro novoDinheiro)
 
     string comando = "UPDATE ";
     comando += atividadeAtual.getValorCodigo();
-    comando += " SET Dinheiro=";
-    comando += novoDinheiro.getValor();
-    comando += " WHERE Tag='";
+    comando += " SET Dinheiro='";
+    comando += to_string(novoDinheiro.getValor());
+    comando += "' WHERE Tag='";
     comando += atividadeAtual.getTag().getValor();
     comando += "';";
 
@@ -336,9 +336,9 @@ bool MBAtividade::atualizar(Atividade atividadeAtual, Avaliacao novoAvaliacao)
 
     string comando = "UPDATE ";
     comando += atividadeAtual.getValorCodigo();
-    comando += " SET Avaliacao=";
-    comando += novoAvaliacao.getValor();
-    comando += " WHERE Tag='";
+    comando += " SET Avaliacao='";
+    comando += to_string(novoAvaliacao.getValor());
+    comando += "' WHERE Tag='";
     comando += atividadeAtual.getTag().getValor();
     comando += "';";
 

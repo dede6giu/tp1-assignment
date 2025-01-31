@@ -31,12 +31,12 @@ bool MBDestino::criar(Destino novoDestino)
     string comando = "INSERT INTO ";
     comando += novoDestino.getValorCodigo();
     comando += " (Tag, TagViagem, Nome, Inicio, Fim, Avaliacao) VALUES ('";
-    comando += novoDestino.getTag().getValor();       comando += "', '";
-    comando += novoDestino.getTagViagem().getValor(); comando += "', '";
-    comando += novoDestino.getValorNome();            comando += "', '";
-    comando += novoDestino.getValorInicio();          comando += "', '";
-    comando += novoDestino.getValorFim();             comando += "', ";
-    comando += novoDestino.getValorAvaliacao();       comando += ");";
+    comando += novoDestino.getTag().getValor();            comando += "', '";
+    comando += novoDestino.getTagViagem().getValor();      comando += "', '";
+    comando += novoDestino.getValorNome();                 comando += "', '";
+    comando += novoDestino.getValorInicio();               comando += "', '";
+    comando += novoDestino.getValorFim();                  comando += "', '";
+    comando += to_string(novoDestino.getValorAvaliacao()); comando += "');";
 
     char* errmsg;
     int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
@@ -321,9 +321,9 @@ bool MBDestino::atualizar(Destino destinoAtual, Avaliacao novaAvaliacao)
 
     string comando = "UPDATE ";
     comando += destinoAtual.getValorCodigo();
-    comando += " SET Avaliacao=";
-    comando += novaAvaliacao.getValor();
-    comando += " WHERE Tag='";
+    comando += " SET Avaliacao='";
+    comando += to_string(novaAvaliacao.getValor());
+    comando += "' WHERE Tag='";
     comando += destinoAtual.getTag().getValor();
     comando += "';";
 

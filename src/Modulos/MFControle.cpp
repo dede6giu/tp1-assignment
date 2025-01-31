@@ -1,8 +1,7 @@
 #include "../../include/Modulos/MFControle.hpp"
-#include "../../include/Modulos/MBAutenticacao.hpp"
-#include "../../include/Modulos/MBConta.hpp"
+#include "../../include/Modulos/MFAutenticacao.hpp"
 #include "../../include/Modulos/MFConta.hpp"
-#include "../../include/Modulos/MFViagem.hpp"
+#include "../../include/Modulos/MFDados.hpp"
 #include <iostream>
 
 using namespace std;
@@ -10,11 +9,17 @@ using namespace std;
 MFControle::MFControle()
 {
     contaAutenticada = new Conta();
+    cntrIFAutenticacao = new MFAutenticacao();
+    cntrIFConta = new MFConta();
+    cntrIFDados = new MFDados();
 }
 
 MFControle::~MFControle()
 {
     delete contaAutenticada;
+    delete cntrIFAutenticacao;
+    delete cntrIFConta;
+    delete cntrIFDados;
 }
 
 void MFControle::esperarInput()
@@ -27,16 +32,6 @@ void MFControle::esperarInput()
 
 void MFControle::run()
 {
-    IBAutenticacao* dep1 = new MBAutenticacao();
-    IBConta* dep2 = new MBConta();
-    IFConta* dep3 = new MFConta();
-    IFViagem* dep4 = new MFViagem();
-
-    cntrIFAutenticacao->setCntrIBAutenticacao(dep1);
-    cntrIFConta->setCntrIBConta(dep2);
-    cntrIFDados->setCntrIFConta(dep3);
-    cntrIFDados->setCntrIFViagem(dep4);
-
     bool operando = true;
     while (operando)
     {
@@ -94,9 +89,4 @@ void MFControle::run()
                 break;
         }
     }
-
-    delete dep1;
-    delete dep2;
-    delete dep3;
-    delete dep4;
 }

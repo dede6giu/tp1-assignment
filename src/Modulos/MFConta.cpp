@@ -1,7 +1,18 @@
 #include "../../include/Modulos/MFConta.hpp"
+#include "../../include/Modulos/MBConta.hpp"
 #include <iostream>
 
 using namespace std;
+
+MFConta::MFConta()
+{
+    cntrIBConta = new MBConta();
+}
+
+MFConta::~MFConta()
+{
+    delete cntrIBConta;
+}
 
 void MFConta::esperarInput()
 {

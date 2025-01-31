@@ -399,6 +399,7 @@ void MFHospedagem::run(Codigo contaAutenticada, Codigo destinoAssociado)
                     if (sucesso)
                     {
                         cout << endl << "Hospedagem criada com sucesso.";
+                        atualizarHospedagem = true;
                     }
                     else
                     {

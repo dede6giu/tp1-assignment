@@ -25,11 +25,11 @@ bool MBHospedagem::criar(Hospedagem novoHospedagem)
     string comando = "INSERT INTO ";
     comando += novoHospedagem.getValorCodigo();
     comando += " (Tag, TagDestino, Nome, Avaliacao, Diaria) VALUES ('";
-    comando += novoHospedagem.getTag().getValor();        comando += "', '";
-    comando += novoHospedagem.getTagDestino().getValor(); comando += "', '";
-    comando += novoHospedagem.getValorNome();             comando += "', ";
-    comando += novoHospedagem.getValorAvaliacao();        comando += ", ";
-    comando += novoHospedagem.getValorDiaria();           comando += ");";
+    comando += novoHospedagem.getTag().getValor();            comando += "', '";
+    comando += novoHospedagem.getTagDestino().getValor();     comando += "', '";
+    comando += novoHospedagem.getValorNome();                 comando += "', '";
+    comando += to_string(novoHospedagem.getValorAvaliacao()); comando += "', '";
+    comando += to_string(novoHospedagem.getValorDiaria());    comando += "');";
 
     char* errmsg;
     int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
@@ -229,9 +229,9 @@ bool MBHospedagem::atualizar(Hospedagem hospedagemAtual, Dinheiro novoDiaria)
 
     string comando = "UPDATE ";
     comando += hospedagemAtual.getValorCodigo();
-    comando += " SET Diaria=";
-    comando += novoDiaria.getValor();
-    comando += " WHERE Tag='";
+    comando += " SET Diaria='";
+    comando += to_string(novoDiaria.getValor());
+    comando += "' WHERE Tag='";
     comando += hospedagemAtual.getTag().getValor();
     comando += "';";
 
@@ -253,9 +253,9 @@ bool MBHospedagem::atualizar(Hospedagem hospedagemAtual, Avaliacao novoAvaliacao
 
     string comando = "UPDATE ";
     comando += hospedagemAtual.getValorCodigo();
-    comando += " SET Avaliacao=";
-    comando += novoAvaliacao.getValor();
-    comando += " WHERE Tag='";
+    comando += " SET Avaliacao='";
+    comando += to_string(novoAvaliacao.getValor());
+    comando += "' WHERE Tag='";
     comando += hospedagemAtual.getTag().getValor();
     comando += "';";
 

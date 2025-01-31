@@ -4,18 +4,22 @@
 #include "../Interfaces/IFConta.hpp"
 #include "../Interfaces/IBConta.hpp"
 
-class MFConta : public IFConta {
-private:
+class MFConta : public IFConta
+{
+    private:
 
-    IBConta* cntrIBConta;
+        IBConta* cntrIBConta;
 
-public:
+    public:
 
-    void esperarInput();
+        MFConta();
+        ~MFConta();
 
-    bool criar();
-    bool run(Conta);
-    void setCntrIBConta(IBConta*);
+        void esperarInput();
+
+        bool criar();
+        bool run(Conta);
+        void setCntrIBConta(IBConta*);
 };
 
 inline void MFConta::setCntrIBConta(IBConta* novo)

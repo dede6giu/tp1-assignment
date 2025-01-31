@@ -1,8 +1,19 @@
 #include "../../include/Modulos/MFAtividade.hpp"
+#include "../../include/Modulos/MBAtividade.hpp"
 #include <stdexcept>
 #include <iostream>
 
 using namespace std;
+
+MFAtividade::MFAtividade()
+{
+    cntrIBAtividade = new MBAtividade();
+}
+
+MFAtividade::~MFAtividade()
+{
+    delete cntrIBAtividade;
+}
 
 int MFAtividade::lerInt(std::string entrada)
 {
@@ -530,6 +541,7 @@ void MFAtividade::run(Codigo contaAutenticada, Codigo destinoAssociado)
                     if (sucesso)
                     {
                         cout << endl << "Atividade criada com sucesso.";
+                        atualizarAtividade = true;
                     }
                     else
                     {

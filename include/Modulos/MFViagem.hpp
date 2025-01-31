@@ -19,8 +19,10 @@ class MFViagem : public IFViagem
 
     public:
 
-        void esperarInput();
+        MFViagem();
+        ~MFViagem();
 
+        void esperarInput();
         int lerInt(std::string);
         bool processViagem();
         bool editarViagem(Viagem);

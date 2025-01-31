@@ -13,6 +13,9 @@ class MFAutenticacao : public IFAutenticacao
 
     public:
 
+        MFAutenticacao();
+        ~MFAutenticacao();
+
         void esperarInput();
 
         bool run(Conta*);

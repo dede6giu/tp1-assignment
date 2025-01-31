@@ -15,6 +15,9 @@ class MFDados : public IFDados
 
     public:
 
+        MFDados();
+        ~MFDados();
+
         void run(Conta);
         void setCntrIFConta(IFConta* cntrIFConta);
         void setCntrIFViagem(IFViagem* cntrIFViagem);

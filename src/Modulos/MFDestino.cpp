@@ -1,10 +1,25 @@
 #include "../../include/Modulos/MFDestino.hpp"
-#include "../../include/Modulos/MBAtividade.hpp"
-#include "../../include/Modulos/MBHospedagem.hpp"
+#include "../../include/Modulos/MBDestino.hpp"
+#include "../../include/Modulos/MFAtividade.hpp"
+#include "../../include/Modulos/MFHospedagem.hpp"
 #include <stdexcept>
 #include <iostream>
 
 using namespace std;
+
+MFDestino::MFDestino()
+{
+    cntrIBDestino = new MBDestino();
+    cntrIFAtividade = new MFAtividade();
+    cntrIFHospedagem = new MFHospedagem();
+}
+
+MFDestino::~MFDestino()
+{
+    delete cntrIBDestino;
+    delete cntrIFAtividade;
+    delete cntrIFHospedagem;
+}
 
 int MFDestino::lerInt(std::string entrada)
 {
@@ -402,7 +417,7 @@ bool MFDestino::criarDestino(Codigo contaAutenticada, Codigo viagemAssociada)
     {
         Data aux1(inicio);
         Data aux2(fim);
-        if (aux2 > aux1)
+        if (aux2 < aux1)
         {
             cout << endl << "Data de fim deve ser depois do inicio.";
             esperarInput();
@@ -443,14 +458,6 @@ bool MFDestino::criarDestino(Codigo contaAutenticada, Codigo viagemAssociada)
 
 void MFDestino::run(Codigo contaAutenticada, Codigo viagemAssociada)
 {
-    IBAtividade* dep1 = new MBAtividade();
-    IBHospedagem* dep2 = new MBHospedagem();
-
-    cntrIBDestino->setCntrIBAtividade(dep1);
-    cntrIBDestino->setCntrIBHospedagem(dep2);
-    cntrIFAtividade->setCntrIBAtividade(dep1);
-    cntrIFHospedagem->setCntrIBHospedagem(dep2);
-
     bool atualizarDestino = true;
     bool operando = true;
     while (operando)
@@ -482,6 +489,7 @@ void MFDestino::run(Codigo contaAutenticada, Codigo viagemAssociada)
                     if (sucesso)
                     {
                         cout << endl << "Destino criado com sucesso.";
+                        atualizarDestino = true;
                     }
                     else
                     {
@@ -514,8 +522,5 @@ void MFDestino::run(Codigo contaAutenticada, Codigo viagemAssociada)
                 break;
         }
     }
-
-    delete dep1;
-    delete dep2;
     return;
 }

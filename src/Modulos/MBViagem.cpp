@@ -1,7 +1,7 @@
 #include "../../include/Modulos/MBViagem.hpp"
-#include "../../include/Modulos/MBAtividade.hpp"
-#include "../../include/Modulos/MBHospedagem.hpp"
+#include "../../include/Modulos/MBDestino.hpp"
 #include <stdexcept>
+#include <iostream>
 
 using namespace std;
 
@@ -12,11 +12,14 @@ MBViagem::MBViagem()
     {
         throw runtime_error("Falha na abertura do banco de dados. O diretorio 'data/' existe?");
     }
+
+    cntrIBDestino = new MBDestino();
 }
 
 MBViagem::~MBViagem()
 {
     sqlite3_close(banco);
+    delete cntrIBDestino;
 }
 
 bool MBViagem::criar(Viagem novaViagem)
@@ -30,9 +33,10 @@ bool MBViagem::criar(Viagem novaViagem)
     string comando = "INSERT INTO ";
     comando += novaViagem.getValorCodigo();
     comando += " (Tag, Nome, Avaliacao) VALUES ('";
-    comando += novaViagem.getTag().getValor(); comando += "', '";
-    comando += novaViagem.getValorNome();      comando += "', ";
-    comando += novaViagem.getValorAvaliacao(); comando += ");";
+    comando += novaViagem.getTag().getValor();            comando += "', '";
+    comando += novaViagem.getValorNome();                 comando += "', '";
+    comando += to_string(novaViagem.getValorAvaliacao()); comando += "');";
+    // cout << comando << endl;
 
     char* errmsg;
     int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
@@ -65,14 +69,8 @@ bool MBViagem::excluir(Viagem viagemExcluir)
     // checa se a viagem existe
     if (!MBViagem::ler(viagemExcluir)) return false;
 
-    IBAtividade* dep1 = new MBAtividade();
-    IBHospedagem* dep2 = new MBHospedagem();
-    cntrIBDestino->setCntrIBAtividade(dep1);
-    cntrIBDestino->setCntrIBHospedagem(dep2);
     // exclui destinos associados
     cntrIBDestino->excluir(Codigo(viagemExcluir.getValorCodigo()), viagemExcluir.getTag());
-    delete dep1;
-    delete dep2;
 
     string comando = "DELETE FROM ";
     comando += viagemExcluir.getValorCodigo();
@@ -92,14 +90,8 @@ bool MBViagem::excluir(Viagem viagemExcluir)
 
 void MBViagem::excluir(Codigo tabelaExcluir)
 {
-    IBAtividade* dep1 = new MBAtividade();
-    IBHospedagem* dep2 = new MBHospedagem();
-    cntrIBDestino->setCntrIBAtividade(dep1);
-    cntrIBDestino->setCntrIBHospedagem(dep2);
     // exclui destinos da conta
     cntrIBDestino->excluir(tabelaExcluir);
-    delete dep1;
-    delete dep2;
 
     string comando = "DROP TABLE IF EXISTS ";
     comando += tabelaExcluir.getValor();
@@ -206,9 +198,9 @@ bool MBViagem::atualizar(Viagem viagemAtual, Avaliacao novoAvaliacao)
 
     string comando = "UPDATE ";
     comando += viagemAtual.getValorCodigo();
-    comando += " SET Avaliacao=";
-    comando += novoAvaliacao.getValor();
-    comando += " WHERE Tag='";
+    comando += " SET Avaliacao='";
+    comando += to_string(novoAvaliacao.getValor());
+    comando += "' WHERE Tag='";
     comando += viagemAtual.getTag().getValor();
     comando += "';";
 

@@ -20,6 +20,9 @@ class MFDestino : public IFDestino
 
     public:
 
+        MFDestino();
+        ~MFDestino();
+
         int lerInt(std::string);
         void esperarInput();
         void printDestino(Destino);

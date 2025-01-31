@@ -1,7 +1,6 @@
 #include "../../include/Modulos/MFDados.hpp"
-#include "../../include/Modulos/MFDestino.hpp"
-#include "../../include/Modulos/MBConta.hpp"
-#include "../../include/Modulos/MBViagem.hpp"
+#include "../../include/Modulos/MFConta.hpp"
+#include "../../include/Modulos/MFViagem.hpp"
 #include <stdlib.h>
 #include <iostream>
 #include <string>
@@ -9,16 +8,20 @@
 
 using namespace std;
 
+MFDados::MFDados()
+{
+    cntrIFConta = new MFConta();
+    cntrIFViagem = new MFViagem();
+}
+
+MFDados::~MFDados()
+{
+    delete cntrIFConta;
+    delete cntrIFViagem;
+}
+
 void MFDados::run(Conta contaAutenticada)
 {
-    IFDestino* dep1 = new MFDestino();
-    IBConta* dep2 = new MBConta();
-    IBViagem* dep3 = new MBViagem();
-
-    cntrIFConta->setCntrIBConta(dep2);
-    cntrIFViagem->setCntrIBViagem(dep3);
-    cntrIFViagem->setCntrIFDestino(dep1);
-
     bool operando = 1;
     while(operando)
     {
@@ -60,7 +63,4 @@ void MFDados::run(Conta contaAutenticada)
                 break;
         }
     }
-    delete dep1;
-    delete dep2;
-    delete dep3;
 }
