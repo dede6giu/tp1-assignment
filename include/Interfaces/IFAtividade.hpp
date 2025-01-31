@@ -41,7 +41,8 @@ class IFAtividade
         //! Dependência da IBAtividade
         /*!
             Estabelece uma referência para a IBAtividade como uma variável,
-            permitindo uma conexão com os métodos atuantes no banco de dados.
+            permitindo uma conexão com os métodos referentes a Atividade
+            atuantes no banco de dados.
             @param Referência à IBAtividade a ser salva.
         */
         virtual void setCntrIBAtividade(IBAtividade*) = 0;

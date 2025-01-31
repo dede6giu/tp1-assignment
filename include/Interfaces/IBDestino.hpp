@@ -12,7 +12,8 @@
     232002771 - Implementação e Documentação \n
 
     A IBDestino é responsável pela comunicação do usuário com
-    o banco de dados. Ela permite criar, excluir, ler e atualizar os dados de um Destino,
+    o banco de dados quanto ao controle de Destino. Ela permite
+    criar, excluir, ler e atualizar os dados de um Destino,
 */
 class IBDestino
 {
@@ -56,8 +57,8 @@ class IBDestino
         //! Exclui Destinos
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo uma Viagem. Exclui
-            da Conta associada todos os Destino que possuem a Viagem como pai. Método
-            só deve ser acionado durante a exclusão de Viagem.
+            da Conta associada todos os Destino que possuem a Viagem relacionada.
+            Método só deve ser acionado durante a exclusão de Viagem.
             @param Codigo da Conta.
             @param Codigo da Viagem excluída.
         */
@@ -74,7 +75,7 @@ class IBDestino
         //! Lê todos Destino
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo uma Viagem. Busca
-            da Conta associada por todos Destino que possuem a Viagem como pai.
+            da Conta associada por todos Destino que possuem a Viagem relacionada.
             @param Codigo da Conta.
             @param Codigo da Viagem.
             @return Retorna um vetor de Destino com todos os Destino cadastrados

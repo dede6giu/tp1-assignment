@@ -41,7 +41,8 @@ class IFHospedagem
         //! Dependência da IBHospedagem
         /*!
             Estabelece uma referência para a IBHospedagem como uma variável,
-            permitindo uma conexão com os métodos atuantes no banco de dados.
+            permitindo uma conexão com os métodos referentes a Hospedagem
+            atuantes no banco de dados.
             @param Referência à IBHospedagem a ser salva.
         */
         virtual void setCntrIBHospedagem(IBHospedagem*) = 0;

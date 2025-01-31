@@ -10,7 +10,8 @@
     232002771 - Implementação e Documentação \n
 
     A IBAtividade é responsável pela comunicação do usuário com
-    o banco de dados. Ela permite criar, excluir, ler e atualizar os dados de uma Atividade,
+    o banco de dados quanto ao controle de Atividade. Ela permite
+    criar, excluir, ler e atualizar os dados de uma Atividade,
 */
 class IBAtividade
 {
@@ -54,8 +55,8 @@ class IBAtividade
         //! Exclui Atividades
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Exclui
-            da Conta associada todas as Atividade que possuem o Destino como pai. Método
-            só deve ser acionado durante a exclusão de Destino.
+            da Conta associada todas as Atividade que possuem o Destino relacionado.
+            Método só deve ser acionado durante a exclusão de Destino.
             @param Codigo da Conta.
             @param Codigo do Destino excluído.
         */
@@ -72,7 +73,7 @@ class IBAtividade
         //! Lê todos Atividade
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Busca
-            da Conta associada por todos Atividade que possuem o Destino como pai.
+            da Conta associada por todos Atividade que possuem o Destino relacionado.
             @param Codigo da Conta.
             @param Codigo do Destino.
             @return Retorna um vetor de Atividade com todos os Atividade cadastrados

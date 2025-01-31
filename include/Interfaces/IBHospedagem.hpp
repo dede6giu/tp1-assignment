@@ -10,7 +10,8 @@
     232002771 - Implementação e Documentação \n
 
     A IBHospedagem é responsável pela comunicação do usuário com
-    o banco de dados. Ela permite criar, excluir, ler e atualizar os dados de uma Hospedagem,
+    o banco de dados quanto ao controle de Hospedagem. Ela permite
+    criar, excluir, ler e atualizar os dados de uma Hospedagem,
 */
 class IBHospedagem
 {
@@ -54,8 +55,8 @@ class IBHospedagem
         //! Exclui Hospedagens
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Exclui
-            da Conta associada todos os Hospedagem que possuem o Destino como pai. Método
-            só deve ser acionado durante a exclusão de Destino.
+            da Conta associada todos os Hospedagem que possuem o Destino relacionado.
+            Método só deve ser acionado durante a exclusão de Destino.
             @param Codigo da Conta.
             @param Codigo do Destino excluído.
         */
@@ -72,7 +73,7 @@ class IBHospedagem
         //! Lê todos Hospedagem
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Busca
-            da Conta associada por todos Hospedagem que possuem o Destino como pai.
+            da Conta associada por todos Hospedagem que possuem o Destino relacionado.
             @param Codigo da Conta.
             @param Codigo do Destino.
             @return Retorna um vetor de Hospedagem com todos os Hospedagem cadastrados

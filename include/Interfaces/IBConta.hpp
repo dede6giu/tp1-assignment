@@ -12,8 +12,8 @@
     232013031 - Implementação e Documentação \n
 
     A IBConta é responsável pela comunicação do usuário com
-    o banco de dados. Ela permite criar, excluir, verificar a
-    existência e atualizar uma Conta
+    o banco de dados quanto ao controle de Conta. Ela permite
+    criar, excluir, ler e atualizar uma Conta.
 */
 
 class IBConta

@@ -41,7 +41,8 @@ class IFViagem {
         //! Dependência da IBViagem
         /*!
             Estabelece uma referência para a IBViagem como uma variável,
-            permitindo uma conexão com os métodos atuantes no banco de dados.
+            permitindo uma conexão com os métodos referentes a Viagem
+            atuantes no banco de dados.
             @param Referência à IBViagem a ser salva.
         */
         virtual void setCntrIBViagem(IBViagem*) = 0;
@@ -49,7 +50,8 @@ class IFViagem {
         //! Dependência da IFDestino
         /*!
             Estabelece uma referência para a IFDestino como uma variável,
-            permitindo uma conexão com os métodos atuantes em Destino.
+            permitindo uma conexão com os métodos referentes a Destino
+            atuantes em Destino.
             @param Referência à IFDestino a ser salva.
         */
         virtual void setCntrIFDestino(IFDestino*) = 0;
