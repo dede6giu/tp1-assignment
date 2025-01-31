@@ -91,6 +91,9 @@
 		<Unit filename="include/Modulos/MBDestino.hpp" />
 		<Unit filename="include/Modulos/MBHospedagem.hpp" />
 		<Unit filename="include/Modulos/MBViagem.hpp" />
+		<Unit filename="include/Modulos/MFAtividade.hpp" />
+		<Unit filename="include/Modulos/MFDestino.hpp" />
+		<Unit filename="include/Modulos/MFHospedagem.hpp" />
 		<Unit filename="include/Modulos/MFViagem.hpp" />
 		<Unit filename="include/Stubs.hpp" />
 		<Unit filename="include/Stubs/SBAutenticacao.hpp" />
@@ -134,6 +137,9 @@
 		<Unit filename="src/Modulos/MBDestino.cpp" />
 		<Unit filename="src/Modulos/MBHospedagem.cpp" />
 		<Unit filename="src/Modulos/MBViagem.cpp" />
+		<Unit filename="src/Modulos/MFAtividade.cpp" />
+		<Unit filename="src/Modulos/MFDestino.cpp" />
+		<Unit filename="src/Modulos/MFHospedagem.cpp" />
 		<Unit filename="src/Modulos/MFViagem.cpp" />
 		<Unit filename="src/Stubs/SBAutenticacao.cpp" />
 		<Unit filename="src/Stubs/SBConta.cpp" />
