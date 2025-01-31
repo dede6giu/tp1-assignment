@@ -1,5 +1,4 @@
 #include "../../include/Modulos/MFAtividade.hpp"
-#include "../../include/Modulos/MBAtividade.hpp"
 #include <stdexcept>
 #include <iostream>
 
@@ -370,8 +369,8 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
     cout << endl << "data, um horario, uma duracao, um preco,";
     cout << endl << "e uma avaliacao" << endl;
     cout << endl << "Tag sao identificadores unicos de 6 caracteres.";
-    cout << endl << "Nomes sao compostos de, no maximo, 30 caracteres" << endl;
     cout << endl << "Podem ser letras min e maiusculas, ou numeros." << endl;
+    cout << endl << "Nomes sao compostos de, no maximo, 30 caracteres" << endl;
     cout << endl << "Datas sao do tipo 'DD/MM/AA'." << endl;
     cout << endl << "Horarios sao do tipo 'HH:mm'." << endl;
     cout << endl << "Duracoes sao dadas em minutos. Max 360." << endl;
@@ -529,11 +528,11 @@ void MFAtividade::run(Codigo contaAutenticada, Codigo destinoAssociado)
                     bool sucesso = criarAtividade(contaAutenticada, destinoAssociado);
                     if (sucesso)
                     {
-                        cout << endl << "Atividade criado com sucesso.";
+                        cout << endl << "Atividade criada com sucesso.";
                     }
                     else
                     {
-                        cout << endl << "Atividade nao foi criado. Tente novamente.";
+                        cout << endl << "Atividade nao foi criada. Tente novamente.";
                     }
                 }
                 catch (const runtime_error &exp)

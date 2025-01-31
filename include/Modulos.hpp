@@ -10,6 +10,7 @@
 
 #include "Modulos/MFAtividade.hpp"
 #include "Modulos/MFDestino.hpp"
+#include "Modulos/MFHospedagem.hpp"
 #include "Modulos/MFViagem.hpp"
 
 #endif // MODULOS_HPP_INCLUDED
