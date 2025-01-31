@@ -2,17 +2,17 @@
 #define IFCONTROLE_HPP_INCLUDED
 
 #include "IFConta.hpp"
-#include "../Interfaces/IFAutenticacao.hpp"
-#include "Entidades/Conta.hpp"
+#include "IFAutenticacao.hpp"
+#include "IFDados.hpp"
 
 //! Interface Front Controle
 /*!
-    232002520 - implementação e documentação \n
+    232002520 - implementaÃ§Ã£o e documentaÃ§Ã£o \n
 
-    A IFControle é responsável pela parte de apresentação ao usuário
-    dos métodos relacionados ao controle geral do programa. Ela permite
-    a criação de uma nova conta, a autenticação de uma conta existente
-    e a saída do programa.
+    A IFControle Ã© responsÃ¡vel pela parte de apresentaÃ§Ã£o ao usuÃ¡rio
+    dos mÃ©todos relacionados ao controle geral do programa. Ela permite
+    a criaÃ§Ã£o de uma nova conta, a autenticaÃ§Ã£o de uma conta existente
+    e a saÃ­da do programa.
 */
 
 class IFControle {
@@ -20,33 +20,41 @@ class IFControle {
 
         //! Inicia IFControle
         /*!
-            Método que inicia a IFControle. O método, por padrão, pergunta
-            ao usuário se deseja criar uma nova conta, autenticar uma conta
+            MÃ©todo que inicia a IFControle. O mÃ©todo, por padrÃ£o, pergunta
+            ao usuÃ¡rio se deseja criar uma nova conta, autenticar uma conta
             existente ou sair do programa. \n
-            Se escolher criar uma nova conta, o sistema requisita todas as
-            informações necessárias para a criação de um objeto Conta e então
-            envia os resultados para o backend. Deve esclarecer ao usuário se
-            a operação falhou ou não. \n
-            Se escolher autenticar uma conta, o sistema requisita as informações
-            de autenticação (como login e senha) e tenta autenticar a conta. Deve
-            esclarecer ao usuário se a operação falhou ou não. \n
-            Se escolher sair do programa, a função retorna void.\n
+            Se escolher criar uma nova conta, o sistema envia o usuario para a
+            tela de criacao de conta manejada por IFConta. \n
+            Se escolher autenticar uma conta, o sistema envia o usuario para a
+            tela de autenticacao manejada por IFAutenticacao. Se a autenticacao
+            ocorrer com sucesso, o IFControle envia o usuario autenticado para
+            a tela do IFDados. Se o usuario, em algum momento, sair da tela do
+            IFDados, deve-se assumir que tal nao esta mais autenticado. \n
+            Se escolher sair do programa, a funÃ§Ã£o retorna void. \n
         */
         virtual void run() = 0;
 
-        //! Dependência da IFConta
+        //! DependÃªncia da IFConta
         /*!
-            Estabelece uma referência para a IFConta como uma variável,
-            permitindo uma conexão com os métodos atuantes na criação de contas.
-            @param Referência à IFConta a ser salva.
+            Estabelece uma referÃªncia para a IFConta como uma variÃ¡vel,
+            permitindo uma conexÃ£o com os mÃ©todos atuantes na criaÃ§Ã£o de contas.
+            @param ReferÃªncia Ã  IFConta a ser salva.
         */
         virtual void setCntrIFConta(IFConta*) = 0;
 
-        //! Dependência da IFAutenticacao
+        //! DependÃªncia da IFAutenticacao
         /*!
-            Estabelece uma referência para a IFAutenticacao como uma variável,
-            permitindo uma conexão com os métodos atuantes na autenticação de contas.
-            @param Referência à IFAutenticacao a ser salva.
+            Estabelece uma referÃªncia para a IFAutenticacao como uma variÃ¡vel,
+            permitindo uma conexÃ£o com os mÃ©todos atuantes na autenticaÃ§Ã£o de contas.
+            @param ReferÃªncia Ã  IFAutenticacao a ser salva.
+        */
+        virtual void setCntrIFAutenticacao(IFAutenticacao*) = 0;
+
+        //! DependÃªncia da IFDados
+        /*!
+            Estabelece uma referÃªncia para a IFDados como uma variÃ¡vel,
+            permitindo uma conexÃ£o com os mÃ©todos atuantes na interface.
+            @param ReferÃªncia Ã  IFAutenticacao a ser salva.
         */
         virtual void setCntrIFAutenticacao(IFAutenticacao*) = 0;
 
