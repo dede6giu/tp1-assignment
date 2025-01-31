@@ -15,10 +15,18 @@ class MFDados : public IFDados
 
 
     public:
-        bool run(Conta* Conta) = 0;
-        void setCntrIFConta(IFConta* cntrIFConta) = 0;
-        void setCntrIFvIAGEM(IFViagem* cntrIFViagem) = 0;
+        bool run(Codigo);
+        void setCntrIFConta(IFConta* cntrIFConta);
+        void setCntrIFViagem(IFViagem* cntrIFViagem);
 
 };
+
+inline void MFDados::setCntrIFConta(IFConta* cntrIFConta) {
+    this->cntrIFConta = cntrIFConta;
+}
+
+inline void MFDados::setCntrIFViagem(IFViagem* cntrIFViagem) {
+    this->cntrIFViagem = cntrIFViagem;
+}
 
 #endif // MFDADOS_HPP_INCLUDED

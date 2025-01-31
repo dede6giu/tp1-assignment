@@ -1,38 +1,53 @@
 #include "MFDados.hpp"
 #include <stdlib.h>
 #include <iostream>
+#include <string>
+#include <exception>
 
 using namespace std;
 
-bool MFDados::run(Conta* contaAutenticar){
-    while(true){
+void MFDados::run(Codigo contaAutenticada){
+    IFDestino* dep1 = new MFDestino();
+    IBConta* dep2 = new MBConta();
+    IBViagem* dep3 = new MBViagem();
+
+    cntrIFConta->setCntrIBConta(dep2);
+    cntrIFViagem->setCntrIBViagem(dep3);
+    cntrIFViagem->setCntrIFDestino(dep1);
+
+    bool operando = 1;
+    while(operando){
         system("cls");
         string aux;
-        cout << "Selecione uma das opcoes a seguir: " << endl;
-        cout << "0 - Gerenciar conta" << endl;
-        cout << "1 - Gerenciar viagens" << endl;
+        cout << endl << "Selecione uma das opcoes a seguir: ";
+        cout << endl << "0 - Sair da conta";
+        cout << endl << "1 - Gerenciar conta";
+        cout << endl << "2 - Gerenciar viagens";
         getline(cin, aux);
-
-        if(aux == "cancelar"){
-            return;
-        }else{
-            int entrada = int(aux);
-            switch(entrada){
-                case 0:
-                    cntrIFConta->run(Conta contaAutenticada);
-                    break;
-                case 1:
-                    cntrIFViagem->run(Conta contaAutenticada);
-                    break;
-            }
+        int entrada;
+        // string para int
+        try{
+            entrada = stoi(entrada);
+        }catch(const exception &exp){
+            entrada = -1;
+        }
+        switch(entrada){
+            case 0:
+                operando = 0;
+                break;
+            case 1:
+                bool exclusao = cntrIFConta->run(Codigo contaAutenticada);
+                operando = !exclusao;
+                break;
+            case 2:
+                cntrIFViagem->run(Codigo contaAutenticada);
+                break;
+            default:
+                cout << endl << "Operacao invalida. Selecione uma opcao valida.";
+                break;
         }
     }
-}
-
-void MFDados::setCntrIFConta(IFConta* cntrIFConta) {
-    this->cntrIFConta = cntrIFConta;
-}
-
-void MFDados::setCntrIFViagem(IFViagem* cntrIFViagem) {
-    this->cntrIFViagem = cntrIFViagem;
+    delete dep1;
+    delete dep2;
+    delete dep3;
 }

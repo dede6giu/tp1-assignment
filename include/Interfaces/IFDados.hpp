@@ -30,7 +30,7 @@ class IFDados
             imediatamente desautenticar a Conta (retornar void).
             @param Conta atualmente autenticada.
         */
-        virtual void run(Conta) = 0;
+        virtual void run(Codigo) = 0;
 
         //! Dependência da IFConta
         /*!
