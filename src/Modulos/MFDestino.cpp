@@ -46,13 +46,14 @@ bool MFDestino::editarDestino(Destino destinoAtual)
 {
     cout << endl << "=========================================";
     cout << endl << "                  EDITAR";
-    cout << endl << "0. Retornar";
-    cout << endl << "1. Nome";
-    cout << endl << "2. Data de inicio";
-    cout << endl << "3. Data de fim";
-    cout << endl << "4. Avaliacao";
+    cout << endl << "Operacoes disponiveis:";
+    cout << endl << "    0. Retornar";
+    cout << endl << "    1. Editar Nome";
+    cout << endl << "    2. Editar Data de inicio";
+    cout << endl << "    3. Editar Data de fim";
+    cout << endl << "    4. Editar Avaliacao";
     cout << endl << "=========================================";
-    cout << endl << "Qual valor deseja editar? ";
+    cout << endl << "Por favor, escolha uma operacao: ";
     string comando;
     getline(cin, comando);
     int resultado = lerInt(comando);

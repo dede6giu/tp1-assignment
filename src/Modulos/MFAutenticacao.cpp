@@ -1,37 +1,97 @@
-#include "MFAutenticacao.hpp"
+#include "../../include/Modulos/MFAutenticacao.hpp"
+#include "../../include/Modulos/MBConta.hpp"
 #include <stdlib.h>
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-bool MFAutenticacao::run(Conta* contaAutenticar){
+void MFAutenticacao::esperarInput()
+{
+    cout << endl << "Pressione Enter para continuar...";
+    string aux;
+    getline(cin, aux);
+    return;
+}
+
+bool MFAutenticacao::run(Conta* contaAutenticar)
+{
     IBConta* dep1 = new MBConta();
 
     cntrIBAutenticacao->setCntrIBConta(dep1);
 
-    bool retorno = 0;
-    while(true){
+    bool retorno = false;
+    while(true)
+    {
         system("cls");
 
-        string codigo, senha;
-        cout << "Forneca seu codigo e senha, se deseja retornar digite \"cancelar\"";
-        cout << "Digite seu codigo: ";
-        getline(cin, codigo);
-        cout << endl << "Digite sua senha: ";
-        getline(cin, senha)
-        if(codigo == "cancelar" || senha == "cancelar"){
-            break;
+        cout << endl << "=========================================";
+        cout << endl << "              AUTENTICACAO";
+        cout << endl << "Forneca um codigo e uma senha.";
+        cout << endl << "Se deseja retornar, digite 'cancelar'.";
+        cout << endl << "=========================================";
+
+        string codigoStr, senhaStr;
+        try
+        {
+            cout << endl <<  "Digite o codigo da conta: ";
+            string resultado;
+            getline(cin, resultado);
+            if (resultado == "cancelar")
+            {
+                cout << endl << "Operacao cancelada.";
+                esperarInput();
+                break;
+            }
+            Codigo aux1(resultado);
+            codigoStr = resultado;
+            cout << endl <<  "Digite a senha da conta: ";
+            getline(cin, resultado);
+            if (resultado == "cancelar")
+            {
+                cout << endl << "Operacao cancelada.";
+                esperarInput();
+                break;
+            }
+            Senha aux2(resultado);
+            senhaStr = resultado;
         }
+        catch (const invalid_argument &exp)
+        {
+            cout << endl << "Valor invalido.";
+            continue;
+        }
+        catch (const length_error &exp)
+        {
+            cout << endl << "Valor invalido.";
+            continue;
+        }
+
+        Codigo codigo(codigoStr);
+        Senha senha(senhaStr);
+        try
+        {
+            Conta aux(codigo, senha);
+        }
+        catch (const invalid_argument &exp)
+        {
+            cout << endl << "Valor invalido.";
+            continue;
+        }
+
         Conta contaFornecida(codigo, senha);
-        if (cntrIBConta->criar(contaFornecida)){
-            contaAutenticar->setValor(Codigo(contaAutenticar.getValorCodigo()));
-            contaAutenticar->setValor(Senha(contaAutenticar.getValorSenha()));
-            retorno = 1;
+        if (cntrIBAutenticacao->autenticar(contaFornecida))
+        {
+            contaAutenticar->setValor(Codigo(contaFornecida.getValorCodigo()));
+            contaAutenticar->setValor(Senha(contaFornecida.getValorSenha()));
+            retorno = true;
             break;
         }
-        else{
-            break;
+        else
+        {
+            cout << endl << "Credenciais invalidas.";
+            esperarInput();
+            continue;
         }
     }
 

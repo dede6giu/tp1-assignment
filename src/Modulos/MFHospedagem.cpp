@@ -43,12 +43,13 @@ bool MFHospedagem::editarHospedagem(Hospedagem hospedagemAtual)
 {
     cout << endl << "=========================================";
     cout << endl << "                  EDITAR";
-    cout << endl << "0. Retornar";
-    cout << endl << "1. Nome";
-    cout << endl << "2. Preco da diaria";
-    cout << endl << "3. Avaliacao";
+    cout << endl << "Operacoes disponiveis:";
+    cout << endl << "    0. Retornar";
+    cout << endl << "    1. Editar Nome";
+    cout << endl << "    2. Editar Preco da diaria";
+    cout << endl << "    3. Editar Avaliacao";
     cout << endl << "=========================================";
-    cout << endl << "Qual valor deseja editar? ";
+    cout << endl << "Por favor, escolha uma operacao: ";
     string comando;
     getline(cin, comando);
     int resultado = lerInt(comando);

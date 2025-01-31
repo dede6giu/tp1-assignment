@@ -36,13 +36,12 @@ class MBDestino : public IBDestino
         void setCntrIBHospedagem(IBHospedagem*);
 };
 
-
-void MBDestino::setCntrIBAtividade(IBAtividade* novo)
+inline void MBDestino::setCntrIBAtividade(IBAtividade* novo)
 {
     this->cntrIBAtividade = novo;
 }
 
-void MBDestino::setCntrIBHospedagem(IBHospedagem* novo)
+inline void MBDestino::setCntrIBHospedagem(IBHospedagem* novo)
 {
     this->cntrIBHospedagem = novo;
 }

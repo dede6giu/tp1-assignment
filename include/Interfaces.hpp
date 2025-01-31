@@ -11,6 +11,7 @@
 #include "Interfaces/IFAtividade.hpp"
 #include "Interfaces/IFAutenticacao.hpp"
 #include "Interfaces/IFConta.hpp"
+#include "Interfaces/IFControle.hpp"
 #include "Interfaces/IFDados.hpp"
 #include "Interfaces/IFDestino.hpp"
 #include "Interfaces/IFHospedagem.hpp"

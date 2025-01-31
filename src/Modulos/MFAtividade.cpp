@@ -46,15 +46,16 @@ bool MFAtividade::editarAtividade(Atividade atividadeAtual)
 {
     cout << endl << "=========================================";
     cout << endl << "                  EDITAR";
-    cout << endl << "0. Retornar";
-    cout << endl << "1. Nome";
-    cout << endl << "2. Data";
-    cout << endl << "3. Horario";
-    cout << endl << "4. Duracao";
-    cout << endl << "5. Preco";
-    cout << endl << "6. Avaliacao";
+    cout << endl << "Operacoes disponiveis:";
+    cout << endl << "    0. Retornar";
+    cout << endl << "    1. Editar Nome";
+    cout << endl << "    2. Editar Data";
+    cout << endl << "    3. Editar Horario";
+    cout << endl << "    4. Editar Duracao";
+    cout << endl << "    5. Editar Preco";
+    cout << endl << "    6. Editar Avaliacao";
     cout << endl << "=========================================";
-    cout << endl << "Qual valor deseja editar? ";
+    cout << endl << "Por favor, escolha uma operacao: ";
     string comando;
     getline(cin, comando);
     int resultado = lerInt(comando);
@@ -367,7 +368,7 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
     cout << endl << "              NOVA ATIVIDADE";
     cout << endl << "Uma Atividade possui um tag, um nome, uma";
     cout << endl << "data, um horario, uma duracao, um preco,";
-    cout << endl << "e uma avaliacao" << endl;
+    cout << endl << "e uma avaliacao." << endl;
     cout << endl << "Tag sao identificadores unicos de 6 caracteres.";
     cout << endl << "Podem ser letras min e maiusculas, ou numeros." << endl;
     cout << endl << "Nomes sao compostos de, no maximo, 30 caracteres" << endl;

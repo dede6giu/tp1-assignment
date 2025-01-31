@@ -28,17 +28,13 @@ MBAutenticacao::MBAutenticacao()
 MBAutenticacao::~MBAutenticacao()
 {
     sqlite3_close(banco);
+    delete cntrIBConta;
 }
 
 bool MBAutenticacao::autenticar(Conta contaAutenticar)
 {
-    IBViagem* dep1 = new MBViagem();
-    cntrIBConta->setCntrIBViagem(dep1);
-
     Codigo codigo(contaAutenticar.getValorCodigo());
-    if (!cntrIBConta->ler(codigo)) return false;
-
-    delete dep1;
+    // if (!cntrIBConta->ler(codigo)) return false;
 
     string comando = "SELECT Senha FROM Contas WHERE Codigo='";
     comando += contaAutenticar.getValorCodigo();

@@ -24,6 +24,9 @@ bool MBViagem::criar(Viagem novaViagem)
     // verifica se uma viagem com mesma tag ja existe
     if (MBViagem::ler(novaViagem)) return false;
 
+    // garante que a conta tem uma tabela
+    MBViagem::criar(Codigo(novaViagem.getValorCodigo()));
+
     string comando = "INSERT INTO ";
     comando += novaViagem.getValorCodigo();
     comando += " (Tag, Nome, Avaliacao) VALUES ('";

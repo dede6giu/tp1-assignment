@@ -1,5 +1,5 @@
 #include "../../include/Modulos/MBConta.hpp"
-#include "../../include/Modulos/MBDestino.hpp"
+#include "../../include/Modulos/MBViagem.hpp"
 
 #include <stdexcept>
 #include <iostream>
@@ -25,11 +25,14 @@ MBConta::MBConta()
     }
 
     delete errmsg;
+
+    cntrIBViagem = new MBViagem();
 }
 
 MBConta::~MBConta()
 {
     sqlite3_close(banco);
+    delete cntrIBViagem;
 }
 
 bool MBConta::criar(Conta novaConta)
@@ -59,11 +62,8 @@ bool MBConta::excluir(Codigo contaExcluir)
 {
     if (!MBConta::ler(contaExcluir)) return false;
 
-    IBDestino* dep1 = new MBDestino();
-    cntrIBViagem->setCntrIBDestino(dep1);
     // exclui viagens da conta
     cntrIBViagem->excluir(contaExcluir);
-    delete dep1;
 
     string comando = "DELETE FROM Contas WHERE Codigo='";
     comando += contaExcluir.getValor();

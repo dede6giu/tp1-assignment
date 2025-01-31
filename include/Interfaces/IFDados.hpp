@@ -1,7 +1,7 @@
 #ifndef IFDADOS_HPP_INCLUDED
 #define IFDADOS_HPP_INCLUDED
 
-#include "Entidades/Conta.hpp"
+#include "../Entidades/Conta.hpp"
 #include "IFAtividade.hpp"
 #include "IFConta.hpp"
 #include "IFDestino.hpp"
@@ -30,7 +30,7 @@ class IFDados
             imediatamente desautenticar a Conta (retornar void).
             @param Conta atualmente autenticada.
         */
-        virtual void run(Codigo) = 0;
+        virtual void run(Conta) = 0;
 
         //! Dependência da IFConta
         /*!

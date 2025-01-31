@@ -29,4 +29,9 @@ class MFHospedagem : public IFHospedagem
         void setCntrIBHospedagem(IBHospedagem*);
 };
 
+inline void MFHospedagem::setCntrIBHospedagem(IBHospedagem* novo)
+{
+    this->cntrIBHospedagem = novo;
+}
+
 #endif // MFHOSPEDAGEM_HPP_INCLUDED

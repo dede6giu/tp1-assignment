@@ -12,10 +12,11 @@ class MFAutenticacao : public IFAutenticacao
         IBAutenticacao* cntrIBAutenticacao;
 
     public:
-        bool run(Conta* Conta) = 0;
-        void setCntrIBAutenticacao(IBAutenticacao* cntrIBAutenticacao) = 0;
 
+        void esperarInput();
 
+        bool run(Conta*);
+        void setCntrIBAutenticacao(IBAutenticacao*);
 };
 
 inline void MFAutenticacao::setCntrIBAutenticacao(IBAutenticacao* cntrIBAutenticacao) {

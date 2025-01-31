@@ -54,9 +54,9 @@ class IFControle {
         /*!
             Estabelece uma referência para a IFDados como uma variável,
             permitindo uma conexão com os métodos atuantes na interface.
-            @param Referência à IFAutenticacao a ser salva.
+            @param Referência à IFDados a ser salva.
         */
-        virtual void setCntrIFAutenticacao(IFAutenticacao*) = 0;
+        virtual void setCntrIFDados(IFDados*) = 0;
 
         //! Destrutor Virtual
         virtual ~IFControle(){};

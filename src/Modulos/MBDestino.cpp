@@ -1,4 +1,6 @@
 #include "../../include/Modulos/MBDestino.hpp"
+#include "../../include/Modulos/MBAtividade.hpp"
+#include "../../include/Modulos/MBHospedagem.hpp"
 #include <stdexcept>
 
 using namespace std;
@@ -10,11 +12,15 @@ MBDestino::MBDestino()
     {
         throw runtime_error("Falha na abertura do banco de dados. O diretorio 'data/' existe?");
     }
+    cntrIBAtividade = new MBAtividade();
+    cntrIBHospedagem = new MBHospedagem();
 }
 
 MBDestino::~MBDestino()
 {
     sqlite3_close(banco);
+    delete cntrIBAtividade;
+    delete cntrIBHospedagem;
 }
 
 bool MBDestino::criar(Destino novoDestino)

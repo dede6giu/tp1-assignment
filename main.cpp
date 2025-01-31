@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 #include <exception>
-#include "include/Controladores.hpp"
-#include "include/Stubs.hpp"
 #include "include/Interfaces.hpp"
 #include "include/Modulos.hpp"
 
@@ -12,41 +10,28 @@ int main()
 {
     cout << "Hello World" << endl;
 
-    IFConta* cntrIFConta = new MFConta();
-    IBConta* cntrIBConta = new MBConta();
+    IFControle* cntrIFControle = new MFControle();
+    IFConta* dep1 = new MFConta();
+    IFDados* dep2 = new MFDados();
+    IFAutenticacao* dep3 = new MFAutenticacao();
 
-    cntrIFConta->setCntrIBConta(cntrIBConta);
+    cntrIFControle->setCntrIFConta(dep1);
+    cntrIFControle->setCntrIFDados(dep2);
+    cntrIFControle->setCntrIFAutenticacao(dep3);
 
-    bool resultado = false;
-
-    while (true)
+    try
     {
-        cout << endl << "Tela inicial do sistema." << endl;
-
-        try
-        {
-            resultado = cntrIFConta->criar();
-        }
-        catch (const runtime_error &exc)
-        {
-            cout << &exc << endl;
-            break;
-        }
-
-        if (resultado)
-        {
-            cout << endl << "Sucesso." << endl;
-            break;
-        }
-        else
-        {
-            cout << "Falha na criacao." << endl;
-            break;
-        }
+        cntrIFControle->run();
+    }
+    catch (const runtime_error &exp)
+    {
+        cout << &exp;
     }
 
-    delete cntrIFConta;
-    delete cntrIBConta;
+
+    delete dep1;
+    delete dep2;
+    delete dep3;
 
     return 0;
 }

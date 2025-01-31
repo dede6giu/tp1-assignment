@@ -1,4 +1,7 @@
-#include "MFDados.hpp"
+#include "../../include/Modulos/MFDados.hpp"
+#include "../../include/Modulos/MFDestino.hpp"
+#include "../../include/Modulos/MBConta.hpp"
+#include "../../include/Modulos/MBViagem.hpp"
 #include <stdlib.h>
 #include <iostream>
 #include <string>
@@ -6,7 +9,8 @@
 
 using namespace std;
 
-void MFDados::run(Codigo contaAutenticada){
+void MFDados::run(Conta contaAutenticada)
+{
     IFDestino* dep1 = new MFDestino();
     IBConta* dep2 = new MBConta();
     IBViagem* dep3 = new MBViagem();
@@ -16,31 +20,40 @@ void MFDados::run(Codigo contaAutenticada){
     cntrIFViagem->setCntrIFDestino(dep1);
 
     bool operando = 1;
-    while(operando){
+    while(operando)
+    {
         system("cls");
         string aux;
         cout << endl << "Selecione uma das opcoes a seguir: ";
         cout << endl << "0 - Sair da conta";
         cout << endl << "1 - Gerenciar conta";
         cout << endl << "2 - Gerenciar viagens";
+
+        // string para int
         getline(cin, aux);
         int entrada;
-        // string para int
-        try{
-            entrada = stoi(entrada);
-        }catch(const exception &exp){
+        try
+        {
+            entrada = stoi(aux);
+        }
+        catch (const exception &exp)
+        {
             entrada = -1;
         }
-        switch(entrada){
+
+        switch (entrada)
+        {
             case 0:
                 operando = 0;
                 break;
             case 1:
-                bool exclusao = cntrIFConta->run(Codigo contaAutenticada);
-                operando = !exclusao;
-                break;
+                {
+                    bool exclusao = cntrIFConta->run(contaAutenticada);
+                    operando = !exclusao;
+                    break;
+                }
             case 2:
-                cntrIFViagem->run(Codigo contaAutenticada);
+                cntrIFViagem->run(Codigo(contaAutenticada.getValorCodigo()));
                 break;
             default:
                 cout << endl << "Operacao invalida. Selecione uma opcao valida.";

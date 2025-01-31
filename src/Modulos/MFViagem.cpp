@@ -45,11 +45,12 @@ bool MFViagem::editarViagem(Viagem viagemAtual)
 {
     cout << endl << "=========================================";
     cout << endl << "                  EDITAR";
-    cout << endl << "0. Retornar";
-    cout << endl << "1. Nome";
-    cout << endl << "2. Avaliacao";
+    cout << endl << "Operacoes disponiveis:";
+    cout << endl << "    0. Retornar";
+    cout << endl << "    1. Editar Nome";
+    cout << endl << "    2. Editar Avaliacao";
     cout << endl << "=========================================";
-    cout << endl << "Qual valor deseja editar? ";
+    cout << endl << "Por favor, escolha uma operacao: ";
     string comando;
     getline(cin, comando);
     int resultado = lerInt(comando);
@@ -280,7 +281,6 @@ bool MFViagem::criarViagem(Codigo contaAutenticada)
     catch (const exception &exp)
     {
         cout << endl << "Valor invalido.";
-        esperarInput();
         return false;
     }
     cout << endl << "Forneca um nome para a Viagem:";
@@ -294,7 +294,6 @@ bool MFViagem::criarViagem(Codigo contaAutenticada)
     catch (const exception &exp)
     {
         cout << endl << "Valor invalido.";
-        esperarInput();
         return false;
     }
     cout << endl << "Forneca uma avaliacao para a Viagem: ";
@@ -308,7 +307,6 @@ bool MFViagem::criarViagem(Codigo contaAutenticada)
     catch (const exception &exp)
     {
         cout << endl << "Valor invalido.";
-        esperarInput();
         return false;
     }
 

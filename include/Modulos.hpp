@@ -9,6 +9,10 @@
 #include "Modulos/MBViagem.hpp"
 
 #include "Modulos/MFAtividade.hpp"
+#include "Modulos/MFAutenticacao.hpp"
+#include "Modulos/MFConta.hpp"
+#include "Modulos/MFControle.hpp"
+#include "Modulos/MFDados.hpp"
 #include "Modulos/MFDestino.hpp"
 #include "Modulos/MFHospedagem.hpp"
 #include "Modulos/MFViagem.hpp"

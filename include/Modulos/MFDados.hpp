@@ -3,19 +3,19 @@
 
 #include "../Interfaces/IFDados.hpp"
 
-
 /*!
     232002771 - implementação. \n
 */
 class MFDados : public IFDados
 {
     private:
+
         IFConta* cntrIFConta;
         IFViagem* cntrIFViagem;
 
-
     public:
-        bool run(Codigo);
+
+        void run(Conta);
         void setCntrIFConta(IFConta* cntrIFConta);
         void setCntrIFViagem(IFViagem* cntrIFViagem);
 
