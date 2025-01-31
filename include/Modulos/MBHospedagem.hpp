@@ -4,6 +4,9 @@
 #include "../Interfaces/IBHospedagem.hpp"
 #include <sqlite3.h>
 
+/*!
+    232013031 - Implementação.
+*/
 class MBHospedagem : public IBHospedagem
 {
     private:

@@ -113,6 +113,13 @@ class Hospedagem
         */
         inline int getValorDiaria() const {return this->diaria.getValor();}
 
+        //! inline std::string Hospedagem::getValorPreco() const
+        /*!
+            Retorna o objeto Dinheiro com o preço da hospedagem formatado.
+            @return objeto Dinheiro armazenado no objeto Hospedagem.
+        */
+        inline std::string getValorDiariaFormatado() const { return this->diaria.getValorFormatado(); }
+
         inline Codigo getTag()        const { return this->tag; }
         inline Codigo getTagDestino() const { return this->tagDestino; }
 

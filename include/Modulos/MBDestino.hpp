@@ -4,7 +4,10 @@
 #include "../Interfaces/IBDestino.hpp"
 #include <sqlite3.h>
 
-class MBDestino
+/*!
+    232013031 - Implementação.
+*/
+class MBDestino : public IBDestino
 {
     private:
 

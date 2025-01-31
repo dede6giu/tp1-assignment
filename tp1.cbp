@@ -92,11 +92,9 @@
 		<Unit filename="include/Modulos/MBHospedagem.hpp" />
 		<Unit filename="include/Modulos/MBViagem.hpp" />
 		<Unit filename="include/Modulos/MFAtividade.hpp" />
-		<Unit filename="include/Modulos/MFAutenticacao.hpp" />
-		<Unit filename="include/Modulos/MFConta.hpp" />
-		<Unit filename="include/Modulos/MFDados.hpp" />
 		<Unit filename="include/Modulos/MFDestino.hpp" />
 		<Unit filename="include/Modulos/MFHospedagem.hpp" />
+		<Unit filename="include/Modulos/MFViagem.hpp" />
 		<Unit filename="include/Stubs.hpp" />
 		<Unit filename="include/Stubs/SBAutenticacao.hpp" />
 		<Unit filename="include/Stubs/SBConta.hpp" />
@@ -115,14 +113,6 @@
 		<Unit filename="include/TU/TUNome.hpp" />
 		<Unit filename="include/TU/TUSenha.hpp" />
 		<Unit filename="include/TU/TUViagem.hpp" />
-		<Unit filename="libraries/sql/shell.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="libraries/sql/sqlite3.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="libraries/sql/sqlite3.h" />
-		<Unit filename="libraries/sql/sqlite3ext.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mainpage.dox" />
 		<Unit filename="src/Controladores/CIFAutenticacao.cpp" />
@@ -148,11 +138,9 @@
 		<Unit filename="src/Modulos/MBHospedagem.cpp" />
 		<Unit filename="src/Modulos/MBViagem.cpp" />
 		<Unit filename="src/Modulos/MFAtividade.cpp" />
-		<Unit filename="src/Modulos/MFAutenticacao.cpp" />
-		<Unit filename="src/Modulos/MFConta.cpp" />
-		<Unit filename="src/Modulos/MFDados.cpp" />
 		<Unit filename="src/Modulos/MFDestino.cpp" />
-		<Unit filename="src/Modulos/MFHopedagem.cpp" />
+		<Unit filename="src/Modulos/MFHospedagem.cpp" />
+		<Unit filename="src/Modulos/MFViagem.cpp" />
 		<Unit filename="src/Stubs/SBAutenticacao.cpp" />
 		<Unit filename="src/Stubs/SBConta.cpp" />
 		<Unit filename="src/Stubs/SBViagem.cpp" />
@@ -169,7 +157,6 @@
 		<Unit filename="src/TU/TUNome.cpp" />
 		<Unit filename="src/TU/TUSenha.cpp" />
 		<Unit filename="src/TU/TUViagem.cpp" />
-		<Unit filename="tests/unit.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

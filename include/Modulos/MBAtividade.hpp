@@ -4,6 +4,9 @@
 #include "../Interfaces/IBAtividade.hpp"
 #include <sqlite3.h>
 
+/*!
+    232013031 - Implementação.
+*/
 class MBAtividade : public IBAtividade
 {
     private:

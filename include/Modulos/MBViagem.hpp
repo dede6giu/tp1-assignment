@@ -4,6 +4,9 @@
 #include "../Interfaces/IBViagem.hpp"
 #include <sqlite3.h>
 
+/*!
+    232013031 - Implementação.
+*/
 class MBViagem : public IBViagem
 {
     private:

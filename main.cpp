@@ -4,7 +4,7 @@
 #include "include/Controladores.hpp"
 #include "include/Stubs.hpp"
 #include "include/Interfaces.hpp"
-#include "include/Modulos/MBConta.hpp"
+#include "include/Modulos.hpp"
 
 using namespace std;
 
@@ -12,10 +12,10 @@ int main()
 {
     cout << "Hello World" << endl;
 
-    IFConta* cntrIFConta = new CIFConta();
-    IBConta* mdlConta = new MBConta();
+    IFConta* cntrIFConta = new MFConta();
+    IBConta* cntrIBConta = new MBConta();
 
-    cntrIFConta->setCntrIBConta(mdlConta);
+    cntrIFConta->setCntrIBConta(cntrIBConta);
 
     bool resultado = false;
 
@@ -46,7 +46,7 @@ int main()
     }
 
     delete cntrIFConta;
-    delete mdlConta;
+    delete cntrIBConta;
 
     return 0;
 }

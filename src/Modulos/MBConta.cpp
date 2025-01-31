@@ -1,4 +1,6 @@
 #include "../../include/Modulos/MBConta.hpp"
+#include "../../include/Modulos/MBDestino.hpp"
+
 #include <stdexcept>
 #include <iostream>
 
@@ -57,8 +59,11 @@ bool MBConta::excluir(Codigo contaExcluir)
 {
     if (!MBConta::ler(contaExcluir)) return false;
 
+    IBDestino* dep1 = new MBDestino();
+    cntrIBViagem->setCntrIBDestino(dep1);
     // exclui viagens da conta
     cntrIBViagem->excluir(contaExcluir);
+    delete dep1;
 
     string comando = "DELETE FROM Contas WHERE Codigo='";
     comando += contaExcluir.getValor();
