@@ -1,5 +1,6 @@
 #include "../include/Modulos/MBAutenticacao.hpp"
 #include "../include/Modulos/MBConta.hpp"
+#include "../include/Modulos/MBViagem.hpp"
 #include <stdexcept>
 #include <iostream>
 
@@ -27,12 +28,13 @@ MBAutenticacao::MBAutenticacao()
 MBAutenticacao::~MBAutenticacao()
 {
     sqlite3_close(banco);
+    delete cntrIBConta;
 }
 
 bool MBAutenticacao::autenticar(Conta contaAutenticar)
 {
     Codigo codigo(contaAutenticar.getValorCodigo());
-    if (!cntrIBConta->ler(codigo)) return false;
+    // if (!cntrIBConta->ler(codigo)) return false;
 
     string comando = "SELECT Senha FROM Contas WHERE Codigo='";
     comando += contaAutenticar.getValorCodigo();

@@ -1,4 +1,6 @@
 #include "../../include/Modulos/MBConta.hpp"
+#include "../../include/Modulos/MBViagem.hpp"
+
 #include <stdexcept>
 #include <iostream>
 
@@ -23,11 +25,14 @@ MBConta::MBConta()
     }
 
     delete errmsg;
+
+    cntrIBViagem = new MBViagem();
 }
 
 MBConta::~MBConta()
 {
     sqlite3_close(banco);
+    delete cntrIBViagem;
 }
 
 bool MBConta::criar(Conta novaConta)

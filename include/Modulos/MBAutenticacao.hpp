@@ -4,12 +4,16 @@
 #include "../Interfaces/IBAutenticacao.hpp"
 #include <sqlite3.h>
 
+/*!
+    232013031 - Implementação.
+*/
 class MBAutenticacao : public IBAutenticacao
 {
     private:
         sqlite3* banco;
 
         IBConta* cntrIBConta;
+        bool setUp = false;
 
     public:
         MBAutenticacao();

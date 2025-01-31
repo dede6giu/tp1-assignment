@@ -1,5 +1,7 @@
 #include "../../include/Modulos/MBViagem.hpp"
+#include "../../include/Modulos/MBDestino.hpp"
 #include <stdexcept>
+#include <iostream>
 
 using namespace std;
 
@@ -10,11 +12,14 @@ MBViagem::MBViagem()
     {
         throw runtime_error("Falha na abertura do banco de dados. O diretorio 'data/' existe?");
     }
+
+    cntrIBDestino = new MBDestino();
 }
 
 MBViagem::~MBViagem()
 {
     sqlite3_close(banco);
+    delete cntrIBDestino;
 }
 
 bool MBViagem::criar(Viagem novaViagem)
@@ -22,12 +27,16 @@ bool MBViagem::criar(Viagem novaViagem)
     // verifica se uma viagem com mesma tag ja existe
     if (MBViagem::ler(novaViagem)) return false;
 
+    // garante que a conta tem uma tabela
+    MBViagem::criar(Codigo(novaViagem.getValorCodigo()));
+
     string comando = "INSERT INTO ";
     comando += novaViagem.getValorCodigo();
     comando += " (Tag, Nome, Avaliacao) VALUES ('";
-    comando += novaViagem.getTag().getValor(); comando += "', '";
-    comando += novaViagem.getValorNome();      comando += "', ";
-    comando += novaViagem.getValorAvaliacao(); comando += ");";
+    comando += novaViagem.getTag().getValor();            comando += "', '";
+    comando += novaViagem.getValorNome();                 comando += "', '";
+    comando += to_string(novaViagem.getValorAvaliacao()); comando += "');";
+    // cout << comando << endl;
 
     char* errmsg;
     int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
@@ -189,9 +198,9 @@ bool MBViagem::atualizar(Viagem viagemAtual, Avaliacao novoAvaliacao)
 
     string comando = "UPDATE ";
     comando += viagemAtual.getValorCodigo();
-    comando += " SET Avaliacao=";
-    comando += novoAvaliacao.getValor();
-    comando += " WHERE Tag='";
+    comando += " SET Avaliacao='";
+    comando += to_string(novoAvaliacao.getValor());
+    comando += "' WHERE Tag='";
     comando += viagemAtual.getTag().getValor();
     comando += "';";
 

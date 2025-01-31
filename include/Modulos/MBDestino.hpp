@@ -4,7 +4,10 @@
 #include "../Interfaces/IBDestino.hpp"
 #include <sqlite3.h>
 
-class MBDestino
+/*!
+    232013031 - Implementação.
+*/
+class MBDestino : public IBDestino
 {
     private:
 
@@ -33,13 +36,12 @@ class MBDestino
         void setCntrIBHospedagem(IBHospedagem*);
 };
 
-
-void MBDestino::setCntrIBAtividade(IBAtividade* novo)
+inline void MBDestino::setCntrIBAtividade(IBAtividade* novo)
 {
     this->cntrIBAtividade = novo;
 }
 
-void MBDestino::setCntrIBHospedagem(IBHospedagem* novo)
+inline void MBDestino::setCntrIBHospedagem(IBHospedagem* novo)
 {
     this->cntrIBHospedagem = novo;
 }

@@ -1,7 +1,7 @@
 #ifndef IFDADOS_HPP_INCLUDED
 #define IFDADOS_HPP_INCLUDED
 
-#include "Entidades/Conta.hpp"
+#include "../Entidades/Conta.hpp"
 #include "IFAtividade.hpp"
 #include "IFConta.hpp"
 #include "IFDestino.hpp"

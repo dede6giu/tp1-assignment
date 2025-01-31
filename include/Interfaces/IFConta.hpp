@@ -44,7 +44,7 @@ class IFConta
             @param Conta atualmente autenticada.
             @return Bool o usuário deletou a Conta.
         */
-        virtual bool run(Conta*) = 0;
+        virtual bool run(Conta) = 0;
 
         //! Dependência da IBConta
         /*!
