@@ -1,8 +1,8 @@
 #ifndef IFVIAGEM_HPP_INCLUDED
 #define IFVIAGEM_HPP_INCLUDED
 
-#include "IBViagem.hpp"
-#include "IFDestino.hpp"
+#include "../Interfaces/IBViagem.hpp"
+#include "../Interfaces/IFDestino.hpp"
 #include "Entidades/Conta.hpp"
 
 //! Interface Front Viagem

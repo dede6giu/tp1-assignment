@@ -18,4 +18,8 @@ class MFAutenticacao : public IFAutenticacao
 
 };
 
+inline void MFAutenticacao::setCntrIBAutenticacao(IBAutenticacao* cntrIBAutenticacao) {
+    this->cntrIBAutenticacao = cntrIBAutenticacao;
+}
+
 #endif // MFAUTENTICACAO_HPP_INCLUDEDE
