@@ -55,7 +55,7 @@ class IBHospedagem
         //! Exclui Hospedagens
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Exclui
-            da Conta associada todos os Hospedagem que possuem o Destino relacionado.
+            da Conta associada todos os Hospedagem relacionados ao Destino.
             Método só deve ser acionado durante a exclusão de Destino.
             @param Codigo da Conta.
             @param Codigo do Destino excluído.
@@ -73,7 +73,7 @@ class IBHospedagem
         //! Lê todos Hospedagem
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Busca
-            da Conta associada por todos Hospedagem que possuem o Destino relacionado.
+            da Conta associada por todos Hospedagem relacionados ao Destino.
             @param Codigo da Conta.
             @param Codigo do Destino.
             @return Retorna um vetor de Hospedagem com todos os Hospedagem cadastrados

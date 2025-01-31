@@ -57,8 +57,8 @@ class IBDestino
         //! Exclui Destinos
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo uma Viagem. Exclui
-            da Conta associada todos os Destino que possuem a Viagem relacionada.
-            Método só deve ser acionado durante a exclusão de Viagem.
+            da Conta associada todos os Destino relacionados ao Viagem. Método só
+            deve ser acionado durante a exclusão de Viagem.
             @param Codigo da Conta.
             @param Codigo da Viagem excluída.
         */
@@ -75,7 +75,7 @@ class IBDestino
         //! Lê todos Destino
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo uma Viagem. Busca
-            da Conta associada por todos Destino que possuem a Viagem relacionada.
+            da Conta associada por todos Destino relacionados ao Viagem.
             @param Codigo da Conta.
             @param Codigo da Viagem.
             @return Retorna um vetor de Destino com todos os Destino cadastrados

@@ -55,8 +55,8 @@ class IBAtividade
         //! Exclui Atividades
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Exclui
-            da Conta associada todas as Atividade que possuem o Destino relacionado.
-            Método só deve ser acionado durante a exclusão de Destino.
+            da Conta associada todas as Atividade relacionados ao Destino. Método só
+            deve ser acionado durante a exclusão de Destino.
             @param Codigo da Conta.
             @param Codigo do Destino excluído.
         */
@@ -73,7 +73,7 @@ class IBAtividade
         //! Lê todos Atividade
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Busca
-            da Conta associada por todos Atividade que possuem o Destino relacionado.
+            da Conta associada por todos Atividade relacionados ao Destino.
             @param Codigo da Conta.
             @param Codigo do Destino.
             @return Retorna um vetor de Atividade com todos os Atividade cadastrados
