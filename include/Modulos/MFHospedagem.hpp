@@ -5,6 +5,9 @@
 #include <string>
 #include <vector>
 
+/*!
+    232013031 - Implementação.
+*/
 class MFHospedagem : public IFHospedagem
 {
     private:

@@ -4,6 +4,9 @@
 #include "../Interfaces/IBAutenticacao.hpp"
 #include <sqlite3.h>
 
+/*!
+    232013031 - Implementação.
+*/
 class MBAutenticacao : public IBAutenticacao
 {
     private:
