@@ -8,6 +8,7 @@
 #include "Modulos/MBHospedagem.hpp"
 #include "Modulos/MBViagem.hpp"
 
+#include "Modulos/MFDestino.hpp"
 #include "Modulos/MFViagem.hpp"
 
 #endif // MODULOS_HPP_INCLUDED
