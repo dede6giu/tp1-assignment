@@ -31,17 +31,17 @@ class MFDestino : public IFDestino
         void setCntrIFAtividade(IFAtividade*);
 };
 
-void MFDestino::setCntrIBDestino(IBDestino* novo)
+inline void MFDestino::setCntrIBDestino(IBDestino* novo)
 {
     this->cntrIBDestino = novo;
 }
 
-void MFDestino::setCntrIFHospedagem(IFHospedagem* novo)
+inline void MFDestino::setCntrIFHospedagem(IFHospedagem* novo)
 {
     this->cntrIFHospedagem = novo;
 }
 
-void MFDestino::setCntrIFAtividade(IFAtividade* novo)
+inline void MFDestino::setCntrIFAtividade(IFAtividade* novo)
 {
     this->cntrIFAtividade = novo;
 }

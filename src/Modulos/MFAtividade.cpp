@@ -1,12 +1,11 @@
-#include "../../include/Modulos/MFDestino.hpp"
+#include "../../include/Modulos/MFAtividade.hpp"
 #include "../../include/Modulos/MBAtividade.hpp"
-#include "../../include/Modulos/MBHospedagem.hpp"
 #include <stdexcept>
 #include <iostream>
 
 using namespace std;
 
-int MFDestino::lerInt(std::string entrada)
+int MFAtividade::lerInt(std::string entrada)
 {
     try
     {
@@ -19,7 +18,7 @@ int MFDestino::lerInt(std::string entrada)
     }
 }
 
-void MFDestino::esperarInput()
+void MFAtividade::esperarInput()
 {
     cout << endl << "Pressione Enter para continuar...";
     string aux;
@@ -27,30 +26,34 @@ void MFDestino::esperarInput()
     return;
 }
 
-void MFDestino::printDestino(Destino destinoImprimir)
+void MFAtividade::printAtividade(Atividade atividadeImprimir)
 {
     cout << endl << "=========================================";
-    cout << endl << "                 DESTINO";
-    cout << endl << "      Tag: " << destinoImprimir.getTag().getValor();
-    cout << endl << "TagViagem: " << destinoImprimir.getTagViagem().getValor();
-    cout << endl << "     Nome: " << destinoImprimir.getValorNome();
-    cout << endl << "   Inicio: " << destinoImprimir.getValorInicio();
-    cout << endl << "      Fim: " << destinoImprimir.getValorFim();
-    cout << endl << "Avaliacao: ";
-    for (int i = 0; i < destinoImprimir.getValorAvaliacao(); i++)     cout << "*";
-    for (int i = 0; i < 5 - destinoImprimir.getValorAvaliacao(); i++) cout << "-";
+    cout << endl << "                ATIVIDADE";
+    cout << endl << "       Tag: " << atividadeImprimir.getTag().getValor();
+    cout << endl << "TagDestino: " << atividadeImprimir.getTagDestino().getValor();
+    cout << endl << "      Nome: " << atividadeImprimir.getValorNome();
+    cout << endl << "      Data: " << atividadeImprimir.getValorData();
+    cout << endl << "   Horario: " << atividadeImprimir.getValorHorario();
+    cout << endl << "   Duracao: " << atividadeImprimir.getValorDuracao() << " min";
+    cout << endl << "     Preco: R$" << atividadeImprimir.getValorPrecoFormatado();
+    cout << endl << " Avaliacao: ";
+    for (int i = 0; i < atividadeImprimir.getValorAvaliacao(); i++)     cout << "*";
+    for (int i = 0; i < 5 - atividadeImprimir.getValorAvaliacao(); i++) cout << "-";
     cout << endl << "=========================================";
 }
 
-bool MFDestino::editarDestino(Destino destinoAtual)
+bool MFAtividade::editarAtividade(Atividade atividadeAtual)
 {
     cout << endl << "=========================================";
     cout << endl << "                  EDITAR";
     cout << endl << "0. Retornar";
     cout << endl << "1. Nome";
-    cout << endl << "2. Data de inicio";
-    cout << endl << "3. Data de fim";
-    cout << endl << "4. Avaliacao";
+    cout << endl << "2. Data";
+    cout << endl << "3. Horario";
+    cout << endl << "4. Duracao";
+    cout << endl << "5. Preco";
+    cout << endl << "6. Avaliacao";
     cout << endl << "=========================================";
     cout << endl << "Qual valor deseja editar? ";
     string comando;
@@ -66,7 +69,7 @@ bool MFDestino::editarDestino(Destino destinoAtual)
             try
             {
                 Nome nomeNovo(comando);
-                if (cntrIBDestino->atualizar(destinoAtual, nomeNovo))
+                if (cntrIBAtividade->atualizar(atividadeAtual, nomeNovo))
                 {
                     return true;
                 }
@@ -81,19 +84,13 @@ bool MFDestino::editarDestino(Destino destinoAtual)
             }
             break;
         case 2:
-            cout << endl << "Qual a nova data de inicio?";
+            cout << endl << "Qual a nova data?";
             cout << endl << "DD/MM/AA" << endl;
             getline(cin, comando);
             try
             {
-                Data inicioNovo(comando);
-                if (inicioNovo > Data(destinoAtual.getValorFim()))
-                {
-                    cout << endl << "Data de inicio deve ser antes da data de fim";
-                    esperarInput();
-                    return false;
-                }
-                if (cntrIBDestino->atualizar(destinoAtual, inicioNovo, 0))
+                Data dataNovo(comando);
+                if (cntrIBAtividade->atualizar(atividadeAtual, dataNovo))
                 {
                     return true;
                 }
@@ -112,19 +109,13 @@ bool MFDestino::editarDestino(Destino destinoAtual)
             }
             break;
         case 3:
-            cout << endl << "Qual a nova data de fim?";
-            cout << endl << "DD/MM/AA" << endl;
+            cout << endl << "Qual o novo horario?";
+            cout << endl << "HH:mm" << endl;
             getline(cin, comando);
             try
             {
-                Data fimNovo(comando);
-                if (fimNovo < Data(destinoAtual.getValorInicio()))
-                {
-                    cout << endl << "Data de fim deve ser depois da data de inicio";
-                    esperarInput();
-                    return false;
-                }
-                if (cntrIBDestino->atualizar(destinoAtual, fimNovo, 1))
+                Horario horarioNovo(comando);
+                if (cntrIBAtividade->atualizar(atividadeAtual, horarioNovo))
                 {
                     return true;
                 }
@@ -143,6 +134,58 @@ bool MFDestino::editarDestino(Destino destinoAtual)
             }
             break;
         case 4:
+            cout << endl << "Qual a nova duracao?";
+            cout << endl << "De 0 a 360 minutos." << endl;
+            getline(cin, comando);
+            try
+            {
+                resultado = stoi(comando);
+                Duracao duracaoNovo(resultado);
+                if (cntrIBAtividade->atualizar(atividadeAtual, duracaoNovo))
+                {
+                    return true;
+                }
+                else
+                {
+                    throw runtime_error("Falha na operacao");
+                }
+            }
+            catch (const invalid_argument &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
+            catch (const length_error &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
+            break;
+        case 5:
+            cout << endl << "Qual o novo preco em centavos?";
+            cout << endl << "De 0 a 20000000." << endl;
+            getline(cin, comando);
+            try
+            {
+                resultado = stoi(comando);
+                Dinheiro precoNovo(resultado);
+                if (cntrIBAtividade->atualizar(atividadeAtual, precoNovo))
+                {
+                    return true;
+                }
+                else
+                {
+                    throw runtime_error("Falha na operacao");
+                }
+            }
+            catch (const invalid_argument &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
+            catch (const length_error &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
+            break;
+        case 6:
             cout << endl << "Qual a nova avaliacao?";
             cout << endl << "Avaliacao vai de 1 a 5, inclusivo" << endl;
             getline(cin, comando);
@@ -150,7 +193,7 @@ bool MFDestino::editarDestino(Destino destinoAtual)
             {
                 resultado = stoi(comando);
                 Avaliacao nomeAvaliacao(resultado);
-                if (cntrIBDestino->atualizar(destinoAtual, nomeAvaliacao))
+                if (cntrIBAtividade->atualizar(atividadeAtual, nomeAvaliacao))
                 {
                     return true;
                 }
@@ -178,24 +221,24 @@ bool MFDestino::editarDestino(Destino destinoAtual)
     return false;
 }
 
-bool MFDestino::processDestino()
+bool MFAtividade::processAtividade()
 {
-    bool atualizarDestino = false;
+    bool atualizarAtividade = false;
     int posicaoAtual = 0;
     while (true)
     {
-        int posicaoMaxima = destinoRegistrados.size();
+        int posicaoMaxima = atividadeRegistradas.size();
         posicaoAtual %= posicaoMaxima; // failsafe
         if (posicaoMaxima == 0)
         {
             // nenhuma viagem disponivel
-            atualizarDestino = true;
-            return atualizarDestino;
+            atualizarAtividade = true;
+            return atualizarAtividade;
         }
 
         system("cls");
 
-        printDestino(destinoRegistrados[posicaoAtual]);
+        printAtividade(atividadeRegistradas[posicaoAtual]);
         cout << endl << "Operacoes disponiveis:";
         cout << endl << "    0. Navegacao: Retornar";
         cout << endl << "    1. Navegacao: Anterior";
@@ -203,8 +246,6 @@ bool MFDestino::processDestino()
         cout << endl << "    3. Navegacao: Pesquisar Tag";
         cout << endl << "    4. Atual: Editar";
         cout << endl << "    5. Atual: Excluir";
-        cout << endl << "    6. Atual: Atividades Associadas";
-        cout << endl << "    7. Atual: Hospedagens Associadas";
         cout << endl << "=========================================";
         cout << endl << "Por favor, escolha uma operacao: ";
         string comando;
@@ -213,7 +254,7 @@ bool MFDestino::processDestino()
         switch (resultado)
         {
             case 0:
-                return atualizarDestino;
+                return atualizarAtividade;
             case 1:
                 posicaoAtual += posicaoMaxima-1;
                 posicaoAtual %= posicaoMaxima;
@@ -223,7 +264,7 @@ bool MFDestino::processDestino()
                 posicaoAtual %= posicaoMaxima;
                 break;
             case 3:
-                cout << endl << "Informe a tag do Destino desejado: ";
+                cout << endl << "Informe a tag da Atividade desejada: ";
                 getline(cin, comando);
                 try
                 {
@@ -231,7 +272,7 @@ bool MFDestino::processDestino()
                     int posicaoInicial = posicaoAtual;
                     for (int i = 0; i < posicaoMaxima; i++)
                     {
-                        if (destinoRegistrados[i].getTag().getValor() == tagFornecida.getValor())
+                        if (atividadeRegistradas[i].getTag().getValor() == tagFornecida.getValor())
                         {
                             posicaoAtual = i;
                             break;
@@ -255,10 +296,10 @@ bool MFDestino::processDestino()
                 }
                 break;
             case 4:
-                atualizarDestino = true;
+                atualizarAtividade = true;
                 try
                 {
-                    bool sucesso = editarDestino(destinoRegistrados[posicaoAtual]);
+                    bool sucesso = editarAtividade(atividadeRegistradas[posicaoAtual]);
                     if (sucesso)
                     {
                         cout << endl << "Alteracao realizada com sucesso.";
@@ -275,21 +316,20 @@ bool MFDestino::processDestino()
                     cout << endl << "Falha desconhecida durante a operacao. Tente novamente.";
                 }
                 esperarInput();
-                return atualizarDestino;
+                return atualizarAtividade;
             case 5:
-                cout << endl << "Deseja excluir esse Destino?";
-                cout << endl << "Isso excluira todas as Atividades e as Hospedagens";
-                cout << endl << "associados a esse Destino. Tem certeza disso? (S/n) ";
+                cout << endl << "Deseja excluir essa Atividade?";
+                cout << endl << "Tem certeza disso? (S/n) ";
                 getline(cin, comando);
                 if (comando == "S" || comando == "s")
                 {
-                    atualizarDestino = true;
+                    atualizarAtividade = true;
                     try
                     {
-                        if (cntrIBDestino->excluir(destinoRegistrados[posicaoAtual]))
+                        if (cntrIBAtividade->excluir(atividadeRegistradas[posicaoAtual]))
                         {
                             cout << endl << "Sucesso na operacao.";
-                            destinoRegistrados.erase(destinoRegistrados.begin() + posicaoAtual);
+                            atividadeRegistradas.erase(atividadeRegistradas.begin() + posicaoAtual);
                             posicaoMaxima--;
                             posicaoAtual %= posicaoMaxima;
                         }
@@ -297,14 +337,14 @@ bool MFDestino::processDestino()
                         {
                             cout << endl << "Falha na operacao.";
                             esperarInput();
-                            return atualizarDestino;
+                            return atualizarAtividade;
                         }
                     }
                     catch (const exception &exp)
                     {
                         cout << endl << "Erro no sistema." << endl;
                         esperarInput();
-                        return atualizarDestino;
+                        return atualizarAtividade;
                     }
                 }
                 else
@@ -312,14 +352,6 @@ bool MFDestino::processDestino()
                     cout << endl << "Operacao cancelada.";
                 }
                 esperarInput();
-                break;
-            case 6:
-                cntrIFAtividade->run(Codigo(destinoRegistrados[posicaoAtual].getValorCodigo()),
-                                   destinoRegistrados[posicaoAtual].getTag());
-                break;
-            case 7:
-                cntrIFHospedagem->run(Codigo(destinoRegistrados[posicaoAtual].getValorCodigo()),
-                                   destinoRegistrados[posicaoAtual].getTag());
                 break;
             case -1:
             default:
@@ -329,20 +361,25 @@ bool MFDestino::processDestino()
     }
 }
 
-bool MFDestino::criarDestino(Codigo contaAutenticada, Codigo viagemAssociada)
+bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociado)
 {
     system("cls");
     cout << endl << "=========================================";
-    cout << endl << "               NOVO DESTINO";
-    cout << endl << "Um Destino possui um tag, um nome, um inicio";
-    cout << endl << "um fim e uma avaliacao" << endl;
+    cout << endl << "              NOVA ATIVIDADE";
+    cout << endl << "Uma Atividade possui um tag, um nome, uma";
+    cout << endl << "data, um horario, uma duracao, um preco,";
+    cout << endl << "e uma avaliacao" << endl;
     cout << endl << "Tag sao identificadores unicos de 6 caracteres.";
-    cout << endl << "Podem ser letras min e maiusculas, ou numeros." << endl;
     cout << endl << "Nomes sao compostos de, no maximo, 30 caracteres" << endl;
-    cout << endl << "Inicio e fim sao ambos datas 'DD/MM/AA'." << endl;
+    cout << endl << "Podem ser letras min e maiusculas, ou numeros." << endl;
+    cout << endl << "Datas sao do tipo 'DD/MM/AA'." << endl;
+    cout << endl << "Horarios sao do tipo 'HH:mm'." << endl;
+    cout << endl << "Duracoes sao dadas em minutos. Max 360." << endl;
+    cout << endl << "Preco sao dados em centavos, e sao, no";
+    cout << endl << "maximo, 20000000, ou seja, R$200.000,00." << endl;
     cout << endl << "Avaliacao vai de 1 a 5, inclusivo" << endl;
     cout << endl << "=========================================";
-    cout << endl << "Forneca um tag para o Destino:";
+    cout << endl << "Forneca um tag para a Atividade:";
     cout << endl << "    6v" << endl;
     string tag;
     getline(cin, tag);
@@ -356,7 +393,7 @@ bool MFDestino::criarDestino(Codigo contaAutenticada, Codigo viagemAssociada)
         esperarInput();
         return false;
     }
-    cout << endl << "Forneca um nome para o Destino:";
+    cout << endl << "Forneca um nome para a Atividade:";
     cout << endl << "                           30v" << endl;
     string nome;
     getline(cin, nome);
@@ -370,13 +407,13 @@ bool MFDestino::criarDestino(Codigo contaAutenticada, Codigo viagemAssociada)
         esperarInput();
         return false;
     }
-    cout << endl << "Forneca uma data de inicio para o Destino:";
+    cout << endl << "Forneca uma data para a Atividade:";
     cout << endl << "DD/MM/AA" << endl;
-    string inicio;
-    getline(cin, inicio);
+    string data;
+    getline(cin, data);
     try
     {
-        Data aux(inicio);
+        Data aux(data);
     }
     catch (const exception &exp)
     {
@@ -384,13 +421,13 @@ bool MFDestino::criarDestino(Codigo contaAutenticada, Codigo viagemAssociada)
         esperarInput();
         return false;
     }
-    cout << endl << "Forneca uma data de fim para o Destino:";
-    cout << endl << "DD/MM/AA" << endl;
-    string fim;
-    getline(cin, fim);
+    cout << endl << "Forneca um horario para a Atividade:";
+    cout << endl << "HH:mm" << endl;
+    string horario;
+    getline(cin, horario);
     try
     {
-        Data aux(fim);
+        Horario aux(horario);
     }
     catch (const exception &exp)
     {
@@ -398,17 +435,35 @@ bool MFDestino::criarDestino(Codigo contaAutenticada, Codigo viagemAssociada)
         esperarInput();
         return false;
     }
+    cout << endl << "Forneca uma duracao para a Atividade: ";
+    string duracaoStr;
+    getline(cin, duracaoStr);
+    try
     {
-        Data aux1(inicio);
-        Data aux2(fim);
-        if (aux2 > aux1)
-        {
-            cout << endl << "Data de fim deve ser depois do inicio.";
-            esperarInput();
-            return false;
-        }
+        int duracao = stoi(duracaoStr);
+        Dinheiro aux(duracao);
     }
-    cout << endl << "Forneca uma avaliacao para o Destino: ";
+    catch (const exception &exp)
+    {
+        cout << endl << "Valor invalido.";
+        esperarInput();
+        return false;
+    }
+    cout << endl << "Forneca um preco em centavos para a Atividade: ";
+    string precoStr;
+    getline(cin, precoStr);
+    try
+    {
+        int preco = stoi(precoStr);
+        Dinheiro aux(preco);
+    }
+    catch (const exception &exp)
+    {
+        cout << endl << "Valor invalido.";
+        esperarInput();
+        return false;
+    }
+    cout << endl << "Forneca uma avaliacao para a Atividade: ";
     string avaliacaoStr;
     getline(cin, avaliacaoStr);
     try
@@ -423,14 +478,16 @@ bool MFDestino::criarDestino(Codigo contaAutenticada, Codigo viagemAssociada)
         return false;
     }
 
-    Destino novoDestino(contaAutenticada,
-                        Nome(nome),
-                        Data(inicio),
-                        Data(fim),
-                        Avaliacao(stoi(avaliacaoStr)),
-                        Codigo(tag),
-                        viagemAssociada);
-    if (cntrIBDestino->criar(novoDestino))
+    Atividade novoAtividade(contaAutenticada,
+                            Nome(nome),
+                            Data(data),
+                            Horario(horario),
+                            Duracao(stoi(duracaoStr)),
+                            Dinheiro(stoi(precoStr)),
+                            Avaliacao(stoi(avaliacaoStr)),
+                            Codigo(tag),
+                            destinoAssociado);
+    if (cntrIBAtividade->criar(novoAtividade))
     {
         return true;
     }
@@ -440,33 +497,25 @@ bool MFDestino::criarDestino(Codigo contaAutenticada, Codigo viagemAssociada)
     }
 }
 
-void MFDestino::run(Codigo contaAutenticada, Codigo viagemAssociada)
+void MFAtividade::run(Codigo contaAutenticada, Codigo destinoAssociado)
 {
-    IBAtividade* dep1 = new MBAtividade();
-    IBHospedagem* dep2 = new MBHospedagem();
-
-    cntrIBDestino->setCntrIBAtividade(dep1);
-    cntrIBDestino->setCntrIBHospedagem(dep2);
-    cntrIFAtividade->setCntrIBAtividade(dep1);
-    cntrIFHospedagem->setCntrIBHospedagem(dep2);
-
-    bool atualizarDestino = true;
+    bool atualizarAtividade = true;
     bool operando = true;
     while (operando)
     {
         system("cls");
-        if (atualizarDestino)
+        if (atualizarAtividade)
         {
-            destinoRegistrados = cntrIBDestino->ler(contaAutenticada, viagemAssociada);
-            atualizarDestino = false;
+            atividadeRegistradas = cntrIBAtividade->ler(contaAutenticada, destinoAssociado);
+            atualizarAtividade = false;
         }
         cout << endl << "=========================================";
-        cout << endl << "                 DESTINOS";
-        cout << endl << "             DA VIAGEM "; cout << viagemAssociada.getValor();
+        cout << endl << "               ATIVIDADES";
+        cout << endl << "           DO DESTINO "; cout << destinoAssociado.getValor();
         cout << endl << "Operacoes disponiveis:";
         cout << endl << "    0. Retornar";
-        cout << endl << "    1. Criar novo Destino";
-        cout << endl << "    2. Manejar Destinos registrados";
+        cout << endl << "    1. Criar nova Atividade";
+        cout << endl << "    2. Manejar Atividade registradas";
         cout << endl << "=========================================";
         cout << endl << "Por favor, escolha uma operacao: ";
         string comando;
@@ -477,14 +526,14 @@ void MFDestino::run(Codigo contaAutenticada, Codigo viagemAssociada)
             case 1:
                 try
                 {
-                    bool sucesso = criarDestino(contaAutenticada, viagemAssociada);
+                    bool sucesso = criarAtividade(contaAutenticada, destinoAssociado);
                     if (sucesso)
                     {
-                        cout << endl << "Destino criado com sucesso.";
+                        cout << endl << "Atividade criado com sucesso.";
                     }
                     else
                     {
-                        cout << endl << "Destino nao foi criado. Tente novamente.";
+                        cout << endl << "Atividade nao foi criado. Tente novamente.";
                     }
                 }
                 catch (const runtime_error &exp)
@@ -494,13 +543,13 @@ void MFDestino::run(Codigo contaAutenticada, Codigo viagemAssociada)
                 esperarInput();
                 break;
             case 2:
-                if ((int)destinoRegistrados.size() == 0)
+                if ((int)atividadeRegistradas.size() == 0)
                 {
-                    cout << endl << "Nao ha destinos registrados";
+                    cout << endl << "Nao ha atividades registradas";
                     esperarInput();
                     break;
                 }
-                atualizarDestino = processDestino();
+                atualizarAtividade = processAtividade();
                 break;
 
             case 0:
@@ -513,8 +562,5 @@ void MFDestino::run(Codigo contaAutenticada, Codigo viagemAssociada)
                 break;
         }
     }
-
-    delete dep1;
-    delete dep2;
     return;
 }

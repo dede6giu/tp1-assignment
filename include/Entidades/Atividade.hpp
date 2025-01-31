@@ -166,6 +166,13 @@ class Atividade {
         */
         inline int getValorPreco() const { return this->preco.getValor(); }
 
+        //! inline std::string Atividade::getValorPreco() const
+        /*!
+            Retorna o objeto Dinheiro com o preço da atividade formatado.
+            @return objeto Dinheiro armazenado no objeto Atividade.
+        */
+        inline std::string getValorPrecoFormatado() const { return this->preco.getValorFormatado(); }
+
         //! inline int getValorAvaliacao() const
         /*!
             Retorna o objeto Avaliacao da atividade.

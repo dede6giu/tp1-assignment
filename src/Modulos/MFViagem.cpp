@@ -1,6 +1,6 @@
 #include "../../include/Modulos/MFViagem.hpp"
 #include "../../include/Modulos/MBDestino.hpp"
-//#include "../../include/Modulos/MFAtividade.hpp"
+#include "../../include/Modulos/MFAtividade.hpp"
 //#include "../../include/Modulos/MFHospedagem.hpp"
 #include <stdlib.h>
 #include <stdexcept>

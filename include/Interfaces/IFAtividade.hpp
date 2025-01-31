@@ -36,7 +36,7 @@ class IFAtividade
             @param Conta atualmente autenticada.
             @param Codigo Tag do Destino associado.
         */
-        virtual void run(Conta, Codigo) = 0;
+        virtual void run(Codigo, Codigo) = 0;
 
         //! Dependência da IBAtividade
         /*!
