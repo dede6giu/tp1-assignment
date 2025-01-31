@@ -10,6 +10,7 @@ class MBAutenticacao : public IBAutenticacao
         sqlite3* banco;
 
         IBConta* cntrIBConta;
+        bool setUp = false;
 
     public:
         MBAutenticacao();

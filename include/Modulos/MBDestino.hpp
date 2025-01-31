@@ -4,7 +4,7 @@
 #include "../Interfaces/IBDestino.hpp"
 #include <sqlite3.h>
 
-class MBDestino
+class MBDestino : public IBDestino
 {
     private:
 

@@ -39,7 +39,7 @@ class IFDestino
             @param Conta atualmente autenticada.
             @param Codigo Tag da Viagem associada.
         */
-        virtual void run(Conta, Codigo) = 0;
+        virtual void run(Codigo, Codigo) = 0;
 
         //! Dependência da IBDestino
         /*!

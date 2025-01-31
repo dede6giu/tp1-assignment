@@ -1,4 +1,6 @@
 #include "../../include/Modulos/MBViagem.hpp"
+#include "../../include/Modulos/MBAtividade.hpp"
+#include "../../include/Modulos/MBHospedagem.hpp"
 #include <stdexcept>
 
 using namespace std;
@@ -60,8 +62,14 @@ bool MBViagem::excluir(Viagem viagemExcluir)
     // checa se a viagem existe
     if (!MBViagem::ler(viagemExcluir)) return false;
 
+    IBAtividade* dep1 = new MBAtividade();
+    IBHospedagem* dep2 = new MBHospedagem();
+    cntrIBDestino->setCntrIBAtividade(dep1);
+    cntrIBDestino->setCntrIBHospedagem(dep2);
     // exclui destinos associados
     cntrIBDestino->excluir(Codigo(viagemExcluir.getValorCodigo()), viagemExcluir.getTag());
+    delete dep1;
+    delete dep2;
 
     string comando = "DELETE FROM ";
     comando += viagemExcluir.getValorCodigo();
@@ -81,8 +89,14 @@ bool MBViagem::excluir(Viagem viagemExcluir)
 
 void MBViagem::excluir(Codigo tabelaExcluir)
 {
+    IBAtividade* dep1 = new MBAtividade();
+    IBHospedagem* dep2 = new MBHospedagem();
+    cntrIBDestino->setCntrIBAtividade(dep1);
+    cntrIBDestino->setCntrIBHospedagem(dep2);
     // exclui destinos da conta
     cntrIBDestino->excluir(tabelaExcluir);
+    delete dep1;
+    delete dep2;
 
     string comando = "DROP TABLE IF EXISTS ";
     comando += tabelaExcluir.getValor();
