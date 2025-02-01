@@ -22,35 +22,40 @@
 class Atividade {
     private:
 
+        //! Tag da atividade
+        /*! Atributo Codigo que armazena a tag (no contexto do bando de dados) da atividade. */
         Codigo tag;
+        //! Tag do destino relacionado à atividade
+        /*! Atributo Codigo que armazena a tag (no contexto do bando de dados) do destino relacionado à atividade. */
         Codigo tagDestino;
 
-        //! Codigo (atributo)
-        /*! Atributo da classe Codigo. */
+
+        //! Código da atividade
+        /*! Atributo Codigo referente ao código da Atividade. */
         Codigo codigo;
 
-        //! Nome (atributo)
-        /*! Atributo da classe Nome. */
+        //! Nome da atividade
+        /*! Atributo Nome referente ao nome da Atividade. */
         Nome nome;
 
-        //! Data (atributo)
-        /*! Atributo da classe Data. */
+        //! Data da atividade
+        /*! Atributo Data referente à data da Atividade. */
         Data data;
 
-        //! Horario (atributo)
-        /*! Atributo da classe Horario. */
+        //! Horário da atividade
+        /*! Atributo Horario referente ao horário da Atividade. */
         Horario horario;
 
-        //! Duracao (atributo)
-        /*! Atributo da classe Duracao. */
+        //! Duração da atividade
+        /*! Atributo referente á Duração da Atividade. */
         Duracao duracao;
 
-        //! Dinheiro (atributo)
-        /*! Atributo da classe Dinheiro. */
+        //! Custo da atividade
+        /*! Atributo Dinheiro referente ao custo da Atividade. */
         Dinheiro preco;
 
-        //! Avaliacao (atributo)
-        /*! Atributo da classe Avaliacao. */
+        //! Avaliação da atividade
+        /*! Atributo Avaliacao referente à avaliação da Atividade. */
         Avaliacao avaliacao;
 
     public:
@@ -77,113 +82,124 @@ class Atividade {
 
         //! Atividade::setValor(const Codigo&)
         /*!
-            Recebe um objeto Codigo e armazena no objeto Atividade.
+            Recebe um Codigo e armazena no objeto Atividade.
             @param const Codigo.
         */
         void setValor(const Codigo &);
 
         //! Atividade::setValor(const Nome&)
         /*!
-            Recebe um objeto Nome e armazena no objeto Atividade.
+            Recebe um Nome e armazena no objeto Atividade.
             @param const Nome.
         */
         void setValor(const Nome &);
 
         //! Atividade::setValor(const Data&)
         /*!
-            Recebe um objeto Data e armazena no objeto Atividade.
+            Recebe um Data e armazena no objeto Atividade.
             @param const Data.
         */
         void setValor(const Data &);
 
         //! Atividade::setValor(const Horario&)
         /*!
-            Recebe um objeto Horario e armazena no objeto Atividade.
+            Recebe um Horario e armazena no objeto Atividade.
             @param const Horario.
         */
         void setValor(const Horario &);
 
         //! Atividade::setValor(const Duracao&)
         /*!
-            Recebe um objeto Duracao e armazena no objeto Atividade.
+            Recebe um Duracao e armazena no objeto Atividade.
             @param const Duracao.
         */
         void setValor(const Duracao &);
 
         //! Atividade::setValor(const Dinheiro&)
         /*!
-            Recebe um objeto Dinheiro e armazena no objeto Atividade.
+            Recebe um Dinheiro e armazena no objeto Atividade.
             @param const Dinheiro.
         */
         void setValor(const Dinheiro &);
 
         //! Atividade::setValor(const Avaliacao&)
         /*!
-            Recebe um objeto Avaliacao e armazena no objeto Atividade.
+            Recebe um Avaliacao e armazena no objeto Atividade.
             @param const Avaliacao.
         */
         void setValor(const Avaliacao &);
 
         //! inline std::string Atividade::getValorCodigo() const
         /*!
-            Retorna o objeto Codigo da atividade.
-            @return objeto Codigo armazenado no objeto Atividade.
+            Retorna o Codigo da atividade.
+            @return Codigo armazenado no Atividade.
         */
         inline std::string getValorCodigo() const { return this->codigo.getValor(); }
 
         //! inline std::string Atividade::getValorNome() const
         /*!
-            Retorna o objeto Nome da atividade.
-            @return objeto Nome armazenado no objeto Atividade.
+            Retorna o Nome da atividade.
+            @return Nome armazenado no Atividade.
         */
         inline std::string getValorNome() const { return this->nome.getValor(); }
 
         //! inline std::string Atividade::getValorData() const
         /*!
-            Retorna o objeto Data da atividade.
-            @return objeto Data armazenado no objeto Atividade.
+            Retorna o Data da atividade.
+            @return Data armazenado no Atividade.
         */
         inline std::string getValorData() const { return this->data.getValor(); }
 
         //! inline std::string Atividade::getValorHorario() const
         /*!
-            Retorna o objeto Horario da atividade.
-            @return objeto Horario armazenado no objeto Atividade.
+            Retorna o Horario da atividade.
+            @return Horario armazenado no Atividade.
         */
         inline std::string getValorHorario() const { return this->horario.getValor(); }
 
         //! inline int Atividade::getValorDuracao() const
         /*!
-            Retorna o objeto Duracao da atividade.
-            @return objeto Duracao armazenado no objeto Atividade.
+            Retorna o Duracao da atividade.
+            @return Duracao armazenado no Atividade.
         */
         inline int getValorDuracao() const { return this->duracao.getValor(); }
 
         //! inline int Atividade::getValorPreco() const
         /*!
-            Retorna o objeto Dinheiro com o preço da atividade.
-            @return objeto Dinheiro armazenado no objeto Atividade.
+            Retorna o Dinheiro com o preço da atividade.
+            @return Dinheiro armazenado no Atividade.
         */
         inline int getValorPreco() const { return this->preco.getValor(); }
 
         //! inline std::string Atividade::getValorPreco() const
         /*!
-            Retorna o objeto Dinheiro com o preço da atividade formatado.
-            @return objeto Dinheiro armazenado no objeto Atividade.
+            Retorna o Dinheiro com o preço da atividade formatado.
+            @return Dinheiro armazenado no Atividade.
         */
         inline std::string getValorPrecoFormatado() const { return this->preco.getValorFormatado(); }
 
         //! inline int getValorAvaliacao() const
         /*!
-            Retorna o objeto Avaliacao da atividade.
-            @return objeto Avaliacao armazenado no objeto Atividade.
+            Retorna o Avaliacao da atividade.
+            @return Avaliacao armazenado no Atividade.
         */
         inline int getValorAvaliacao() const { return this->avaliacao.getValor(); }
 
+
+        //! inline Atividade::getTag()
+        /* Retorna a tag do objeto Atividade. */
         inline Codigo getTag()        const { return this->tag; }
+
+        //! inline Atividade::getTagDestino()
+        /* Retorna a tag do Destino relacionado ao objeto Atividade. */
         inline Codigo getTagDestino() const { return this->tagDestino; }
 
+        //! void Atividade::setTag(Codigo&)
+        /* Recebe Codigo& e armazena como nova tag. */
         void setTag(Codigo&);
+
+        //! void Atividade::setTagDestino(Codigo&)
+        /* Recebe Codigo& e armazena como nova tag do Destino relacionado. */
         void setTagDestino(Codigo&);
 };
 

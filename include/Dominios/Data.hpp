@@ -18,16 +18,16 @@ class Data
 {
     private:
 
-        //! Um int
-        /*! Atributo inteiro que armazena o dia. */
+        //! Valor de dia
+        /*! Atributo inteiro referente ao dia. */
         int dia;
 
-        //! Um int
-        /*! Atributo inteiro que armazena o mês.*/
+        //! Valor de mês
+        /*! Atributo inteiro referente ao mês.*/
         int mes;
 
-        //! Um int
-        /*! Atributo inteiro que armazena o ano.*/
+        //! Valor de ano
+        /*! Atributo inteiro referente ao ano.*/
         int ano;
 
         //! Data::validar(int, int, int)
@@ -98,8 +98,9 @@ class Data
 
         //! bool Data::setValor(std::string)
         /*!
-            Recebe uma string com o novo valor do objeto data,
-            e guarda esse valor na classe, se a verificação tiver sucesso.
+            Recebe uma string com os novos valores do objeto data e,
+            se a verificação tiver sucesso, separa, converte e atribui
+            esses valores a dia, mês e ano.
             @param string data no formato "DD/MM/AA"
         */
         void setValor(std::string);

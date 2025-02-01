@@ -15,12 +15,12 @@
 class Horario
 {
     private:
-        //! Um int
-        /*! Armazena o valor das horas */
+        //! Valor de horas
+        /*! Atributo inteiro que armazena o valor das horas */
         int horas;
 
-        //! Um int
-        /*! Armazena o valor dos minutos */
+        //! Valor de minutos
+        /*! Atributo inteiro que armazena o valor dos minutos */
         int minutos;
 
         //! bool Horario::validar(std::string)
@@ -32,14 +32,14 @@ class Horario
 
         //! Horario::validarHoras()
         /*!
-            Verifica se o valor de um int está no intervalo 0 e 24 (24 não incluso).
+            Recebe um int e verifica se está no intervalo 0 e 24 (24 não incluso).
             @param int a ser verificado.
         */
         void validarHoras(int);
 
         //! Horario::validarHoras()
         /*!
-            Verifica se o valor de um int está entre 0 e 60 (60 não incluso).
+            Recebe um int e verifica se está entre 0 e 60 (60 não incluso).
             @param int a ser verificado.
         */
         void validarMinutos(int);
@@ -91,8 +91,8 @@ class Horario
 
         //! Horario::getValor()
         /*!
-            Retorna std::string com o horário, no formato "HH:mm".
-            @return std::string com o horário.
+            Retorna string com o horário, no formato "HH:mm".
+            @return string com valor formatado do horário.
         */
         std::string getValor() const;
 

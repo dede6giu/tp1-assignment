@@ -6,15 +6,16 @@
     Dominio Avaliacao, inteiro válido entre 0 e 5 inclusivo. \n
     232029274 - implementação. \n
     232002771 - documentação. \n
-    232013031 - construtores, exceções, documentação.
+    232013031 - construtores, exceções, documentação. \n
+    232002520 - documentação
 */
 
 class Avaliacao
 {
     private:
 
-        //! Um int.
-        /*! Armazena o valor da avaliação. */
+        //! Valor de avaliação
+        /*! Atributo inteiro referente à avaliação. */
         int avaliacao;
 
         //! Avaliacao::validar()
@@ -28,28 +29,28 @@ class Avaliacao
 
         //! Construtor Vazio
         /*!
-            Constrói um objeto Avaliacao com valor vazio.
+            Constrói um objeto Avaliacao vazio.
             @sa Avaliacao(int)
         */
         Avaliacao();
 
         //! Construtor paramétrico
         /*!
-            Constrói um objeto Avaliacao e recebe um int com o valor de avaliacao.
+            Constrói um objeto Avaliacao e recebe um int com o valor de avaliação.
             @param int avaliacao.
         */
         Avaliacao(int);
 
         //! Avaliacao::setValor()
         /*!
-          Armazena um novo valor dentro da classe.
+          Atribui novo valor referente à avaliação, se for válido.
           @param int novo valor.
         */
         void setValor(int);
 
         //! Avalicao::getValor()
         /*!
-          Função para obter o valor da classe Avaliacao.
+          Retorna o valor da avaliação.
           @return int o valor da avaliacao.
         */
         int getValor() const;
