@@ -14,12 +14,9 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
-					<Add directory="libraries/sql" />
-					<Add directory="include/Modulos" />
 				</Compiler>
 				<Linker>
-					<Add library="libraries/sql/libSQL.a" />
-					<Add directory="libraries/sql" />
+					<Add library="libraries/libsqlite3.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -43,13 +40,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="libraries/sql" />
-			<Add directory="libraries/boost" />
 		</Compiler>
 		<Linker>
-			<Add library="libraries/sql/libSQL.a" />
-			<Add directory="libraries/sql" />
-			<Add directory="libraries/boost" />
+			<Add library="libraries/libsqlite3.a" />
 		</Linker>
 		<Unit filename="include/Controladores.hpp" />
 		<Unit filename="include/Controladores/CIFAutenticacao.hpp" />
