@@ -2,7 +2,7 @@
 #define MBAUTENTICACAO_HPP_INCLUDED
 
 #include "../Interfaces/IBAutenticacao.hpp"
-#include <sqlite3.h>
+#include "../../libraries/sqlite3.h"
 
 /*!
     232013031 - Implementação.
