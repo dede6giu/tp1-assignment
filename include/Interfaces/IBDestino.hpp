@@ -57,7 +57,7 @@ class IBDestino
         //! Exclui Destinos
         /*!
             Recebe dois Codigo. O primeiro é uma Conta, o segundo uma Viagem. Exclui
-            da Conta associada todos os Destino relacionados ao Viagem. Método só
+            da Conta associada todos os Destino relacionados à Viagem. Método só
             deve ser acionado durante a exclusão de Viagem.
             @param Codigo da Conta.
             @param Codigo da Viagem excluída.
