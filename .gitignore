@@ -41,4 +41,4 @@
 .vscode/
 
 # exceptions
-!libSQL.a
+!libsqlite3.a
