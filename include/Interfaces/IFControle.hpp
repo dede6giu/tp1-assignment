@@ -7,7 +7,8 @@
 
 //! Interface Front Controle
 /*!
-    232002520 - implementação e documentação \n
+    232002771 - implementação \n
+    232013031 - implementação e documentação \n
 
     A IFControle é responsável pela parte de apresentação ao usuário
     dos métodos relacionados ao controle geral do programa. Ela permite
@@ -23,13 +24,13 @@ class IFControle {
             Método que inicia a IFControle. O método, por padrão, pergunta
             ao usuário se deseja criar uma nova conta, autenticar uma conta
             existente ou sair do programa. \n
-            Se escolher criar uma nova conta, o sistema envia o usuario para a
-            tela de criacao de conta manejada por IFConta. \n
-            Se escolher autenticar uma conta, o sistema envia o usuario para a
-            tela de autenticacao manejada por IFAutenticacao. Se a autenticacao
-            ocorrer com sucesso, o IFControle envia o usuario autenticado para
-            a tela do IFDados. Se o usuario, em algum momento, sair da tela do
-            IFDados, deve-se assumir que tal nao esta mais autenticado. \n
+            Se escolher criar uma nova conta, o sistema envia o usuário para a
+            tela de criação de conta manejada por IFConta. \n
+            Se escolher autenticar uma conta, o sistema envia o usuário para a
+            tela de autenticação manejada por IFAutenticacao. Se a autenticação
+            ocorrer com sucesso, o IFControle envia o usuário autenticado para
+            a tela do IFDados. Se o usuário, em algum momento, sair da tela do
+            IFDados, deve-se assumir que tal não está mais autenticado. \n
             Se escolher sair do programa, a função retorna void. \n
         */
         virtual void run() = 0;

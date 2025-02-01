@@ -25,7 +25,7 @@ class IFViagem {
             ao usuário se deseja manejar as Viagem já registradas ou se
             deseja criar uma nova, ou retornar uma tela. \n
             Se desejar criar uma nova, o sistema requisita todas as informações
-            necessárias para a criação de um objeto Viagem (com excessão do
+            necessárias para a criação de um objeto Viagem (com exceção do
             Codigo da Conta) e então envia os resultados para o backend. Deve
             esclarecer ao usuário se a operação falhou ou não. \n
             Se desejar visualizar as Viagem, o sistema deve chamar a leitura
@@ -41,7 +41,8 @@ class IFViagem {
         //! Dependência da IBViagem
         /*!
             Estabelece uma referência para a IBViagem como uma variável,
-            permitindo uma conexão com os métodos atuantes no banco de dados.
+            permitindo uma conexão com os métodos referentes a Viagem
+            atuantes no banco de dados.
             @param Referência à IBViagem a ser salva.
         */
         virtual void setCntrIBViagem(IBViagem*) = 0;
@@ -49,7 +50,8 @@ class IFViagem {
         //! Dependência da IFDestino
         /*!
             Estabelece uma referência para a IFDestino como uma variável,
-            permitindo uma conexão com os métodos atuantes em Destino.
+            permitindo uma conexão com os métodos referentes a Destino
+            atuantes em Destino.
             @param Referência à IFDestino a ser salva.
         */
         virtual void setCntrIFDestino(IFDestino*) = 0;

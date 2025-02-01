@@ -24,7 +24,7 @@ class IFAtividade
             ao usuário se deseja manejar as Atividade já registrados no
             Destino recebido ou se deseja criar uma nova, ou retornar uma tela. \n
             Se desejar criar uma nova, o sistema requisita todas as informações
-            necessárias para a criação de um objeto Atividade (com excessão do
+            necessárias para a criação de um objeto Atividade (com exceção do
             Codigo da Conta) e então envia o objeto para o backend. Deve
             esclarecer ao usuário se a operação falhou ou não. \n
             Se desejar visualizar as Atividade, o sistema deve chamar a leitura
@@ -41,7 +41,8 @@ class IFAtividade
         //! Dependência da IBAtividade
         /*!
             Estabelece uma referência para a IBAtividade como uma variável,
-            permitindo uma conexão com os métodos atuantes no banco de dados.
+            permitindo uma conexão com os métodos referentes a Atividade
+            atuantes no banco de dados.
             @param Referência à IBAtividade a ser salva.
         */
         virtual void setCntrIBAtividade(IBAtividade*) = 0;

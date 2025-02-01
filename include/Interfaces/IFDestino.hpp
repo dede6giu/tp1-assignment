@@ -26,7 +26,7 @@ class IFDestino
             ao usuário se deseja manejar os Destinos já registrados na Viagem
             recebida ou se deseja criar um novo, ou retornar uma tela. \n
             Se desejar criar um novo, o sistema requisita todas as informações
-            necessárias para a criação de um objeto Destino (com excessão do
+            necessárias para a criação de um objeto Destino (com exceção do
             Codigo da Conta) e então envia o objeto para o backend. Deve
             esclarecer ao usuário se a operação falhou ou não. \n
             Se desejar visualizar os Destino, o sistema deve chamar a leitura
@@ -44,7 +44,8 @@ class IFDestino
         //! Dependência da IBDestino
         /*!
             Estabelece uma referência para a IBDestino como uma variável,
-            permitindo uma conexão com os métodos atuantes no banco de dados.
+            permitindo uma conexão com os métodos referentes a Destino
+            atuantes no banco de dados.
             @param Referência à IBDestino a ser salva.
         */
         virtual void setCntrIBDestino(IBDestino*) = 0;

@@ -24,7 +24,7 @@ class IFHospedagem
             ao usuário se deseja manejar as Hospedagem já registrados no
             Destino recebido ou se deseja criar uma nova, ou retornar uma tela. \n
             Se desejar criar uma nova, o sistema requisita todas as informações
-            necessárias para a criação de um objeto Hospedagem (com excessão do
+            necessárias para a criação de um objeto Hospedagem (com exceção do
             Codigo da Conta) e então envia o objeto para o backend. Deve
             esclarecer ao usuário se a operação falhou ou não. \n
             Se desejar visualizar as Hospedagem, o sistema deve chamar a leitura
@@ -41,7 +41,8 @@ class IFHospedagem
         //! Dependência da IBHospedagem
         /*!
             Estabelece uma referência para a IBHospedagem como uma variável,
-            permitindo uma conexão com os métodos atuantes no banco de dados.
+            permitindo uma conexão com os métodos referentes a Hospedagem
+            atuantes no banco de dados.
             @param Referência à IBHospedagem a ser salva.
         */
         virtual void setCntrIBHospedagem(IBHospedagem*) = 0;
