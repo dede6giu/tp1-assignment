@@ -8,14 +8,15 @@
     Dominio Senha, sequência válida de 5 dígitos sem repetição, não crescente nem decrescente.
     232006028 - implementação, exceções, documentação. \n
     232002771 - implementação por string,documentação. \n
-    232013031 - construtores, documentação.
+    232013031 - construtores, documentação. \n
+    232002520 - documentação
 */
 
 class Senha
 {
     private:
-        //! Uma string.
-        /*! Armazena o valor da senha. */
+        //! Valor de senha
+        /*! Atributo string que armazena o valor da senha. */
         std::string senha;
 
         //! Senha::validar()
@@ -28,8 +29,8 @@ class Senha
         void validar(std::string);
 
     public:
-        //! Um inteiro constante estático.
-        /*! Armazena o valor do tamanho da senha. */
+        //! Tamanho válido de senha
+        /*! Atributo inteiro estático constante que armazena o tamanho exigido da senha. */
         static const int PASSLENGTH = 5;
 
         //! Construtor Vazio

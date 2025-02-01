@@ -8,15 +8,16 @@
     Dominio Nome, string de no máximo 30 caracteres.\n
     232013031 - implementação, documentação, construtores\n
     232002771 - exceções, documentação \n
-    232006028 - documentação
+    232006028 - documentação \n
+    232002520 - documentação
 */
 
 class Nome
 {
     private:
 
-        //! Uma string.
-        /*! Armazena o valor do nome. */
+        //! Valor de nome
+        /*! Atributo string que armazena o valor do nome. */
         std::string nome;
 
         //! Nome::validar()
@@ -28,15 +29,15 @@ class Nome
 
     public:
 
-        //! Um inteiro público estático
+        //! Tamanho máximo de nome
         /*!
-          Armazena o tamanho máximo do valor.
+          Atributo inteiro estático constante que armazena o tamanho máximo do valor.
         */
         static int const MAXLENGTH = 30;
 
         //! Construtor Vazio
         /*!
-            Constrói um objeto Nome com valor vazio.
+            Constrói um objeto Nome vazio.
             @sa Nome(std::string)
         */
         Nome();
@@ -52,7 +53,7 @@ class Nome
 
         //! Nome::setValor()
         /*!
-          Armazena um novo valor dentro da classe após sua verificação.
+          Recebe um valor string, verifica-o e o armazena como novo nome dentro da classe.
           @param string novo valor.
           @return bool indicando sucesso da operação.
           @sa getValor()
@@ -61,8 +62,8 @@ class Nome
 
         //! Nome::getValor()
         /*!
-          Função para obter o valor da classe Nome.
-          @return string parâmetro nome do objeto.
+          Retorna o nome armazenado na classe.
+          @return string com valor do novo nome.
         */
         std::string getValor() const;
 };

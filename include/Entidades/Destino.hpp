@@ -20,27 +20,32 @@ class Destino
 {
     private:
 
+        //! Tag do destino
+        /*! Atributo Codigo que armazena a tag (no contexto do bando de dados) do destino. */
         Codigo tag;
+        //! Tag da viagem relacionada ao destino
+        /*! Atributo Codigo que armazena a tag (no contexto do bando de dados) da viagem relacionada ao destino. */
         Codigo tagViagem;
 
-        //! Codigo (atributo)
-        /*! Atributo que armazena o objeto Codigo do Destino.*/
+
+        //! Código do destino
+        /*! Atributo Codigo que armazena o código do destino.*/
         Codigo codigo;
 
-        //! Nome (atributo)
-        /*! Atributo que armazena o objeto Nome do Destino. */
+        //! Nome do destino
+        /*! Atributo Nomeque armazena o nome do destino. */
         Nome nome;
 
-        //! Data (atributo)
-        /*! Atributo que armazena o objeto Data de início do Destino */
+        //! Data de início do destino
+        /*! Atributo Data que armazena a data de início do destino */
         Data inicio;
 
-        //! Data (atributo)
-        /*! Atributo que armazena o objeto Data de fim do Destino. */
+        //! Data de fim do destino
+        /*! Atributo Data que armazena a data de fim do destino. */
         Data fim;
 
-        //! Avaliacao (atributo)
-        /*! Atributo que armazena o objeto Avaliacao do Destino. */
+        //! Avaliação do destino
+        /*! Atributo Avaliacao que armazena a avaliação do destino. */
         Avaliacao avaliacao;
 
     public:
@@ -66,14 +71,14 @@ class Destino
 
         //! void Destino::setValor(const Codigo&)
         /*!
-            Recebe um objeto Codigo e armazena-o como atributo do objeto.
+            Recebe um Codigo e armazena-o como atributo do Destino.
             @param const Codigo&
         */
         void setValor(const Codigo&);
 
         //! inline Codigo Destino::getValorCodigo()
         /*!
-            Retorna o objeto Codigo armazenado no objeto.
+            Retorna o Codigo armazenado no objeto.
             @return string valor do Codigo.
         */
         inline std::string getValorCodigo() const;
@@ -81,14 +86,14 @@ class Destino
 
         //! void Destino::setValor(const Nome&)
         /*!
-            Recebe um objeto Nome e armazena-o como atributo do objeto.
+            Recebe um Nome e armazena-o como atributo do Destino.
             @param const Nome& a ser armazenado.
         */
         void setValor(const Nome&);
 
         //! inline Nome Destino::getValorNome()
         /*!
-            Retorna o objeto Nome armazenado no objeto.
+            Retorna o Nome armazenado no objeto.
             @return string valor do Nome.
         */
         inline std::string getValorNome() const;
@@ -96,14 +101,14 @@ class Destino
 
         //! void Destino::setValor(const Avaliacao&)
         /*!
-            Recebe um objeto Avaliacao e armazena-o como atributo do objeto.
+            Recebe um Avaliacao e armazena-o como atributo do Destino.
             @param const Avaliacao.
         */
         void setValor(const Avaliacao&);
 
         //! inline Avaliacao Destino::getValorAvaliacao()
         /*!
-            Retorna o objeto Avaliacao armazenado no objeto.
+            Retorna o Avaliacao armazenado no objeto.
             @return int valor do Avaliacao.
         */
         inline int getValorAvaliacao() const;
@@ -111,7 +116,7 @@ class Destino
 
         //! void Destino::setValor(const Data&, bool)
         /*!
-            Recebe um objeto Data e um bool e armazena-os como atributos do objeto.
+            Recebe um Data e um bool e armazena-os como atributos do Destino.
             @param const Data& a ser armazenado.
             @param bool (se vale 0, é a data de início; se vale 1, é a data de fim).
         */
@@ -119,22 +124,32 @@ class Destino
 
         //! inline Data Destino::getValorInicio()
         /*!
-            Retorna o objeto Data de início armazenado no objeto.
+            Retorna o Data de início armazenado no Destino.
             @return string valor do parâmetro início (Data).
         */
         inline std::string getValorInicio() const;
 
         //! inline Data Destino::getValorFim()
         /*!
-            Retorna o objeto Data de fim armazenado no objeto.
+            Retorna o Data de fim armazenado no objeto.
             @return string valor do parâmetro fim (Data).
         */
         inline std::string getValorFim() const;
 
+
+        //! inline Codigo::getTag()
+        /* Retorna a tag do objeto Destino. */
         inline Codigo getTag()       const { return this->tag; }
+        
+        //! inline Codigo::getTagViagem()
+        /* Retorna a tag do Viagem relacionado ao objeto Destino. */
         inline Codigo getTagViagem() const { return this->tagViagem; }
 
+        //! void Codigo::setTag(Codigo&)
+        /* Recebe Codigo& e armazena como nova tag. */
         void setTag(Codigo&);
+        //! void Codigo::setTagViagem(Codigo&)
+        /* Recebe Codigo& e armazena como nova tag da Viagem relacionada. */
         void setTagViagem(Codigo&);
 };
 

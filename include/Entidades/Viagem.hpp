@@ -17,18 +17,21 @@
 class Viagem {
     private:
 
+        //! Tag da viagem
+        /*! Atributo Codigo que armazena a tag (no contexto do bando de dados) da viagem. */
         Codigo tag;
 
-        //! Avaliacao (atributo)
-        /*! Atributo de classe Avaliacao. */
+
+        //! Avaliação da viagem
+        /*! Atributo Avaliacao que armazena a avaliação da viagem. */
         Avaliacao avaliacao;
 
-        //! Codigo (atributo)
-        /*! Atributo de classe Codigo. */
+        //! Código da viagem
+        /*! Atributo Codigo que armazena o código da viagem. */
         Codigo codigo;
 
-        //! Nome (atributo)
-        /*! Atributo de classe Nome. */
+        //! Nome da viagem
+        /*! Atributo Nome que armazena o nome da viagem. */
         Nome nome;
 
     public:
@@ -52,47 +55,51 @@ class Viagem {
 
         //! Viagem::setValor(const Avaliaacao&)
         /*!
-            Recebe um objeto Avaliacao e armazena no objeto Viagem.
+            Recebe um Avaliacao e armazena no objeto Viagem.
             @param const Avaliacao.
         */
         void setValor(const Avaliacao&);
 
         //! Avaliacao Viagem::getAvaliacao() const
         /*!
-            Retorna o objeto Avaliacao armazenado no objeto Viagem.
+            Retorna o Avaliacao armazenado no objeto Viagem.
             @return int valor do parâmetro avaliacao.
         */
         int getValorAvaliacao() const;
 
         //! Viagem::setValor(const Codigo&)
         /*!
-            Recebe um objeto Codigo e armazena no objeto Viagem.
+            Recebe um Codigo e armazena no objeto Viagem.
             @param const Codigo.
         */
         void setValor(const Codigo&);
 
         //! Codigo Viagem::getCodigo() const
         /*!
-            Retorna o objeto Codigo armazenado no objeto Viagem.
+            Retorna o Codigo armazenado no objeto Viagem.
             @return string valor do parâmetro codigo.
         */
         std::string getValorCodigo() const;
 
         //! Viagem::setValor(const Nome&)
         /*!
-            Recebe um objeto Nome e armazena no objeto Viagem.
+            Recebe um Nome e armazena no objeto Viagem.
             @param const Nome.
         */
         void setValor(const Nome&);
         //! Nome Viagem::getNome() const
         /*!
-            Retorna o objeto Nome armazenado no objeto Viagem.
+            Retorna o Nome armazenado no objeto Viagem.
             @return string valor do parâmetro nome.
         */
         std::string getValorNome() const;
 
+        //! inline Viagem::getTag()
+        /* Retorna a tag do objeto Viagem. */
         inline Codigo getTag() const { return this->tag; }
 
+        //! inline Viagem::getTag()
+        /* Recebe Codigo& e armazena como nova tag. */
         void setTag(Codigo);
 };
 

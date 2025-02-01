@@ -15,12 +15,12 @@ class Conta
 {
     private:
 
-        //! Codigo (atributo)
-        /*! Atributo que armazena o codigo da conta. */
+        //! Código da conta
+        /*! Atributo Codigo que armazena o código da conta. */
         Codigo codigo;
 
-        //! Senha (atributo)
-        /*! Atributo que armazena a senha da conta. */
+        //! Senha da conta
+        /*! Atributo Senha que armazena a senha da conta. */
         Senha senha;
 
     public:
@@ -33,7 +33,7 @@ class Conta
 
         //! Construtor paramétrico.
         /*!
-            Constrói um objeto Conta e pede 2 parâmetros: um Codigo e uma Senha.
+            Constrói um objeto Conta e pede 2 parâmetros: um Codigo e um Senha.
             @param const Codigo a ser armazenado.
             @param const Senha a ser armazenado.
             @sa Conta()
@@ -43,28 +43,28 @@ class Conta
 
         //! Conta::setValor(const Codigo&)
         /*!
-            Método que recebe um objeto Codigo e armazena-o como atributo do objeto.
+            Rcebe um Codigo e armazena-o como atributo do objeto.
             @param Codigo a ser armazenado.
         */
         void setValor(const Codigo&);
 
         //! Codigo Conta::getCodigo()
         /*!
-            Retorna o atributo Codigo armazenado no objeto.
+            Retorna o Codigo armazenado no objeto.
             @return string valor do parâmetro codigo.
         */
         std::string getValorCodigo() const;
 
         //! Conta::setValor(const Senha&)
         /*!
-            Método que recebe um objeto Senha e armazena-o como atributo do objeto.
+            Recebe um Senha e armazena-o como atributo do objeto.
             @param Senha a ser armazenado.
         */
         void setValor(const Senha&);
 
         //! Senha Conta::getSenha()
         /*!
-            Retorna o atributo Senha armazenado no objeto.
+            Retorna o Senha armazenado no objeto.
             @return string valor do parâmetro senha.
         */
         std::string getValorSenha() const;

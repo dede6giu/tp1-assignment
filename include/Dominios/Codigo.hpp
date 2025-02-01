@@ -7,15 +7,16 @@
 /*!
     Dominio Codigo, string de 6 caracteres alfanum&eacute;ricos maiúsculos ou minúsculos sem diacríticos. \n
     232013031 - implementação, construtores, documentação. \n
-    232002771 - exceções, documentação.
+    232002771 - exceções, documentação. \n
+    232002520 - documentação
 */
 
 class Codigo
 {
     private:
 
-        //! Uma string.
-        /*! Armazena o valor do Codigo. */
+        //! Valor de código
+        /*! Atributo string referente ao código. */
         std::string codigo;
 
         //! Senha::validar()
@@ -29,15 +30,15 @@ class Codigo
 
     public:
 
-        //! Um inteiro público
+        //! Tamanho válido de código
         /*!
-          Armazena o valor máximo da valiação.
+          Atributo inteiro estático constante com o comprimento válido de código.
         */
         static int const CODELENGTH = 6;
 
         //! Construtor Vazio
         /*!
-            Constrói um objeto Codigo com valor vazio.
+            Constrói um objeto Codigo vazio.
             @sa Codigo(std::string)
         */
         Codigo();
@@ -52,7 +53,7 @@ class Codigo
 
         //! Codigo::setValor(std::string)
         /*!
-            Recebe um valor string, verifica-o e altera o valor atual do objeto pelo novo.
+            Recebe um valor string, verifica-o e armazena-o como novo código.
             @param string que substituirá o valor codigo atual.
             @sa codigo, Codigo::validar()
         */
@@ -60,7 +61,7 @@ class Codigo
 
         //! Codigo::getValor(std::string)
         /*!
-            Retorna o valor atual do parâmetro codigo.
+            Retorna o valor atual do parâmetro código.
             @return string codigo atual do objeto.
             @sa codigo
         */

@@ -15,8 +15,8 @@ class Dinheiro
 {
     private:
 
-        //! int
-        /*! Atributo int que armazena o valor de dinheiro. */
+        //! Valor de dinheiro
+        /*! Atributo inteiro que armazena o valor de dinheiro. */
         int dinheiro;
 
         //! bool Dinheiro::validar(int)
@@ -28,13 +28,13 @@ class Dinheiro
 
     public:
 
-        //! static int const
-        /*! int estático constante com o valor mínimo de dinheiro possível.
+        //! Valor mínimo de dinheiro
+        /*! Atributo inteiro estático constante com o valor mínimo de dinheiro possível.
             @sa MAXIMO */
         static int const MINIMO = 0;
 
-        //! static int const
-        /*! int estático constante com o valor máximo de dinheiro possível.
+        //! Valor máximo de dinheiro
+        /*! Atributo inteiro estático constante com o valor máximo de dinheiro possível.
             @sa MINIMO */
         static int const MAXIMO = 20000000;
 
@@ -45,7 +45,7 @@ class Dinheiro
 
         //! Construtor paramétrico
         /*!
-            Constrói um objeto Dinheiro e recebe um int com o valor de dinheiro em centavos.
+            Constrói um objeto Dinheiro, recebe e armazena um int com o valor de dinheiro em centavos.
             @param int dinheiro em centavos.
             @sa Dinheiro()
         */
