@@ -2,7 +2,7 @@
 #define MBATIVIDADE_HPP_INCLUDED
 
 #include "../Interfaces/IBAtividade.hpp"
-#include <sqlite3.h>
+#include "../../libraries/sqlite3.h"
 
 /*!
     232013031 - Implementação.
