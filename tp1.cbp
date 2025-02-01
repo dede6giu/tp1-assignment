@@ -111,6 +111,11 @@
 		<Unit filename="include/TU/TUNome.hpp" />
 		<Unit filename="include/TU/TUSenha.hpp" />
 		<Unit filename="include/TU/TUViagem.hpp" />
+		<Unit filename="libraries/sqlite3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libraries/sqlite3.h" />
+		<Unit filename="libraries/sqlite3ext.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mainpage.dox" />
 		<Unit filename="src/Controladores/CIFAutenticacao.cpp" />
