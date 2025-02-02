@@ -1,8 +1,19 @@
 #include "../../include/Modulos/MFHospedagem.hpp"
+#include "../../include/Modulos/MBHospedagem.hpp"
 #include <stdexcept>
 #include <iostream>
 
 using namespace std;
+
+MFHospedagem::MFHospedagem()
+{
+    cntrIBHospedagem = new MBHospedagem();
+}
+
+MFHospedagem::~MFHospedagem()
+{
+    delete cntrIBHospedagem;
+}
 
 int MFHospedagem::lerInt(std::string entrada)
 {
@@ -128,12 +139,10 @@ bool MFHospedagem::editarHospedagem(Hospedagem hospedagemAtual)
 
         case 0:
             cout << endl << "Operacao cancelada.";
-            esperarInput();
             return false;
         case -1:
         default:
             cout << endl << "Valor invalido.";
-            esperarInput();
             return false;
     }
     return false;
@@ -247,23 +256,18 @@ bool MFHospedagem::processHospedagem()
                         if (cntrIBHospedagem->excluir(hospedagemRegistradas[posicaoAtual]))
                         {
                             cout << endl << "Sucesso na operacao.";
-                            hospedagemRegistradas.erase(hospedagemRegistradas.begin() + posicaoAtual);
-                            posicaoMaxima--;
-                            posicaoAtual %= posicaoMaxima;
                         }
                         else
                         {
                             cout << endl << "Falha na operacao.";
-                            esperarInput();
-                            return atualizarHospedagem;
                         }
                     }
                     catch (const exception &exp)
                     {
                         cout << endl << "Erro no sistema." << endl;
-                        esperarInput();
-                        return atualizarHospedagem;
                     }
+                    esperarInput();
+                    return atualizarHospedagem;
                 }
                 else
                 {

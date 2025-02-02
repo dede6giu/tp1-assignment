@@ -161,6 +161,7 @@ bool MFConta::run(Conta contaAtual)
                 }
             case 2:
                 {
+                    bool excluida = false;
                     cout << endl << "=========================================";
                     cout << endl << "Deseja excluir sua conta? Isso removera";
                     cout << endl << "todas as informacoes da sua conta, ";
@@ -174,14 +175,20 @@ bool MFConta::run(Conta contaAtual)
                         if (cntrIBConta->excluir(contaExc))
                         {
                             cout << endl << "Conta excluida com sucesso.";
+                            excluida = true;
                         }
                         else
                         {
                             cout << endl << "Conta nao existe.";
                         }
                     }
+                    else
+                    {
+                        cout << endl << "Operacao cancelada.";
+                        continue;
+                    }
                     esperarInput();
-                    return true;
+                    return excluida;
                 }
             case 0:
                 cout << endl << "Operacao cancelada.";

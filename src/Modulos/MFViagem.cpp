@@ -113,12 +113,10 @@ bool MFViagem::editarViagem(Viagem viagemAtual)
             break;
         case 0:
             cout << endl << "Operacao cancelada.";
-            esperarInput();
             return false;
         case -1:
         default:
             cout << endl << "Valor invalido.";
-            esperarInput();
             return false;
     }
     return false;
@@ -229,23 +227,18 @@ bool MFViagem::processViagem()
                         if (cntrIBViagem->excluir(viagemRegistradas[posicaoAtual]))
                         {
                             cout << endl << "Sucesso na operacao.";
-                            viagemRegistradas.erase(viagemRegistradas.begin() + posicaoAtual);
-                            posicaoMaxima--;
-                            posicaoAtual %= posicaoMaxima;
                         }
                         else
                         {
                             cout << endl << "Falha na operacao.";
-                            esperarInput();
-                            return atualizarViagem;
                         }
                     }
                     catch (const exception &exp)
                     {
                         cout << endl << "Erro no sistema." << endl;
-                        esperarInput();
-                        return atualizarViagem;
                     }
+                    esperarInput();
+                    return atualizarViagem;
                 }
                 else
                 {

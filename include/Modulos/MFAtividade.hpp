@@ -24,11 +24,11 @@ class MFAtividade : public IFAtividade
         int lerInt(std::string);
         void esperarInput();
         void printAtividade(Atividade);
-        bool criarAtividade(Codigo, Codigo);
-        bool editarAtividade(Atividade);
-        bool processAtividade();
+        bool criarAtividade(Codigo, Destino);
+        bool editarAtividade(Atividade, Destino);
+        bool processAtividade(Destino);
 
-        void run(Codigo, Codigo);
+        void run(Codigo, Destino);
         void setCntrIBAtividade(IBAtividade*);
 };
 

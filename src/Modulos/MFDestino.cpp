@@ -106,7 +106,6 @@ bool MFDestino::editarDestino(Destino destinoAtual)
                 if (inicioNovo > Data(destinoAtual.getValorFim()))
                 {
                     cout << endl << "Data de inicio deve ser antes da data de fim";
-                    esperarInput();
                     return false;
                 }
                 if (cntrIBDestino->atualizar(destinoAtual, inicioNovo, 0))
@@ -137,7 +136,6 @@ bool MFDestino::editarDestino(Destino destinoAtual)
                 if (fimNovo < Data(destinoAtual.getValorInicio()))
                 {
                     cout << endl << "Data de fim deve ser depois da data de inicio";
-                    esperarInput();
                     return false;
                 }
                 if (cntrIBDestino->atualizar(destinoAtual, fimNovo, 1))
@@ -183,12 +181,10 @@ bool MFDestino::editarDestino(Destino destinoAtual)
 
         case 0:
             cout << endl << "Operacao cancelada.";
-            esperarInput();
             return false;
         case -1:
         default:
             cout << endl << "Valor invalido.";
-            esperarInput();
             return false;
     }
     return false;
@@ -305,23 +301,18 @@ bool MFDestino::processDestino()
                         if (cntrIBDestino->excluir(destinoRegistrados[posicaoAtual]))
                         {
                             cout << endl << "Sucesso na operacao.";
-                            destinoRegistrados.erase(destinoRegistrados.begin() + posicaoAtual);
-                            posicaoMaxima--;
-                            posicaoAtual %= posicaoMaxima;
                         }
                         else
                         {
                             cout << endl << "Falha na operacao.";
-                            esperarInput();
-                            return atualizarDestino;
                         }
                     }
                     catch (const exception &exp)
                     {
                         cout << endl << "Erro no sistema." << endl;
-                        esperarInput();
-                        return atualizarDestino;
                     }
+                    esperarInput();
+                    return atualizarDestino;
                 }
                 else
                 {
@@ -331,7 +322,7 @@ bool MFDestino::processDestino()
                 break;
             case 6:
                 cntrIFAtividade->run(Codigo(destinoRegistrados[posicaoAtual].getValorCodigo()),
-                                   destinoRegistrados[posicaoAtual].getTag());
+                                   destinoRegistrados[posicaoAtual]);
                 break;
             case 7:
                 cntrIFHospedagem->run(Codigo(destinoRegistrados[posicaoAtual].getValorCodigo()),

@@ -26,13 +26,17 @@ void MFDados::run(Conta contaAutenticada)
     while(operando)
     {
         system("cls");
-        string aux;
-        cout << endl << "Selecione uma das opcoes a seguir: ";
-        cout << endl << "0 - Sair da conta";
-        cout << endl << "1 - Gerenciar conta";
-        cout << endl << "2 - Gerenciar viagens";
+        cout << endl << "=========================================";
+        cout << endl << "            BEM VINDO, "; cout << contaAutenticada.getValorCodigo();
+        cout << endl << "Operacoes disponiveis: ";
+        cout << endl << "    0. Sair da conta";
+        cout << endl << "    1. Gerenciar conta";
+        cout << endl << "    2. Gerenciar viagens";
+        cout << endl << "=========================================";
+        cout << endl << "Por favor, escolha uma operacao: ";
 
         // string para int
+        string aux;
         getline(cin, aux);
         int entrada;
         try

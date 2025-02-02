@@ -3,6 +3,7 @@
 
 #include "IBAtividade.hpp"
 #include "Entidades/Conta.hpp"
+#include "../Entidades/Destino.hpp"
 
 //! Interface Front Atividade
 /*!
@@ -34,9 +35,9 @@ class IFAtividade
             excluir a atual. \n
             Se escolher retornar uma tela, a função retorna void.
             @param Conta atualmente autenticada.
-            @param Codigo Tag do Destino associado.
+            @param Destino associado.
         */
-        virtual void run(Codigo, Codigo) = 0;
+        virtual void run(Codigo, Destino) = 0;
 
         //! Dependência da IBAtividade
         /*!
