@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v2.0</span>
    </div>
    <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
   </td>
@@ -130,9 +130,10 @@ Membros públicos</h2></td></tr>
 <p>Dominio <a class="el" href="class_avaliacao.html" title="Dominio Avaliacao.">Avaliacao</a>, inteiro válido entre 0 e 5 inclusivo. <br  />
 232029274 - implementação. <br  />
 232002771 - documentação. <br  />
-232013031 - construtores, exceções, documentação. </p>
+232013031 - construtores, exceções, documentação. <br  />
+232002520 - documentação </p>
 
-<p class="definition">Definido na linha <a class="el" href="_avaliacao_8hpp_source.html#l00012">12</a> do ficheiro <a class="el" href="_avaliacao_8hpp_source.html">Avaliacao.hpp</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="_avaliacao_8hpp_source.html#l00013">13</a> do ficheiro <a class="el" href="_avaliacao_8hpp_source.html">Avaliacao.hpp</a>.</p>
 </div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
 <a id="a49ae02de8f82e85711f3da7b8a45c008" name="a49ae02de8f82e85711f3da7b8a45c008"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49ae02de8f82e85711f3da7b8a45c008">&#9670;&#160;</a></span>Avaliacao() <span class="overload">[1/2]</span></h2>
@@ -150,7 +151,7 @@ Membros públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor Vazio. </p>
-<p>Constrói um objeto <a class="el" href="class_avaliacao.html" title="Dominio Avaliacao.">Avaliacao</a> com valor vazio. </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="#a58ab9164208fa6157d5952b6c6ca946b" title="Construtor paramétrico.">Avaliacao(int)</a> </dd></dl>
+<p>Constrói um objeto <a class="el" href="class_avaliacao.html" title="Dominio Avaliacao.">Avaliacao</a> vazio. </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="#a58ab9164208fa6157d5952b6c6ca946b" title="Construtor paramétrico.">Avaliacao(int)</a> </dd></dl>
 
 <p class="definition">Definido na linha <a class="el" href="_avaliacao_8cpp_source.html#l00004">4</a> do ficheiro <a class="el" href="_avaliacao_8cpp_source.html">Avaliacao.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    5</span>{</div>
@@ -175,7 +176,7 @@ Membros públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor paramétrico. </p>
-<p>Constrói um objeto <a class="el" href="class_avaliacao.html" title="Dominio Avaliacao.">Avaliacao</a> e recebe um int com o valor de avaliacao. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Constrói um objeto <a class="el" href="class_avaliacao.html" title="Dominio Avaliacao.">Avaliacao</a> e recebe um int com o valor de avaliação. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">int</td><td>avaliacao. </td></tr>
   </table>
@@ -215,12 +216,12 @@ Membros públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Avalicao::getValor() </p>
-<p>Função para obter o valor da classe <a class="el" href="class_avaliacao.html" title="Dominio Avaliacao.">Avaliacao</a>. </p><dl class="section return"><dt>Retorna</dt><dd>int o valor da avaliacao. </dd></dl>
+<p>Retorna o valor da avaliação. </p><dl class="section return"><dt>Retorna</dt><dd>int o valor da avaliacao. </dd></dl>
 
-<p class="definition">Definido na linha <a class="el" href="_avaliacao_8hpp_source.html#l00058">58</a> do ficheiro <a class="el" href="_avaliacao_8hpp_source.html">Avaliacao.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>{</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> avaliacao;</div>
-<div class="line"><span class="lineno">   61</span>}</div>
+<p class="definition">Definido na linha <a class="el" href="_avaliacao_8hpp_source.html#l00059">59</a> do ficheiro <a class="el" href="_avaliacao_8hpp_source.html">Avaliacao.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> avaliacao;</div>
+<div class="line"><span class="lineno">   62</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -240,7 +241,7 @@ Membros públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="#a3f2776f1f13da9557727eedfb9d82c9a" title="Avaliacao::setValor()">Avaliacao::setValor()</a> </p>
-<p>Armazena um novo valor dentro da classe. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Atribui novo valor referente à avaliação, se for válido. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">int</td><td>novo valor. </td></tr>
   </table>

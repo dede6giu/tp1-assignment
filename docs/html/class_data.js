@@ -8,5 +8,8 @@ var class_data =
     [ "getMes", "class_data.html#a1df6f5e1695c7cae56b9ee752a6895e8", null ],
     [ "getValor", "class_data.html#aecd8f0d04b834d1448d1d005f9b748b8", null ],
     [ "setValor", "class_data.html#a5247797cdb69232a6b6c7db6683a292d", null ],
-    [ "setValor", "class_data.html#a76a47b2d1164edb937dce7954828552e", null ]
+    [ "setValor", "class_data.html#a76a47b2d1164edb937dce7954828552e", null ],
+    [ "operator<", "class_data.html#aa9a2fcbea8a6f5b2fd7b636332012368", null ],
+    [ "operator==", "class_data.html#afb754f03dbd6cb1d3f03d0c7f8056fac", null ],
+    [ "operator>", "class_data.html#a755ae84659703b8d12eddd8f6237104f", null ]
 ];

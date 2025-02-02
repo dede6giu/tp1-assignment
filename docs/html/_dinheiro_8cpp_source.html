@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v2.0</span>
    </div>
    <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
   </td>
@@ -140,37 +140,39 @@ $(function(){initNavTree('_dinheiro_8cpp_source.html',''); initResizable(true); 
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_dinheiro.html#a9f40ac3b05bdc5a4578910db09db0aa8">   31</a></span>std::string <a class="code hl_function" href="class_dinheiro.html#a9f40ac3b05bdc5a4578910db09db0aa8">Dinheiro::getValorFormatado</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">if</span> (this-&gt;dinheiro &lt; 100)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;0,&quot;</span> + std::to_string(this-&gt;dinheiro);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    std::string numero = std::to_string(this-&gt;dinheiro);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">int</span> i = numero.length() - 1;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::string resultado = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    resultado += numero[i]; i--;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    resultado += numero[i];</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    resultado += <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">int</span> cnt = 0;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">while</span> (i--)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">if</span> (cnt == 3)</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            cnt = 0;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            resultado += <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        cnt++;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        resultado += numero[i];</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::reverse(resultado.begin(), resultado.end());</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> resultado;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::string resultado = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::string numero = std::to_string(this-&gt;dinheiro);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">if</span> (this-&gt;dinheiro &lt; 100)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        resultado += <span class="stringliteral">&quot;0,&quot;</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">if</span> (this-&gt;dinheiro &lt; 10) resultado += <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">return</span> resultado + numero;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">int</span> i = numero.length() - 1;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    resultado += numero[i]; i--;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    resultado += numero[i];</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    resultado += <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">int</span> cnt = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">while</span> (i--)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (cnt == 3)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            cnt = 0;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            resultado += <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        cnt++;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        resultado += numero[i];</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::reverse(resultado.begin(), resultado.end());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> resultado;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 </div>
 <div class="ttc" id="a_dinheiro_8hpp_html"><div class="ttname"><a href="_dinheiro_8hpp.html">Dinheiro.hpp</a></div></div>
 <div class="ttc" id="aclass_dinheiro_html_a7529ac8a24b2cca107c06abe1a9d1f74"><div class="ttname"><a href="class_dinheiro.html#a7529ac8a24b2cca107c06abe1a9d1f74">Dinheiro::Dinheiro</a></div><div class="ttdeci">Dinheiro()</div><div class="ttdoc">Construtor vazio.</div><div class="ttdef"><b>Definição</b> <a href="#l00006">Dinheiro.cpp:6</a></div></div>
 <div class="ttc" id="aclass_dinheiro_html_a9f40ac3b05bdc5a4578910db09db0aa8"><div class="ttname"><a href="class_dinheiro.html#a9f40ac3b05bdc5a4578910db09db0aa8">Dinheiro::getValorFormatado</a></div><div class="ttdeci">std::string getValorFormatado() const</div><div class="ttdoc">std::string Dinheiro::getValorFormatado() const</div><div class="ttdef"><b>Definição</b> <a href="#l00031">Dinheiro.cpp:31</a></div></div>
-<div class="ttc" id="aclass_dinheiro_html_abfb3d89a6113143bb378ce07b3086c89"><div class="ttname"><a href="class_dinheiro.html#abfb3d89a6113143bb378ce07b3086c89">Dinheiro::MAXIMO</a></div><div class="ttdeci">static int const MAXIMO</div><div class="ttdoc">static int const</div><div class="ttdef"><b>Definição</b> <a href="_dinheiro_8hpp_source.html#l00039">Dinheiro.hpp:39</a></div></div>
+<div class="ttc" id="aclass_dinheiro_html_abfb3d89a6113143bb378ce07b3086c89"><div class="ttname"><a href="class_dinheiro.html#abfb3d89a6113143bb378ce07b3086c89">Dinheiro::MAXIMO</a></div><div class="ttdeci">static int const MAXIMO</div><div class="ttdoc">Valor máximo de dinheiro.</div><div class="ttdef"><b>Definição</b> <a href="_dinheiro_8hpp_source.html#l00039">Dinheiro.hpp:39</a></div></div>
 <div class="ttc" id="aclass_dinheiro_html_ae4295a085c7ddd5f9be944b201aa54ee"><div class="ttname"><a href="class_dinheiro.html#ae4295a085c7ddd5f9be944b201aa54ee">Dinheiro::setValor</a></div><div class="ttdeci">void setValor(int)</div><div class="ttdoc">void Dinheiro::setValor(int)</div><div class="ttdef"><b>Definição</b> <a href="#l00017">Dinheiro.cpp:17</a></div></div>
-<div class="ttc" id="aclass_dinheiro_html_afbaabfb0fe21c104125ad86a762ae80e"><div class="ttname"><a href="class_dinheiro.html#afbaabfb0fe21c104125ad86a762ae80e">Dinheiro::MINIMO</a></div><div class="ttdeci">static int const MINIMO</div><div class="ttdoc">static int const</div><div class="ttdef"><b>Definição</b> <a href="_dinheiro_8hpp_source.html#l00034">Dinheiro.hpp:34</a></div></div>
+<div class="ttc" id="aclass_dinheiro_html_afbaabfb0fe21c104125ad86a762ae80e"><div class="ttname"><a href="class_dinheiro.html#afbaabfb0fe21c104125ad86a762ae80e">Dinheiro::MINIMO</a></div><div class="ttdeci">static int const MINIMO</div><div class="ttdoc">Valor mínimo de dinheiro.</div><div class="ttdef"><b>Definição</b> <a href="_dinheiro_8hpp_source.html#l00034">Dinheiro.hpp:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

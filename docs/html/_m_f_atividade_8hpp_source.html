@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TP1 Trabalho: Código-Fonte de include/Modulos/MFAtividade.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v2.0</span>
+   </div>
+   <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_m_f_atividade_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MFAtividade.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_m_f_atividade_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MFATIVIDADE_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MFATIVIDADE_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_i_f_atividade_8hpp.html">../Interfaces/IFAtividade.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_m_f_atividade.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_m_f_atividade.html">MFAtividade</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_f_atividade.html">IFAtividade</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="class_i_b_atividade.html">IBAtividade</a>* cntrIBAtividade;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        std::vector&lt;Atividade&gt; atividadeRegistradas;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_function" href="class_m_f_atividade.html#af0cb8df87a2146b1d7175c94ee87614c">MFAtividade</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_function" href="class_m_f_atividade.html#a6b3e1a130ceec1a3a6166cd102b61783">~MFAtividade</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_m_f_atividade.html#abfb93d42517a5d8dd8c88e236f95455a">lerInt</a>(std::string);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_m_f_atividade.html#a4f9d6326985583b26a96e443b950ffc2">esperarInput</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_m_f_atividade.html#adab45a2af8327ef027d9611e718354bf">printAtividade</a>(<a class="code hl_class" href="class_atividade.html">Atividade</a>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_f_atividade.html#aefe79b4d300ece8603ebbc1e57dab39c">criarAtividade</a>(<a class="code hl_class" href="class_codigo.html">Codigo</a>, <a class="code hl_class" href="class_destino.html">Destino</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_f_atividade.html#af872fcd6ab6644f1a98f48702e17fd41">editarAtividade</a>(<a class="code hl_class" href="class_atividade.html">Atividade</a>, <a class="code hl_class" href="class_destino.html">Destino</a>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_f_atividade.html#a356b8c8acf828a7f5bbfd6e6bd7c17a9">processAtividade</a>(<a class="code hl_class" href="class_destino.html">Destino</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_m_f_atividade.html#a853520234ee670a4739176ecb60712fc">run</a>(<a class="code hl_class" href="class_codigo.html">Codigo</a>, <a class="code hl_class" href="class_destino.html">Destino</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_m_f_atividade.html#a224a6e390be0e49328f630f6300128a0">setCntrIBAtividade</a>(<a class="code hl_class" href="class_i_b_atividade.html">IBAtividade</a>*);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_m_f_atividade.html#a224a6e390be0e49328f630f6300128a0">   35</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_m_f_atividade.html#a224a6e390be0e49328f630f6300128a0">MFAtividade::setCntrIBAtividade</a>(<a class="code hl_class" href="class_i_b_atividade.html">IBAtividade</a>* novo)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    this-&gt;cntrIBAtividade = novo;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif </span><span class="comment">// MFATIVIDADE_HPP_INCLUDED</span></div>
+<div class="ttc" id="a_i_f_atividade_8hpp_html"><div class="ttname"><a href="_i_f_atividade_8hpp.html">IFAtividade.hpp</a></div></div>
+<div class="ttc" id="aclass_atividade_html"><div class="ttname"><a href="class_atividade.html">Atividade</a></div><div class="ttdoc">Entidade Atividade.</div><div class="ttdef"><b>Definição</b> <a href="_atividade_8hpp_source.html#l00022">Atividade.hpp:22</a></div></div>
+<div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Dominio Codigo.</div><div class="ttdef"><b>Definição</b> <a href="_codigo_8hpp_source.html#l00014">Codigo.hpp:15</a></div></div>
+<div class="ttc" id="aclass_destino_html"><div class="ttname"><a href="class_destino.html">Destino</a></div><div class="ttdoc">Entidade Destino.</div><div class="ttdef"><b>Definição</b> <a href="_destino_8hpp_source.html#l00019">Destino.hpp:20</a></div></div>
+<div class="ttc" id="aclass_i_b_atividade_html"><div class="ttname"><a href="class_i_b_atividade.html">IBAtividade</a></div><div class="ttdoc">Interface Back Atividade.</div><div class="ttdef"><b>Definição</b> <a href="_i_b_atividade_8hpp_source.html#l00016">IBAtividade.hpp:17</a></div></div>
+<div class="ttc" id="aclass_i_f_atividade_html"><div class="ttname"><a href="class_i_f_atividade.html">IFAtividade</a></div><div class="ttdoc">Interface Front Atividade.</div><div class="ttdef"><b>Definição</b> <a href="_i_f_atividade_8hpp_source.html#l00018">IFAtividade.hpp:19</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html"><div class="ttname"><a href="class_m_f_atividade.html">MFAtividade</a></div><div class="ttdef"><b>Definição</b> <a href="#l00011">MFAtividade.hpp:12</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html_a224a6e390be0e49328f630f6300128a0"><div class="ttname"><a href="class_m_f_atividade.html#a224a6e390be0e49328f630f6300128a0">MFAtividade::setCntrIBAtividade</a></div><div class="ttdeci">void setCntrIBAtividade(IBAtividade *)</div><div class="ttdoc">Dependência da IBAtividade.</div><div class="ttdef"><b>Definição</b> <a href="#l00035">MFAtividade.hpp:35</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html_a356b8c8acf828a7f5bbfd6e6bd7c17a9"><div class="ttname"><a href="class_m_f_atividade.html#a356b8c8acf828a7f5bbfd6e6bd7c17a9">MFAtividade::processAtividade</a></div><div class="ttdeci">bool processAtividade(Destino)</div><div class="ttdef"><b>Definição</b> <a href="_m_f_atividade_8cpp_source.html#l00241">MFAtividade.cpp:241</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html_a4f9d6326985583b26a96e443b950ffc2"><div class="ttname"><a href="class_m_f_atividade.html#a4f9d6326985583b26a96e443b950ffc2">MFAtividade::esperarInput</a></div><div class="ttdeci">void esperarInput()</div><div class="ttdef"><b>Definição</b> <a href="_m_f_atividade_8cpp_source.html#l00031">MFAtividade.cpp:31</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html_a6b3e1a130ceec1a3a6166cd102b61783"><div class="ttname"><a href="class_m_f_atividade.html#a6b3e1a130ceec1a3a6166cd102b61783">MFAtividade::~MFAtividade</a></div><div class="ttdeci">~MFAtividade()</div><div class="ttdef"><b>Definição</b> <a href="_m_f_atividade_8cpp_source.html#l00013">MFAtividade.cpp:13</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html_a853520234ee670a4739176ecb60712fc"><div class="ttname"><a href="class_m_f_atividade.html#a853520234ee670a4739176ecb60712fc">MFAtividade::run</a></div><div class="ttdeci">void run(Codigo, Destino)</div><div class="ttdoc">Inicia IFAtividade.</div><div class="ttdef"><b>Definição</b> <a href="_m_f_atividade_8cpp_source.html#l00511">MFAtividade.cpp:511</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html_abfb93d42517a5d8dd8c88e236f95455a"><div class="ttname"><a href="class_m_f_atividade.html#abfb93d42517a5d8dd8c88e236f95455a">MFAtividade::lerInt</a></div><div class="ttdeci">int lerInt(std::string)</div><div class="ttdef"><b>Definição</b> <a href="_m_f_atividade_8cpp_source.html#l00018">MFAtividade.cpp:18</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html_adab45a2af8327ef027d9611e718354bf"><div class="ttname"><a href="class_m_f_atividade.html#adab45a2af8327ef027d9611e718354bf">MFAtividade::printAtividade</a></div><div class="ttdeci">void printAtividade(Atividade)</div><div class="ttdef"><b>Definição</b> <a href="_m_f_atividade_8cpp_source.html#l00039">MFAtividade.cpp:39</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html_aefe79b4d300ece8603ebbc1e57dab39c"><div class="ttname"><a href="class_m_f_atividade.html#aefe79b4d300ece8603ebbc1e57dab39c">MFAtividade::criarAtividade</a></div><div class="ttdeci">bool criarAtividade(Codigo, Destino)</div><div class="ttdef"><b>Definição</b> <a href="_m_f_atividade_8cpp_source.html#l00376">MFAtividade.cpp:376</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html_af0cb8df87a2146b1d7175c94ee87614c"><div class="ttname"><a href="class_m_f_atividade.html#af0cb8df87a2146b1d7175c94ee87614c">MFAtividade::MFAtividade</a></div><div class="ttdeci">MFAtividade()</div><div class="ttdef"><b>Definição</b> <a href="_m_f_atividade_8cpp_source.html#l00008">MFAtividade.cpp:8</a></div></div>
+<div class="ttc" id="aclass_m_f_atividade_html_af872fcd6ab6644f1a98f48702e17fd41"><div class="ttname"><a href="class_m_f_atividade.html#af872fcd6ab6644f1a98f48702e17fd41">MFAtividade::editarAtividade</a></div><div class="ttdeci">bool editarAtividade(Atividade, Destino)</div><div class="ttdef"><b>Definição</b> <a href="_m_f_atividade_8cpp_source.html#l00056">MFAtividade.cpp:56</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3e2e2f189f0e74f7358b320107face2a.html">Modulos</a></li><li class="navelem"><a class="el" href="_m_f_atividade_8hpp.html">MFAtividade.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

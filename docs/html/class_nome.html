@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v2.0</span>
    </div>
    <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
   </td>
@@ -129,7 +129,7 @@ Membros públicos</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Atributos Públicos Estáticos</h2></td></tr>
 <tr class="memitem:ac8d63ad7f3154953925f3027eb15c147" id="r_ac8d63ad7f3154953925f3027eb15c147"><td class="memItemLeft" align="right" valign="top">static int const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8d63ad7f3154953925f3027eb15c147">MAXLENGTH</a> = 30</td></tr>
-<tr class="memdesc:ac8d63ad7f3154953925f3027eb15c147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Um inteiro público estático.  <br /></td></tr>
+<tr class="memdesc:ac8d63ad7f3154953925f3027eb15c147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tamanho máximo de nome.  <br /></td></tr>
 <tr class="separator:ac8d63ad7f3154953925f3027eb15c147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
@@ -137,9 +137,10 @@ Atributos Públicos Estáticos</h2></td></tr>
 <p>Dominio <a class="el" href="class_nome.html" title="Dominio Nome.">Nome</a>, string de no máximo 30 caracteres.<br  />
 232013031 - implementação, documentação, construtores<br  />
 232002771 - exceções, documentação <br  />
-232006028 - documentação </p>
+232006028 - documentação <br  />
+232002520 - documentação </p>
 
-<p class="definition">Definido na linha <a class="el" href="_nome_8hpp_source.html#l00014">14</a> do ficheiro <a class="el" href="_nome_8hpp_source.html">Nome.hpp</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="_nome_8hpp_source.html#l00015">15</a> do ficheiro <a class="el" href="_nome_8hpp_source.html">Nome.hpp</a>.</p>
 </div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
 <a id="a500b022728cd437dd749bfe625a26a4d" name="a500b022728cd437dd749bfe625a26a4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a500b022728cd437dd749bfe625a26a4d">&#9670;&#160;</a></span>Nome() <span class="overload">[1/2]</span></h2>
@@ -157,7 +158,7 @@ Atributos Públicos Estáticos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor Vazio. </p>
-<p>Constrói um objeto <a class="el" href="class_nome.html" title="Dominio Nome.">Nome</a> com valor vazio. </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="#a1286afeeafed7a30af95d258f02318a6" title="Construtor Paramétrico.">Nome(std::string)</a> </dd></dl>
+<p>Constrói um objeto <a class="el" href="class_nome.html" title="Dominio Nome.">Nome</a> vazio. </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="#a1286afeeafed7a30af95d258f02318a6" title="Construtor Paramétrico.">Nome(std::string)</a> </dd></dl>
 
 <p class="definition">Definido na linha <a class="el" href="_nome_8cpp_source.html#l00005">5</a> do ficheiro <a class="el" href="_nome_8cpp_source.html">Nome.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    6</span>{</div>
@@ -223,12 +224,12 @@ Atributos Públicos Estáticos</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="#ae6eddd41a782357f0466a1c400156925" title="Nome::getValor()">Nome::getValor()</a> </p>
-<p>Função para obter o valor da classe <a class="el" href="class_nome.html" title="Dominio Nome.">Nome</a>. </p><dl class="section return"><dt>Retorna</dt><dd>string parâmetro nome do objeto. </dd></dl>
+<p>Retorna o nome armazenado na classe. </p><dl class="section return"><dt>Retorna</dt><dd>string com valor do novo nome. </dd></dl>
 
-<p class="definition">Definido na linha <a class="el" href="_nome_8hpp_source.html#l00070">70</a> do ficheiro <a class="el" href="_nome_8hpp_source.html">Nome.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>{</div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> nome;</div>
-<div class="line"><span class="lineno">   73</span>}</div>
+<p class="definition">Definido na linha <a class="el" href="_nome_8hpp_source.html#l00071">71</a> do ficheiro <a class="el" href="_nome_8hpp_source.html">Nome.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>{</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">return</span> nome;</div>
+<div class="line"><span class="lineno">   74</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -248,7 +249,7 @@ Atributos Públicos Estáticos</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="#a3fa35d065611a83a5aebda0c642b2f19" title="Nome::setValor()">Nome::setValor()</a> </p>
-<p>Armazena um novo valor dentro da classe após sua verificação. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Recebe um valor string, verifica-o e o armazena como novo nome dentro da classe. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>novo valor. </td></tr>
   </table>
@@ -286,10 +287,10 @@ Atributos Públicos Estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Um inteiro público estático. </p>
-<p>Armazena o tamanho máximo do valor. </p>
+<p>Tamanho máximo de nome. </p>
+<p>Atributo inteiro estático constante que armazena o tamanho máximo do valor. </p>
 
-<p class="definition">Definido na linha <a class="el" href="_nome_8hpp_source.html#l00035">35</a> do ficheiro <a class="el" href="_nome_8hpp_source.html">Nome.hpp</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="_nome_8hpp_source.html#l00036">36</a> do ficheiro <a class="el" href="_nome_8hpp_source.html">Nome.hpp</a>.</p>
 
 </div>
 </div>

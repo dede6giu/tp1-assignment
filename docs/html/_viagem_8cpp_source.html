@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v2.0</span>
    </div>
    <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
   </td>
@@ -109,46 +109,57 @@ $(function(){initNavTree('_viagem_8cpp_source.html',''); initResizable(true); })
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    avaliacao = <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>();</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    codigo = <a class="code hl_class" href="class_codigo.html">Codigo</a>();</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    nome = <a class="code hl_class" href="class_nome.html">Nome</a>();</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    tag = <a class="code hl_class" href="class_codigo.html">Codigo</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
 </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_viagem.html#a269d254b7735c256f2a9655f22918f08">   10</a></span><a class="code hl_function" href="class_viagem.html#a5b74d4780b008414c2045f5788b6afa5">Viagem::Viagem</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp; avaliacaoNovo,</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>               <span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigoNovo,</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>               <span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp; nomeNovo)</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    avaliacao = avaliacaoNovo;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    codigo = codigoNovo;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    nome = nomeNovo;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_viagem.html#a0c986d9a1a5f1a93ee8bf2bdef69b71f">   11</a></span><a class="code hl_function" href="class_viagem.html#a5b74d4780b008414c2045f5788b6afa5">Viagem::Viagem</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp; avaliacaoNovo,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>               <span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigoNovo,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>               <span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp; nomeNovo,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>               <span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; tagNovo)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    avaliacao = avaliacaoNovo;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    codigo = codigoNovo;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    nome = nomeNovo;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    tag = tagNovo;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
 </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_viagem.html#a13b342c649fb23949fb00f6db987a417">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">Viagem::setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a> &amp;novoCodigo)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    this-&gt;codigo = novoCodigo;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_viagem.html#a13b342c649fb23949fb00f6db987a417">   22</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">Viagem::setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a> &amp;novoCodigo)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    this-&gt;codigo = novoCodigo;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_viagem.html#af8ef08f4f0b197b836dae3602dba27b2">   24</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">Viagem::setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a> &amp;novoNome)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    this-&gt;nome = novoNome;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_viagem.html#af8ef08f4f0b197b836dae3602dba27b2">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">Viagem::setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a> &amp;novoNome)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    this-&gt;nome = novoNome;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
 </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">   29</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">Viagem::setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> &amp;novaAvaliacao)</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    this-&gt;avaliacao = novaAvaliacao;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">   32</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">Viagem::setValor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> &amp;novaAvaliacao)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    this-&gt;avaliacao = novaAvaliacao;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_viagem.html#ab467f773b6b2aaf16c3a1a9e4599f723">   37</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#ab467f773b6b2aaf16c3a1a9e4599f723">Viagem::setTag</a>(<a class="code hl_class" href="class_codigo.html">Codigo</a> novoID)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    this-&gt;tag = novoID;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
 </div>
 <div class="ttc" id="a_viagem_8hpp_html"><div class="ttname"><a href="_viagem_8hpp.html">Viagem.hpp</a></div></div>
-<div class="ttc" id="aclass_avaliacao_html"><div class="ttname"><a href="class_avaliacao.html">Avaliacao</a></div><div class="ttdoc">Dominio Avaliacao.</div><div class="ttdef"><b>Definição</b> <a href="_avaliacao_8hpp_source.html#l00012">Avaliacao.hpp:13</a></div></div>
-<div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Dominio Codigo.</div><div class="ttdef"><b>Definição</b> <a href="_codigo_8hpp_source.html#l00013">Codigo.hpp:14</a></div></div>
-<div class="ttc" id="aclass_nome_html"><div class="ttname"><a href="class_nome.html">Nome</a></div><div class="ttdoc">Dominio Nome.</div><div class="ttdef"><b>Definição</b> <a href="_nome_8hpp_source.html#l00014">Nome.hpp:15</a></div></div>
+<div class="ttc" id="aclass_avaliacao_html"><div class="ttname"><a href="class_avaliacao.html">Avaliacao</a></div><div class="ttdoc">Dominio Avaliacao.</div><div class="ttdef"><b>Definição</b> <a href="_avaliacao_8hpp_source.html#l00013">Avaliacao.hpp:14</a></div></div>
+<div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Dominio Codigo.</div><div class="ttdef"><b>Definição</b> <a href="_codigo_8hpp_source.html#l00014">Codigo.hpp:15</a></div></div>
+<div class="ttc" id="aclass_nome_html"><div class="ttname"><a href="class_nome.html">Nome</a></div><div class="ttdoc">Dominio Nome.</div><div class="ttdef"><b>Definição</b> <a href="_nome_8hpp_source.html#l00015">Nome.hpp:16</a></div></div>
 <div class="ttc" id="aclass_viagem_html_a5b74d4780b008414c2045f5788b6afa5"><div class="ttname"><a href="class_viagem.html#a5b74d4780b008414c2045f5788b6afa5">Viagem::Viagem</a></div><div class="ttdeci">Viagem()</div><div class="ttdoc">Construtor vazio.</div><div class="ttdef"><b>Definição</b> <a href="#l00003">Viagem.cpp:3</a></div></div>
-<div class="ttc" id="aclass_viagem_html_af25cc4e7977ddf3a569107f4f12a03f0"><div class="ttname"><a href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">Viagem::setValor</a></div><div class="ttdeci">void setValor(const Avaliacao &amp;)</div><div class="ttdoc">Viagem::setValor(const Avaliaacao&amp;)</div><div class="ttdef"><b>Definição</b> <a href="#l00029">Viagem.cpp:29</a></div></div>
+<div class="ttc" id="aclass_viagem_html_ab467f773b6b2aaf16c3a1a9e4599f723"><div class="ttname"><a href="class_viagem.html#ab467f773b6b2aaf16c3a1a9e4599f723">Viagem::setTag</a></div><div class="ttdeci">void setTag(Codigo)</div><div class="ttdoc">inline Viagem::getTag()</div><div class="ttdef"><b>Definição</b> <a href="#l00037">Viagem.cpp:37</a></div></div>
+<div class="ttc" id="aclass_viagem_html_af25cc4e7977ddf3a569107f4f12a03f0"><div class="ttname"><a href="class_viagem.html#af25cc4e7977ddf3a569107f4f12a03f0">Viagem::setValor</a></div><div class="ttdeci">void setValor(const Avaliacao &amp;)</div><div class="ttdoc">Viagem::setValor(const Avaliaacao&amp;)</div><div class="ttdef"><b>Definição</b> <a href="#l00032">Viagem.cpp:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

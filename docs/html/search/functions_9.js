@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['viagem_0',['Viagem',['../class_viagem.html#a5b74d4780b008414c2045f5788b6afa5',1,'Viagem::Viagem()'],['../class_viagem.html#a269d254b7735c256f2a9655f22918f08',1,'Viagem::Viagem(const Avaliacao &amp;, const Codigo &amp;, const Nome &amp;)']]]
+  ['operator_3c_0',['operator&lt;',['../_data_8cpp.html#aa9a2fcbea8a6f5b2fd7b636332012368',1,'Data.cpp']]],
+  ['operator_3d_3d_1',['operator==',['../_data_8cpp.html#afb754f03dbd6cb1d3f03d0c7f8056fac',1,'Data.cpp']]],
+  ['operator_3e_2',['operator&gt;',['../_data_8cpp.html#a755ae84659703b8d12eddd8f6237104f',1,'Data.cpp']]]
 ];

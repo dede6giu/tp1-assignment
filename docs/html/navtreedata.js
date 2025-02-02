@@ -30,17 +30,20 @@ var NAVTREE =
     [ "Classes", "annotated.html", [
       [ "Lista de componentes", "annotated.html", "annotated_dup" ],
       [ "Índice dos componentes", "classes.html", null ],
+      [ "Hierarquia de classes", "hierarchy.html", "hierarchy" ],
       [ "Componentes membro", "functions.html", [
-        [ "Tudo", "functions.html", null ],
-        [ "Funções", "functions_func.html", null ],
-        [ "Variáveis", "functions_vars.html", null ]
+        [ "Tudo", "functions.html", "functions_dup" ],
+        [ "Funções", "functions_func.html", "functions_func" ],
+        [ "Variáveis", "functions_vars.html", null ],
+        [ "Símbolos relacionados", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Ficheiros", "files.html", [
       [ "Lista de ficheiros", "files.html", "files_dup" ],
       [ "Membros dos Ficheiros", "globals.html", [
         [ "Tudo", "globals.html", null ],
-        [ "Funções", "globals_func.html", null ]
+        [ "Funções", "globals_func.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -49,7 +52,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_atividade_8cpp.html",
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html"
+"class_atividade.html#afa32195ee25ca6fb8e7045600bf90821",
+"class_m_b_hospedagem.html#a957d7b13f7ef9f1ec881dabcdeedc335"
 ];
 
 var SYNCONMSG = 'clique para desativar a sincronização do painel';
