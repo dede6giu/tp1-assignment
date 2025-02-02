@@ -82,8 +82,13 @@ bool MFHospedagem::editarHospedagem(Hospedagem hospedagemAtual)
                 {
                     throw runtime_error("Falha na operacao");
                 }
+
             }
             catch (const length_error &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
+            catch (const invalid_argument &exp)
             {
                 cout << endl << "Valor invalido.";
             }
@@ -132,6 +137,10 @@ bool MFHospedagem::editarHospedagem(Hospedagem hospedagemAtual)
                 }
             }
             catch (const length_error &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
+            catch (const invalid_argument &exp)
             {
                 cout << endl << "Valor invalido.";
             }

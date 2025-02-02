@@ -93,6 +93,10 @@ bool MFAtividade::editarAtividade(Atividade atividadeAtual, Destino destinoAssoc
             {
                 cout << endl << "Valor invalido.";
             }
+            catch (const invalid_argument &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
             break;
         case 2:
             cout << endl << "Qual a nova data?";
@@ -220,6 +224,10 @@ bool MFAtividade::editarAtividade(Atividade atividadeAtual, Destino destinoAssoc
                 }
             }
             catch (const length_error &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
+            catch (const invalid_argument &exp)
             {
                 cout << endl << "Valor invalido.";
             }
