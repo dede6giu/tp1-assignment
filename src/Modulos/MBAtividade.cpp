@@ -47,9 +47,9 @@ bool MBAtividade::criar(Atividade novoAtividade)
 
 void MBAtividade::criar(Codigo tabelaNova)
 {
-    string comando = "CREATE TABLE IF NOT EXISTS \"";
+    string comando = "CREATE TABLE IF NOT EXISTS ";
     comando += tabelaNova.getValor();
-    comando += "\" (Tag, TagDestino, Nome, Data, Horario, Duracao, Preco, Avaliacao);";
+    comando += " (Tag, TagDestino, Nome, Data, Horario, Duracao, Preco, Avaliacao);";
     char* errmsg;
     int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
     if (rc != SQLITE_OK)
@@ -98,6 +98,8 @@ void MBAtividade::excluir(Codigo tabelaExcluir)
 
 void MBAtividade::excluir(Codigo contaExcluir, Codigo destinoExcluir)
 {
+    MBAtividade::criar(contaExcluir);
+
     string comando = "DELETE FROM ";
     comando += contaExcluir.getValor();
     comando += " WHERE TagDestino='";

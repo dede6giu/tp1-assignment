@@ -241,9 +241,9 @@ bool MFViagem::processViagem()
                             cout << endl << "Falha na operacao.";
                         }
                     }
-                    catch (const exception &exp)
+                    catch (const runtime_error &exp)
                     {
-                        cout << endl << "Erro no sistema." << endl;
+                        cout << endl << "Erro no sistema: " << &exp << endl;
                     }
                     esperarInput();
                     return atualizarViagem;
