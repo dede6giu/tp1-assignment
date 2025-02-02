@@ -18,6 +18,7 @@ class MBConta : public IBConta
         MBConta();
         ~MBConta();
 
+        Codigo insensitivo(Codigo);
         bool criar(Conta);
         bool excluir(Codigo);
         bool ler(Codigo);

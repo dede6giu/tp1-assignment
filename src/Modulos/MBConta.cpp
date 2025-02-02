@@ -80,12 +80,23 @@ bool MBConta::excluir(Codigo contaExcluir)
     return true;
 }
 
+Codigo MBConta::insensitivo(Codigo codigoAtual)
+{
+    string resultado = "";
+    string atual = codigoAtual.getValor();
+    for (int i = 0; i < atual.size(); i++)
+    {
+        resultado += tolower(atual[i]);
+    }
+    return Codigo(resultado);
+}
+
 bool MBConta::ler(Codigo contaCheque)
 {
     bool resultado = false;
 
     string comando = "SELECT Codigo FROM Contas WHERE Codigo='";
-    comando += contaCheque.getValor();
+    comando += insensitivo(contaCheque).getValor();
     comando += "'";
     sqlite3_stmt *stmt;
 

@@ -51,9 +51,9 @@ bool MBViagem::criar(Viagem novaViagem)
 
 void MBViagem::criar(Codigo tabelaNova)
 {
-    string comando = "CREATE TABLE IF NOT EXISTS ";
+    string comando = "CREATE TABLE IF NOT EXISTS \"";
     comando += tabelaNova.getValor();
-    comando += " (Tag, Nome, Avaliacao);";
+    comando += "\" (Tag, Nome, Avaliacao);";
     char* errmsg;
     int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
     if (rc != SQLITE_OK)
