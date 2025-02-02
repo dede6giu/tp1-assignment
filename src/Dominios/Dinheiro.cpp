@@ -30,13 +30,15 @@ void Dinheiro::validar(int valor)
 
 std::string Dinheiro::getValorFormatado() const
 {
+    std::string resultado = "";
+    std::string numero = std::to_string(this->dinheiro);
     if (this->dinheiro < 100)
     {
-        return "0," + std::to_string(this->dinheiro);
+        resultado += "0,";
+        if (this->dinheiro < 10) resultado += "0";
+        return resultado + numero;
     }
-    std::string numero = std::to_string(this->dinheiro);
     int i = numero.length() - 1;
-    std::string resultado = "";
     resultado += numero[i]; i--;
     resultado += numero[i];
     resultado += ",";

@@ -18,6 +18,9 @@ class MFHospedagem : public IFHospedagem
 
     public:
 
+        MFHospedagem();
+        ~MFHospedagem();
+
         int lerInt(std::string);
         void esperarInput();
         void printHospedagem(Hospedagem);

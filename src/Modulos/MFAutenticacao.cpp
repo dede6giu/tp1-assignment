@@ -65,11 +65,13 @@ bool MFAutenticacao::run(Conta* contaAutenticar)
         catch (const invalid_argument &exp)
         {
             cout << endl << "Valor invalido.";
+            esperarInput();
             continue;
         }
         catch (const length_error &exp)
         {
             cout << endl << "Valor invalido.";
+            esperarInput();
             continue;
         }
 
@@ -82,6 +84,7 @@ bool MFAutenticacao::run(Conta* contaAutenticar)
         catch (const invalid_argument &exp)
         {
             cout << endl << "Valor invalido.";
+            esperarInput();
             continue;
         }
 

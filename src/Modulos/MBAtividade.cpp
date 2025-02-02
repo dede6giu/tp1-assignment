@@ -312,7 +312,7 @@ bool MBAtividade::atualizar(Atividade atividadeAtual, Dinheiro novoDinheiro)
 
     string comando = "UPDATE ";
     comando += atividadeAtual.getValorCodigo();
-    comando += " SET Dinheiro='";
+    comando += " SET Preco='";
     comando += to_string(novoDinheiro.getValor());
     comando += "' WHERE Tag='";
     comando += atividadeAtual.getTag().getValor();

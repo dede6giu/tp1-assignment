@@ -53,7 +53,7 @@ void MFAtividade::printAtividade(Atividade atividadeImprimir)
     cout << endl << "=========================================";
 }
 
-bool MFAtividade::editarAtividade(Atividade atividadeAtual)
+bool MFAtividade::editarAtividade(Atividade atividadeAtual, Destino destinoAssociado)
 {
     cout << endl << "=========================================";
     cout << endl << "                  EDITAR";
@@ -101,6 +101,12 @@ bool MFAtividade::editarAtividade(Atividade atividadeAtual)
             try
             {
                 Data dataNovo(comando);
+                if (destinoAssociado.getValorInicio() > dataNovo
+                    || destinoAssociado.getValorFim() < dataNovo)
+                {
+                    cout << endl << "Data da atividade deve ocorrer dentro do periodo do destino associado";
+                    break;
+                }
                 if (cntrIBAtividade->atualizar(atividadeAtual, dataNovo))
                 {
                     return true;
@@ -232,7 +238,7 @@ bool MFAtividade::editarAtividade(Atividade atividadeAtual)
     return false;
 }
 
-bool MFAtividade::processAtividade()
+bool MFAtividade::processAtividade(Destino destinoAssociado)
 {
     bool atualizarAtividade = false;
     int posicaoAtual = 0;
@@ -310,7 +316,7 @@ bool MFAtividade::processAtividade()
                 atualizarAtividade = true;
                 try
                 {
-                    bool sucesso = editarAtividade(atividadeRegistradas[posicaoAtual]);
+                    bool sucesso = editarAtividade(atividadeRegistradas[posicaoAtual], destinoAssociado);
                     if (sucesso)
                     {
                         cout << endl << "Alteracao realizada com sucesso.";
@@ -340,23 +346,18 @@ bool MFAtividade::processAtividade()
                         if (cntrIBAtividade->excluir(atividadeRegistradas[posicaoAtual]))
                         {
                             cout << endl << "Sucesso na operacao.";
-                            atividadeRegistradas.erase(atividadeRegistradas.begin() + posicaoAtual);
-                            posicaoMaxima--;
-                            posicaoAtual %= posicaoMaxima;
                         }
                         else
                         {
                             cout << endl << "Falha na operacao.";
-                            esperarInput();
-                            return atualizarAtividade;
                         }
                     }
                     catch (const exception &exp)
                     {
                         cout << endl << "Erro no sistema." << endl;
-                        esperarInput();
-                        return atualizarAtividade;
                     }
+                    esperarInput();
+                    return atualizarAtividade;
                 }
                 else
                 {
@@ -372,7 +373,7 @@ bool MFAtividade::processAtividade()
     }
 }
 
-bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociado)
+bool MFAtividade::criarAtividade(Codigo contaAutenticada, Destino destinoAssociado)
 {
     system("cls");
     cout << endl << "=========================================";
@@ -401,7 +402,6 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
     catch (const exception &exp)
     {
         cout << endl << "Valor invalido.";
-        esperarInput();
         return false;
     }
     cout << endl << "Forneca um nome para a Atividade:";
@@ -415,7 +415,6 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
     catch (const exception &exp)
     {
         cout << endl << "Valor invalido.";
-        esperarInput();
         return false;
     }
     cout << endl << "Forneca uma data para a Atividade:";
@@ -425,11 +424,16 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
     try
     {
         Data aux(data);
+        if (destinoAssociado.getValorInicio() > aux
+            || destinoAssociado.getValorFim() < aux)
+        {
+            cout << endl << "Data da atividade deve ocorrer dentro do periodo do destino associado";
+            return false;
+        }
     }
     catch (const exception &exp)
     {
         cout << endl << "Valor invalido.";
-        esperarInput();
         return false;
     }
     cout << endl << "Forneca um horario para a Atividade:";
@@ -443,7 +447,6 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
     catch (const exception &exp)
     {
         cout << endl << "Valor invalido.";
-        esperarInput();
         return false;
     }
     cout << endl << "Forneca uma duracao para a Atividade: ";
@@ -457,7 +460,6 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
     catch (const exception &exp)
     {
         cout << endl << "Valor invalido.";
-        esperarInput();
         return false;
     }
     cout << endl << "Forneca um preco em centavos para a Atividade: ";
@@ -471,7 +473,6 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
     catch (const exception &exp)
     {
         cout << endl << "Valor invalido.";
-        esperarInput();
         return false;
     }
     cout << endl << "Forneca uma avaliacao para a Atividade: ";
@@ -485,7 +486,6 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
     catch (const exception &exp)
     {
         cout << endl << "Valor invalido.";
-        esperarInput();
         return false;
     }
 
@@ -497,7 +497,7 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
                             Dinheiro(stoi(precoStr)),
                             Avaliacao(stoi(avaliacaoStr)),
                             Codigo(tag),
-                            destinoAssociado);
+                            destinoAssociado.getTag());
     if (cntrIBAtividade->criar(novoAtividade))
     {
         return true;
@@ -508,7 +508,7 @@ bool MFAtividade::criarAtividade(Codigo contaAutenticada, Codigo destinoAssociad
     }
 }
 
-void MFAtividade::run(Codigo contaAutenticada, Codigo destinoAssociado)
+void MFAtividade::run(Codigo contaAutenticada, Destino destinoAssociado)
 {
     bool atualizarAtividade = true;
     bool operando = true;
@@ -517,12 +517,12 @@ void MFAtividade::run(Codigo contaAutenticada, Codigo destinoAssociado)
         system("cls");
         if (atualizarAtividade)
         {
-            atividadeRegistradas = cntrIBAtividade->ler(contaAutenticada, destinoAssociado);
+            atividadeRegistradas = cntrIBAtividade->ler(contaAutenticada, destinoAssociado.getTag());
             atualizarAtividade = false;
         }
         cout << endl << "=========================================";
         cout << endl << "               ATIVIDADES";
-        cout << endl << "           DO DESTINO "; cout << destinoAssociado.getValor();
+        cout << endl << "           DO DESTINO "; cout << destinoAssociado.getTag().getValor();
         cout << endl << "Operacoes disponiveis:";
         cout << endl << "    0. Retornar";
         cout << endl << "    1. Criar nova Atividade";
@@ -561,7 +561,7 @@ void MFAtividade::run(Codigo contaAutenticada, Codigo destinoAssociado)
                     esperarInput();
                     break;
                 }
-                atualizarAtividade = processAtividade();
+                atualizarAtividade = processAtividade(destinoAssociado);
                 break;
 
             case 0:
