@@ -4,7 +4,7 @@ var searchData=
   ['data_2ecpp_1',['Data.cpp',['../_data_8cpp.html',1,'']]],
   ['data_2ehpp_2',['Data.hpp',['../_data_8hpp.html',1,'']]],
   ['de_20tp1_3',['Projeto de TP1',['../index.html',1,'']]],
-  ['destino_4',['Destino',['../class_destino.html',1,'Destino'],['../class_destino.html#aef24a2b0cbe223ed8a1c7f9c5b661934',1,'Destino::Destino()'],['../class_destino.html#acf097123e558aecc76f31f5d963ab8f2',1,'Destino::Destino(const Codigo &amp;, const Nome &amp;, const Data &amp;, const Data &amp;, const Avaliacao &amp;)']]],
+  ['destino_4',['Destino',['../class_destino.html',1,'Destino'],['../class_destino.html#aef24a2b0cbe223ed8a1c7f9c5b661934',1,'Destino::Destino()'],['../class_destino.html#abc8edb72a55e7dc786fc80fbec5556e3',1,'Destino::Destino(const Codigo &amp;, const Nome &amp;, const Data &amp;, const Data &amp;, const Avaliacao &amp;, const Codigo &amp;, const Codigo &amp;)']]],
   ['destino_2ecpp_5',['Destino.cpp',['../_destino_8cpp.html',1,'']]],
   ['destino_2ehpp_6',['Destino.hpp',['../_destino_8hpp.html',1,'']]],
   ['dinheiro_7',['Dinheiro',['../class_dinheiro.html',1,'Dinheiro'],['../class_dinheiro.html#a7529ac8a24b2cca107c06abe1a9d1f74',1,'Dinheiro::Dinheiro()'],['../class_dinheiro.html#a15e6c9e89acd87da84970aad0a1c27c3',1,'Dinheiro::Dinheiro(int)']]],

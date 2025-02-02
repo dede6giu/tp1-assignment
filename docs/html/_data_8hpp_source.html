@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v2.0</span>
    </div>
    <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
   </td>
@@ -151,42 +151,49 @@ $(function(){initNavTree('_data_8hpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_data.html#a5247797cdb69232a6b6c7db6683a292d">setValor</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_data.html#a5247797cdb69232a6b6c7db6683a292d">setValor</a>(std::string);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        std::string <a class="code hl_function" href="class_data.html#aecd8f0d04b834d1448d1d005f9b748b8">getValor</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>};</div>
-</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_data.html#a5247797cdb69232a6b6c7db6683a292d">setValor</a>(std::string);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        std::string <a class="code hl_function" href="class_data.html#aecd8f0d04b834d1448d1d005f9b748b8">getValor</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_data.html#aa9b7bdc683d9c493d903184e85f1e6b3">  112</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_data.html#aa9b7bdc683d9c493d903184e85f1e6b3">Data::getDia</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">return</span> this-&gt;dia;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_data.html#a755ae84659703b8d12eddd8f6237104f">operator&gt;</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_data.html#afb754f03dbd6cb1d3f03d0c7f8056fac">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_data.html#aa9a2fcbea8a6f5b2fd7b636332012368">operator&lt;</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>};</div>
 </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_data.html#a1df6f5e1695c7cae56b9ee752a6895e8">  117</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_data.html#a1df6f5e1695c7cae56b9ee752a6895e8">Data::getMes</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_data.html#aa9b7bdc683d9c493d903184e85f1e6b3">  117</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_data.html#aa9b7bdc683d9c493d903184e85f1e6b3">Data::getDia</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> this-&gt;mes;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> this-&gt;dia;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
 </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_data.html#a986bec10cbca338f08c9096d8e51efb5">  122</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_data.html#a986bec10cbca338f08c9096d8e51efb5">Data::getAno</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_data.html#a1df6f5e1695c7cae56b9ee752a6895e8">  122</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_data.html#a1df6f5e1695c7cae56b9ee752a6895e8">Data::getMes</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">return</span> this-&gt;ano;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">return</span> this-&gt;mes;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
 </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#endif </span><span class="comment">// DATA_HPP_INCLUDED</span></div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="class_data.html#a986bec10cbca338f08c9096d8e51efb5">  127</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_data.html#a986bec10cbca338f08c9096d8e51efb5">Data::getAno</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">return</span> this-&gt;ano;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#endif </span><span class="comment">// DATA_HPP_INCLUDED</span></div>
 <div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdoc">Dominio Data.</div><div class="ttdef"><b>Definição</b> <a href="#l00017">Data.hpp:18</a></div></div>
-<div class="ttc" id="aclass_data_html_a1df6f5e1695c7cae56b9ee752a6895e8"><div class="ttname"><a href="class_data.html#a1df6f5e1695c7cae56b9ee752a6895e8">Data::getMes</a></div><div class="ttdeci">int getMes() const</div><div class="ttdoc">int Data::getMes() const</div><div class="ttdef"><b>Definição</b> <a href="#l00117">Data.hpp:117</a></div></div>
+<div class="ttc" id="aclass_data_html_a1df6f5e1695c7cae56b9ee752a6895e8"><div class="ttname"><a href="class_data.html#a1df6f5e1695c7cae56b9ee752a6895e8">Data::getMes</a></div><div class="ttdeci">int getMes() const</div><div class="ttdoc">int Data::getMes() const</div><div class="ttdef"><b>Definição</b> <a href="#l00122">Data.hpp:122</a></div></div>
 <div class="ttc" id="aclass_data_html_a5247797cdb69232a6b6c7db6683a292d"><div class="ttname"><a href="class_data.html#a5247797cdb69232a6b6c7db6683a292d">Data::setValor</a></div><div class="ttdeci">void setValor(int, int, int)</div><div class="ttdoc">bool Data::setValor(int, int, int)</div><div class="ttdef"><b>Definição</b> <a href="_data_8cpp_source.html#l00083">Data.cpp:83</a></div></div>
-<div class="ttc" id="aclass_data_html_a986bec10cbca338f08c9096d8e51efb5"><div class="ttname"><a href="class_data.html#a986bec10cbca338f08c9096d8e51efb5">Data::getAno</a></div><div class="ttdeci">int getAno() const</div><div class="ttdoc">int Data::getAno() const</div><div class="ttdef"><b>Definição</b> <a href="#l00122">Data.hpp:122</a></div></div>
-<div class="ttc" id="aclass_data_html_aa9b7bdc683d9c493d903184e85f1e6b3"><div class="ttname"><a href="class_data.html#aa9b7bdc683d9c493d903184e85f1e6b3">Data::getDia</a></div><div class="ttdeci">int getDia() const</div><div class="ttdoc">int Data::getDia() const</div><div class="ttdef"><b>Definição</b> <a href="#l00112">Data.hpp:112</a></div></div>
+<div class="ttc" id="aclass_data_html_a755ae84659703b8d12eddd8f6237104f"><div class="ttname"><a href="class_data.html#a755ae84659703b8d12eddd8f6237104f">Data::operator&gt;</a></div><div class="ttdeci">friend bool operator&gt;(const Data &amp;, const Data &amp;)</div><div class="ttdef"><b>Definição</b> <a href="_data_8cpp_source.html#l00159">Data.cpp:159</a></div></div>
+<div class="ttc" id="aclass_data_html_a986bec10cbca338f08c9096d8e51efb5"><div class="ttname"><a href="class_data.html#a986bec10cbca338f08c9096d8e51efb5">Data::getAno</a></div><div class="ttdeci">int getAno() const</div><div class="ttdoc">int Data::getAno() const</div><div class="ttdef"><b>Definição</b> <a href="#l00127">Data.hpp:127</a></div></div>
+<div class="ttc" id="aclass_data_html_aa9a2fcbea8a6f5b2fd7b636332012368"><div class="ttname"><a href="class_data.html#aa9a2fcbea8a6f5b2fd7b636332012368">Data::operator&lt;</a></div><div class="ttdeci">friend bool operator&lt;(const Data &amp;, const Data &amp;)</div><div class="ttdef"><b>Definição</b> <a href="_data_8cpp_source.html#l00146">Data.cpp:146</a></div></div>
+<div class="ttc" id="aclass_data_html_aa9b7bdc683d9c493d903184e85f1e6b3"><div class="ttname"><a href="class_data.html#aa9b7bdc683d9c493d903184e85f1e6b3">Data::getDia</a></div><div class="ttdeci">int getDia() const</div><div class="ttdoc">int Data::getDia() const</div><div class="ttdef"><b>Definição</b> <a href="#l00117">Data.hpp:117</a></div></div>
 <div class="ttc" id="aclass_data_html_aecd8f0d04b834d1448d1d005f9b748b8"><div class="ttname"><a href="class_data.html#aecd8f0d04b834d1448d1d005f9b748b8">Data::getValor</a></div><div class="ttdeci">std::string getValor() const</div><div class="ttdoc">std::string Data::getValor() const</div><div class="ttdef"><b>Definição</b> <a href="_data_8cpp_source.html#l00125">Data.cpp:125</a></div></div>
 <div class="ttc" id="aclass_data_html_af11f741cb7f587e2e495452a8905a22a"><div class="ttname"><a href="class_data.html#af11f741cb7f587e2e495452a8905a22a">Data::Data</a></div><div class="ttdeci">Data()</div><div class="ttdoc">Construtor vazio.</div><div class="ttdef"><b>Definição</b> <a href="_data_8cpp_source.html#l00004">Data.cpp:4</a></div></div>
+<div class="ttc" id="aclass_data_html_afb754f03dbd6cb1d3f03d0c7f8056fac"><div class="ttname"><a href="class_data.html#afb754f03dbd6cb1d3f03d0c7f8056fac">Data::operator==</a></div><div class="ttdeci">friend bool operator==(const Data &amp;, const Data &amp;)</div><div class="ttdef"><b>Definição</b> <a href="_data_8cpp_source.html#l00140">Data.cpp:140</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

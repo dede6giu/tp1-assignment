@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v2.0</span>
    </div>
    <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
   </td>
@@ -129,7 +129,7 @@ Membros públicos</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Atributos Públicos Estáticos</h2></td></tr>
 <tr class="memitem:a26590f49fa46863781e4fa1af91de894" id="r_a26590f49fa46863781e4fa1af91de894"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26590f49fa46863781e4fa1af91de894">MAXIMO</a> = 360</td></tr>
-<tr class="memdesc:a26590f49fa46863781e4fa1af91de894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Um inteiro público.  <br /></td></tr>
+<tr class="memdesc:a26590f49fa46863781e4fa1af91de894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor máximo de duração.  <br /></td></tr>
 <tr class="separator:a26590f49fa46863781e4fa1af91de894"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
@@ -137,9 +137,10 @@ Atributos Públicos Estáticos</h2></td></tr>
 <p>Dominio <a class="el" href="class_duracao.html" title="Dominio Duracao.">Duracao</a>, inteiro entre 0 e 360 <br  />
 232002771 - implementação, documentação, exceções <br  />
 232013031 - construtores <br  />
-232006028 - documentação </p>
+232006028 - documentação <br  />
+232002520 - documentação </p>
 
-<p class="definition">Definido na linha <a class="el" href="_duracao_8hpp_source.html#l00012">12</a> do ficheiro <a class="el" href="_duracao_8hpp_source.html">Duracao.hpp</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="_duracao_8hpp_source.html#l00013">13</a> do ficheiro <a class="el" href="_duracao_8hpp_source.html">Duracao.hpp</a>.</p>
 </div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
 <a id="ad62b759c566b1576632e2479dc648bfa" name="ad62b759c566b1576632e2479dc648bfa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad62b759c566b1576632e2479dc648bfa">&#9670;&#160;</a></span>Duracao() <span class="overload">[1/2]</span></h2>
@@ -182,9 +183,9 @@ Atributos Públicos Estáticos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor paramétrico. </p>
-<p>Constrói um objeto <a class="el" href="class_duracao.html" title="Dominio Duracao.">Duracao</a> e recebe um int com o valor de duracao. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Constrói um objeto <a class="el" href="class_duracao.html" title="Dominio Duracao.">Duracao</a>, recebe e armazena um int com o valor de duracao. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">int</td><td>duracao. </td></tr>
+    <tr><td class="paramname">int</td><td>com o valor de duração. </td></tr>
   </table>
   </dd>
 </dl>
@@ -222,7 +223,7 @@ Atributos Públicos Estáticos</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="#a5fd6f8ad02e0daa5b40341a27919c565" title="Duracao::getValor()">Duracao::getValor()</a> </p>
-<p>Retorna um int com o valor da duracao armazenada. </p><dl class="section return"><dt>Retorna</dt><dd>int duracao </dd></dl>
+<p>Retorna um int com o valor da duracao armazenada. </p><dl class="section return"><dt>Retorna</dt><dd>int com o valor atual de duração. </dd></dl>
 
 <p class="definition">Definido na linha <a class="el" href="_duracao_8hpp_source.html#l00059">59</a> do ficheiro <a class="el" href="_duracao_8hpp_source.html">Duracao.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
@@ -249,7 +250,7 @@ Atributos Públicos Estáticos</h2></td></tr>
 <p><a class="el" href="#ad4659398cd168f931fc00667ab45bc6f" title="Duracao::setValor()">Duracao::setValor()</a> </p>
 <p>Recebe um int, verifica se é válido e guarda no objeto se a verificação tiver sucesso. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">int</td><td>duracao </td></tr>
+    <tr><td class="paramname">int</td><td>com novo valor de duração. </td></tr>
   </table>
   </dd>
 </dl>
@@ -283,15 +284,10 @@ Atributos Públicos Estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Um inteiro público. </p>
-<p>Armazena a quantidade máxima da duração. </p><dl class="params"><dt>Parâmetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">int</td><td>valor a validar </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Valor máximo de duração. </p>
+<p>Atributo inteiro estático constante com o valor máximo possível de duração. </p>
 
-<p class="definition">Definido na linha <a class="el" href="_duracao_8hpp_source.html#l00042">42</a> do ficheiro <a class="el" href="_duracao_8hpp_source.html">Duracao.hpp</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="_duracao_8hpp_source.html#l00031">31</a> do ficheiro <a class="el" href="_duracao_8hpp_source.html">Duracao.hpp</a>.</p>
 
 </div>
 </div>

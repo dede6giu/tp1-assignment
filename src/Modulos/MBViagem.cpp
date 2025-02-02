@@ -77,6 +77,7 @@ bool MBViagem::excluir(Viagem viagemExcluir)
     comando += " WHERE Tag='";
     comando += viagemExcluir.getTag().getValor();
     comando += "';";
+    // cout << endl << comando;
 
     char* errmsg;
     int rc = sqlite3_exec(banco, comando.c_str(), nullptr, 0, &errmsg);
@@ -125,8 +126,7 @@ bool MBViagem::ler(Viagem viagemCheque)
     int rc = sqlite3_prepare_v2(banco, comando.c_str(), -1, &stmt, NULL);
     if (rc != SQLITE_OK)
     {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
+        throw runtime_error(sqlite3_errmsg(banco));
     }
     while ((rc = sqlite3_step(stmt)) == SQLITE_ROW)
     {
@@ -134,14 +134,12 @@ bool MBViagem::ler(Viagem viagemCheque)
     }
     if (rc != SQLITE_DONE)
     {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
+        throw runtime_error(sqlite3_errmsg(banco));
     }
     rc = sqlite3_finalize(stmt);
     if (rc != SQLITE_OK)
     {
-        string err = sqlite3_errmsg(banco);
-        throw runtime_error(err);
+        throw runtime_error(sqlite3_errmsg(banco));
     }
 
     return resultado;

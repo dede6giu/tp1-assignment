@@ -114,6 +114,8 @@ void MBDestino::excluir(Codigo contaExcluir, Codigo viagemExcluir)
 {
     vector<string> destinos;
 
+    MBDestino::criar(contaExcluir);
+
     string comando = "SELECT Tag FROM ";
     comando += contaExcluir.getValor();
     comando += " WHERE TagViagem='";

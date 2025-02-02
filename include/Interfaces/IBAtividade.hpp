@@ -7,9 +7,9 @@
 
 //! Interface Back Atividade
 /*!
-    232002771 - Implementação e Documentação \n
+    232002771 - ImplementaÃ§Ã£o e DocumentaÃ§Ã£o \n
 
-    A IBAtividade é responsável pela comunicação do usuário com
+    A IBAtividade Ã© responsÃ¡vel pela comunicaÃ§Ã£o do usuÃ¡rio com
     o banco de dados quanto ao controle de Atividade. Ela permite
     criar, excluir, ler e atualizar os dados de uma Atividade,
 */
@@ -20,59 +20,59 @@ class IBAtividade
         //! Cria uma Atividade
         /*!
             Recebe os detalhes de uma nova Atividade e adiciona ao banco de dados.
-            Verifica se a Atividade é única antes de realizar a operação.
+            Verifica se a Atividade Ã© Ãºnica antes de realizar a operaÃ§Ã£o.
             @param Atividade a ser criada.
-            @return Sucesso da operação.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool criar(Atividade) = 0;
 
         //! Cria uma Tabela
         /*!
             Recebe um Codigo e adiciona uma nova tabela com tal Codigo ao banco
-            de dados, se não já existir a tabela.
+            de dados, se nÃ£o jÃ¡ existir a tabela.
             @param Codigo da Conta.
         */
         virtual void criar(Codigo) = 0;
 
         //! Exclui uma Atividade
         /*!
-            Recebe uma Atividade e realiza uma confirmação antes da exclusão. Se a
-            Atividade existe, ela é removida do banco de dados. Caso
-            contrário, a operação falha.
-            @param Atividade a ser excluída.
-            @return Sucesso da operação.
+            Recebe uma Atividade e realiza uma confirmaÃ§Ã£o antes da exclusÃ£o. Se a
+            Atividade existe, ela Ã© removida do banco de dados. Caso
+            contrÃ¡rio, a operaÃ§Ã£o falha.
+            @param Atividade a ser excluÃ­da.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool excluir(Atividade) = 0;
 
         //! Exclui uma Tabela
         /*!
-            Recebe um Codigo e exclui a tabela associada ao Codigo. Método só deve
-            ser usado durante a exclusão de Conta.
-            @param Codigo da Conta excluída.
+            Recebe um Codigo e exclui a tabela associada ao Codigo. MÃ©todo sÃ³ deve
+            ser usado durante a exclusÃ£o de Conta.
+            @param Codigo da Conta excluÃ­da.
         */
         virtual void excluir(Codigo) = 0;
 
         //! Exclui Atividades
         /*!
-            Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Exclui
-            da Conta associada todas as Atividade relacionados ao Destino. Método só
-            deve ser acionado durante a exclusão de Destino.
+            Recebe dois Codigo. O primeiro Ã© uma Conta, o segundo um Destino. Exclui
+            da Conta associada todas as Atividade relacionados ao Destino. MÃ©todo sÃ³
+            deve ser acionado durante a exclusÃ£o de Destino.
             @param Codigo da Conta.
-            @param Codigo do Destino excluído.
+            @param Codigo do Destino excluÃ­do.
         */
         virtual void excluir(Codigo, Codigo) = 0;
 
-        //! Lê uma Atividade
+        //! LÃª uma Atividade
         /*!
-            Verifica a existência de uma Atividade no banco de dados.
+            Verifica a existÃªncia de uma Atividade no banco de dados.
             @param Atividade a verificar.
-            @return Existência da Atividade.
+            @return ExistÃªncia da Atividade.
         */
         virtual bool ler(Atividade) = 0;
 
-        //! Lê todos Atividade
+        //! LÃª todos Atividade
         /*!
-            Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Busca
+            Recebe dois Codigo. O primeiro Ã© uma Conta, o segundo um Destino. Busca
             da Conta associada por todos Atividade relacionados ao Destino.
             @param Codigo da Conta.
             @param Codigo do Destino.
@@ -85,8 +85,8 @@ class IBAtividade
         /*!
             Atualiza o nome de uma Atividade.
             @param Atividade a ser atualizada.
-            @param Novo Nome a ser atribuído à Atividade.
-            @return Sucesso da operação.
+            @param Novo Nome a ser atribuÃ­do Ã  Atividade.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool atualizar(Atividade, Nome) = 0;
 
@@ -94,26 +94,26 @@ class IBAtividade
         /*!
             Atualiza a Data de uma Atividade.
             @param Atividade a ser atualizada.
-            @param Nova Data a ser atribuída à Atividade.
-            @return Sucesso da operação.
+            @param Nova Data a ser atribuÃ­da Ã  Atividade.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool atualizar(Atividade, Data) = 0;
 
         //! Atualiza o Horario de uma Atividade
         /*!
-            Atualiza o horário de início de uma Atividade.
+            Atualiza o horÃ¡rio de inÃ­cio de uma Atividade.
             @param Atividade a ser atualizada.
-            @param Novo Horario a ser atribuído à Atividade.
-            @return Sucesso da operação.
+            @param Novo Horario a ser atribuÃ­do Ã  Atividade.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool atualizar(Atividade, Horario) = 0;
 
         //! Atualiza a Duracao de uma Atividade
         /*!
-            Atualiza a duração de uma Atividade.
+            Atualiza a duraÃ§Ã£o de uma Atividade.
             @param Atividade a ser atualizada.
-            @param Nova Duracao a ser atribuída à Atividade.
-            @return Sucesso da operação.
+            @param Nova Duracao a ser atribuÃ­da Ã  Atividade.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool atualizar(Atividade, Duracao) = 0;
 
@@ -121,8 +121,8 @@ class IBAtividade
         /*!
             Atualiza o Dinheiro associado a uma Atividade.
             @param Atividade a ser atualizada.
-            @param Novo Dinheiro a ser atribuído à Atividade.
-            @return Sucesso da operação.
+            @param Novo Dinheiro a ser atribuÃ­do Ã  Atividade.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool atualizar(Atividade, Dinheiro) = 0;
 
@@ -130,8 +130,8 @@ class IBAtividade
         /*!
             Atualiza a Avaliacao de uma Atividade.
             @param Atividade a ser atualizada.
-            @param Nova Avaliacao a ser atribuída à Atividade.
-            @return Sucesso da operação.
+            @param Nova Avaliacao a ser atribuÃ­da Ã  Atividade.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool atualizar(Atividade, Avaliacao) = 0;
 

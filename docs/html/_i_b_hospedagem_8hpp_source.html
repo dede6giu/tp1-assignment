@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TP1 Trabalho: Código-Fonte de include/Interfaces/IBHospedagem.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v2.0</span>
+   </div>
+   <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_i_b_hospedagem_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IBHospedagem.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_i_b_hospedagem_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef IBHOSPEDAGEM_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define IBHOSPEDAGEM_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_conta_8hpp.html">../Entidades/Conta.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_hospedagem_8hpp.html">../Entidades/Hospedagem.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_b_hospedagem.html">IBHospedagem</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#a609d6a7c40b106aec6e9f66325faaa4b">   27</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_b_hospedagem.html#a609d6a7c40b106aec6e9f66325faaa4b">criar</a>(<a class="code hl_class" href="class_hospedagem.html">Hospedagem</a>) = 0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#ae7927fc81636fd929a17b693b05851c5">   35</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_b_hospedagem.html#ae7927fc81636fd929a17b693b05851c5">criar</a>(<a class="code hl_class" href="class_codigo.html">Codigo</a>) = 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#a707109d255061d9a81b296ed6a89cfdf">   45</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_b_hospedagem.html#a707109d255061d9a81b296ed6a89cfdf">excluir</a>(<a class="code hl_class" href="class_hospedagem.html">Hospedagem</a>) = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#a0985e5fa30ad7e6fa0ede73106a8df8e">   53</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_b_hospedagem.html#a0985e5fa30ad7e6fa0ede73106a8df8e">excluir</a>(<a class="code hl_class" href="class_codigo.html">Codigo</a>) = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#ad59c4f1b5bd69d5c8c39c93140c1f141">   63</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_b_hospedagem.html#ad59c4f1b5bd69d5c8c39c93140c1f141">excluir</a>(<a class="code hl_class" href="class_codigo.html">Codigo</a>, <a class="code hl_class" href="class_codigo.html">Codigo</a>) = 0;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#adb36cafb11fc2cd888e0359e9b3fc98a">   71</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_b_hospedagem.html#adb36cafb11fc2cd888e0359e9b3fc98a">ler</a>(<a class="code hl_class" href="class_hospedagem.html">Hospedagem</a>) = 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#a9719cd68f9c032a4f242dac69868ca9f">   82</a></span>        <span class="keyword">virtual</span> std::vector&lt;Hospedagem&gt; <a class="code hl_function" href="class_i_b_hospedagem.html#a9719cd68f9c032a4f242dac69868ca9f">ler</a>(<a class="code hl_class" href="class_codigo.html">Codigo</a>, <a class="code hl_class" href="class_codigo.html">Codigo</a>) = 0;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#a7f92e365f1edf1d8f8227222e3370686">   91</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_b_hospedagem.html#a7f92e365f1edf1d8f8227222e3370686">atualizar</a>(<a class="code hl_class" href="class_hospedagem.html">Hospedagem</a>, <a class="code hl_class" href="class_nome.html">Nome</a>) = 0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#af54a3b780867f5b8fbcad2ba94719b73">  100</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_b_hospedagem.html#af54a3b780867f5b8fbcad2ba94719b73">atualizar</a>(<a class="code hl_class" href="class_hospedagem.html">Hospedagem</a>, <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a>) = 0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#ad48609dd56430481ecce7053bf72e191">  110</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_b_hospedagem.html#ad48609dd56430481ecce7053bf72e191">atualizar</a>(<a class="code hl_class" href="class_hospedagem.html">Hospedagem</a>, <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>) = 0;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_i_b_hospedagem.html#a7da0b2cab6afedd2d68b393395af8d32">  113</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_i_b_hospedagem.html#a7da0b2cab6afedd2d68b393395af8d32">~IBHospedagem</a>() {}</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>};</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif </span><span class="comment">// IBHOSPEDAGEM_HPP_INCLUDED</span></div>
+<div class="ttc" id="a_conta_8hpp_html"><div class="ttname"><a href="_conta_8hpp.html">Conta.hpp</a></div></div>
+<div class="ttc" id="a_hospedagem_8hpp_html"><div class="ttname"><a href="_hospedagem_8hpp.html">Hospedagem.hpp</a></div></div>
+<div class="ttc" id="aclass_avaliacao_html"><div class="ttname"><a href="class_avaliacao.html">Avaliacao</a></div><div class="ttdoc">Dominio Avaliacao.</div><div class="ttdef"><b>Definição</b> <a href="_avaliacao_8hpp_source.html#l00013">Avaliacao.hpp:14</a></div></div>
+<div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Dominio Codigo.</div><div class="ttdef"><b>Definição</b> <a href="_codigo_8hpp_source.html#l00014">Codigo.hpp:15</a></div></div>
+<div class="ttc" id="aclass_dinheiro_html"><div class="ttname"><a href="class_dinheiro.html">Dinheiro</a></div><div class="ttdoc">Dominio Dinheiro.</div><div class="ttdef"><b>Definição</b> <a href="_dinheiro_8hpp_source.html#l00014">Dinheiro.hpp:15</a></div></div>
+<div class="ttc" id="aclass_hospedagem_html"><div class="ttname"><a href="class_hospedagem.html">Hospedagem</a></div><div class="ttdoc">Entidade Hospedagem.</div><div class="ttdef"><b>Definição</b> <a href="_hospedagem_8hpp_source.html#l00018">Hospedagem.hpp:19</a></div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html"><div class="ttname"><a href="class_i_b_hospedagem.html">IBHospedagem</a></div><div class="ttdoc">Interface Back Hospedagem.</div><div class="ttdef"><b>Definição</b> <a href="#l00016">IBHospedagem.hpp:17</a></div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_a0985e5fa30ad7e6fa0ede73106a8df8e"><div class="ttname"><a href="class_i_b_hospedagem.html#a0985e5fa30ad7e6fa0ede73106a8df8e">IBHospedagem::excluir</a></div><div class="ttdeci">virtual void excluir(Codigo)=0</div><div class="ttdoc">Exclui uma Tabela.</div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_a609d6a7c40b106aec6e9f66325faaa4b"><div class="ttname"><a href="class_i_b_hospedagem.html#a609d6a7c40b106aec6e9f66325faaa4b">IBHospedagem::criar</a></div><div class="ttdeci">virtual bool criar(Hospedagem)=0</div><div class="ttdoc">Cria uma Hospedagem.</div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_a707109d255061d9a81b296ed6a89cfdf"><div class="ttname"><a href="class_i_b_hospedagem.html#a707109d255061d9a81b296ed6a89cfdf">IBHospedagem::excluir</a></div><div class="ttdeci">virtual bool excluir(Hospedagem)=0</div><div class="ttdoc">Exclui uma Hospedagem.</div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_a7da0b2cab6afedd2d68b393395af8d32"><div class="ttname"><a href="class_i_b_hospedagem.html#a7da0b2cab6afedd2d68b393395af8d32">IBHospedagem::~IBHospedagem</a></div><div class="ttdeci">virtual ~IBHospedagem()</div><div class="ttdoc">Destrutor Virtual.</div><div class="ttdef"><b>Definição</b> <a href="#l00113">IBHospedagem.hpp:113</a></div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_a7f92e365f1edf1d8f8227222e3370686"><div class="ttname"><a href="class_i_b_hospedagem.html#a7f92e365f1edf1d8f8227222e3370686">IBHospedagem::atualizar</a></div><div class="ttdeci">virtual bool atualizar(Hospedagem, Nome)=0</div><div class="ttdoc">Atualiza o Nome de uma Hospedagem.</div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_a9719cd68f9c032a4f242dac69868ca9f"><div class="ttname"><a href="class_i_b_hospedagem.html#a9719cd68f9c032a4f242dac69868ca9f">IBHospedagem::ler</a></div><div class="ttdeci">virtual std::vector&lt; Hospedagem &gt; ler(Codigo, Codigo)=0</div><div class="ttdoc">Lê todos Hospedagem.</div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_ad48609dd56430481ecce7053bf72e191"><div class="ttname"><a href="class_i_b_hospedagem.html#ad48609dd56430481ecce7053bf72e191">IBHospedagem::atualizar</a></div><div class="ttdeci">virtual bool atualizar(Hospedagem, Avaliacao)=0</div><div class="ttdoc">Atualiza a Avaliacao de uma Hospedagem.</div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_ad59c4f1b5bd69d5c8c39c93140c1f141"><div class="ttname"><a href="class_i_b_hospedagem.html#ad59c4f1b5bd69d5c8c39c93140c1f141">IBHospedagem::excluir</a></div><div class="ttdeci">virtual void excluir(Codigo, Codigo)=0</div><div class="ttdoc">Exclui Hospedagens.</div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_adb36cafb11fc2cd888e0359e9b3fc98a"><div class="ttname"><a href="class_i_b_hospedagem.html#adb36cafb11fc2cd888e0359e9b3fc98a">IBHospedagem::ler</a></div><div class="ttdeci">virtual bool ler(Hospedagem)=0</div><div class="ttdoc">Lê uma Hospedagem.</div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_ae7927fc81636fd929a17b693b05851c5"><div class="ttname"><a href="class_i_b_hospedagem.html#ae7927fc81636fd929a17b693b05851c5">IBHospedagem::criar</a></div><div class="ttdeci">virtual void criar(Codigo)=0</div><div class="ttdoc">Cria uma Tabela.</div></div>
+<div class="ttc" id="aclass_i_b_hospedagem_html_af54a3b780867f5b8fbcad2ba94719b73"><div class="ttname"><a href="class_i_b_hospedagem.html#af54a3b780867f5b8fbcad2ba94719b73">IBHospedagem::atualizar</a></div><div class="ttdeci">virtual bool atualizar(Hospedagem, Dinheiro)=0</div><div class="ttdoc">Atualiza o Dinheiro de uma Hospedagem.</div></div>
+<div class="ttc" id="aclass_nome_html"><div class="ttname"><a href="class_nome.html">Nome</a></div><div class="ttdoc">Dominio Nome.</div><div class="ttdef"><b>Definição</b> <a href="_nome_8hpp_source.html#l00015">Nome.hpp:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_15ed6569ea5834b5f18ad73179dedf2f.html">Interfaces</a></li><li class="navelem"><a class="el" href="_i_b_hospedagem_8hpp.html">IBHospedagem.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -32,7 +32,7 @@ bool MFConta::criar()
         cout << endl << "Uma Conta possui um codigo identificador";
         cout << endl << "e uma senha." << endl;
         cout << endl << "Codigos sao identificadores unicos de 6 caracteres.";
-        cout << endl << "Podem ser letras min e maiusculas, ou numeros." << endl;
+        cout << endl << "Podem ser letras ou numeros. Case-insensitive." << endl;
         cout << endl << "Senhas sao compostas de 5 numeros distintos";
         cout << endl << "que nao estao em ordem (de)crescente.";
         cout << endl << "=========================================";
@@ -53,11 +53,13 @@ bool MFConta::criar()
         catch (const invalid_argument &exp)
         {
             cout << endl << "Valor invalido.";
+            esperarInput();
             continue;
         }
         catch (const length_error &exp)
         {
             cout << endl << "Valor invalido.";
+            esperarInput();
             continue;
         }
 
@@ -68,6 +70,7 @@ bool MFConta::criar()
         catch (const invalid_argument &exp)
         {
             cout << endl << "Valor invalido.";
+            esperarInput();
             continue;
         }
 
@@ -80,7 +83,7 @@ bool MFConta::criar()
         }
         else
         {
-            cout << endl << "Houve um problema na criacao da conta.";
+            cout << endl << "Uma conta com esse codigo ja existe.";
             esperarInput();
             return false;
         }
@@ -185,6 +188,7 @@ bool MFConta::run(Conta contaAtual)
                     else
                     {
                         cout << endl << "Operacao cancelada.";
+                        esperarInput();
                         continue;
                     }
                     esperarInput();

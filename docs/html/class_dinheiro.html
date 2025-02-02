@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v2.0</span>
    </div>
    <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
   </td>
@@ -132,10 +132,10 @@ Membros públicos</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Atributos Públicos Estáticos</h2></td></tr>
 <tr class="memitem:afbaabfb0fe21c104125ad86a762ae80e" id="r_afbaabfb0fe21c104125ad86a762ae80e"><td class="memItemLeft" align="right" valign="top">static int const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbaabfb0fe21c104125ad86a762ae80e">MINIMO</a> = 0</td></tr>
-<tr class="memdesc:afbaabfb0fe21c104125ad86a762ae80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">static int const  <br /></td></tr>
+<tr class="memdesc:afbaabfb0fe21c104125ad86a762ae80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor mínimo de dinheiro.  <br /></td></tr>
 <tr class="separator:afbaabfb0fe21c104125ad86a762ae80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfb3d89a6113143bb378ce07b3086c89" id="r_abfb3d89a6113143bb378ce07b3086c89"><td class="memItemLeft" align="right" valign="top">static int const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfb3d89a6113143bb378ce07b3086c89">MAXIMO</a> = 20000000</td></tr>
-<tr class="memdesc:abfb3d89a6113143bb378ce07b3086c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">static int const  <br /></td></tr>
+<tr class="memdesc:abfb3d89a6113143bb378ce07b3086c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor máximo de dinheiro.  <br /></td></tr>
 <tr class="separator:abfb3d89a6113143bb378ce07b3086c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
@@ -188,7 +188,7 @@ Atributos Públicos Estáticos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor paramétrico. </p>
-<p>Constrói um objeto <a class="el" href="class_dinheiro.html" title="Dominio Dinheiro.">Dinheiro</a> e recebe um int com o valor de dinheiro em centavos. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Constrói um objeto <a class="el" href="class_dinheiro.html" title="Dominio Dinheiro.">Dinheiro</a>, recebe e armazena um int com o valor de dinheiro em centavos. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">int</td><td>dinheiro em centavos. </td></tr>
   </table>
@@ -261,30 +261,32 @@ Os pontos e a vírgula só são adicionados mediante necessidade. </p><dl class=
 
 <p class="definition">Definido na linha <a class="el" href="_dinheiro_8cpp_source.html#l00031">31</a> do ficheiro <a class="el" href="_dinheiro_8cpp_source.html">Dinheiro.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   32</span>{</div>
-<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">if</span> (this-&gt;dinheiro &lt; 100)</div>
-<div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;0,&quot;</span> + std::to_string(this-&gt;dinheiro);</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="line"><span class="lineno">   37</span>    std::string numero = std::to_string(this-&gt;dinheiro);</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordtype">int</span> i = numero.length() - 1;</div>
-<div class="line"><span class="lineno">   39</span>    std::string resultado = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   40</span>    resultado += numero[i]; i--;</div>
-<div class="line"><span class="lineno">   41</span>    resultado += numero[i];</div>
-<div class="line"><span class="lineno">   42</span>    resultado += <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>    <span class="keywordtype">int</span> cnt = 0;</div>
-<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">while</span> (i--)</div>
-<div class="line"><span class="lineno">   45</span>    {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (cnt == 3)</div>
-<div class="line"><span class="lineno">   47</span>        {</div>
-<div class="line"><span class="lineno">   48</span>            cnt = 0;</div>
-<div class="line"><span class="lineno">   49</span>            resultado += <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>        cnt++;</div>
-<div class="line"><span class="lineno">   52</span>        resultado += numero[i];</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-<div class="line"><span class="lineno">   54</span>    std::reverse(resultado.begin(), resultado.end());</div>
-<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">return</span> resultado;</div>
-<div class="line"><span class="lineno">   56</span>}</div>
+<div class="line"><span class="lineno">   33</span>    std::string resultado = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   34</span>    std::string numero = std::to_string(this-&gt;dinheiro);</div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">if</span> (this-&gt;dinheiro &lt; 100)</div>
+<div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        resultado += <span class="stringliteral">&quot;0,&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (this-&gt;dinheiro &lt; 10) resultado += <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> resultado + numero;</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordtype">int</span> i = numero.length() - 1;</div>
+<div class="line"><span class="lineno">   42</span>    resultado += numero[i]; i--;</div>
+<div class="line"><span class="lineno">   43</span>    resultado += numero[i];</div>
+<div class="line"><span class="lineno">   44</span>    resultado += <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordtype">int</span> cnt = 0;</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">while</span> (i--)</div>
+<div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (cnt == 3)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            cnt = 0;</div>
+<div class="line"><span class="lineno">   51</span>            resultado += <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        cnt++;</div>
+<div class="line"><span class="lineno">   54</span>        resultado += numero[i];</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="line"><span class="lineno">   56</span>    std::reverse(resultado.begin(), resultado.end());</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">return</span> resultado;</div>
+<div class="line"><span class="lineno">   58</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -340,8 +342,8 @@ Os pontos e a vírgula só são adicionados mediante necessidade. </p><dl class=
 </table>
 </div><div class="memdoc">
 
-<p>static int const </p>
-<p>int estático constante com o valor máximo de dinheiro possível. </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="#afbaabfb0fe21c104125ad86a762ae80e" title="static int const">MINIMO</a> </dd></dl>
+<p>Valor máximo de dinheiro. </p>
+<p>Atributo inteiro estático constante com o valor máximo de dinheiro possível. </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="#afbaabfb0fe21c104125ad86a762ae80e" title="Valor mínimo de dinheiro.">MINIMO</a> </dd></dl>
 
 <p class="definition">Definido na linha <a class="el" href="_dinheiro_8hpp_source.html#l00039">39</a> do ficheiro <a class="el" href="_dinheiro_8hpp_source.html">Dinheiro.hpp</a>.</p>
 
@@ -367,8 +369,8 @@ Os pontos e a vírgula só são adicionados mediante necessidade. </p><dl class=
 </table>
 </div><div class="memdoc">
 
-<p>static int const </p>
-<p>int estático constante com o valor mínimo de dinheiro possível. </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="#abfb3d89a6113143bb378ce07b3086c89" title="static int const">MAXIMO</a> </dd></dl>
+<p>Valor mínimo de dinheiro. </p>
+<p>Atributo inteiro estático constante com o valor mínimo de dinheiro possível. </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="#abfb3d89a6113143bb378ce07b3086c89" title="Valor máximo de dinheiro.">MAXIMO</a> </dd></dl>
 
 <p class="definition">Definido na linha <a class="el" href="_dinheiro_8hpp_source.html#l00034">34</a> do ficheiro <a class="el" href="_dinheiro_8hpp_source.html">Dinheiro.hpp</a>.</p>
 

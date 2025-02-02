@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">TP1 Trabalho<span id="projectnumber">&#160;v2.0</span>
    </div>
    <div id="projectbrief">Trabalho de TP1 (CIC0197)</div>
   </td>
@@ -100,6 +100,7 @@ $(function(){initNavTree('class_data.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#friends">Amigos</a> &#124;
 <a href="class_data-members.html">Mostrar lista completa dos membros</a>  </div>
   <div class="headertitle"><div class="title">Referência à classe Data</div></div>
 </div><!--header-->
@@ -139,13 +140,22 @@ Membros públicos</h2></td></tr>
 <tr class="memitem:aecd8f0d04b834d1448d1d005f9b748b8" id="r_aecd8f0d04b834d1448d1d005f9b748b8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecd8f0d04b834d1448d1d005f9b748b8">getValor</a> () const</td></tr>
 <tr class="memdesc:aecd8f0d04b834d1448d1d005f9b748b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">std::string <a class="el" href="#aecd8f0d04b834d1448d1d005f9b748b8" title="std::string Data::getValor() const">Data::getValor() const</a>  <br /></td></tr>
 <tr class="separator:aecd8f0d04b834d1448d1d005f9b748b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Amigos</h2></td></tr>
+<tr class="memitem:a755ae84659703b8d12eddd8f6237104f" id="r_a755ae84659703b8d12eddd8f6237104f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a755ae84659703b8d12eddd8f6237104f">operator&gt;</a> (const <a class="el" href="class_data.html">Data</a> &amp;data1, const <a class="el" href="class_data.html">Data</a> &amp;data2)</td></tr>
+<tr class="separator:a755ae84659703b8d12eddd8f6237104f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb754f03dbd6cb1d3f03d0c7f8056fac" id="r_afb754f03dbd6cb1d3f03d0c7f8056fac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb754f03dbd6cb1d3f03d0c7f8056fac">operator==</a> (const <a class="el" href="class_data.html">Data</a> &amp;data1, const <a class="el" href="class_data.html">Data</a> &amp;data2)</td></tr>
+<tr class="separator:afb754f03dbd6cb1d3f03d0c7f8056fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a2fcbea8a6f5b2fd7b636332012368" id="r_aa9a2fcbea8a6f5b2fd7b636332012368"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9a2fcbea8a6f5b2fd7b636332012368">operator&lt;</a> (const <a class="el" href="class_data.html">Data</a> &amp;data1, const <a class="el" href="class_data.html">Data</a> &amp;data2)</td></tr>
+<tr class="separator:aa9a2fcbea8a6f5b2fd7b636332012368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
 <div class="textblock"><p>Dominio <a class="el" href="class_data.html" title="Dominio Data.">Data</a>. </p>
 <p>Dominio <a class="el" href="class_data.html" title="Dominio Data.">Data</a>, formato "DD/MM/AA", salvo como três inteiros, tal que 01 &lt;= DD &lt;= 31, 01 &lt;= MM &lt;= 12 e 00 &lt;= AA &lt;= 99, seguindo as devidas quantidades de dias no mês.<br  />
  232013031 - implementação, construtores, documentação. <br  />
 232002520 - documentação, exceções. <br  />
-232002771 - documentação. </p>
+232002771 - documentação, sobrecarga de operadores. </p>
 
 <p class="definition">Definido na linha <a class="el" href="_data_8hpp_source.html#l00017">17</a> do ficheiro <a class="el" href="_data_8hpp_source.html">Data.hpp</a>.</p>
 </div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
@@ -277,10 +287,10 @@ Membros públicos</h2></td></tr>
 <p>int <a class="el" href="#a986bec10cbca338f08c9096d8e51efb5" title="int Data::getAno() const">Data::getAno() const</a> </p>
 <p>Retorna um int com o valor do ano. </p>
 
-<p class="definition">Definido na linha <a class="el" href="_data_8hpp_source.html#l00122">122</a> do ficheiro <a class="el" href="_data_8hpp_source.html">Data.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>{</div>
-<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">return</span> this-&gt;ano;</div>
-<div class="line"><span class="lineno">  125</span>}</div>
+<p class="definition">Definido na linha <a class="el" href="_data_8hpp_source.html#l00127">127</a> do ficheiro <a class="el" href="_data_8hpp_source.html">Data.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>{</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">return</span> this-&gt;ano;</div>
+<div class="line"><span class="lineno">  130</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,10 +320,10 @@ Membros públicos</h2></td></tr>
 <p>int <a class="el" href="#aa9b7bdc683d9c493d903184e85f1e6b3" title="int Data::getDia() const">Data::getDia() const</a> </p>
 <p>Retorna um int com o valor do dia. </p>
 
-<p class="definition">Definido na linha <a class="el" href="_data_8hpp_source.html#l00112">112</a> do ficheiro <a class="el" href="_data_8hpp_source.html">Data.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>{</div>
-<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">return</span> this-&gt;dia;</div>
-<div class="line"><span class="lineno">  115</span>}</div>
+<p class="definition">Definido na linha <a class="el" href="_data_8hpp_source.html#l00117">117</a> do ficheiro <a class="el" href="_data_8hpp_source.html">Data.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>{</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">return</span> this-&gt;dia;</div>
+<div class="line"><span class="lineno">  120</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -343,10 +353,10 @@ Membros públicos</h2></td></tr>
 <p>int <a class="el" href="#a1df6f5e1695c7cae56b9ee752a6895e8" title="int Data::getMes() const">Data::getMes() const</a> </p>
 <p>Retorna um int com o valor do mês. </p>
 
-<p class="definition">Definido na linha <a class="el" href="_data_8hpp_source.html#l00117">117</a> do ficheiro <a class="el" href="_data_8hpp_source.html">Data.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>{</div>
-<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">return</span> this-&gt;mes;</div>
-<div class="line"><span class="lineno">  120</span>}</div>
+<p class="definition">Definido na linha <a class="el" href="_data_8hpp_source.html#l00122">122</a> do ficheiro <a class="el" href="_data_8hpp_source.html">Data.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>{</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">return</span> this-&gt;mes;</div>
+<div class="line"><span class="lineno">  125</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -444,7 +454,7 @@ Membros públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>bool <a class="el" href="#a76a47b2d1164edb937dce7954828552e" title="bool Data::setValor(std::string)">Data::setValor(std::string)</a> </p>
-<p>Recebe uma string com o novo valor do objeto data, e guarda esse valor na classe, se a verificação tiver sucesso. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Recebe uma string com os novos valores do objeto data e, se a verificação tiver sucesso, separa, converte e atribui esses valores a dia, mês e ano. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>data no formato "DD/MM/AA" </td></tr>
   </table>
@@ -464,6 +474,123 @@ Membros públicos</h2></td></tr>
 <div class="line"><span class="lineno">  121</span>    aa = stoi(aux);</div>
 <div class="line"><span class="lineno">  122</span>    <a class="code hl_function" href="#a5247797cdb69232a6b6c7db6683a292d">Data::setValor</a>(dd, mm, aa);</div>
 <div class="line"><span class="lineno">  123</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentação dos símbolos amigos e relacionados</h2>
+<a id="aa9a2fcbea8a6f5b2fd7b636332012368" name="aa9a2fcbea8a6f5b2fd7b636332012368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a2fcbea8a6f5b2fd7b636332012368">&#9670;&#160;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_data.html">Data</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_data.html">Data</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="_data_8cpp_source.html#l00146">146</a> do ficheiro <a class="el" href="_data_8cpp_source.html">Data.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                    {</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">if</span>(data1.<a class="code hl_function" href="#a986bec10cbca338f08c9096d8e51efb5">getAno</a>() &lt; data2.<a class="code hl_function" href="#a986bec10cbca338f08c9096d8e51efb5">getAno</a>()){</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">if</span>(data1.<a class="code hl_function" href="#a986bec10cbca338f08c9096d8e51efb5">getAno</a>() == data2.<a class="code hl_function" href="#a986bec10cbca338f08c9096d8e51efb5">getAno</a>() &amp;&amp; data1.<a class="code hl_function" href="#a1df6f5e1695c7cae56b9ee752a6895e8">getMes</a>() &lt; data2.<a class="code hl_function" href="#a1df6f5e1695c7cae56b9ee752a6895e8">getMes</a>()){</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
+<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">if</span>(data1.<a class="code hl_function" href="#a986bec10cbca338f08c9096d8e51efb5">getAno</a>() == data2.<a class="code hl_function" href="#a986bec10cbca338f08c9096d8e51efb5">getAno</a>() &amp;&amp; data1.<a class="code hl_function" href="#a1df6f5e1695c7cae56b9ee752a6895e8">getMes</a>() == data2.<a class="code hl_function" href="#a1df6f5e1695c7cae56b9ee752a6895e8">getMes</a>() &amp;&amp; data1.<a class="code hl_function" href="#aa9b7bdc683d9c493d903184e85f1e6b3">getDia</a>() &lt; data2.<a class="code hl_function" href="#aa9b7bdc683d9c493d903184e85f1e6b3">getDia</a>()){</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  157</span>};</div>
+<div class="ttc" id="aclass_data_html_a1df6f5e1695c7cae56b9ee752a6895e8"><div class="ttname"><a href="#a1df6f5e1695c7cae56b9ee752a6895e8">Data::getMes</a></div><div class="ttdeci">int getMes() const</div><div class="ttdoc">int Data::getMes() const</div><div class="ttdef"><b>Definição</b> <a href="_data_8hpp_source.html#l00122">Data.hpp:122</a></div></div>
+<div class="ttc" id="aclass_data_html_a986bec10cbca338f08c9096d8e51efb5"><div class="ttname"><a href="#a986bec10cbca338f08c9096d8e51efb5">Data::getAno</a></div><div class="ttdeci">int getAno() const</div><div class="ttdoc">int Data::getAno() const</div><div class="ttdef"><b>Definição</b> <a href="_data_8hpp_source.html#l00127">Data.hpp:127</a></div></div>
+<div class="ttc" id="aclass_data_html_aa9b7bdc683d9c493d903184e85f1e6b3"><div class="ttname"><a href="#aa9b7bdc683d9c493d903184e85f1e6b3">Data::getDia</a></div><div class="ttdeci">int getDia() const</div><div class="ttdoc">int Data::getDia() const</div><div class="ttdef"><b>Definição</b> <a href="_data_8hpp_source.html#l00117">Data.hpp:117</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afb754f03dbd6cb1d3f03d0c7f8056fac" name="afb754f03dbd6cb1d3f03d0c7f8056fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb754f03dbd6cb1d3f03d0c7f8056fac">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_data.html">Data</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_data.html">Data</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="_data_8cpp_source.html#l00140">140</a> do ficheiro <a class="el" href="_data_8cpp_source.html">Data.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                     {</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">return</span> data1.<a class="code hl_function" href="#a986bec10cbca338f08c9096d8e51efb5">getAno</a>() == data2.<a class="code hl_function" href="#a986bec10cbca338f08c9096d8e51efb5">getAno</a>()</div>
+<div class="line"><span class="lineno">  142</span>    &amp;&amp; data1.<a class="code hl_function" href="#a1df6f5e1695c7cae56b9ee752a6895e8">getMes</a>() == data2.<a class="code hl_function" href="#a1df6f5e1695c7cae56b9ee752a6895e8">getMes</a>()</div>
+<div class="line"><span class="lineno">  143</span>    &amp;&amp; data1.<a class="code hl_function" href="#aa9b7bdc683d9c493d903184e85f1e6b3">getDia</a>() == data2.<a class="code hl_function" href="#aa9b7bdc683d9c493d903184e85f1e6b3">getDia</a>();</div>
+<div class="line"><span class="lineno">  144</span>};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a755ae84659703b8d12eddd8f6237104f" name="a755ae84659703b8d12eddd8f6237104f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a755ae84659703b8d12eddd8f6237104f">&#9670;&#160;</a></span>operator&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_data.html">Data</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_data.html">Data</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="_data_8cpp_source.html#l00159">159</a> do ficheiro <a class="el" href="_data_8cpp_source.html">Data.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                                                    {</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">return</span> data2 &lt; data1;</div>
+<div class="line"><span class="lineno">  161</span>};</div>
 </div><!-- fragment -->
 </div>
 </div>

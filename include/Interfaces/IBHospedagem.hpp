@@ -7,9 +7,9 @@
 
 //! Interface Back Hospedagem
 /*!
-    232002771 - Implementação e Documentação \n
+    232002771 - ImplementaÃ§Ã£o e DocumentaÃ§Ã£o \n
 
-    A IBHospedagem é responsável pela comunicação do usuário com
+    A IBHospedagem Ã© responsÃ¡vel pela comunicaÃ§Ã£o do usuÃ¡rio com
     o banco de dados quanto ao controle de Hospedagem. Ela permite
     criar, excluir, ler e atualizar os dados de uma Hospedagem,
 */
@@ -20,59 +20,59 @@ class IBHospedagem
         //! Cria uma Hospedagem
         /*!
             Recebe os detalhes de uma nova Hospedagem e adiciona ao banco de dados.
-            Verifica se a Hospedagem é única antes de realizar a operação.
+            Verifica se a Hospedagem Ã© Ãºnica antes de realizar a operaÃ§Ã£o.
             @param Hospedagem a ser criada.
-            @return Sucesso da operação.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool criar(Hospedagem) = 0;
 
         //! Cria uma Tabela
         /*!
             Recebe um Codigo e adiciona uma nova tabela com tal Codigo ao banco
-            de dados, se não já existir a tabela.
+            de dados, se nÃ£o jÃ¡ existir a tabela.
             @param Codigo da Conta.
         */
         virtual void criar(Codigo) = 0;
 
         //! Exclui uma Hospedagem
         /*!
-            Recebe uma Hospedagem e realiza uma confirmação antes da exclusão. Se a
-            Hospedagem existe, ela é removida do banco de dados. Caso
-            contrário, a operação falha.
-            @param Hospedagem a ser excluída.
-            @return Sucesso da operação.
+            Recebe uma Hospedagem e realiza uma confirmaÃ§Ã£o antes da exclusÃ£o. Se a
+            Hospedagem existe, ela Ã© removida do banco de dados. Caso
+            contrÃ¡rio, a operaÃ§Ã£o falha.
+            @param Hospedagem a ser excluÃ­da.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool excluir(Hospedagem) = 0;
 
         //! Exclui uma Tabela
         /*!
-            Recebe um Codigo e exclui a tabela associada ao Codigo. Método só deve
-            ser usado durante a exclusão de Conta.
-            @param Codigo da Conta excluída.
+            Recebe um Codigo e exclui a tabela associada ao Codigo. MÃ©todo sÃ³ deve
+            ser usado durante a exclusÃ£o de Conta.
+            @param Codigo da Conta excluÃ­da.
         */
         virtual void excluir(Codigo) = 0;
 
         //! Exclui Hospedagens
         /*!
-            Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Exclui
+            Recebe dois Codigo. O primeiro Ã© uma Conta, o segundo um Destino. Exclui
             da Conta associada todos os Hospedagem relacionados ao Destino.
-            Método só deve ser acionado durante a exclusão de Destino.
+            MÃ©todo sÃ³ deve ser acionado durante a exclusÃ£o de Destino.
             @param Codigo da Conta.
-            @param Codigo do Destino excluído.
+            @param Codigo do Destino excluÃ­do.
         */
         virtual void excluir(Codigo, Codigo) = 0;
 
-        //! Lê uma Hospedagem
+        //! LÃª uma Hospedagem
         /*!
-            Verifica a existência de uma Hospedagem no banco de dados.
+            Verifica a existÃªncia de uma Hospedagem no banco de dados.
             @param Hospedagem a verificar.
-            @return Existência da Hospedagem.
+            @return ExistÃªncia da Hospedagem.
         */
         virtual bool ler(Hospedagem) = 0;
 
-        //! Lê todos Hospedagem
+        //! LÃª todos Hospedagem
         /*!
-            Recebe dois Codigo. O primeiro é uma Conta, o segundo um Destino. Busca
+            Recebe dois Codigo. O primeiro Ã© uma Conta, o segundo um Destino. Busca
             da Conta associada por todos Hospedagem relacionados ao Destino.
             @param Codigo da Conta.
             @param Codigo do Destino.
@@ -85,8 +85,8 @@ class IBHospedagem
         /*!
             Atualiza o nome de uma Hospedagem.
             @param Hospedagem a ser atualizada.
-            @param Novo Nome a ser atribuído à Hospedagem.
-            @return Sucesso da operação.
+            @param Novo Nome a ser atribuÃ­do Ã  Hospedagem.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool atualizar(Hospedagem, Nome) = 0;
 
@@ -94,8 +94,8 @@ class IBHospedagem
         /*!
             Atualiza o Dinheiro associado a uma Hospedagem.
             @param Hospedagem a ser atualizada.
-            @param Novo Dinheiro a ser atribuído à Hospedagem.
-            @return Sucesso da operação.
+            @param Novo Dinheiro a ser atribuÃ­do Ã  Hospedagem.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool atualizar(Hospedagem, Dinheiro) = 0;
 
@@ -104,8 +104,8 @@ class IBHospedagem
         /*!
             Atualiza a Avaliacao de uma Hospedagem.
             @param Hospedagem a ser atualizada.
-            @param Nova Avaliacao a ser atribuída à Hospedagem.
-            @return Sucesso da operação.
+            @param Nova Avaliacao a ser atribuÃ­da Ã  Hospedagem.
+            @return Sucesso da operaÃ§Ã£o.
         */
         virtual bool atualizar(Hospedagem, Avaliacao) = 0;
 

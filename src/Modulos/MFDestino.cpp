@@ -95,6 +95,10 @@ bool MFDestino::editarDestino(Destino destinoAtual)
             {
                 cout << endl << "Valor invalido.";
             }
+            catch (const invalid_argument &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
             break;
         case 2:
             cout << endl << "Qual a nova data de inicio?";
@@ -174,6 +178,10 @@ bool MFDestino::editarDestino(Destino destinoAtual)
                 }
             }
             catch (const length_error &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
+            catch (const invalid_argument &exp)
             {
                 cout << endl << "Valor invalido.";
             }

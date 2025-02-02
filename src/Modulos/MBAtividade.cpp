@@ -98,6 +98,8 @@ void MBAtividade::excluir(Codigo tabelaExcluir)
 
 void MBAtividade::excluir(Codigo contaExcluir, Codigo destinoExcluir)
 {
+    MBAtividade::criar(contaExcluir);
+
     string comando = "DELETE FROM ";
     comando += contaExcluir.getValor();
     comando += " WHERE TagDestino='";

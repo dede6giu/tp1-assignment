@@ -88,6 +88,10 @@ bool MFViagem::editarViagem(Viagem viagemAtual)
             {
                 cout << endl << "Valor invalido.";
             }
+            catch (const invalid_argument &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
             break;
         case 2:
             cout << endl << "Qual a nova avaliacao?";
@@ -107,6 +111,10 @@ bool MFViagem::editarViagem(Viagem viagemAtual)
                 }
             }
             catch (const length_error &exp)
+            {
+                cout << endl << "Valor invalido.";
+            }
+            catch (const invalid_argument &exp)
             {
                 cout << endl << "Valor invalido.";
             }
@@ -233,9 +241,9 @@ bool MFViagem::processViagem()
                             cout << endl << "Falha na operacao.";
                         }
                     }
-                    catch (const exception &exp)
+                    catch (const runtime_error &exp)
                     {
-                        cout << endl << "Erro no sistema." << endl;
+                        cout << endl << "Erro no sistema: " << &exp << endl;
                     }
                     esperarInput();
                     return atualizarViagem;

@@ -95,6 +95,8 @@ void MBHospedagem::excluir(Codigo tabelaExcluir)
 
 void MBHospedagem::excluir(Codigo contaExcluir, Codigo destinoExcluir)
 {
+    MBHospedagem::criar(contaExcluir);
+
     string comando = "DELETE FROM ";
     comando += contaExcluir.getValor();
     comando += " WHERE TagDestino='";
