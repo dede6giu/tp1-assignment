@@ -53,11 +53,13 @@ bool MFConta::criar()
         catch (const invalid_argument &exp)
         {
             cout << endl << "Valor invalido.";
+            esperarInput();
             continue;
         }
         catch (const length_error &exp)
         {
             cout << endl << "Valor invalido.";
+            esperarInput();
             continue;
         }
 
@@ -68,6 +70,7 @@ bool MFConta::criar()
         catch (const invalid_argument &exp)
         {
             cout << endl << "Valor invalido.";
+            esperarInput();
             continue;
         }
 
