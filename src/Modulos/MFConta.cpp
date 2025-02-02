@@ -185,6 +185,7 @@ bool MFConta::run(Conta contaAtual)
                     else
                     {
                         cout << endl << "Operacao cancelada.";
+                        esperarInput();
                         continue;
                     }
                     esperarInput();

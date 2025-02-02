@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World" << endl;
+    // cout << "Hello World" << endl;
 
     IFControle* cntrIFControle = new MFControle();
     IFConta* dep1 = new MFConta();
